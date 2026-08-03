@@ -78,3 +78,8 @@ Diese Daten werden durch `.gitignore` ausgeschlossen. Die fertigen Pakete könne
 - Genau eine Healthbar-Variante aktivieren.
 - Mount Speed und Mount All Stats nicht gleichzeitig aktivieren.
 - Vor einem Versionswechsel alte Modpakete entfernen beziehungsweise im Mod Manager auf Vanilla zurücksetzen.
+
+## Mod-Katalog
+
+Eine Übersicht der einzelnen Mods befindet sich unter [`mods/`](mods/).
+Die gemeinsam verwendeten Buildwerkzeuge und Patchrezepte bleiben im Hauptordner.
