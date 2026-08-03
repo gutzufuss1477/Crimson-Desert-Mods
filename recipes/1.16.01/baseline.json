@@ -1,0 +1,46 @@
+{
+  "game_version": "1.16.01",
+  "created_from": "User-supplied verified vanilla files",
+  "files": {
+    "0008/gamedata/binary__/client/bin/characterinfo.pabgb": {
+      "bytes": 27178884,
+      "sha256": "20413EE9E180AF6F1785EA65F859C347362DC2AC74D766BABD1C7516C6329E19"
+    },
+    "0008/gamedata/binary__/client/bin/characterinfo.pabgh": {
+      "bytes": 57954,
+      "sha256": "BCB5B4EDCFB08F859BA8B59D3201FCF16207E18A828935D81C751AC31785479F"
+    },
+    "0008/gamedata/binary__/client/bin/iteminfo.pabgb": {
+      "bytes": 6145386,
+      "sha256": "491C00A805105C3633F7BB25E500E6C1074DC0B853D58739A4FE6DCBB445A40E"
+    },
+    "0008/gamedata/binary__/client/bin/iteminfo.pabgh": {
+      "bytes": 52650,
+      "sha256": "3BF2DC5933E733C051CCD0C1DB2F67D049ADC32753ED09E2C2B3121F923F7669"
+    },
+    "0008/gamedata/binary__/client/bin/skill.pabgb": {
+      "bytes": 1234380,
+      "sha256": "DCCCA0A7C9CA54370C22E1C0D5E0FCA10CD55E2BEB50633787D17863F7A21838"
+    },
+    "0008/gamedata/binary__/client/bin/skill.pabgh": {
+      "bytes": 16106,
+      "sha256": "39832634041D3AF18E8B5C2108A72986668930B702EEEE8276582D03D2306C49"
+    },
+    "0008/gamedata/binary__/client/bin/storeinfo.pabgb": {
+      "bytes": 866221,
+      "sha256": "B4BD4E0FC35948105CDAEC9E35135184D153A7BF2A633218C1C9F801C0C11011"
+    },
+    "0008/gamedata/binary__/client/bin/storeinfo.pabgh": {
+      "bytes": 2594,
+      "sha256": "7137683EFA65ACBE011B7E0AE1A12E842E7458B127CA3A1D25854C31AFAD2036"
+    },
+    "0012/ui/xml/gamemain/play/subtitletagview.css": {
+      "bytes": 4878,
+      "sha256": "A4874FA587AD3164866525288FD6E154B3D55B05518069DFB6415BCF7A95D62F"
+    },
+    "0012/ui/xml/gamemain/play/subtitletagview.html": {
+      "bytes": 5457,
+      "sha256": "768DAD0FD6BBA8425FEB6059E384B0E58E868886E0F5854E6070B193F0BD4962"
+    }
+  }
+}

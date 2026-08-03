@@ -1,0 +1,34 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+
+# Local game inputs and generated outputs
+input/*
+!input/.gitkeep
+work/*
+!work/.gitkeep
+dist/*
+!dist/.gitkeep
+release-assets/*
+!release-assets/.gitkeep
+
+# Game and mod binary data
+*.pabgb
+*.pabgh
+*.paz
+*.pamt
+!assets/alden/0.pamt.template
+*.zip
+
+# Logs and local files
+*.log
+*.tmp
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

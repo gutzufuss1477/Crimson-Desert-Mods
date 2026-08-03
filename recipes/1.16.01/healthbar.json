@@ -1,0 +1,44 @@
+{
+  "skill_target_key": 1201,
+  "skill_target_name": "Passive_Player_BasicSkill",
+  "skill_source_key": 91002,
+  "skill_source_name": "Equip_Passive_ShowHPUI",
+  "characters": [
+    {
+      "key": 1,
+      "name": "Kliff",
+      "relative_offset": 298,
+      "before": "FBB0010001000000",
+      "after": "0100000000010101",
+      "expected": "FA000000",
+      "patched": "7A630100"
+    },
+    {
+      "key": 1002113,
+      "name": "Kliff_AI",
+      "relative_offset": 313,
+      "before": "FBB0010001000000",
+      "after": "0100000000010101",
+      "expected": "FA000000",
+      "patched": "7A630100"
+    },
+    {
+      "key": 1004085,
+      "name": "Yann",
+      "relative_offset": 329,
+      "before": "FBB0010001000000",
+      "after": "0100000000010101",
+      "expected": "FA000000",
+      "patched": "7A630100"
+    }
+  ],
+  "ui": {
+    "html": "0012/ui/xml/gamemain/play/subtitletagview.html",
+    "css": "0012/ui/xml/gamemain/play/subtitletagview.css"
+  },
+  "variants": [
+    "caites",
+    "classic",
+    "multi"
+  ]
+}
