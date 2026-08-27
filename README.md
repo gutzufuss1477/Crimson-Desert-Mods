@@ -1,85 +1,61 @@
-# Crimson Desert Mods – Build- und Update-System
+# Crimson Desert Mods
 
-Dieses Repository verwaltet die aktuellen Crimson-Desert-Mods als reproduzierbare Patchrezepte und Buildskripte. Die Originaldateien des Spiels werden nicht in Git gespeichert.
+DMM-only Build- und Release-Repository für die Crimson-Desert-Mods von Blablup.
 
-## Verwaltete Mods
+## Aktueller Stand
 
-- Alden AIO Shop + All Items 1 Copper
-- All Mounts LvL 5 Speed
-- All Mounts LvL 5 All Stats
-- Steelheart Horseshoes +20 Stamina Regen
-- Healthbar Always On – Caites Multitarget
-- Healthbar Always On – Classic Vanilla Single Target
-- Healthbar Always On – Vanilla Multitarget
-- alle drei Healthbar-Varianten zusätzlich im DMM-Format
+- Spielversion: **Crimson Desert 2.00.00**
+- Mod Manager: **DMM**
+- Mit DMM 1.9.3 getestet
+- **JMM wird nicht mehr unterstützt oder gepflegt.**
+- Die Kernimplementierungen von Alden, Steelheart, Mount All Stats und Healthbar Vanilla Multitarget wurden im Spiel bestätigt. Speed ist die exakt validierte Speed-Teilmenge der All-Stats-Version; die beiden weiteren Healthbar-Varianten verwenden dieselbe bestätigte Skill-/CharacterInfo-Basis.
 
-## Funktionsprinzip
+## Enthaltene Mods
 
-Die Builder arbeiten nicht nur mit alten absoluten Offsets. Sie suchen die relevanten Datensätze anhand von IDs, Namen, Kontextsignaturen und Strukturmerkmalen neu. Jede erzeugte JSON-Patchstelle wird gegen die aktuelle Vanilla-Datei validiert.
+| Mod | Status 2.00.00 | Hinweise |
+|---|---|---|
+| Alden AIO Shop + All Items 1 Copper | im Spiel bestätigt | Exakter alter 379-Item-Katalog, alte Reihenfolge und alte Bestände, Preise 1 Copper |
+| All Mounts LvL 5 Speed | statisch bestätigt | Nur Speed auf Level 5 |
+| All Mounts LvL 5 All Stats | im Spiel bestätigt | Speed, Acceleration, Turning und Jump auf Level 5 |
+| Steelheart Horseshoes +20 Stamina Regen | im Spiel bestätigt | Semantischer DMM-ItemInfo-Patch nur für Item 1000594 |
+| Healthbar Always On - Caites Multitarget | gleiche bestätigte Basis | DMM-Dateiersatz + 3 gezielte CharacterInfo-Patches |
+| Healthbar Always On - Classic Vanilla Single Target | gleiche bestätigte Basis | DMM-Dateiersatz + 3 gezielte CharacterInfo-Patches |
+| Healthbar Always On - Vanilla Multitarget | im Spiel bestätigt | DMM-Dateiersatz + 3 gezielte CharacterInfo-Patches |
 
-Falls ein Spielupdate ein Datenformat verändert, wird der betroffene Mod blockiert und im `BUILD_REPORT.json` mit der konkreten Ursache aufgeführt. Das System erstellt in diesem Fall keine scheinbar erfolgreiche, aber unzuverlässige Version.
+## Fertige Downloads
 
-## Ersteinrichtung
+Die bestätigten Pakete liegen unter [`release-assets/2.00.00/`](release-assets/2.00.00/).
 
-Der kürzeste Einstieg steht in [START_HERE_DE.md](START_HERE_DE.md). Die vollständige Windows-Anleitung steht in [SETUP_WINDOWS_DE.md](SETUP_WINDOWS_DE.md).
+Die Dateinamen und internen Modnamen folgen nur noch diesem Schema:
 
-Nach dem Entpacken reicht für das erstmalige private GitHub-Repository:
+`Mod_Name_2.00.00`
 
-```powershell
-Set-ExecutionPolicy -Scope Process Bypass
-.\scripts\Setup-GitHub.ps1 -Owner gutzufuss1477 -Repository Crimson-Desert-Mods -Visibility private -CreateInitialRelease -OpenInBrowser
-```
+Es gibt keine `DMM`, `RC`, `R2`, `R5` oder `TEST`-Zusätze mehr in den finalen Modnamen.
 
-## Update nach einem neuen Spielpatch
+## Wichtige Konflikte
 
-Die zehn sauberen Vanilla-Dateien wie bisher in eine ZIP-Datei packen. Danach:
+- Nur **eine** der beiden Mount-Versionen gleichzeitig aktivieren.
+- Nur **eine** der drei Healthbar-Versionen gleichzeitig aktivieren.
+- Vor einem Versionswechsel alte Modpakete in DMM entfernen und auf Vanilla zurücksetzen.
 
-```powershell
-.\scripts\Update-Mods.ps1 -GameVersion 1.17 -GameZip "C:\Modding\Crimson_Desert_1.17_Vanilla.zip" -OpenOutput
-```
+## Build-System
 
-Das Ergebnis liegt in `dist\1.17`.
+Die finalen Mods können aus sauberen Vanilla-Dateien reproduziert werden:
 
-## Nach dem Ingame-Test
+- `src/crimson_mod_tools/dmm_builder.py` - Builder und Validierung
+- `recipes/2.00.00/` - bestätigte Rezepte und Baselines
+- `scripts/Build-DMM-Mods.ps1` - Windows-Build
+- `tests/` - Struktur- und Release-Tests
+- `release-assets/2.00.00/` - im Spiel bestätigte finale Mod-ZIPs
 
-Erst wenn alle erzeugten Mods im Spiel bestätigt wurden, darf die neue Version als Ausgangsbasis gespeichert werden:
+Originaldateien des Spiels werden nicht in Git gespeichert.
 
-```powershell
-.\scripts\Promote-Baseline.ps1 -GameVersion 1.17 -GameZip "C:\Modding\Crimson_Desert_1.17_Vanilla.zip" -ConfirmedInGame -CommitAndPush
-```
+## Changelog 2.00.00
 
-Danach kann die getestete Version veröffentlicht werden:
+Für alle Mods gilt:
 
-```powershell
-.\scripts\Publish-Release.ps1 -Owner gutzufuss1477 -Repository Crimson-Desert-Mods -Version 1.17
-```
+> Updated for Crimson Desert 2.00.00.  
+> The mod has been rebuilt specifically for DMM and is no longer maintained for JMM.  
+> Internal patches and game data have been updated to match the current game version.
 
-## Repository-Inhalte
-
-- `src/crimson_mod_tools/` – Builder, Parser und Validierung
-- `recipes/` – getestete semantische Patchrezepte
-- `assets/alden/` – minimale selbst erzeugte PAZ/PAMT-Paketvorlage
-- `scripts/` – Windows-Automatisierung
-- `tests/` – Tests ohne Original-Spieldateien
-- `.github/workflows/` – GitHub-Actions-Prüfung des Quellcodes und der Rezepte
-
-## Nicht in Git enthalten
-
-- Vanilla-Spieldateien
-- extrahierte Spielarchive
-- gebaute Mod-ZIPs
-- temporäre Dateien
-- lokale Python-Umgebung
-
-Diese Daten werden durch `.gitignore` ausgeschlossen. Die fertigen Pakete können lokal als privater GitHub-Release hochgeladen oder wie bisher auf Nexus Mods veröffentlicht werden.
-
-## Wichtige Installationskonflikte
-
-- Genau eine Healthbar-Variante aktivieren.
-- Mount Speed und Mount All Stats nicht gleichzeitig aktivieren.
-- Vor einem Versionswechsel alte Modpakete entfernen beziehungsweise im Mod Manager auf Vanilla zurücksetzen.
-
-## Mod-Katalog
-
-Eine Übersicht der einzelnen Mods befindet sich unter [`mods/`](mods/).
-Die gemeinsam verwendeten Buildwerkzeuge und Patchrezepte bleiben im Hauptordner.
+Weitere Details: [`CHANGELOG.md`](CHANGELOG.md)

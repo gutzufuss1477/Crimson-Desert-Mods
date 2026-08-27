@@ -1,0 +1,14 @@
+{
+  "game_version": "2.00.00",
+  "store_key": 3101,
+  "store_name": "Store_Her_General",
+  "catalog_entries": 379,
+  "stock_distribution": {
+    "1": 258,
+    "99": 93,
+    "999": 28
+  },
+  "price": 1,
+  "price_field": "price_list[*].price.price",
+  "catalog_file": "alden_catalog.tsv"
+}

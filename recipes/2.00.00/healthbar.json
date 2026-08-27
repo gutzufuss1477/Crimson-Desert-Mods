@@ -1,0 +1,28 @@
+{
+  "game_version": "2.00.00",
+  "skill_clone": {
+    "target_key": 1201,
+    "target_name": "Passive_Player_BasicSkill",
+    "source_key": 91002,
+    "source_name": "Equip_Passive_ShowHPUI"
+  },
+  "range_redirects": [
+    {
+      "key": 1,
+      "name": "Kliff"
+    },
+    {
+      "key": 1002113,
+      "name": "Kliff_AI"
+    },
+    {
+      "key": 1004085,
+      "name": "Yann"
+    }
+  ],
+  "variants": [
+    "caites_multitarget",
+    "classic_vanilla_single_target",
+    "vanilla_multitarget"
+  ]
+}

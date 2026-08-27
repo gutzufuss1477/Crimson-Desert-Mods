@@ -1,106 +1,48 @@
-# Ablauf bei einem neuen Crimson-Desert-Update
+# Update-Workflow nach einem Crimson-Desert-Patch
 
-## Phase A – saubere Vanilla-Dateien beschaffen
+Das Repository ist ab 2.00.00 vollständig auf DMM ausgerichtet. JMM-Ausgaben werden nicht mehr gebaut.
 
-1. Alle Mods deaktivieren.
-2. Im verwendeten Mod Manager auf Vanilla zurücksetzen.
-3. Spieldateien über Steam prüfen.
-4. Spielversion kontrollieren.
-5. Die folgenden Dateien in eine ZIP packen:
+## Benötigte saubere Vanilla-Dateien
 
-```text
-0008/gamedata/binary__/client/bin/characterinfo.pabgb
-0008/gamedata/binary__/client/bin/characterinfo.pabgh
-0008/gamedata/binary__/client/bin/iteminfo.pabgb
-0008/gamedata/binary__/client/bin/iteminfo.pabgh
-0008/gamedata/binary__/client/bin/skill.pabgb
-0008/gamedata/binary__/client/bin/skill.pabgh
-0008/gamedata/binary__/client/bin/storeinfo.pabgb
-0008/gamedata/binary__/client/bin/storeinfo.pabgh
-0012/ui/xml/gamemain/play/subtitletagview.css
-0012/ui/xml/gamemain/play/subtitletagview.html
-```
+Für den vollständigen Build werden diese 12 Dateien benötigt:
 
-Ein zusätzlicher oberster Ordner wie `extract/` ist erlaubt.
+- `0008/gamedata/binary__/client/bin/characterinfo.pabgb`
+- `0008/gamedata/binary__/client/bin/characterinfo.pabgh`
+- `0008/gamedata/binary__/client/bin/iteminfo.pabgb`
+- `0008/gamedata/binary__/client/bin/iteminfo.pabgh`
+- `0008/gamedata/binary__/client/bin/skill.pabgb`
+- `0008/gamedata/binary__/client/bin/skill.pabgh`
+- `0008/gamedata/binary__/client/bin/storeinfo.pabgb`
+- `0008/gamedata/binary__/client/bin/storeinfo.pabgh`
+- `0008/gamedata/binary__/client/bin/buffinfo.pabgb`
+- `0008/gamedata/binary__/client/bin/buffinfo.pabgh`
+- `0012/ui/xml/gamemain/play/subtitletagview.css`
+- `0012/ui/xml/gamemain/play/subtitletagview.html`
 
-## Phase B – automatische Aktualisierung
+Vor dem Extrahieren in DMM auf Vanilla zurücksetzen und die Spieldateien über Steam prüfen.
 
-Beispiel für Version 1.17:
+## Build
 
-```powershell
-.\scripts\Update-Mods.ps1 `
-  -GameVersion 1.17 `
-  -GameZip "C:\Modding\Crimson_Desert_1.17_Vanilla.zip" `
-  -OpenOutput
-```
+Die Dateien mit Ordnerstruktur in eine ZIP packen. Danach:
 
-Der Builder erzeugt:
+`powershell -ExecutionPolicy Bypass -File .\scripts\Build-DMM-Mods.ps1 -GameZip "C:\Modding\Crimson_Desert_Vanilla.zip"`
 
-- sieben normale Modpakete
-- drei DMM-Healthbar-Pakete
-- Healthbar-Sammelpakete
-- ein Gesamtpaket
-- `BUILD_REPORT.json`
-- `SHA256SUMS.txt`
+Der Builder bricht ab, wenn eine der bestätigten Strukturen nicht mehr eindeutig gefunden wird. Dadurch werden bei einem Spielupdate keine alten Offsets blind weiterverwendet.
 
-## Phase C – Bericht auswerten
+## Nach einem neuen Spielupdate
 
-`successful_build_groups` muss diese vier Gruppen enthalten:
+1. Neue Vanilla-Dateien sichern.
+2. Versionsnummer im Builder und in den Rezepten auf die neue Spielversion anheben.
+3. Builder ausführen.
+4. Jeden Mod einzeln im Spiel testen.
+5. Alden, Steelheart, eine Mount-Version und eine Healthbar-Version kombiniert testen.
+6. Erst nach erfolgreichem Ingame-Test die neuen Pakete unter `release-assets/<Version>/` übernehmen.
+7. README und Changelog aktualisieren.
+8. Commit und Push durchführen.
 
-```text
-mounts
-steelheart
-alden
-healthbars
-```
+## Spezielle Baselines
 
-`failed_build_groups` und `validation_errors` müssen leer sein.
-
-Warnungen bei geänderten Mount-Datensatzmengen sind nicht automatisch ein Fehler, müssen aber geprüft werden.
-
-## Phase D – Ingame-Test
-
-Mindestens folgende Tests durchführen:
-
-1. Mount Speed und All Stats getrennt testen.
-2. Steelheart-Ausdauerregeneration prüfen.
-3. Alden öffnen und Anzahl, Preise und Mengen prüfen.
-4. Jede normale Healthbar-Variante einzeln testen.
-5. Jede DMM-Healthbar-Variante einzeln mounten und testen.
-6. Spielstart und Gebietswechsel auf Abstürze prüfen.
-
-## Phase E – neue Basis übernehmen
-
-Nur nach erfolgreichem Ingame-Test:
-
-```powershell
-.\scripts\Promote-Baseline.ps1 `
-  -GameVersion 1.17 `
-  -GameZip "C:\Modding\Crimson_Desert_1.17_Vanilla.zip" `
-  -ConfirmedInGame `
-  -CommitAndPush
-```
-
-Dadurch werden neue Kontextsignaturen und Dateihashes unter `recipes\1.17` gespeichert. Die Original-Spieldateien werden nicht übernommen.
-
-## Phase F – Release veröffentlichen
-
-```powershell
-.\scripts\Publish-Release.ps1 `
-  -Owner gutzufuss1477 `
-  -Repository Crimson-Desert-Mods `
-  -Version 1.17
-```
-
-Das Skript erstellt den Tag `game-1.17`. Falls der Release bereits existiert, werden die Assets ersetzt und die Release-Informationen aktualisiert.
-
-## Fehlerfall
-
-Wenn eine Buildgruppe blockiert wird:
-
-- keine ZIP dieser Gruppe veröffentlichen
-- `BUILD_REPORT.json` aufbewahren
-- aktuelle Vanilla-ZIP und die letzte bestätigte Version für die Analyse bereithalten
-- nicht einfach alte Offsets übernehmen
-
-Die anderen erfolgreich gebauten Gruppen bleiben im Ausgabeordner erhalten.
+- Alden verwendet die ursprüngliche 379-Item-Liste aus `recipes/2.00.00/alden_catalog.tsv`.
+- Steelheart wird semantisch über ItemInfo gepatcht, nicht als roher Bytepatch.
+- Healthbar ersetzt SkillInfo nur für Skill 1201 und verwendet drei gezielte CharacterInfo-Patches.
+- Mount Speed ist eine echte Teilmenge von Mount All Stats und ändert ausschliesslich den Speed-Wert.

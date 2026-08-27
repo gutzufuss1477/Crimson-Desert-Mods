@@ -1,0 +1,10 @@
+{
+  "game_version": "2.00.00",
+  "item_key": 1000594,
+  "item_name": "HorseShoe_HorseArmor_Shoe_III",
+  "field": "enchant_data_list[0].equip_buffs[0].level",
+  "vanilla_value": 4,
+  "patched_value": 20,
+  "vanilla_buff_key": 1000046,
+  "vanilla_buff_name": "BuffLevel_StaminaRegen"
+}

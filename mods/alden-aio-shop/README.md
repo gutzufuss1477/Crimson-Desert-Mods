@@ -1,15 +1,14 @@
-﻿# Alden AIO Shop + All Items 1 Copper
+# Alden AIO Shop + All Items 1 Copper
 
-Shop- und Preis-Modifikation für Alden.
+Current game version: **2.00.00**  
+Target mod manager: **DMM**
 
-## Technische Struktur
+Ports the exact original 379-item Alden catalog, preserves the original order and stock quantities, and sets catalog purchase prices to 1 Copper.
 
-Dieser Mod verwendet das gemeinsame Buildsystem dieses Repositorys:
+## Download
 
-- `src/crimson_mod_tools` – gemeinsame Builder und Validierung
-- `recipes` – versionsbezogene Patchrezepte
-- `scripts` – Build-, Update- und Release-Automatisierung
-- `tests` – gemeinsame Tests
-- `dist` – lokal erzeugte Ausgaben, nicht als Quellcode gedacht
+[`Alden_AIO_Shop_All_Items_1_Copper_2.00.00.zip`](../../release-assets/2.00.00/Alden_AIO_Shop_All_Items_1_Copper_2.00.00.zip)
 
-Die Dateien werden absichtlich nicht in diesen Katalogordner dupliziert.
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md).

@@ -1,15 +1,14 @@
-﻿# Steelheart Horseshoes +20 Stamina Regen
+# Steelheart Horseshoes +20 Stamina Regen
 
-Erhöht die Ausdauerregeneration der Steelheart-Hufeisen.
+Current game version: **2.00.00**  
+Target mod manager: **DMM**
 
-## Technische Struktur
+Sets the Steelheart Horseshoes stamina-regeneration equip-buff level from 4 to 20 and targets only item 1000594.
 
-Dieser Mod verwendet das gemeinsame Buildsystem dieses Repositorys:
+## Download
 
-- `src/crimson_mod_tools` – gemeinsame Builder und Validierung
-- `recipes` – versionsbezogene Patchrezepte
-- `scripts` – Build-, Update- und Release-Automatisierung
-- `tests` – gemeinsame Tests
-- `dist` – lokal erzeugte Ausgaben, nicht als Quellcode gedacht
+[`Steelheart_Horseshoes_20_Stamina_Regen_2.00.00.zip`](../../release-assets/2.00.00/Steelheart_Horseshoes_20_Stamina_Regen_2.00.00.zip)
 
-Die Dateien werden absichtlich nicht in diesen Katalogordner dupliziert.
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md).

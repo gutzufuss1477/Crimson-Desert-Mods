@@ -2,6 +2,6 @@
 
 Do not commit or publish clean game files, account tokens, GitHub credentials, crash dumps, or personal paths.
 
-The repository intentionally ignores generated binary mod packages and game-derived inputs. Review platform rules and distribution rights before making binary release assets public.
+The repository ignores extracted game inputs and local build directories. The small final DMM packages under `release-assets/` are intentional release artifacts. Review platform rules and distribution rights before publishing binaries elsewhere.
 
-Report unexpected parser behaviour, malformed archives, or credential exposure through a private repository issue.
+Report unexpected parser behaviour, malformed archives, or credential exposure through a private issue or direct maintainer contact.

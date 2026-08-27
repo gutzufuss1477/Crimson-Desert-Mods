@@ -1,3 +1,3 @@
-"""Crimson Desert mod build and validation tools."""
+"""DMM-only Crimson Desert mod build tools."""
 
-__version__ = "1.0.0"
+__version__ = "2.00.00"

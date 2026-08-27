@@ -1,0 +1,13 @@
+{
+  "game_version": "2.00.00",
+  "target_records": 380,
+  "compatible_stat_blocks": 1250,
+  "speed_patch_count": 1248,
+  "all_stats_patch_count": 4990,
+  "fields": [
+    "movement_speed",
+    "acceleration",
+    "turning",
+    "jump"
+  ]
+}

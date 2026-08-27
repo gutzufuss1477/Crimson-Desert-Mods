@@ -1,15 +1,16 @@
-﻿# Healthbar Always On – Caites Multitarget
+# Healthbar Always On - Caites Multitarget
 
-Healthbar-Variante für Caites Multitarget, einschliesslich DMM-Ausgabe.
+Current game version: **2.00.00**  
+Target mod manager: **DMM**
 
-## Technische Struktur
+Persistent enemy HP bars with the compact Caites-style multitarget presentation.
 
-Dieser Mod verwendet das gemeinsame Buildsystem dieses Repositorys:
+**Conflict:** Enable only one Healthbar variant at the same time.
 
-- `src/crimson_mod_tools` – gemeinsame Builder und Validierung
-- `recipes` – versionsbezogene Patchrezepte
-- `scripts` – Build-, Update- und Release-Automatisierung
-- `tests` – gemeinsame Tests
-- `dist` – lokal erzeugte Ausgaben, nicht als Quellcode gedacht
+## Download
 
-Die Dateien werden absichtlich nicht in diesen Katalogordner dupliziert.
+[`Healthbar_always_on_2.00.00.zip`](../../release-assets/2.00.00/Healthbar_always_on_2.00.00.zip)
+
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md).

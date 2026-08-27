@@ -1,34 +1,26 @@
+# Local build/input data
+dist/
+input/
+work/
+*.pabgb
+*.pabgh
+
 # Python
 .venv/
+venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-.ruff_cache/
 *.egg-info/
 build/
 
-# Local game inputs and generated outputs
-input/*
-!input/.gitkeep
-work/*
-!work/.gitkeep
-dist/*
-!dist/.gitkeep
-release-assets/*
-!release-assets/.gitkeep
-
-# Game and mod binary data
-*.pabgb
-*.pabgh
-*.paz
-*.pamt
-!assets/alden/0.pamt.template
-*.zip
-
-# Logs and local files
-*.log
-*.tmp
+# IDE / OS
 .vscode/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Credentials / local secrets
+.env
+.env.*
+*.token

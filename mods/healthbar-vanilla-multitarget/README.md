@@ -1,15 +1,16 @@
-﻿# Healthbar Always On – Vanilla Multitarget
+# Healthbar Always On - Vanilla Multitarget
 
-Vanilla-Multitarget-Variante, einschliesslich DMM-Ausgabe.
+Current game version: **2.00.00**  
+Target mod manager: **DMM**
 
-## Technische Struktur
+Persistent vanilla-style multitarget enemy HP bars.
 
-Dieser Mod verwendet das gemeinsame Buildsystem dieses Repositorys:
+**Conflict:** Enable only one Healthbar variant at the same time.
 
-- `src/crimson_mod_tools` – gemeinsame Builder und Validierung
-- `recipes` – versionsbezogene Patchrezepte
-- `scripts` – Build-, Update- und Release-Automatisierung
-- `tests` – gemeinsame Tests
-- `dist` – lokal erzeugte Ausgaben, nicht als Quellcode gedacht
+## Download
 
-Die Dateien werden absichtlich nicht in diesen Katalogordner dupliziert.
+[`Healthbar_always_on_vanilla_multitarget_2.00.00.zip`](../../release-assets/2.00.00/Healthbar_always_on_vanilla_multitarget_2.00.00.zip)
+
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md).

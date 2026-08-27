@@ -1,15 +1,16 @@
-﻿# All Mounts Level 5 All Stats
+# All Mounts LvL 5 All Stats
 
-Setzt alle relevanten Reittierwerte auf Level 5.
+Current game version: **2.00.00**  
+Target mod manager: **DMM**
 
-## Technische Struktur
+Sets movement speed, acceleration, turning and jump to level 5 in all compatible mount stat blocks.
 
-Dieser Mod verwendet das gemeinsame Buildsystem dieses Repositorys:
+**Conflict:** Enable only one Mount Level 5 variant at the same time.
 
-- `src/crimson_mod_tools` – gemeinsame Builder und Validierung
-- `recipes` – versionsbezogene Patchrezepte
-- `scripts` – Build-, Update- und Release-Automatisierung
-- `tests` – gemeinsame Tests
-- `dist` – lokal erzeugte Ausgaben, nicht als Quellcode gedacht
+## Download
 
-Die Dateien werden absichtlich nicht in diesen Katalogordner dupliziert.
+[`All_Mounts_LvL_5_All_Stats_2.00.00.zip`](../../release-assets/2.00.00/All_Mounts_LvL_5_All_Stats_2.00.00.zip)
+
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md).
