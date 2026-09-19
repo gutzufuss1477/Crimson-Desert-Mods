@@ -4,58 +4,79 @@ DMM-only Build- und Release-Repository für die Crimson-Desert-Mods von Blablup.
 
 ## Aktueller Stand
 
-- Spielversion: **Crimson Desert 2.00.00**
+- Aktuelle Mount-Mods: **Crimson Desert 2.03.00**
+- Die übrigen vorhandenen Mods bleiben auf ihrem zuletzt bestätigten Stand **2.00.00**, bis sie separat aktualisiert werden.
 - Mod Manager: **DMM**
-- Mit DMM 1.9.3 getestet
-- **JMM wird nicht mehr unterstützt oder gepflegt.**
-- Die Kernimplementierungen von Alden, Steelheart, Mount All Stats und Healthbar Vanilla Multitarget wurden im Spiel bestätigt. Speed ist die exakt validierte Speed-Teilmenge der All-Stats-Version; die beiden weiteren Healthbar-Varianten verwenden dieselbe bestätigte Skill-/CharacterInfo-Basis.
+- JMM wird nicht mehr unterstützt oder gepflegt.
+- Die 2.03.00-Mount-Mods werden als DMM-verwaltete ASI-Plugins ausgeliefert, weil die bisherigen statischen CharacterInfo-Patches die aktiven Werte bestehender Level-5-Mounts in 2.03.00 nicht mehr zuverlässig steuern.
 
 ## Enthaltene Mods
 
-| Mod | Status 2.00.00 | Hinweise |
-|---|---|---|
-| Alden AIO Shop + All Items 1 Copper | im Spiel bestätigt | Exakter alter 379-Item-Katalog, alte Reihenfolge und alte Bestände, Preise 1 Copper |
-| All Mounts LvL 5 Speed | statisch bestätigt | Nur Speed auf Level 5 |
-| All Mounts LvL 5 All Stats | im Spiel bestätigt | Speed, Acceleration, Turning und Jump auf Level 5 |
-| Steelheart Horseshoes +20 Stamina Regen | im Spiel bestätigt | Semantischer DMM-ItemInfo-Patch nur für Item 1000594 |
-| Healthbar Always On - Caites Multitarget | gleiche bestätigte Basis | DMM-Dateiersatz + 3 gezielte CharacterInfo-Patches |
-| Healthbar Always On - Classic Vanilla Single Target | gleiche bestätigte Basis | DMM-Dateiersatz + 3 gezielte CharacterInfo-Patches |
-| Healthbar Always On - Vanilla Multitarget | im Spiel bestätigt | DMM-Dateiersatz + 3 gezielte CharacterInfo-Patches |
+| Mod | Aktuelle Version | Status | Hinweise |
+| --- | --- | --- | --- |
+| Alden AIO Shop + All Items 1 Copper | 2.00.00 | im Spiel bestätigt | Exakter alter 379-Item-Katalog, alte Reihenfolge und alte Bestände, Preise 1 Copper |
+| All Mounts LvL 5 Speed | **2.03.00** | aktualisiert | Nur Movement Speed auf Level 5; DMM-managed ASI |
+| All Mounts LvL 5 All Stats | **2.03.00** | im Spiel bestätigt | Speed, Acceleration, Turning und Jump auf Level 5; DMM-managed ASI |
+| Steelheart Horseshoes +20 Stamina Regen | 2.00.00 | im Spiel bestätigt | Semantischer DMM-ItemInfo-Patch nur für Item 1000594 |
+| Healthbar Always On - Caites Multitarget | 2.00.00 | gleiche bestätigte Basis | DMM-Dateiersatz + CharacterInfo-Patches |
+| Healthbar Always On - Classic Vanilla Single Target | 2.00.00 | gleiche bestätigte Basis | DMM-Dateiersatz + CharacterInfo-Patches |
+| Healthbar Always On - Vanilla Multitarget | 2.00.00 | im Spiel bestätigt | DMM-Dateiersatz + CharacterInfo-Patches |
 
 ## Fertige Downloads
 
-Die bestätigten Pakete liegen unter [`release-assets/2.00.00/`](release-assets/2.00.00/).
+- `release-assets/2.03.00/` – aktuelle Mount-Mods für Crimson Desert 2.03.00
+- `release-assets/2.00.00/` – bisherige 2.00.00-Releases
 
-Die Dateinamen und internen Modnamen folgen nur noch diesem Schema:
+Die Dateinamen und internen Modnamen folgen weiterhin diesem Schema:
 
-`Mod_Name_2.00.00`
+`Mod_Name_GameVersion`
 
-Es gibt keine `DMM`, `RC`, `R2`, `R5` oder `TEST`-Zusätze mehr in den finalen Modnamen.
+Es gibt keine `DMM`, `RC`, `R2`, `R5` oder `TEST`-Zusätze in finalen Modnamen.
 
 ## Wichtige Konflikte
 
 - Nur **eine** der beiden Mount-Versionen gleichzeitig aktivieren.
-- Nur **eine** der drei Healthbar-Versionen gleichzeitig aktivieren.
+- Nur eine der drei Healthbar-Versionen gleichzeitig aktivieren.
 - Vor einem Versionswechsel alte Modpakete in DMM entfernen und auf Vanilla zurücksetzen.
+
+## Mount-Mods 2.03.00
+
+### Warum wurde das Mod-Format geändert?
+
+Crimson Desert 2.03.00 hat die Verarbeitung der aktiven Mount-Stats geändert.
+
+Die bisherigen Mount-Mods änderten die Level-5-Werte statisch in CharacterInfo. Diese Daten lassen sich auch in 2.03.00 weiterhin korrekt patchen, werden bei bereits vorhandenen Level-5-Mounts aber nicht mehr zuverlässig als aktive Werte übernommen.
+
+Die 2.03.00-Versionen verwenden deshalb den im Spiel verifizierten aktuellen Runtime-Mount-Stat-Pfad und werden als **DMM-managed ASI plugins** ausgeliefert.
+
+Für den Benutzer bleibt die Installation gleich: Release-ZIP in DMM importieren, aktivieren und anwenden. Cheat Engine oder manuelle Runtime-Tools werden nicht benötigt.
+
+### Varianten
+
+- **All Mounts LvL 5 All Stats** – setzt Movement Speed, Acceleration, Turning/Handling und Jump auf 5.
+- **All Mounts LvL 5 Speed** – setzt ausschliesslich Movement Speed auf 5.
 
 ## Build-System
 
-Die finalen Mods können aus sauberen Vanilla-Dateien reproduziert werden:
+Die bisherigen statischen DMM-Datenmods können weiterhin über das vorhandene Build-System reproduziert werden:
 
-- `src/crimson_mod_tools/dmm_builder.py` - Builder und Validierung
-- `recipes/2.00.00/` - bestätigte Rezepte und Baselines
-- `scripts/Build-DMM-Mods.ps1` - Windows-Build
-- `tests/` - Struktur- und Release-Tests
-- `release-assets/2.00.00/` - im Spiel bestätigte finale Mod-ZIPs
+- `src/crimson_mod_tools/dmm_builder.py`
+- `recipes/2.00.00/`
+- `scripts/Build-DMM-Mods.ps1`
+- `tests/`
+
+Die Quellcodes der neuen 2.03.00-Mount-Plugins liegen direkt unter:
+
+- `mods/all-mounts-level-5-all-stats/src/`
+- `mods/all-mounts-level-5-speed/src/`
 
 Originaldateien des Spiels werden nicht in Git gespeichert.
 
-## Changelog 2.00.00
+## Changelog 2.03.00
 
-Für alle Mods gilt:
+> Updated the mount mods for Crimson Desert 2.03.00.  
+> Reworked the mount stat modification system for the current game version.  
+> The mount mods now use DMM-managed ASI plugins because the previous static CharacterInfo patches no longer reliably control the active stats of existing mounts.  
+> No Cheat Engine or manual runtime setup is required.
 
-> Updated for Crimson Desert 2.00.00.  
-> The mod has been rebuilt specifically for DMM and is no longer maintained for JMM.  
-> Internal patches and game data have been updated to match the current game version.
-
-Weitere Details: [`CHANGELOG.md`](CHANGELOG.md)
+Weitere Details: `CHANGELOG.md`

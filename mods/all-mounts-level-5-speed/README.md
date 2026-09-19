@@ -1,16 +1,30 @@
 # All Mounts LvL 5 Speed
 
-Current game version: **2.00.00**  
-Target mod manager: **DMM**
+Current version: **2.03.00**
 
-Sets only movement speed to level 5 in all compatible mount stat blocks.
+Sets only the compatible mount **Movement Speed** rank to Level 5.
 
-**Conflict:** Enable only one Mount Level 5 variant at the same time.
+Acceleration, Turning / Handling and Jump remain unchanged.
 
-## Download
+## 2.03.00 implementation
 
-[`All_Mounts_LvL_5_Speed_2.00.00.zip`](../../release-assets/2.00.00/All_Mounts_LvL_5_Speed_2.00.00.zip)
+Crimson Desert 2.03.00 changed how active mount stats are resolved for existing mounts.
+The previous static CharacterInfo data patch is therefore replaced by a
+**DMM-managed ASI plugin** using the current runtime mount-stat path.
 
-## Changelog
+This version uses the same validated 2.03.00 mount-stat path as the All Stats variant,
+but only modifies Speed / SubIndex 15.
 
-See [`CHANGELOG.md`](CHANGELOG.md).
+The plugin is not hardcoded to Rokade or Character ID 31378.
+
+## Installation
+
+Install the release ZIP through DMM and enable it as usual.
+
+Do not enable this mod together with **All Mounts LvL 5 All Stats**.
+
+## Compatibility guard
+
+The 2.03.00 build contains a strict game-code signature check. If the expected
+Crimson Desert 2.03.00 code does not match, the plugin fails closed instead of
+blindly patching an unknown game build.

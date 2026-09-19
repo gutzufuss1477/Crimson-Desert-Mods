@@ -1,5 +1,31 @@
 # Changelog
 
+## 2.03.00
+
+### General
+
+- Updated **All Mounts LvL 5 All Stats** and **All Mounts LvL 5 Speed** for Crimson Desert 2.03.00.
+- Reworked the mount stat modification system for compatibility with the current game version.
+- Changed the two mount mods from static CharacterInfo data patches to **DMM-managed ASI plugins**.
+- The previous static CharacterInfo values can still be changed in 2.03.00, but are no longer reliably used as the active stats of existing Level 5 mounts.
+- The new implementation uses the current runtime mount-stat path.
+- No Cheat Engine or manual runtime setup is required for normal use.
+- Both plugins contain a strict 2.03.00 code-signature guard and fail closed on a mismatching game build.
+- Only one Mount LvL 5 variant should be enabled at a time.
+
+### All Mounts LvL 5 All Stats
+
+- Sets Movement Speed, Acceleration, Turning / Handling and Jump to Level 5.
+- Runtime path validated in-game on an existing Level 5 Rokade.
+- Confirmed result on the validation mount: **4 / 4 / 5 / 5 -> 5 / 5 / 5 / 5**.
+- The implementation is not hardcoded to Rokade or Character ID 31378; it targets the compatible mount-stat row structure.
+
+### All Mounts LvL 5 Speed
+
+- Uses the same 2.03.00 mount-stat implementation as the All Stats version.
+- Changes only Movement Speed to Level 5.
+- Acceleration, Turning / Handling and Jump remain unchanged.
+
 ## 2.00.00
 
 ### General
