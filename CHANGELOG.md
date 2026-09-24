@@ -4,6 +4,11 @@
 
 ### General
 
+- Added **Mining Helmet Always On 1.0.0** for Crimson Desert 2.03.00.
+- The mod automatically activates the native blue mining-resource highlight while any headgear is equipped.
+- The green full-screen Mining Helmet filter remains disabled.
+- The original Mining Helmet and its `B`-key behavior remain available while the physical helmet is equipped.
+- The release uses the game's normal visibility and fade distance and contains a strict executable hash guard.
 - Updated **All Mounts LvL 5 All Stats** and **All Mounts LvL 5 Speed** for Crimson Desert 2.03.00.
 - Reworked the mount stat modification system for compatibility with the current game version.
 - Changed the two mount mods from static CharacterInfo data patches to **DMM-managed ASI plugins**.

@@ -7,6 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE = ROOT / "release-assets" / "2.00.00"
+RELEASE_203 = ROOT / "release-assets" / "2.03.00"
 BUILD_REPORT = ROOT / "reports" / "BUILD_REPORT_2.00.00.json"
 
 EXPECTED = {
@@ -94,3 +95,22 @@ def test_recipes_match_confirmed_baselines() -> None:
     assert len(catalog) == 379
     assert [row[0] for row in catalog] == list(range(379))
     assert len({row[1] for row in catalog}) == 379
+
+
+def test_mining_helmet_always_on_release() -> None:
+    filename = "Mining_Helmet_Always_On_2.03.00.zip"
+    package = RELEASE_203 / filename
+    checksums = {}
+    for line in (RELEASE_203 / "SHA256SUMS.txt").read_text().splitlines():
+        digest, checksum_filename = line.split(maxsplit=1)
+        checksums[checksum_filename] = digest
+
+    assert hashlib.sha256(package.read_bytes()).hexdigest() == checksums[filename]
+    with zipfile.ZipFile(package) as archive:
+        assert archive.testzip() is None
+        assert set(archive.namelist()) == {
+            "MinHook-LICENSE.txt",
+            "Mining_Helmet_Always_On_2.03.00.asi",
+            "README.txt",
+        }
+        assert archive.getinfo("Mining_Helmet_Always_On_2.03.00.asi").file_size > 0

@@ -1,7 +1,8 @@
 # Mod catalog
 
-All maintained Crimson Desert mods are DMM-only from version 2.00.00 onward.
+All maintained Crimson Desert mods can be installed through DMM. ASI plugins can also be installed manually with an ASI loader.
 
+- [Mining Helmet Always On](mining-helmet-always-on/)
 - [Alden AIO Shop + All Items 1 Copper](alden-aio-shop/)
 - [All Mounts LvL 5 Speed](all-mounts-level-5-speed/)
 - [All Mounts LvL 5 All Stats](all-mounts-level-5-all-stats/)

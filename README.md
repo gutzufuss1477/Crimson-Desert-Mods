@@ -1,10 +1,11 @@
 # Crimson Desert Mods
 
-DMM-only Build- und Release-Repository für die Crimson-Desert-Mods von Blablup.
+Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Die Pakete können über DMM installiert werden; ASI-Plugins lassen sich zusätzlich manuell mit einem ASI-Loader verwenden.
 
 ## Aktueller Stand
 
 - Aktuelle Mount-Mods: **Crimson Desert 2.03.00**
+- Mining Helmet Always On: **Crimson Desert 2.03.00**
 - Die übrigen vorhandenen Mods bleiben auf ihrem zuletzt bestätigten Stand **2.00.00**, bis sie separat aktualisiert werden.
 - Mod Manager: **DMM**
 - JMM wird nicht mehr unterstützt oder gepflegt.
@@ -14,6 +15,7 @@ DMM-only Build- und Release-Repository für die Crimson-Desert-Mods von Blablup.
 
 | Mod | Aktuelle Version | Status | Hinweise |
 | --- | --- | --- | --- |
+| Mining Helmet Always On | **2.03.00** | im Spiel bestätigt | Automatisches blaues Ressourcenleuchten mit beliebiger Kopfbedeckung; DMM oder manuelle ASI-Installation |
 | Alden AIO Shop + All Items 1 Copper | 2.00.00 | im Spiel bestätigt | Exakter alter 379-Item-Katalog, alte Reihenfolge und alte Bestände, Preise 1 Copper |
 | All Mounts LvL 5 Speed | **2.03.00** | aktualisiert | Nur Movement Speed auf Level 5; DMM-managed ASI |
 | All Mounts LvL 5 All Stats | **2.03.00** | im Spiel bestätigt | Speed, Acceleration, Turning und Jump auf Level 5; DMM-managed ASI |
@@ -24,7 +26,7 @@ DMM-only Build- und Release-Repository für die Crimson-Desert-Mods von Blablup.
 
 ## Fertige Downloads
 
-- `release-assets/2.03.00/` – aktuelle Mount-Mods für Crimson Desert 2.03.00
+- `release-assets/2.03.00/` – aktuelle Mount-Mods und Mining Helmet Always On für Crimson Desert 2.03.00
 - `release-assets/2.00.00/` – bisherige 2.00.00-Releases
 
 Die Dateinamen und internen Modnamen folgen weiterhin diesem Schema:
@@ -69,10 +71,16 @@ Die Quellcodes der neuen 2.03.00-Mount-Plugins liegen direkt unter:
 
 - `mods/all-mounts-level-5-all-stats/src/`
 - `mods/all-mounts-level-5-speed/src/`
+- `mods/mining-helmet-always-on/src/`
 
 Originaldateien des Spiels werden nicht in Git gespeichert.
 
 ## Changelog 2.03.00
+
+> Added **Mining Helmet Always On 1.0.0** for Crimson Desert 2.03.00.<br>
+> The native blue mining-resource highlight now starts automatically without requiring the Mining Helmet.<br>
+> The green full-screen filter remains disabled and the original Mining Helmet behavior is preserved.<br>
+> The mod uses the game's normal visibility and fade distance.
 
 > Updated the mount mods for Crimson Desert 2.03.00.  
 > Reworked the mount stat modification system for the current game version.  
