@@ -8,6 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RELEASE = ROOT / "release-assets" / "2.00.00"
 RELEASE_203 = ROOT / "release-assets" / "2.03.00"
+RELEASE_20302 = ROOT / "release-assets" / "2.03.02"
 BUILD_REPORT = ROOT / "reports" / "BUILD_REPORT_2.00.00.json"
 
 EXPECTED = {
@@ -114,3 +115,38 @@ def test_mining_helmet_always_on_release() -> None:
             "README.txt",
         }
         assert archive.getinfo("Mining_Helmet_Always_On_2.03.00.asi").file_size > 0
+
+
+def test_mount_20302_releases_are_sealed_and_complete() -> None:
+    expected = {
+        "All_Mounts_LvL_5_All_Stats_2.03.02.zip": "All_Mounts_LvL_5_All_Stats_2.03.02.asi",
+        "All_Mounts_LvL_5_Speed_2.03.02.zip": "All_Mounts_LvL_5_Speed_2.03.02.asi",
+    }
+    checksums = {}
+    for line in (RELEASE_20302 / "SHA256SUMS.txt").read_text().splitlines():
+        digest, filename = line.split(maxsplit=1)
+        checksums[filename] = digest
+
+    assert set(path.name for path in RELEASE_20302.glob("*.zip")) == set(expected)
+    for filename, asi_name in expected.items():
+        package = RELEASE_20302 / filename
+        assert hashlib.sha256(package.read_bytes()).hexdigest() == checksums[filename]
+        with zipfile.ZipFile(package) as archive:
+            assert archive.testzip() is None
+            assert [entry.filename for entry in archive.infolist()] == [asi_name]
+            assert archive.getinfo(asi_name).file_size > 0
+
+    for asi_name in expected.values():
+        mod = next(ROOT.glob(f"mods/**/{asi_name}"))
+        assert hashlib.sha256(mod.read_bytes()).hexdigest() == checksums[asi_name]
+
+
+def test_mount_20302_sources_use_the_current_guarded_hook() -> None:
+    for source in [
+        ROOT / "mods/all-mounts-level-5-all-stats/src/AllMountsLvL5AllStats_20302.c",
+        ROOT / "mods/all-mounts-level-5-speed/src/AllMountsLvL5Speed_20302.c",
+    ]:
+        text = source.read_text()
+        assert "imageBase + 0x00E68B5C" in text
+        assert "imageBase + 0x00E68F09" in text
+        assert "0x4D,0x8B,0x96,0x30,0x02,0x00,0x00,0x49" in text

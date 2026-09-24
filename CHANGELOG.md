@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.03.02
+
+### All Mounts LvL 5 All Stats / Speed
+
+- Ported both runtime ASI plugins to Crimson Desert 2.03.02 / Steam build 25474236.
+- Rebased the verified mount-stat hook from RVA `0x00E68F89` to `0x00E68F09`.
+- Retained the existing StatIndex, SubIndex, ordinal and value-range checks.
+- Added a second strict signature check at the hook target; mismatching builds fail closed.
+- Packaged new DMM-ready releases. In-game validation is still required before marking the port as fully confirmed.
+
 ## 2.03.00
 
 ### General

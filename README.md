@@ -4,7 +4,7 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Die Pake
 
 ## Aktueller Stand
 
-- Aktuelle Mount-Mods: **Crimson Desert 2.03.00**
+- Aktuelle Mount-Mods: **Crimson Desert 2.03.02**
 - Mining Helmet Always On: **Crimson Desert 2.03.00**
 - Die übrigen vorhandenen Mods bleiben auf ihrem zuletzt bestätigten Stand **2.00.00**, bis sie separat aktualisiert werden.
 - Mod Manager: **DMM**
@@ -17,8 +17,8 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Die Pake
 | --- | --- | --- | --- |
 | Mining Helmet Always On | **2.03.00** | im Spiel bestätigt | Automatisches blaues Ressourcenleuchten mit beliebiger Kopfbedeckung; DMM oder manuelle ASI-Installation |
 | Alden AIO Shop + All Items 1 Copper | 2.00.00 | im Spiel bestätigt | Exakter alter 379-Item-Katalog, alte Reihenfolge und alte Bestände, Preise 1 Copper |
-| All Mounts LvL 5 Speed | **2.03.00** | aktualisiert | Nur Movement Speed auf Level 5; DMM-managed ASI |
-| All Mounts LvL 5 All Stats | **2.03.00** | im Spiel bestätigt | Speed, Acceleration, Turning und Jump auf Level 5; DMM-managed ASI |
+| All Mounts LvL 5 Speed | **2.03.02** | statisch geprüft | Nur Movement Speed auf Level 5; DMM-managed ASI |
+| All Mounts LvL 5 All Stats | **2.03.02** | statisch geprüft | Speed, Acceleration, Turning und Jump auf Level 5; DMM-managed ASI |
 | Steelheart Horseshoes +20 Stamina Regen | 2.00.00 | im Spiel bestätigt | Semantischer DMM-ItemInfo-Patch nur für Item 1000594 |
 | Healthbar Always On - Caites Multitarget | 2.00.00 | gleiche bestätigte Basis | DMM-Dateiersatz + CharacterInfo-Patches |
 | Healthbar Always On - Classic Vanilla Single Target | 2.00.00 | gleiche bestätigte Basis | DMM-Dateiersatz + CharacterInfo-Patches |
@@ -26,7 +26,8 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Die Pake
 
 ## Fertige Downloads
 
-- `release-assets/2.03.00/` – aktuelle Mount-Mods und Mining Helmet Always On für Crimson Desert 2.03.00
+- `release-assets/2.03.02/` – aktuelle Mount-Mods für Crimson Desert 2.03.02
+- `release-assets/2.03.00/` – vorherige Mount-Mods und Mining Helmet Always On für Crimson Desert 2.03.00
 - `release-assets/2.00.00/` – bisherige 2.00.00-Releases
 
 Die Dateinamen und internen Modnamen folgen weiterhin diesem Schema:
@@ -41,7 +42,7 @@ Es gibt keine `DMM`, `RC`, `R2`, `R5` oder `TEST`-Zusätze in finalen Modnamen.
 - Nur eine der drei Healthbar-Versionen gleichzeitig aktivieren.
 - Vor einem Versionswechsel alte Modpakete in DMM entfernen und auf Vanilla zurücksetzen.
 
-## Mount-Mods 2.03.00
+## Mount-Mods 2.03.02
 
 ### Warum wurde das Mod-Format geändert?
 
@@ -49,7 +50,7 @@ Crimson Desert 2.03.00 hat die Verarbeitung der aktiven Mount-Stats geändert.
 
 Die bisherigen Mount-Mods änderten die Level-5-Werte statisch in CharacterInfo. Diese Daten lassen sich auch in 2.03.00 weiterhin korrekt patchen, werden bei bereits vorhandenen Level-5-Mounts aber nicht mehr zuverlässig als aktive Werte übernommen.
 
-Die 2.03.00-Versionen verwenden deshalb den im Spiel verifizierten aktuellen Runtime-Mount-Stat-Pfad und werden als **DMM-managed ASI plugins** ausgeliefert.
+Die 2.03.02-Versionen verwenden deshalb den in 2.03.00 im Spiel verifizierten und für Steam-Build 25474236 statisch abgeglichenen Runtime-Mount-Stat-Pfad und werden als **DMM-managed ASI plugins** ausgeliefert.
 
 Für den Benutzer bleibt die Installation gleich: Release-ZIP in DMM importieren, aktivieren und anwenden. Cheat Engine oder manuelle Runtime-Tools werden nicht benötigt.
 
@@ -67,13 +68,19 @@ Die bisherigen statischen DMM-Datenmods können weiterhin über das vorhandene B
 - `scripts/Build-DMM-Mods.ps1`
 - `tests/`
 
-Die Quellcodes der neuen 2.03.00-Mount-Plugins liegen direkt unter:
+Die Quellcodes der neuen 2.03.02-Mount-Plugins liegen direkt unter:
 
 - `mods/all-mounts-level-5-all-stats/src/`
 - `mods/all-mounts-level-5-speed/src/`
 - `mods/mining-helmet-always-on/src/`
 
 Originaldateien des Spiels werden nicht in Git gespeichert.
+
+## Changelog 2.03.02
+
+> Updated the mount mods for Crimson Desert 2.03.02 / Steam build 25474236.<br>
+> The validated runtime path moved by `0x80` bytes; both the function and hook target now have strict signature guards.<br>
+> The releases are statically verified and must still be checked once in-game.
 
 ## Changelog 2.03.00
 
