@@ -1,0 +1,9 @@
+1.1.0 - 2026-09-28
+
+- Reworked the blue resource glow to run independently of the helmet's gameplay mode.
+- Fixed blocked fast travel, character selection and quick-wheel actions.
+- Automatic ore and mineable-rock highlights, without a helmet or key press.
+- No green screen filter. Native glow distance is unchanged.
+- Removed the old F7/F8/F9 controls. Tested on Crimson Desert 2.03.02.
+
+IMPORTANT: Remove the previous Mining Helmet ASI before installing this update.

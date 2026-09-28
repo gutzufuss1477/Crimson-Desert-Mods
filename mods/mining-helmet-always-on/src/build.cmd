@@ -1,34 +1,26 @@
 @echo off
 setlocal
-call "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Auxiliary\Build\vcvars64.bat" >nul
-if errorlevel 1 exit /b 1
-pushd "%~dp0"
+rem The public build uses only the verified material implementation.
+rem Historical full-mode source files in this directory are not linked.
+if "%VSCMD_ARG_TGT_ARCH%"=="x64" goto compiler_ready
+set "VSWHERE=%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vswhere.exe"
+if not exist "%VSWHERE%" exit /b 2
+for /f "usebackq tokens=*" %%I in (`"%VSWHERE%" -latest -products * -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath`) do set "MINING_VSROOT=%%I"
+if not defined MINING_VSROOT exit /b 2
+call "%MINING_VSROOT%\VC\Auxiliary\Build\vcvars64.bat" >nul
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+:compiler_ready
+pushd "%~dp0material"
 if not exist "out" mkdir "out"
-cl /nologo /W3 /O2 /MT /c /Fo:out\ vendor\minhook\src\buffer.c vendor\minhook\src\hook.c vendor\minhook\src\trampoline.c vendor\minhook\src\hde\hde64.c
-if errorlevel 1 exit /b 1
-lib /nologo /OUT:out\minhook.lib out\buffer.obj out\hook.obj out\trampoline.obj out\hde64.obj
-if errorlevel 1 exit /b 1
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\state_tests.exe /Fo:out\state_tests.obj state_tests.cpp
-if errorlevel 1 exit /b 1
-out\state_tests.exe
-if errorlevel 1 exit /b 1
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\hook_tests.exe /Fo:out\hook_tests.obj hook_tests.cpp /link out\minhook.lib bcrypt.lib user32.lib
-if errorlevel 1 exit /b 1
-out\hook_tests.exe
-if errorlevel 1 exit /b 1
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\mode_tests.exe /Fo:out\mode_tests.obj mode_tests.cpp /link out\minhook.lib bcrypt.lib user32.lib
-if errorlevel 1 exit /b 1
-out\mode_tests.exe
-if errorlevel 1 exit /b 1
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\ore_tests.exe /Fo:out\ore_tests.obj ore_tests.cpp /link out\minhook.lib bcrypt.lib user32.lib
-if errorlevel 1 exit /b 1
-out\ore_tests.exe
-if errorlevel 1 exit /b 1
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\asi.obj asi.cpp /link /OUT:out\Mining_Helmet_Always_On_2.03.00.asi /MAP:out\Mining_Helmet_Always_On_2.03.00.map /DYNAMICBASE /NXCOMPAT /GUARD:CF out\minhook.lib bcrypt.lib user32.lib
-if errorlevel 1 exit /b 1
+cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\automatic_material_tests.exe /Fo:out\automatic_material_tests.obj automatic_material_tests.cpp /link bcrypt.lib user32.lib
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+out\automatic_material_tests.exe
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\automatic_material.obj automatic_material.cpp /link /OUT:out\Mining_Helmet_Always_On_2.03.02.asi /MAP:out\Mining_Helmet_Always_On_2.03.02.map /DYNAMICBASE /NXCOMPAT /GUARD:CF bcrypt.lib user32.lib
+if not "%errorlevel%"=="0" exit /b %errorlevel%
 cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\load_smoke.exe /Fo:out\load_smoke.obj load_smoke.cpp
-if errorlevel 1 exit /b 1
-out\load_smoke.exe "%CD%\out\Mining_Helmet_Always_On_2.03.00.asi"
-if errorlevel 1 exit /b 1
+if not "%errorlevel%"=="0" exit /b %errorlevel%
+out\load_smoke.exe "%CD%\out\Mining_Helmet_Always_On_2.03.02.asi"
+if not "%errorlevel%"=="0" exit /b %errorlevel%
 popd
 exit /b 0

@@ -1,5 +1,14 @@
 # Changelog
 
+## Mining Helmet Always On 1.1.0 - 2026-09-28
+
+- Replaced the forced helmet gameplay mode with independent material-based highlighting.
+- Fixed blocked fast travel, character selection and quick-wheel actions.
+- Automatically highlights nearby ore and supported mineable rocks, without a helmet or key press.
+- Keeps the green screen filter off and the native glow distance unchanged.
+- Confirmed in-game on Crimson Desert 2.03.02 / Steam build 25474236.
+- Remove the previous Mining Helmet ASI before installing this update.
+
 ## 2.03.02
 
 ### All Mounts LvL 5 All Stats / Speed

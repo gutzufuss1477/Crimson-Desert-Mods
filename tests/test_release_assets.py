@@ -127,7 +127,9 @@ def test_mount_20302_releases_are_sealed_and_complete() -> None:
         digest, filename = line.split(maxsplit=1)
         checksums[filename] = digest
 
-    assert set(path.name for path in RELEASE_20302.glob("*.zip")) == set(expected)
+    assert set(path.name for path in RELEASE_20302.glob("*.zip")) == set(expected) | {
+        "Mining_Helmet_Always_On_2.03.02.zip"
+    }
     for filename, asi_name in expected.items():
         package = RELEASE_20302 / filename
         assert hashlib.sha256(package.read_bytes()).hexdigest() == checksums[filename]
@@ -150,3 +152,29 @@ def test_mount_20302_sources_use_the_current_guarded_hook() -> None:
         assert "imageBase + 0x00E68B5C" in text
         assert "imageBase + 0x00E68F09" in text
         assert "0x4D,0x8B,0x96,0x30,0x02,0x00,0x00,0x49" in text
+
+
+def test_mining_110_package_and_source_provenance() -> None:
+    report = json.loads((ROOT / "reports/BUILD_REPORT_MINING_HELMET_1.1.0.json").read_text())
+    assert report["mod_version"] == "1.1.0"
+    assert report["steam_build"] == "25474236"
+    sums = {}
+    for line in (RELEASE_20302 / "SHA256SUMS.txt").read_text().splitlines():
+        value, name = line.split(maxsplit=1)
+        sums[name] = value
+    mod = ROOT / "mods/mining-helmet-always-on"
+    name = report["asi"]["file"]
+    data = (mod / name).read_bytes()
+    assert hashlib.sha256(data).hexdigest() == report["asi"]["sha256"] == sums[name]
+    assert b"1.1.0\0" in data
+    assert b"test34-automatic-material" not in data
+    package = RELEASE_20302 / report["package"]["file"]
+    assert hashlib.sha256(package.read_bytes()).hexdigest() == report["package"]["sha256"] == sums[package.name]
+    with zipfile.ZipFile(package) as archive:
+        assert archive.testzip() is None
+        assert set(archive.namelist()) == {name, "README.txt", "CHANGELOG.txt"}
+        assert archive.read(name) == data
+        for doc in ("README.txt", "CHANGELOG.txt"):
+            assert archive.read(doc).decode("utf-8") == (mod / doc).read_text(encoding="utf-8")
+    for relative, expected_hash in report["sources"].items():
+        assert hashlib.sha256((ROOT / relative).read_text(encoding="utf-8").encode("utf-8")).hexdigest() == expected_hash

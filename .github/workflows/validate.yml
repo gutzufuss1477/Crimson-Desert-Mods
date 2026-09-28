@@ -29,3 +29,19 @@ jobs:
 
       - name: Run tests
         run: python -m pytest -q
+
+  mining-native:
+    runs-on: windows-2022
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Build and test the material-only Mining Helmet ASI
+        shell: cmd
+        run: mods\mining-helmet-always-on\src\build.cmd
+      - name: Verify refusal outside the game
+        shell: pwsh
+        run: |
+          $status = Get-Content "$env:LOCALAPPDATA\MiningHelmetAlwaysOn\MH110\smoke\latest-status.txt" -Raw
+          if ($status -notmatch 'Status: wrong_process' -or $status -notmatch 'Ready: no' -or $status -notmatch 'ON calls: 0') {
+            throw "ASI did not confirm the expected wrong-process refusal."
+          }

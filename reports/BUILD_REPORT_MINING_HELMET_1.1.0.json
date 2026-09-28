@@ -1,0 +1,31 @@
+{
+  "mod_version": "1.1.0",
+  "game_version": "2.03.02",
+  "steam_build": "25474236",
+  "game_exe_sha256": "57da440d72f4db974f25fef047cf84c4dadd999a88cb2a3c5af4c9bd67fde1e7",
+  "asi": {
+    "file": "Mining_Helmet_Always_On_2.03.02.asi",
+    "sha256": "0650093ed8808adcc344350d8d40be501fc56a919e78044cdb08deaf95bf641c",
+    "size": 223744
+  },
+  "package": {
+    "file": "Mining_Helmet_Always_On_2.03.02.zip",
+    "sha256": "c4a5f8570a7036076809c6d8d66dd041852a86b8e0bcd5150dc489b3e72fd1ac",
+    "members": [
+      "CHANGELOG.txt",
+      "Mining_Helmet_Always_On_2.03.02.asi",
+      "README.txt"
+    ]
+  },
+  "source_hash_format": "UTF-8 with LF line endings",
+  "sources": {
+    "mods/mining-helmet-always-on/src/build.cmd": "6d2ca516ea4c8b25f617efb91f02d2283a0c491b7fd67e463ee06be0d06916cd",
+    "mods/mining-helmet-always-on/src/material/automatic_material.cpp": "d2395c90592b5cf8ca86129c0caec7559eb59c27ccf7f680ccd23d7c333a3777",
+    "mods/mining-helmet-always-on/src/material/automatic_material_tests.cpp": "f3732da1f94585422d8167c92dbc8d9e1e094f080222ac1565bc733b137f8c2d",
+    "mods/mining-helmet-always-on/src/material/load_smoke.cpp": "f5706a67840a7f7becaeb1c98b8b4001e0efac59de97d369e6b25187d7074ecd",
+    "mods/mining-helmet-always-on/src/material/build_guards.hpp": "6a944940c28305a4b29e0c378c71edcc1fa4919140a332d2dab0b14b41562478",
+    "mods/mining-helmet-always-on/src/material/hash_core.hpp": "0515bfee902def75d59e1ff3ef9fd543cd65b3c9e97456199408b49781c6020e",
+    "mods/mining-helmet-always-on/src/material/material_only.hpp": "ad54664f888e6d34c2d54960a63b3e0e9d702174d30e9f31e1bcc63a41955a1b"
+  },
+  "validation_notes": "VALIDATION_MINING_HELMET_1.1.0.md"
+}

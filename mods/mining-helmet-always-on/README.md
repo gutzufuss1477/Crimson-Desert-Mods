@@ -1,62 +1,72 @@
 # Mining Helmet Always On
 
-Current mod version: **1.0.0**<br>
-Supported game version: **Crimson Desert 2.03.00**
+Mod version: **1.1.0**<br>
+Tested game build: **Crimson Desert 2.03.02 / Steam build 25474236**
 
-Automatically keeps the Mining Helmet's native blue mining-resource highlight active while any headgear is equipped. No Mining Helmet and no key press are required.
+Automatically highlights nearby ore and supported mineable rocks with the native
+blue glow, whatever headgear you wear. No Mining Helmet or key press is required.
 
-## Features
+## What's changed in 1.1.0
 
-- Activates automatically after loading into the game.
-- Shows the native blue highlight on nearby supported ore, mine and rock nodes.
-- Works with any headgear.
-- Does not enable the green full-screen Mining Helmet filter.
-- Preserves the original Mining Helmet and its `B` key behavior while that helmet is equipped.
-- Uses the game's normal native visibility and fade distance.
+The highlight now uses a separate material-rendering path. Earlier releases
+kept the game's complete helmet mode active, which could block fast travel,
+character selection and quick-wheel actions. This version does not activate
+that gameplay mode or override the game's availability checks.
 
-## Requirements
+- Automatic blue glow after loading a save, without the green screen filter.
+- Fast travel, character selection and normal quick-wheel actions remain available.
+- Nearby targets are discovered automatically; the effect follows the camera.
+- No timed test window, helmet capture or F7/F8/F9 controls.
+- The native visibility and fade distance are unchanged.
 
-- Crimson Desert **2.03.00**
-- An ASI loader, such as Ultimate ASI Loader, or a DMM setup that supports ASI plugins
+The material approach was confirmed in-game with ore/rock glow and unrestricted
+gameplay. The release changes only version/log labels from the successful Test34
+implementation. Other game executables are not claimed to be supported.
 
-The plugin contains a strict executable hash guard. On an unsupported game executable it fails closed instead of applying hooks to unknown code.
+## Install or update
 
-## Installation
+1. Close the game.
+2. **Remove the previous Mining Helmet ASI first**, including files named
+   `Mining_Helmet_Always_On_2.03.00.asi` and any `test`/`direct-test` builds.
+   If a mod manager installed the old version, disable/remove it there too.
+3. Extract `Mining_Helmet_Always_On_2.03.02.asi` into the game's `bin64` folder.
+4. Keep the ASI loader you already use. DMM is not required.
+5. Start the game and load your save. Allow a few seconds for nearby resources
+   to be detected. Do not press B or F8 to activate the mod.
 
-### DMM
-
-Import `Mining_Helmet_Always_On_2.03.00.zip`, enable the mod and apply it.
-
-### Manual ASI installation
-
-Install an ASI loader in the game's `bin64` folder, then copy `Mining_Helmet_Always_On_2.03.00.asi` from the ZIP into that folder.
-
-Typical Steam path:
-
+Typical Steam folder:
 `Steam\steamapps\common\Crimson Desert\bin64`
 
-## Controls
+Only one version of this mod should be active. An ASI-capable mod manager may
+manage the same file; manual installation requires an existing ASI loader.
+The archive does not include a loader or any original game files.
 
-The mod starts automatically; no key is required.
+## Native helmet and compatibility
 
-- `F7`: write the current status file
-- `F8`: enable or retry for the current session
-- `F9`: disable for the current session
+The mod yields while a native special mode is active. If you turn on the actual
+Mining Helmet with B, the game's original helmet effects and restrictions apply
+until you switch that mode off again.
 
-Status and diagnostic files are written to:
+This release is guarded against the exact tested executable SHA-256:
+`57da440d72f4db974f25fef047cf84c4dadd999a88cb2a3c5af4c9bd67fde1e7`.
+It refuses to activate on an unknown executable or conflicting hook slot.
+Mods that control the same detection materials or effect handlers can conflict.
 
-`%LOCALAPPDATA%\MiningHelmetAlwaysOn\MH125`
+## Uninstall and diagnostics
 
-## Uninstallation
+Close the game and remove `Mining_Helmet_Always_On_2.03.02.asi` from `bin64`.
+No save-file edits or original-file replacements are required.
 
-Disable/remove the mod in DMM, or delete `Mining_Helmet_Always_On_2.03.00.asi` from the game's `bin64` folder.
+Status: `%LOCALAPPDATA%\MiningHelmetAlwaysOn\MH110\latest-status.txt`.
 
-## Notes
+## Source and build
 
-- The glow range is the game's normal Mining Helmet range and was deliberately left unchanged.
-- Mods that replace or force the same special-vision mode may conflict.
-- No original game files are distributed or replaced.
+The current implementation and tests are in `src/material/`.
+Run `src/build.cmd` with Visual Studio 2022 C++ Build Tools installed. It builds
+and runs the native tests, then loads the ASI in a separate test process to
+verify its refusal to activate outside the game. Output: `src/material/out/`.
 
-## Source and third-party component
-
-Source code is in `src/`. The plugin uses MinHook under its BSD 2-Clause license; the full license is included in the source tree and release package.
+The historical mode-based sources remain in `src/` for reference and are not
+linked by this build. Version 1.1.0 does not link MinHook.
+Use `scripts/Package-Mining-Helmet.py` after the build to regenerate the ZIP,
+binary copies and checksums. Release validation is recorded under `reports/`.

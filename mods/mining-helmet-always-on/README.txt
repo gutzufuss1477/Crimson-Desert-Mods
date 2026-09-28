@@ -1,30 +1,34 @@
-Mining Helmet Always On 1.0.0
-For Crimson Desert 2.03.00
+Mining Helmet Always On - 1.1.0
+For Crimson Desert 2.03.02 / Steam build 25474236
 
-Automatically keeps the native blue mining-resource highlight active while any
-headgear is equipped. The green full-screen filter stays disabled. The original
-Mining Helmet and its B-key behavior remain available when that helmet is worn.
+Automatically highlights nearby ore and supported mineable rocks in blue,
+with any headgear. No Mining Helmet or key press is needed. No green screen
+filter. Fast travel, character selection and quick-wheel actions stay available.
+The native glow distance is unchanged.
 
-The glow uses the game's normal visibility and fade distance.
+INSTALL / UPDATE
+1. Close the game.
+2. Remove ALL previous Mining Helmet ASIs, including the old 2.03.00 release
+   and test/direct-test versions. If managed by DMM, disable/remove the old mod
+   there too. Keep only one Mining Helmet ASI active.
+3. Copy Mining_Helmet_Always_On_2.03.02.asi into:
+   Steam\steamapps\common\Crimson Desert\bin64
+4. Keep your existing ASI loader. A loader is required but not included.
+   DMM is optional.
+5. Load your save and wait a few seconds near resources. No F8 or B needed.
 
-DMM INSTALLATION
-Import this ZIP, enable the mod and apply it.
+There are no F7/F8/F9 controls in this version.
+Using the actual helmet with B still activates the game's original helmet mode
+and its normal restrictions. Switch it off for the mod's automatic glow.
 
-MANUAL INSTALLATION
-Install an ASI loader, then copy Mining_Helmet_Always_On_2.03.00.asi into:
-Steam\steamapps\common\Crimson Desert\bin64
+This ASI checks the exact tested game executable and stays inactive on a
+mismatching build. A future game update may require a new version of the mod.
 
-CONTROLS
-No key is required; the mod starts automatically.
-F7 writes a status file.
-F8 enables or retries for the current session.
-F9 disables for the current session.
+UNINSTALL
+Close the game and remove Mining_Helmet_Always_On_2.03.02.asi from bin64.
 
-UNINSTALLATION
-Disable/remove the mod in DMM, or delete the ASI from the bin64 folder.
+STATUS
+%LOCALAPPDATA%\MiningHelmetAlwaysOn\MH110\latest-status.txt
 
-Diagnostics:
-%LOCALAPPDATA%\MiningHelmetAlwaysOn\MH125
-
-Source:
+SOURCE
 https://github.com/gutzufuss1477/Crimson-Desert-Mods

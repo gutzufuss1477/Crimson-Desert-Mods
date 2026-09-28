@@ -5,7 +5,7 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Die Pake
 ## Aktueller Stand
 
 - Aktuelle Mount-Mods: **Crimson Desert 2.03.02**
-- Mining Helmet Always On: **Crimson Desert 2.03.00**
+- Mining Helmet Always On **1.1.0**: **Crimson Desert 2.03.02**, im Spiel bestätigt
 - Die übrigen vorhandenen Mods bleiben auf ihrem zuletzt bestätigten Stand **2.00.00**, bis sie separat aktualisiert werden.
 - Mod Manager: **DMM**
 - JMM wird nicht mehr unterstützt oder gepflegt.
@@ -15,7 +15,7 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Die Pake
 
 | Mod | Aktuelle Version | Status | Hinweise |
 | --- | --- | --- | --- |
-| Mining Helmet Always On | **2.03.00** | im Spiel bestätigt | Automatisches blaues Ressourcenleuchten mit beliebiger Kopfbedeckung; DMM oder manuelle ASI-Installation |
+| Mining Helmet Always On **1.1.0** | **2.03.02** | im Spiel bestätigt | Automatisches blaues Erz-/Steinleuchten; Schnellreise, Charakterwahl und Schnellrad bleiben frei; ASI-Loader erforderlich |
 | Alden AIO Shop + All Items 1 Copper | 2.00.00 | im Spiel bestätigt | Exakter alter 379-Item-Katalog, alte Reihenfolge und alte Bestände, Preise 1 Copper |
 | All Mounts LvL 5 Speed | **2.03.02** | statisch geprüft | Nur Movement Speed auf Level 5; DMM-managed ASI |
 | All Mounts LvL 5 All Stats | **2.03.02** | statisch geprüft | Speed, Acceleration, Turning und Jump auf Level 5; DMM-managed ASI |
@@ -26,8 +26,8 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Die Pake
 
 ## Fertige Downloads
 
-- `release-assets/2.03.02/` – aktuelle Mount-Mods für Crimson Desert 2.03.02
-- `release-assets/2.03.00/` – vorherige Mount-Mods und Mining Helmet Always On für Crimson Desert 2.03.00
+- `release-assets/2.03.02/` – aktuelle Mount-Mods und Mining Helmet Always On 1.1.0 für Crimson Desert 2.03.02
+- `release-assets/2.03.00/` – historische Pakete; für Mining Helmet Always On das Update unter 2.03.02 verwenden
 - `release-assets/2.00.00/` – bisherige 2.00.00-Releases
 
 Die Dateinamen und internen Modnamen folgen weiterhin diesem Schema:
@@ -75,6 +75,13 @@ Die Quellcodes der neuen 2.03.02-Mount-Plugins liegen direkt unter:
 - `mods/mining-helmet-always-on/src/`
 
 Originaldateien des Spiels werden nicht in Git gespeichert.
+
+## Mining Helmet Always On 1.1.0
+
+> Blaues Erz- und Steinleuchten ohne Aktivierung des vollständigen Helm-Modus.<br>
+> Schnellreise, Charakterwahl und Schnellrad bleiben frei; kein grüner Bildschirmfilter.<br>
+> Automatisch ohne Taste; native Sichtweite unverändert.<br>
+> Beim Update die alte Mining-ASI und Testversionen entfernen. Details: `mods/mining-helmet-always-on/`.
 
 ## Changelog 2.03.02
 

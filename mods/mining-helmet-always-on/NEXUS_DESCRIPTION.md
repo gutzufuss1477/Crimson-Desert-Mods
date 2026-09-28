@@ -1,57 +1,52 @@
-Mining Helmet Always On keeps Crimson Desert's native blue mining-resource highlight active without requiring the Mining Helmet. Wear any headgear and the effect starts automatically after your save has loaded.
+Mining Helmet Always On automatically gives nearby ore and supported mineable rocks their native blue glow, whatever headgear you wear. No Mining Helmet, key press or green screen filter required.
+
+[b]Version 1.1.0: gameplay restrictions fixed[/b]
+
+The highlight has been reworked to run independently of the helmet's gameplay mode. Fast travel, character selection and quick-wheel actions remain available while the automatic glow is active.
 
 [b]Features[/b]
-
 [list]
-[*]Automatically enables the blue mining-resource glow; no key press required
-[*]Works while wearing any headgear
-[*]Highlights nearby supported ore, mine and rock nodes consistently
-[*]Does not enable the green full-screen Mining Helmet filter
-[*]Preserves the original Mining Helmet and its B-key behavior when that helmet is equipped
-[*]Does not replace original game files
+[*]Blue highlights on nearby ore and supported mineable rocks
+[*]Starts automatically after loading your save
+[*]Works with any headgear; no Mining Helmet or hotkey required
+[*]No green full-screen filter
+[*]Normal gameplay actions remain available
+[*]Uses the game's native visibility and fade distance
 [/list]
 
 [b]Requirements[/b]
-
 [list]
-[*]Crimson Desert 2.03.00
-[*]An ASI loader, such as Ultimate ASI Loader, or a DMM setup that supports ASI plugins
+[*]Crimson Desert 2.03.02, tested on Steam build 25474236
+[*]An ASI loader already installed in the game's bin64 folder
 [/list]
+DMM is optional. The download contains the ASI, installation notes and changelog. An ASI loader is not included.
 
-This release contains a strict executable hash guard for the supported 2.03.00 build. If the game executable does not match, the plugin fails closed instead of hooking unknown code.
+[b]Updating from an earlier version[/b]
 
-[b]Installation with DMM[/b]
+[b]Close the game and remove the previous Mining Helmet ASI first.[/b] This includes Mining_Helmet_Always_On_2.03.00.asi and any test/direct-test builds. If a mod manager installed the old version, disable/remove it there too. Keep only one version active.
 
-Import the downloaded ZIP, enable the mod and apply it.
-
-[b]Manual installation[/b]
-
-Install an ASI loader in the game's bin64 folder. Extract Mining_Helmet_Always_On_2.03.00.asi from the ZIP into:
-
+[b]Installation[/b]
+[list=1]
+[*]Close the game and remove the previous version if installed.
+[*]Copy Mining_Helmet_Always_On_2.03.02.asi into the game's bin64 folder.
+[*]Keep your existing ASI loader, start the game and load a save.
+[*]Allow a few seconds for nearby resources to be detected. No B or F8 needed.
+[/list]
+Typical folder:
 [code]Steam\steamapps\common\Crimson Desert\bin64[/code]
 
-[b]Controls[/b]
-
-The mod starts automatically.
-
+[b]Notes[/b]
 [list]
-[*]F7: write the current status file
-[*]F8: enable or retry for the current session
-[*]F9: disable for the current session
+[*]The glow distance is unchanged. Resources still fade at the native distance.
+[*]The old F7/F8/F9 controls have been removed.
+[*]Turning on the actual Mining Helmet with B activates the game's original mode and its normal restrictions. Switch it off to use the automatic glow.
+[*]The plugin checks the exact supported executable and stays inactive if it does not match. Future game updates may require a new mod build.
+[*]Mods that control the same detection materials or effect handlers may conflict.
 [/list]
 
-[b]Native visibility distance[/b]
-
-The blue glow uses the game's normal Mining Helmet visibility and fade distance. This release does not increase the rendering distance.
-
 [b]Uninstallation[/b]
+Close the game and remove Mining_Helmet_Always_On_2.03.02.asi from bin64.
 
-Disable/remove the mod in DMM, or delete Mining_Helmet_Always_On_2.03.00.asi from the game's bin64 folder.
-
-[b]Compatibility[/b]
-
-Mods that replace or force the same special-vision mode may conflict. Diagnostic files are written to %LOCALAPPDATA%\MiningHelmetAlwaysOn\MH125.
-
-[b]Credits[/b]
-
-MinHook by Tsuda Kageyu and contributors. Ultimate ASI Loader by ThirteenAG.
+[b]Diagnostics and source[/b]
+Status: %LOCALAPPDATA%\MiningHelmetAlwaysOn\MH110\latest-status.txt
+Source: [url=https://github.com/gutzufuss1477/Crimson-Desert-Mods]Crimson Desert Mods on GitHub[/url]
