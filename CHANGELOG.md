@@ -11,6 +11,15 @@
 
 ## 2.03.02
 
+### Bank Refresh 1.0.0
+
+- Added a manual ASI release with an English INI and a 15-in-game-minute default.
+- Retained the in-game tested recurring bank update path and calendar-aware scheduling.
+- Removed diagnostic logging, event queues and the heartbeat worker loop.
+- Included build/hash/caller/memory guards, source, MinHook license and automated tests.
+- Prepared English Nexus upload text; Nexus publishing is handled by the author.
+- Development build confirmed in-game with changing gold bars and a custom 15-minute timer. Final log-free binary offline-tested, not separately confirmed in-game.
+
 ### All Mounts LvL 5 All Stats / Speed
 
 - Ported both runtime ASI plugins to Crimson Desert 2.03.02 / Steam build 25474236.

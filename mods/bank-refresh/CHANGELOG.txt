@@ -1,0 +1,17 @@
+Bank Refresh 1.0.0
+Crimson Desert 2.03.02 / Steam build 25474236
+
+- First public package based on the in-game tested Bank Refresh prototype.
+- Configure the refresh deadline in in-game minutes through Bank_Refresh.ini.
+- Default interval: 15 in-game minutes. Range: 1 to 4320 whole minutes.
+- Day/night and midnight-aware calendar conversion.
+- Native bank update logic is preserved; no guaranteed profits or forced payouts.
+- Strict EXE hash, function signature, caller, bank identity and memory guards.
+- English configuration and documentation.
+- Removed diagnostic logging, logging queue and heartbeat worker loop.
+- No diagnostic setting or runtime test export in the public interface.
+- Native check frequency and the temporary "Updating" message are unchanged.
+
+Validation: development build confirmed in-game with changing gold bars and a
+custom 15-minute countdown. Final log-free release compiled and offline-tested;
+no separate in-game session of this exact release binary has been claimed.

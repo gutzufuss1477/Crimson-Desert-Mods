@@ -128,7 +128,7 @@ def test_mount_20302_releases_are_sealed_and_complete() -> None:
         checksums[filename] = digest
 
     assert set(path.name for path in RELEASE_20302.glob("*.zip")) == set(expected) | {
-        "Mining_Helmet_Always_On_2.03.02.zip"
+        "Mining_Helmet_Always_On_2.03.02.zip", "Bank_Refresh_2.03.02.zip"
     }
     for filename, asi_name in expected.items():
         package = RELEASE_20302 / filename

@@ -1,0 +1,60 @@
+{
+  "mod": "Bank Refresh",
+  "mod_version": "1.0.0",
+  "game_version": "2.03.02",
+  "steam_build": "25474236",
+  "supported_exe_sha256": "57da440d72f4db974f25fef047cf84c4dadd999a88cb2a3c5af4c9bd67fde1e7",
+  "default_game_minutes": 15,
+  "diagnostic_logging": false,
+  "asi": {
+    "file": "Bank_Refresh_2.03.02.asi",
+    "sha256": "cddfc9e6f1abfedac02b8ee60d68d6a66ec9872d8afbfbb2f176f3a79fbf6d26",
+    "bytes": 154624
+  },
+  "package": {
+    "file": "Bank_Refresh_2.03.02.zip",
+    "sha256": "f35cf6361653fbe14f959adca11470cdacae6feb07d98896059171620d394600",
+    "members": [
+      "Bank_Refresh_2.03.02.asi",
+      "Bank_Refresh.ini",
+      "README.txt",
+      "CHANGELOG.txt",
+      "LICENSE.txt",
+      "MinHook-LICENSE.txt"
+    ]
+  },
+  "validation": {
+    "production_loads": 2,
+    "core_checks": 13028,
+    "in_game": "Development build: gold bars refresh; configurable 15-minute countdown confirmed by user. Final log-free binary not separately run in-game.",
+    "instrumented_guard_cases": 15
+  },
+  "source_hash_encoding": "UTF-8 without BOM, with LF line endings",
+  "sources": {
+    "mods/bank-refresh/Bank_Refresh.ini": "e669775f5244b20ae4c4f4a4700f3198ecd828bfcbf625130bfa8716cf75505c",
+    "mods/bank-refresh/CHANGELOG.txt": "cf2a7a705b741272a2f1fd602b02b85aa1e62e60859530a4ebc9f1a46144a83d",
+    "mods/bank-refresh/LICENSE.txt": "eae201e67d9d9156319921a2aea66f678bd11a499bf1488596b9eadeaebf38c3",
+    "mods/bank-refresh/NEXUS_DESCRIPTION.md": "9d71e21fbdd2a17cf9dcbf3110b70d4e992cb020cb757427f3f7b4485422cd68",
+    "mods/bank-refresh/README.md": "4722270f71c4e5eacd316e24b7b75f3b0d2edcf30f251af1062d2310b5d9b9d3",
+    "mods/bank-refresh/src/bank_core.hpp": "b2a6f0bc20c75c43ddfd2f562c820c82dd71bff05235993c6ed2c33426724960",
+    "mods/bank-refresh/src/bank_refresh.cpp": "cbc4fdcd26051e57df40097fa3f2e8bcbecf29f82fb345152e034ce549a599a0",
+    "mods/bank-refresh/src/bank_refresh.rc": "a8457d2e9c84ba7732becaaf90f9fe81d3235c4c9d3d4401a682c222cc6e1c68",
+    "mods/bank-refresh/src/build.cmd": "7fc08e9b5daa9961c0c0b39e7a34ae7628166770102f673280537ac0adcd0f59",
+    "mods/bank-refresh/src/core_tests.cpp": "8c8cbd140e26e55034055a837e1b053b73312c76bde18b4e2719b081a633d019",
+    "mods/bank-refresh/src/hash_core.hpp": "0515bfee902def75d59e1ff3ef9fd543cd65b3c9e97456199408b49781c6020e",
+    "mods/bank-refresh/src/load_tests.cpp": "629796ba37e0120abf62846ccbbf0f57a6dc5114b545c8c4ec65f9b2bd792b87",
+    "mods/bank-refresh/src/Test-Load.ps1": "64a529085c09a65de7b3becc81266e1b529bb0c0079ce87d25094e25f701400c",
+    "mods/bank-refresh/src/vendor/minhook/include/MinHook.h": "62dff05e63155c6bf8135c36a0d79dedbdcaaede9da26fe38daf0bea34323e38",
+    "mods/bank-refresh/src/vendor/minhook/LICENSE.txt": "2bfff5fa29fc5d1cb2745acfaad9d930e983f5c8dd97e0ec5735d9199cf8f416",
+    "mods/bank-refresh/src/vendor/minhook/SOURCE.json": "64f66a6d76ad9bdf1352679e6e47337a91030d55e60b79d4872bffcbef3d5fa9",
+    "mods/bank-refresh/src/vendor/minhook/src/buffer.c": "9cce251a840c50e9dbd4f7cdc153fd7bf29dcccf1143fdd92919e5c107d7880f",
+    "mods/bank-refresh/src/vendor/minhook/src/buffer.h": "cfe5fa7bfc02961c8821f13d75e882e6fb9d92a82a5d79452e5b4f3e7d1b6a18",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/hde64.c": "2ded468236c5db540aac254e5233adea72e91739f0832efc6634b91161a4c9f0",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/hde64.h": "5bf06ee9ea0aed54dcedceb251e1a739ab7bee70f04b66d9c5e4e75c13db4a19",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/pstdint.h": "4bffb311ef87d0d86569240a10f56eca826ebfe46233710f9dde97d42b3cb474",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/table64.h": "98b281719ce1f20ebb72d0b6a851fbf57d14c11e93b2d50477dd51d65da80678",
+    "mods/bank-refresh/src/vendor/minhook/src/hook.c": "8a67023b221165ff3598982b0925a14e03d0284bd9d4d8e4a294325a50d062b6",
+    "mods/bank-refresh/src/vendor/minhook/src/trampoline.c": "77a4b9121bff76b5f6bf37d5acc5c51dc915e65fc39032f21539c9ae9278d5c8",
+    "mods/bank-refresh/src/vendor/minhook/src/trampoline.h": "054afc0ddf6c60c0b0da221aa092218638d7ab37d8db5a173459cea24b24d64c"
+  }
+}
