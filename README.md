@@ -6,7 +6,7 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Je nach 
 
 - Aktuelle Mount-Mods: **Crimson Desert 2.03.02**
 - Mining Helmet Always On **1.1.0**: **Crimson Desert 2.03.02**, im Spiel bestätigt
-- Bank Refresh **1.0.0**: **Crimson Desert 2.03.02**, konfigurierbare Spielminuten; manuelles ASI-Paket ohne Diagnose-Logs
+- Bank Refresh **1.1.0**: **Crimson Desert 2.03.02**, getrennte Timer fuer Goldbank und Anleihen; manuelles ASI-Paket ohne Diagnose-Logs
 - Die übrigen vorhandenen Mods bleiben auf ihrem zuletzt bestätigten Stand **2.00.00**, bis sie separat aktualisiert werden.
 - Mod Manager: **DMM**
 - JMM wird nicht mehr unterstützt oder gepflegt.
@@ -16,7 +16,7 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Je nach 
 
 | Mod | Aktuelle Version | Status | Hinweise |
 | --- | --- | --- | --- |
-| [Bank Refresh **1.0.0**](mods/bank-refresh/) | **2.03.02** | Spielzeit-Prototyp im Spiel bestätigt; logfreier Release offline geprüft | Englische INI, Standard 15 Spielminuten; ASI-Loader erforderlich |
+| [Bank Refresh **1.1.0**](mods/bank-refresh/) | **2.03.02** | Goldbank und Anleihe-Timer im Spiel bestaetigt; Release offline geprueft | Getrennte INI-Werte, je 15 Spielminuten; Anleihen weiterhin manuell starten |
 | Mining Helmet Always On **1.1.0** | **2.03.02** | im Spiel bestätigt | Automatisches blaues Erz-/Steinleuchten; Schnellreise, Charakterwahl und Schnellrad bleiben frei; ASI-Loader erforderlich |
 | Alden AIO Shop + All Items 1 Copper | 2.00.00 | im Spiel bestätigt | Exakter alter 379-Item-Katalog, alte Reihenfolge und alte Bestände, Preise 1 Copper |
 | All Mounts LvL 5 Speed | **2.03.02** | statisch geprüft | Nur Movement Speed auf Level 5; DMM-managed ASI |
@@ -28,7 +28,7 @@ Build- und Release-Repository für die Crimson-Desert-Mods von Blablup. Je nach 
 
 ## Fertige Downloads
 
-- `release-assets/2.03.02/` – Bank Refresh 1.0.0, aktuelle Mount-Mods und Mining Helmet Always On 1.1.0 für Crimson Desert 2.03.02
+- `release-assets/2.03.02/` – Bank Refresh 1.1.0, aktuelle Mount-Mods und Mining Helmet Always On 1.1.0 für Crimson Desert 2.03.02
 - `release-assets/2.03.00/` – historische Pakete; für Mining Helmet Always On das Update unter 2.03.02 verwenden
 - `release-assets/2.00.00/` – bisherige 2.00.00-Releases
 
@@ -42,7 +42,7 @@ Es gibt keine `DMM`, `RC`, `R2`, `R5` oder `TEST`-Zusätze in finalen Modnamen.
 
 - Nur **eine** der beiden Mount-Versionen gleichzeitig aktivieren.
 - Nur eine der drei Healthbar-Versionen gleichzeitig aktivieren.
-- Nur eine Bank-Refresh-ASI gleichzeitig verwenden; alte BR-02/BR-03/BR-04-Testplugins vor dem Release entfernen/deaktivieren.
+- Nur eine Bank-Refresh-ASI gleichzeitig verwenden; alte BR-02/BR-03/BR-04- und Bonds-Testplugins vor dem Release entfernen/deaktivieren.
 - Vor einem Versionswechsel alte Modpakete in DMM entfernen und auf Vanilla zurücksetzen.
 
 ## Mount-Mods 2.03.02

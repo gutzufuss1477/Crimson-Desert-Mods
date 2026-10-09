@@ -1,5 +1,15 @@
 # Changelog
 
+## Bank Refresh 1.1.0 - 2026-10-09
+
+- Added a separate configurable bond-investment timer alongside the regular gold bank.
+- Both use in-game minutes and default to 15; independently enabled in the English INI.
+- Bond investments still start manually. No automatic reinvestment or payout changes.
+- Existing INIs without the new [Bonds] section remain gold-only.
+- User confirmed the bond countdown reduction and accepted the manual-start behavior.
+- Updated source, tests, package, checksums and Nexus description; no runtime logs.
+- Remove old BR04/Bonds-Test ASIs before installing; never load two Bank Refresh plugins.
+
 ## Mining Helmet Always On 1.1.0 - 2026-09-28
 
 - Replaced the forced helmet gameplay mode with independent material-based highlighting.
