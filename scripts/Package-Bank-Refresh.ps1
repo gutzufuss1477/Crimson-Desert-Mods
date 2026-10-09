@@ -36,7 +36,7 @@ $archive=[IO.Compression.ZipArchive]::new($zipStream,[IO.Compression.ZipArchiveM
 try {
     foreach ($name in $members.Keys) {
         $entry=$archive.CreateEntry($name,[IO.Compression.CompressionLevel]::Optimal)
-        $entry.LastWriteTime=[DateTimeOffset]::new(2026,10,7,0,0,0,[TimeSpan]::Zero)
+        $entry.LastWriteTime=[DateTimeOffset]::new(2026,10,9,0,0,0,[TimeSpan]::Zero)
         $stream=$entry.Open()
         try { $bytes=$members[$name]; $stream.Write($bytes,0,$bytes.Length) }
         finally { $stream.Dispose() }
@@ -67,15 +67,15 @@ foreach ($file in $sourceFiles | Sort-Object FullName) {
     $sources[$relative]=Digest (Utf8-LF $file.FullName)
 }
 $report=[ordered]@{
-    mod='Bank Refresh'; mod_version='1.0.0'; game_version='2.03.02'; steam_build='25474236'
+    mod='Bank Refresh'; mod_version='1.1.0'; game_version='2.03.02'; steam_build='25474236'
     supported_exe_sha256='57da440d72f4db974f25fef047cf84c4dadd999a88cb2a3c5af4c9bd67fde1e7'
-    default_game_minutes=15; diagnostic_logging=$false
+    default_game_minutes=15; default_bond_game_minutes=15; automatic_bond_reinvestment=$false; diagnostic_logging=$false
     asi=@{file=$asiName;sha256=$asiHash;bytes=$production.Length}
     package=@{file=$zipName;sha256=$zipHash;members=@($members.Keys)}
-    validation=@{core_checks=13028;instrumented_guard_cases=15;production_loads=2
-        in_game='Development build: gold bars refresh; configurable 15-minute countdown confirmed by user. Final log-free binary not separately run in-game.'}
+    validation=@{core_checks=24565;host_hook_checks=284;instrumented_guard_cases=33;production_loads=2
+        in_game='Gold refresh previously confirmed. User confirmed bond countdown reduced from days to 15 game minutes and accepted manual-start behavior on 2026-10-09. Final release changes only version/name metadata and packaging relative to the accepted bonds test; not a separate final-binary playtest.'}
     source_hash_encoding='UTF-8 without BOM, with LF line endings'; sources=$sources
 }
-[IO.File]::WriteAllText((Join-Path $repo 'reports\BUILD_REPORT_BANK_REFRESH_1.0.0.json'),($report | ConvertTo-Json -Depth 7)+"`n",[Text.UTF8Encoding]::new($false))
+[IO.File]::WriteAllText((Join-Path $repo 'reports\BUILD_REPORT_BANK_REFRESH_1.1.0.json'),($report | ConvertTo-Json -Depth 7)+"`n",[Text.UTF8Encoding]::new($false))
 Write-Output "PASS: six allow-listed archive members verified; ASI=$asiHash"
 Write-Output $zip
