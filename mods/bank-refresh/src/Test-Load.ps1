@@ -26,7 +26,25 @@ $cases=@(
     @{name='negative'; ini="[BankRefresh]`nEnabled=1`nIntervalGameMinutes=-15"; result=6},
     @{name='truncated'; ini="[BankRefresh]`nEnabled=1`nIntervalGameMinutes=$('1'*80)"; result=6},
     @{name='old seconds INI'; ini="[BankRefresh]`nEnabled=1`nIntervalSeconds=60"; result=6},
-    @{name='old observe-only INI'; ini="[BankRefresh]`nEnabled=1`nIntervalGameMinutes=15`nDiagnosticOnly=1"; result=7}
+    @{name='old observe-only INI'; ini="[BankRefresh]`nEnabled=1`nIntervalGameMinutes=15`nDiagnosticOnly=1"; result=7},
+    @{name='both banks'; ini="[BankRefresh]`nEnabled=1`nIntervalGameMinutes=15`n[Bonds]`nEnabled=1`nIntervalGameMinutes=30"; result=9},
+    @{name='bonds only'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=15"; result=9},
+    @{name='bonds with disabled gold'; ini="[BankRefresh]`nEnabled=0`nIntervalGameMinutes=bad`n[Bonds]`nEnabled=1`nIntervalGameMinutes=15"; result=9},
+    @{name='bond minimum'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=1"; result=9},
+    @{name='bond maximum'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=10080"; result=9},
+    @{name='bond too large'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=10081"; result=15},
+    @{name='bond missing interval'; ini="[Bonds]`nEnabled=1"; result=15},
+    @{name='bond zero'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=0"; result=15},
+    @{name='bond negative'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=-15"; result=15},
+    @{name='bond decimal'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=15.5"; result=15},
+    @{name='bond suffix'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=15min"; result=15},
+    @{name='bond truncated'; ini="[Bonds]`nEnabled=1`nIntervalGameMinutes=$('1'*80)"; result=15},
+    @{name='invalid enabled'; ini="[Bonds]`nEnabled=1garbage`nIntervalGameMinutes=15"; result=16},
+    @{name='invalid gold enabled'; ini="[BankRefresh]`nEnabled=2`nIntervalGameMinutes=15"; result=16},
+    @{name='explicitly disabled bonds'; ini="[BankRefresh]`nEnabled=1`nIntervalGameMinutes=15`n[Bonds]`nEnabled=0`nIntervalGameMinutes=bad"; result=9},
+    @{name='bond interval alone not opt-in'; ini="[Bonds]`nIntervalGameMinutes=15"; result=5},
+    @{name='both disabled'; ini="[BankRefresh]`nEnabled=0`n[Bonds]`nEnabled=0"; result=5},
+    @{name='legacy observe-only with bonds'; ini="[BankRefresh]`nDiagnosticOnly=1`n[Bonds]`nEnabled=1`nIntervalGameMinutes=15"; result=7}
 )
 foreach ($case in $cases) {
     # Generated test fixtures only. The real game and installed INI are never accessed.
@@ -45,4 +63,4 @@ foreach ($hostName in @('load_tests.exe','CrimsonDesert.exe')) {
 }
 $after=@(Get-ChildItem -LiteralPath $root -File | Sort-Object Name | ForEach-Object { $_.Name + ':' + (File-Digest $_.FullName) })
 if (Compare-Object $before $after) { throw 'Production smoke test created or modified files.' }
-Write-Output 'PASS: 15 initialization guard cases, 2 production loads; no logs or test-directory writes'
+Write-Output "PASS: $($cases.Count+1) initialization guard cases, 2 production loads; no logs or test-directory writes"
