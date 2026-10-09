@@ -3,7 +3,7 @@
 Installation varies by mod: DMM packages and manual ASI packages are listed below. Follow each mod's own instructions; Bank Refresh is a manual ASI package.
 
 - [Mining Helmet Always On](mining-helmet-always-on/)
-- [Bank Refresh](bank-refresh/) - configurable in-game minutes, English INI, no diagnostic logs
+- [Bank Refresh 1.1.0](bank-refresh/) - independent gold and bond timers, English INI, manual bond starts, no diagnostic logs
 - [Alden AIO Shop + All Items 1 Copper](alden-aio-shop/)
 - [All Mounts LvL 5 Speed](all-mounts-level-5-speed/)
 - [All Mounts LvL 5 All Stats](all-mounts-level-5-all-stats/)
