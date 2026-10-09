@@ -1,3 +1,23 @@
+Bank Refresh 1.1.0 - 2026-10-09
+Crimson Desert 2.03.02 / Steam build 25474236
+
+- Added configurable bond-investment deadlines in a separate [Bonds] INI section.
+- Regular gold bank and bonds can each be enabled and configured independently.
+- Default: 15 in-game minutes for both. Gold range: 1..4320; bonds: 1..10080.
+- Bond investments still require a MANUAL start after each completed investment.
+- No automatic reinvestment, payout changes or direct balance editing.
+- Existing INIs without [Bonds] keep the previous gold-only behavior.
+- Preserved calendar-aware timing, native completion and exact-build guards.
+- No runtime logging. Production filenames replace the local bonds-test names.
+- User confirmed the bond countdown dropped from several days to 15 game minutes
+  and accepted the intended manual-start behavior in-game.
+- Passed 24,565 core checks, 284 host hook checks, 33 startup guard cases and
+  two no-log production load tests. Final release metadata/package rebuilt.
+
+UPGRADING: Disable/remove older Bank Refresh ASIs, including BR04 and
+Bank_Refresh_Bonds_Test1.asi. Install only Bank_Refresh_2.03.02.asi plus the
+updated INI, or add [Bonds] manually to your existing INI. Back up saves first.
+
 Bank Refresh 1.0.0
 Crimson Desert 2.03.02 / Steam build 25474236
 

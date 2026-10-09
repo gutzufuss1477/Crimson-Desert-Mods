@@ -5,6 +5,10 @@
 
 namespace bank_refresh {
 inline constexpr uint64_t DayTicks = 75600000;
+enum class BankType : uint8_t { gold, bonds };
+inline constexpr uint32_t maximum_minutes(BankType type) {
+    return type==BankType::bonds ? 10080 : 4320;
+}
 inline constexpr char ExpectedSha[] = "57da440d72f4db974f25fef047cf84c4dadd999a88cb2a3c5af4c9bd67fde1e7";
 
 // Observed in 1420e55a0 / 1420d3460, not an ordinary wall-clock struct.
@@ -38,29 +42,31 @@ inline uint64_t cap_deadline(uint64_t current, uint64_t now, uint16_t rate, uint
     return current > limit ? limit : current;
 }
 
-inline bool valid_game_minutes(uint32_t minutes) { return minutes>=1 && minutes<=4320; }
+inline bool valid_game_minutes(uint32_t minutes,BankType type=BankType::gold) {
+    return minutes>=1 && minutes<=maximum_minutes(type);
+}
 
-inline bool parse_game_minutes(const wchar_t* text, uint32_t& minutes) {
+inline bool parse_game_minutes(const wchar_t* text, uint32_t& minutes,BankType type=BankType::gold) {
     if (!text) return false;
     while (*text==L' ' || *text==L'\t') ++text;
     if (*text<L'0' || *text>L'9') return false;
     uint32_t value=0;
     do {
         value=value*10+uint32_t(*text-L'0');
-        if (value>4320) return false;
+        if (value>maximum_minutes(type)) return false;
         ++text;
     } while (*text>=L'0' && *text<=L'9');
     while (*text==L' ' || *text==L'\t') ++text;
-    if (*text || !valid_game_minutes(value)) return false;
+    if (*text || !valid_game_minutes(value,type)) return false;
     minutes=value;
     return true;
 }
 
 // Add displayed calendar minutes BEFORE the native non-linear day/night encoding.
 // Multiplying minutes by rate or by a constant tick value is not calendar time.
-inline bool game_deadline(const Calendar& date, uint32_t minutes, uint64_t& deadline) {
+inline bool game_deadline(const Calendar& date, uint32_t minutes, uint64_t& deadline,BankType type=BankType::gold) {
     uint64_t now{};
-    if (!valid_game_minutes(minutes) || !calendar_ticks(date,now)) return false;
+    if (!valid_game_minutes(minutes,type) || !calendar_ticks(date,now)) return false;
     const uint64_t total=uint64_t(date.hour)*60+date.minute+minutes;
     Calendar target=date;
     const uint64_t day=uint64_t(date.day)+total/1440;
@@ -109,10 +115,11 @@ inline bool unique_record(const BankRecord* records, uint32_t count, uint16_t ke
     return found;
 }
 
-inline bool eligible(const char* name, uint8_t investmentKind) {
-    constexpr char expected[] = "Bank_01";
-    if (!name || investmentKind != 0) return false;
-    for (unsigned i = 0; i < sizeof(expected); ++i) if (name[i] != expected[i]) return false;
+inline bool eligible(const char* name, uint8_t investmentKind,BankType type=BankType::gold) {
+    const char* expected=type==BankType::bonds ? "Bank_02" : "Bank_01";
+    const uint8_t expectedKind=type==BankType::bonds ? 1 : 0;
+    if (!name || investmentKind != expectedKind) return false;
+    for (unsigned i = 0; i < 8; ++i) if (name[i] != expected[i]) return false;
     return true;
 }
 }

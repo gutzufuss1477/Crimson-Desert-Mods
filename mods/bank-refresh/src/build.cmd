@@ -23,6 +23,10 @@ rc /nologo /foout\bank_refresh.res bank_refresh.rc
 if errorlevel 1 exit /b 1
 cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\bank_refresh.obj bank_refresh.cpp /link /OUT:out\Bank_Refresh_2.03.02.asi /MAP:out\Bank_Refresh_2.03.02.map /DYNAMICBASE /NXCOMPAT /GUARD:CF /Brepro out\bank_refresh.res out\minhook.lib bcrypt.lib
 if errorlevel 1 exit /b 1
+cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /Fe:out\hook_tests.exe /Fo:out\hook_tests.obj hook_tests.cpp /link out\minhook.lib bcrypt.lib
+if errorlevel 1 exit /b 1
+out\hook_tests.exe
+if errorlevel 1 exit /b 1
 cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /DBANK_REFRESH_TESTING /LD /Fo:out\bank_refresh_test.obj bank_refresh.cpp /link /OUT:out\bank_refresh_instrumented.dll /IMPLIB:out\bank_refresh_test.lib /DYNAMICBASE /NXCOMPAT /GUARD:CF out\minhook.lib bcrypt.lib
 if errorlevel 1 exit /b 1
 cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\load_tests.exe /Fo:out\load_tests.obj load_tests.cpp

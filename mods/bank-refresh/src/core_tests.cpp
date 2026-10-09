@@ -118,5 +118,34 @@ int main() {
             previous=deadline;
         }
     }
+    require(eligible("Bank_02",1,BankType::bonds),"bond bank with one-shot flag admitted");
+    require(!eligible("Bank_01",1,BankType::bonds) && !eligible("Bank_02",0,BankType::bonds) &&
+        !eligible("Bank_02",2,BankType::bonds) && !eligible("Bank_02X",1,BankType::bonds) &&
+        !eligible(nullptr,1,BankType::bonds),"bond identity exact name and flag");
+    require(parse_game_minutes(L"10080",setting,BankType::bonds) && setting==10080,"seven-day bond maximum");
+    require(!parse_game_minutes(L"10081",setting,BankType::bonds) &&
+        !parse_game_minutes(L"10080",setting) && setting==10080,"bond bound independent of gold bound");
+    const wchar_t* invalidBonds[]={nullptr,L"",L"0",L"-1",L"1.5",L"15min",L"10081",L"4294967296"};
+    for(const auto text:invalidBonds) {
+        setting=99;
+        require(!parse_game_minutes(text,setting,BankType::bonds) && setting==99,"invalid bond config fail closed");
+    }
+    const uint32_t bondIntervals[]={1,10,15,30,1440,4320,4321,10080};
+    for(uint32_t minuteOfDay=0;minuteOfDay<1440;++minuteOfDay) {
+        c={}; c.day=15; c.hour=minuteOfDay/60; c.minute=minuteOfDay%60; c.rate=12;
+        for(const auto duration:bondIntervals) {
+            require(game_deadline(c,duration,deadline,BankType::bonds) &&
+                deadline==reference_ticks(15*1440+minuteOfDay+duration),"bond calendar all minutes through seven days");
+        }
+    }
+    c={}; c.rate=12; c.day=9; c.hour=12;
+    require(calendar_ticks(c,now) && game_deadline(c,15,deadline,BankType::bonds),"bond start date valid");
+    uint64_t activeBond=now+7*DayTicks;
+    activeBond=cap_game_deadline(activeBond,now,deadline);
+    require(activeBond==deadline,"active seven-day bond shortened");
+    require(cap_game_deadline(activeBond,now+60000,deadline+60000)==deadline,"bond does not slide forward");
+    require(cap_game_deadline(activeBond,deadline,deadline+60000)==deadline,"mature bond left for native processing");
+    activeBond=0; // Native completion, not a timer to re-arm.
+    require(cap_game_deadline(activeBond,deadline,deadline+60000)==0,"completed bond stays completed");
     std::printf("PASS: %u bank scheduling / config checks\n",checks);
 }

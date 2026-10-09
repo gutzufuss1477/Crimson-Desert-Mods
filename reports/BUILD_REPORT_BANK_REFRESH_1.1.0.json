@@ -1,0 +1,64 @@
+{
+  "mod": "Bank Refresh",
+  "mod_version": "1.1.0",
+  "game_version": "2.03.02",
+  "steam_build": "25474236",
+  "supported_exe_sha256": "57da440d72f4db974f25fef047cf84c4dadd999a88cb2a3c5af4c9bd67fde1e7",
+  "default_game_minutes": 15,
+  "default_bond_game_minutes": 15,
+  "automatic_bond_reinvestment": false,
+  "diagnostic_logging": false,
+  "asi": {
+    "sha256": "cdd2a3da3d3e686ef4de433a1a94d0ea04c865929c868e9f4c052b2e41aab23c",
+    "file": "Bank_Refresh_2.03.02.asi",
+    "bytes": 156672
+  },
+  "package": {
+    "sha256": "c21c9dbc363d026af9ba2885bf0afdc96be86e9170fa26d096d8211ff08193c5",
+    "members": [
+      "Bank_Refresh_2.03.02.asi",
+      "Bank_Refresh.ini",
+      "README.txt",
+      "CHANGELOG.txt",
+      "LICENSE.txt",
+      "MinHook-LICENSE.txt"
+    ],
+    "file": "Bank_Refresh_2.03.02.zip"
+  },
+  "validation": {
+    "production_loads": 2,
+    "core_checks": 24565,
+    "host_hook_checks": 284,
+    "in_game": "Gold refresh previously confirmed. User confirmed bond countdown reduced from days to 15 game minutes and accepted manual-start behavior on 2026-10-09. Final release changes only version/name metadata and packaging relative to the accepted bonds test; not a separate final-binary playtest.",
+    "instrumented_guard_cases": 33
+  },
+  "source_hash_encoding": "UTF-8 without BOM, with LF line endings",
+  "sources": {
+    "mods/bank-refresh/Bank_Refresh.ini": "7e3c4fc4700c6817d3dfc6f0f74d1a9f32c775e3f9fdcc8a187bd99df88b8e58",
+    "mods/bank-refresh/CHANGELOG.txt": "0cab8ada590841fb49d4b2fbb6ec55629d9c2ce8362b0961511cfbc883bcfc35",
+    "mods/bank-refresh/LICENSE.txt": "eae201e67d9d9156319921a2aea66f678bd11a499bf1488596b9eadeaebf38c3",
+    "mods/bank-refresh/NEXUS_DESCRIPTION.md": "493c915e6464aaa5a94903f34eeb607ea173ec31409353351bf59cf92c008f62",
+    "mods/bank-refresh/README.md": "4f0aff54024d33aa40269241fb054b8976392749c8541a353fbcea7263363efa",
+    "mods/bank-refresh/src/bank_core.hpp": "84fffcae65e4b2b2d65ac0c206f1cb4d3e3a19a103f2925cc884beb4062c23a5",
+    "mods/bank-refresh/src/bank_refresh.cpp": "d8b3e60d37cfde47cf59b1c0e5981bc957f5e659f9ec3b0c910f02d4ebd609a7",
+    "mods/bank-refresh/src/bank_refresh.rc": "22372ddf65443504e3bf6d9b4eb0d3c154fa3a08bebc60692b55351505259f6a",
+    "mods/bank-refresh/src/build.cmd": "45e8068179efe861f94f8432feab0b91193428f4a80e228d1c8d4f66eefb5db2",
+    "mods/bank-refresh/src/core_tests.cpp": "a57df638b7bbdd12e4b763c29a1778e7a3a6bb27b9be400f92f8d0e3aa74cb8c",
+    "mods/bank-refresh/src/hash_core.hpp": "0515bfee902def75d59e1ff3ef9fd543cd65b3c9e97456199408b49781c6020e",
+    "mods/bank-refresh/src/hook_tests.cpp": "dd44c0a30b948e23a333bd2210f8599410e75117012baae806b29f6e4b1160fd",
+    "mods/bank-refresh/src/load_tests.cpp": "629796ba37e0120abf62846ccbbf0f57a6dc5114b545c8c4ec65f9b2bd792b87",
+    "mods/bank-refresh/src/Test-Load.ps1": "a794ffce60aac36444c6b612de2d7fe786c59aec8198b565d568471578a53cbe",
+    "mods/bank-refresh/src/vendor/minhook/include/MinHook.h": "62dff05e63155c6bf8135c36a0d79dedbdcaaede9da26fe38daf0bea34323e38",
+    "mods/bank-refresh/src/vendor/minhook/LICENSE.txt": "2bfff5fa29fc5d1cb2745acfaad9d930e983f5c8dd97e0ec5735d9199cf8f416",
+    "mods/bank-refresh/src/vendor/minhook/SOURCE.json": "64f66a6d76ad9bdf1352679e6e47337a91030d55e60b79d4872bffcbef3d5fa9",
+    "mods/bank-refresh/src/vendor/minhook/src/buffer.c": "9cce251a840c50e9dbd4f7cdc153fd7bf29dcccf1143fdd92919e5c107d7880f",
+    "mods/bank-refresh/src/vendor/minhook/src/buffer.h": "cfe5fa7bfc02961c8821f13d75e882e6fb9d92a82a5d79452e5b4f3e7d1b6a18",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/hde64.c": "2ded468236c5db540aac254e5233adea72e91739f0832efc6634b91161a4c9f0",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/hde64.h": "5bf06ee9ea0aed54dcedceb251e1a739ab7bee70f04b66d9c5e4e75c13db4a19",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/pstdint.h": "4bffb311ef87d0d86569240a10f56eca826ebfe46233710f9dde97d42b3cb474",
+    "mods/bank-refresh/src/vendor/minhook/src/hde/table64.h": "98b281719ce1f20ebb72d0b6a851fbf57d14c11e93b2d50477dd51d65da80678",
+    "mods/bank-refresh/src/vendor/minhook/src/hook.c": "8a67023b221165ff3598982b0925a14e03d0284bd9d4d8e4a294325a50d062b6",
+    "mods/bank-refresh/src/vendor/minhook/src/trampoline.c": "77a4b9121bff76b5f6bf37d5acc5c51dc915e65fc39032f21539c9ae9278d5c8",
+    "mods/bank-refresh/src/vendor/minhook/src/trampoline.h": "054afc0ddf6c60c0b0da221aa092218638d7ab37d8db5a173459cea24b24d64c"
+  }
+}
