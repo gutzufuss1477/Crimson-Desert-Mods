@@ -1,0 +1,21 @@
+{
+  "name": "Bank Refresh Save Patcher",
+  "game": "Crimson Desert",
+  "nexusGame": "crimsondesert",
+  "nexusModId": 2347,
+  "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2347",
+  "pageVersion": "1.0",
+  "sourceStatus": "source-from-published-archive",
+  "sourceNote": "Python and batch source copied byte-for-byte from the SHA-256-verified current Nexus archive.",
+  "currentFiles": [
+    {
+      "fileId": 13633,
+      "name": "Crimson Bank Save Helper",
+      "version": "3",
+      "category": "MAIN",
+      "sha256": "c2313c2cc05740f5219194b791bfad846af35ae9ed00e5eb493f3e785a145d55",
+      "bytes": 16168,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2347?tab=files&file_id=13633"
+    }
+  ]
+}

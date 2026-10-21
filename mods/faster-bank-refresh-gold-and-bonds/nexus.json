@@ -1,0 +1,21 @@
+{
+  "name": "Faster Bank Refresh - Gold and Bonds",
+  "game": "Crimson Desert",
+  "nexusGame": "crimsondesert",
+  "nexusModId": 3669,
+  "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3669",
+  "pageVersion": "1.1.0",
+  "sourceStatus": "release-workspace",
+  "sourceNote": "Source from the published-release workspace; binaries are downloaded from Nexus. No new runtime test was performed for this source import.",
+  "currentFiles": [
+    {
+      "fileId": 17032,
+      "name": "Bank Refresh 1.1.0 - Gold and Bonds (2.03.02)",
+      "version": "1.1.0",
+      "category": "MAIN",
+      "sha256": "c21c9dbc363d026af9ba2885bf0afdc96be86e9170fa26d096d8211ff08193c5",
+      "bytes": 92533,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=17032"
+    }
+  ]
+}

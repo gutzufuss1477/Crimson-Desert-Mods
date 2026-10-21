@@ -1,0 +1,21 @@
+{
+  "name": "Mining Helmet Always On",
+  "game": "Crimson Desert",
+  "nexusGame": "crimsondesert",
+  "nexusModId": 3586,
+  "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3586",
+  "pageVersion": "1.2.0",
+  "sourceStatus": "release-workspace",
+  "sourceNote": "Source from the published-release workspace; binaries are downloaded from Nexus. No new runtime test was performed for this source import.",
+  "currentFiles": [
+    {
+      "fileId": 17161,
+      "name": "Mining Helmet Always On 2.03.02",
+      "version": "1.2.0",
+      "category": "MAIN",
+      "sha256": "60f392c7f7a6080630a8cfc04d7cd192cc1369a9f6d236aa618887c0e39b29e4",
+      "bytes": 136942,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=17161"
+    }
+  ]
+}

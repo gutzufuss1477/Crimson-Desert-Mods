@@ -1,0 +1,39 @@
+{
+  "name": "Real infinite Horse Stamina with optional LvL5 Speed for all Horses",
+  "game": "Crimson Desert",
+  "nexusGame": "crimsondesert",
+  "nexusModId": 2365,
+  "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2365",
+  "pageVersion": "7",
+  "sourceStatus": "release-workspace",
+  "sourceNote": "Source from the published-release workspace; binaries are downloaded from Nexus. No new runtime test was performed for this source import.",
+  "currentFiles": [
+    {
+      "fileId": 14692,
+      "name": "Steelheart Horseshoes 20 Stamina Regen 2.01.00",
+      "version": "8",
+      "category": "MAIN",
+      "sha256": "380779eb23dc4c0268962f9e42b38f63b7e3d5351887c392ff9b778438a6c00c",
+      "bytes": 956,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=14692"
+    },
+    {
+      "fileId": 16274,
+      "name": "All Mounts LvL 5 All Stats 2.03.02",
+      "version": "10",
+      "category": "OPTIONAL",
+      "sha256": "6afb23ec06ace4a98a327a062cce9607ad45186d689b336f5faad37bc502aa1c",
+      "bytes": 2254,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16274"
+    },
+    {
+      "fileId": 16275,
+      "name": "All Mounts LvL 5 Speed 2.03.02",
+      "version": "10",
+      "category": "MAIN",
+      "sha256": "8f5c5c062b843314f859ac374c8164b0db2cef7395953a446fe68965c054999b",
+      "bytes": 2243,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16275"
+    }
+  ]
+}

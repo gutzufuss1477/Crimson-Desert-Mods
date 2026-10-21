@@ -1,0 +1,39 @@
+{
+  "name": "Healthbar always on",
+  "game": "Crimson Desert",
+  "nexusGame": "crimsondesert",
+  "nexusModId": 2406,
+  "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2406",
+  "pageVersion": "1",
+  "sourceStatus": "published-recipe-with-local-game-inputs",
+  "sourceNote": "Exact declarative manifests from the current Nexus archives are included. Full modified game tables and UI files are not redistributed here. Rebuilding the complete overlay requires matching local game inputs and the corresponding transformation; no different-version builder is presented as this release.",
+  "currentFiles": [
+    {
+      "fileId": 14693,
+      "name": "Healthbar Always On Vanilla Multitarget 2.01.00",
+      "version": "2",
+      "category": "MAIN",
+      "sha256": "53063c283252838ed6a2eee267d36aeaca199df8a0cfaffe08da096cafc7dfed",
+      "bytes": 143987,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=14693"
+    },
+    {
+      "fileId": 14694,
+      "name": "Healthbar Always On Classic Vanilla Single Target",
+      "version": "2",
+      "category": "MAIN",
+      "sha256": "9ece70922ecbf533a6f525ec24acb37b1ed27028d8f0c373c3a04c6a106a5d3a",
+      "bytes": 144068,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=14694"
+    },
+    {
+      "fileId": 14695,
+      "name": "Healthbar Always On 2.01.00",
+      "version": "2",
+      "category": "MAIN",
+      "sha256": "8beb1bce1cc9c634512fa7f3c67bc37f3017a7825046a6756610e917f9db0793",
+      "bytes": 143694,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=14695"
+    }
+  ]
+}

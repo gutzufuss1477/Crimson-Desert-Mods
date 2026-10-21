@@ -1,0 +1,2670 @@
+{
+  "modinfo": {
+    "title": "Alden_AIO_Shop_All_Items_1_Copper_2.01.00",
+    "version": "2.01.00",
+    "author": "Blablup",
+    "description": "Ports the original 379-item Alden shop catalog to Crimson Desert 2.01.00 with the original item order and stock quantities. All listed purchase prices are set to 1 copper."
+  },
+  "format": 3,
+  "format_minor": 1,
+  "targets": [
+    {
+      "file": "iteminfo.pabgb",
+      "intents": [
+        {
+          "entry": "Recipe_Item_Stat_AbyssGear_SwimSpeedRate_LV1",
+          "key": 1002525,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Stat_AbyssGear_FireResistance_LV1",
+          "key": 1002528,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Stat_AbyssGear_IceResistance_LV1",
+          "key": 1002529,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Stat_AbyssGear_ElectricityResistance_LV1",
+          "key": 1002530,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_LandMash_LV1",
+          "key": 1001423,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_SoulStrike_LV1",
+          "key": 1002388,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CrowAttack_LV1",
+          "key": 1002390,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_FlashCombo_LV1",
+          "key": 1002478,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_SwordAura_LV1",
+          "key": 1002479,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_FrostBreath_LV1",
+          "key": 1000733,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_FireBreath_LV1",
+          "key": 1000734,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_LightningBreath_LV1",
+          "key": 1002558,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_EnlightenmentWave_LV1",
+          "key": 1002481,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_DarkenRobe_LV1",
+          "key": 1002596,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_DogClaw_LV1",
+          "key": 1002483,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Forgotten_General",
+          "key": 1002639,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Ogre",
+          "key": 1002642,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Antumbra_Spear",
+          "key": 1002762,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CrowStorm_LV1",
+          "key": 1002489,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_SmashStorm_LV1",
+          "key": 1002769,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CresecentAura_1_LV1",
+          "key": 1002856,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CresecentAura_2_LV1",
+          "key": 1002859,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CresecentAura_3_LV1",
+          "key": 1002877,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_FrostSpike_LV1",
+          "key": 1002803,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AbsoluteDefense_LV1",
+          "key": 1002494,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_ArrowRain_LV1",
+          "key": 1002531,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Merrick",
+          "key": 1002878,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_LightningStab_LV1",
+          "key": 1002480,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Antumbra_TwoHandRod",
+          "key": 1002890,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_TarandusWarrior_WarHammer",
+          "key": 1002891,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Bastier",
+          "key": 1003696,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Karanda",
+          "key": 1002649,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_FrostDeath_LV1",
+          "key": 1002804,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Primus",
+          "key": 1002650,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_DarkChase_LV1",
+          "key": 1003719,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Leebur",
+          "key": 1003720,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_QueenSpider",
+          "key": 1003721,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Praevus",
+          "key": 1003722,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Priscus",
+          "key": 1003723,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Skevald",
+          "key": 1003724,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AtorDrone_LV1",
+          "key": 1002534,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_PhantomStab_LV1",
+          "key": 1002490,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_LanFord",
+          "key": 1003725,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_ImpBoss",
+          "key": 1003726,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Catfish_BodySlam_LV1",
+          "key": 1002648,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Titan",
+          "key": 1003727,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_EnergyBurst_LV1",
+          "key": 1002532,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Muscan",
+          "key": 1002651,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Machine_AdditionalDamage_LV1",
+          "key": 1002568,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CommonHexe_AdditionalDamage_LV1",
+          "key": 1002570,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CommonHumanoid_AdditionalDamage_LV1",
+          "key": 1002571,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CommonGolem_AdditionalDamage_LV1",
+          "key": 1002574,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Boss_AdditionalDamage_LV1",
+          "key": 1002579,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CommonAnimal_AdditionalDamage_LV1",
+          "key": 1003728,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Creature_AdditionalDamage_LV1",
+          "key": 1003729,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AbyssGrass_Immune",
+          "key": 1002541,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Hyena_PoisonImmune",
+          "key": 1002544,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Immune_Bismuth",
+          "key": 1002545,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_DAM_UP_RotationBash",
+          "key": 1002546,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AddMoneyDropRate_LV1",
+          "key": 1002594,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_EquipDropRate_LV1",
+          "key": 1003228,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_BlockAmmoConsume_LV1",
+          "key": 1002643,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_FoodSkillLevelUp_LV1",
+          "key": 1002644,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_ReduceCraftMaterial_LV1",
+          "key": 1002645,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AdditionalThief_LV1",
+          "key": 1003736,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CollectDrop_Ore_LV1",
+          "key": 1003737,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CollectDrop_Plant_LV1",
+          "key": 1003738,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CollectDrop_Animal_LV1",
+          "key": 1003739,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_ContributionExp_LV1",
+          "key": 1003740,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_SkillPointExp_LV1",
+          "key": 1003741,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_CollectDrop_Log_LV1",
+          "key": 1002653,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AddFrendly_LV1",
+          "key": 1002654,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Equip_AddHorseExp_LV1",
+          "key": 1003742,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Equip_AddPetFriendly_LV1",
+          "key": 1003743,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AddKillSkillLevel_LV1",
+          "key": 1003730,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Attack_HPRecover_LV1",
+          "key": 1003731,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Attack_MPRecover_LV1",
+          "key": 1003732,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Attack_SPRecover_LV1",
+          "key": 1003733,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_Combo_LV1",
+          "key": 1003734,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Abyss_Artifact",
+          "key": 75001,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_LeatherArmor_LV1",
+          "key": 1001436,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_FabricArmor_LV1",
+          "key": 1003758,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_PlateArmor_LV1",
+          "key": 1000426,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_DDD_LV1",
+          "key": 1002785,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_CriticalRate_LV1",
+          "key": 1002791,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_AttackSpeedRate_LV1",
+          "key": 1002810,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_DPV_LV1",
+          "key": 1002794,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_ADR_LV1",
+          "key": 1002797,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_GuardPVRate_LV1",
+          "key": 1002807,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_MoveSpeedRate_LV1",
+          "key": 1002813,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_ClimbSpeedRate_LV1",
+          "key": 1002816,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_StaminaRegen_LV1",
+          "key": 1002747,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_HpRegen_LV1",
+          "key": 1002822,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_MpRegen_LV1",
+          "key": 1002752,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_SwimSpeedRate_LV1",
+          "key": 1002837,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_FireResistance_LV1",
+          "key": 1001424,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_IceResistance_LV1",
+          "key": 1002167,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Stat_AbyssGear_ElectricityResistance_LV1",
+          "key": 1002497,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Machine_AdditionalDamage_LV1",
+          "key": 1002896,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CommonHexe_AdditionalDamage_LV1",
+          "key": 1002899,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CommonHumanoid_AdditionalDamage_LV1",
+          "key": 1002902,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CommonGolem_AdditionalDamage_LV1",
+          "key": 1002905,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Boss_AdditionalDamage_LV1",
+          "key": 1002908,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CommonAnimal_AdditionalDamage_LV1",
+          "key": 1002911,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Creature_AdditionalDamage_LV1",
+          "key": 1002914,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_PlateArmor_LV1",
+          "key": 1003759,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_LeatherArmor_LV1",
+          "key": 1003762,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_FabricArmor_LV1",
+          "key": 1003765,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AddKillSkillLevel_LV1",
+          "key": 1002953,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_EquipDropRate_LV1",
+          "key": 1003229,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AddMoneyDropRate_LV1",
+          "key": 1002920,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_BlockAmmoConsume_LV1",
+          "key": 1002923,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_FoodSkillLevelUp_LV1",
+          "key": 1002926,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_ReduceCraftMaterial_LV1",
+          "key": 1002929,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AdditionalThief_LV1",
+          "key": 1002932,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CollectDrop_Ore_LV1",
+          "key": 1002935,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CollectDrop_Plant_LV1",
+          "key": 1002938,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CollectDrop_Animal_LV1",
+          "key": 1002941,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CollectDrop_Log_LV1",
+          "key": 1002944,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_ContributionExp_LV1",
+          "key": 1002947,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_SkillPointExp_LV1",
+          "key": 1002950,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AddFrendly_LV1",
+          "key": 1002520,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Equip_AddHorseExp_LV1",
+          "key": 1002662,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Equip_AddPetFriendly_LV1",
+          "key": 1002538,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Attack_HPRecover_LV1",
+          "key": 1003281,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Attack_MPRecover_LV1",
+          "key": 1003290,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Attack_SPRecover_LV1",
+          "key": 1003291,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Combo_LV1",
+          "key": 1001067,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AbyssGrass_Immune",
+          "key": 1002863,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Hyena_PoisonImmune",
+          "key": 1002865,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Immune_Bismuth",
+          "key": 1002866,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_DAM_UP_RotationBash",
+          "key": 1002867,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_LandMash_LV1",
+          "key": 1002509,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_SoulStrike_LV1",
+          "key": 1002523,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CrowAttack_LV1",
+          "key": 1002539,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_FlashCombo_LV1",
+          "key": 1002548,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_SwordAura_LV1",
+          "key": 1002569,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_FrostBreath_LV1",
+          "key": 1002764,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_FireBreath_LV1",
+          "key": 1002766,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_LightningBreath_LV1",
+          "key": 1002848,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_EnlightenmentWave_LV1",
+          "key": 1002583,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_DarkenRobe_LV1",
+          "key": 1002580,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_DogClaw_LV1",
+          "key": 1002592,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Forgotten_General",
+          "key": 1003715,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Ogre",
+          "key": 1003668,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Antumbra_Spear",
+          "key": 1002552,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CrowStorm_LV1",
+          "key": 1002602,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_SmashStorm_LV1",
+          "key": 1002805,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CresecentAura_1_LV1",
+          "key": 1002658,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CresecentAura_2_LV1",
+          "key": 1002659,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_CresecentAura_3_LV1",
+          "key": 1002660,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_FrostSpike_LV1",
+          "key": 1002843,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AbsoluteDefense_LV1",
+          "key": 1002849,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_ArrowRain_LV1",
+          "key": 1002852,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Merrick",
+          "key": 1003685,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_LightningStab_LV1",
+          "key": 1002578,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Antumbra_TwoHandRod",
+          "key": 1003686,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_TarandusWarrior_WarHammer",
+          "key": 1002887,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Bastier",
+          "key": 1000121,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Karanda",
+          "key": 1002542,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_FrostDeath_LV1",
+          "key": 1002845,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Primus",
+          "key": 1002554,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_DarkChase_LV1",
+          "key": 1002841,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Leebur",
+          "key": 1003699,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_QueenSpider",
+          "key": 1003691,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Praevus",
+          "key": 1003718,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Priscus",
+          "key": 1003702,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Skevald",
+          "key": 1003692,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_AtorDrone_LV1",
+          "key": 1002858,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_PhantomStab_LV1",
+          "key": 1002606,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_LanFord",
+          "key": 1003700,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_ImpBoss",
+          "key": 1003714,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Catfish_BodySlam_LV1",
+          "key": 1001893,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Titan",
+          "key": 1002496,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_EnergyBurst_LV1",
+          "key": 1002855,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_Skill_AbyssGear_Muscan",
+          "key": 1002510,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Her_Equipment",
+          "key": 1003153,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Kha_Equipment",
+          "key": 1003154,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Cal_Equipment",
+          "key": 1003155,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Dem_Equipment",
+          "key": 1003156,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Tar_Equipment",
+          "key": 1003157,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Str_Equipment",
+          "key": 1003158,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Del_Equipment",
+          "key": 1003159,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Pai_Equipment",
+          "key": 1003160,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Skog_Equipment",
+          "key": 1003161,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Odeck_Equipment",
+          "key": 1003162,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Var_Equipment",
+          "key": 1003163,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Tash_Equipment",
+          "key": 1003164,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Her_General",
+          "key": 1003172,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Cal_General",
+          "key": 1003173,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Del_General",
+          "key": 1003174,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Pai_General",
+          "key": 1003175,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Bei_General",
+          "key": 1003176,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Dem_General",
+          "key": 1003177,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Tash_General",
+          "key": 1003178,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Var_General",
+          "key": 1003179,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Vellua_General",
+          "key": 1003180,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Skog_General",
+          "key": 1003181,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Her_Tavern",
+          "key": 1003329,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Cal_Tavern",
+          "key": 1003330,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Kha_Tavern",
+          "key": 1003331,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Dem_Tavern",
+          "key": 1003332,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Del_Tavern",
+          "key": 1003333,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Pai_Tavern",
+          "key": 1003334,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Tash_Tavern",
+          "key": 1003335,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Var_Tavern",
+          "key": 1003336,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Her_Seed",
+          "key": 1001778,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Cal_Seed",
+          "key": 1003182,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Dem_Seed",
+          "key": 1003183,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Del_Seed",
+          "key": 1003184,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Pai_Seed",
+          "key": 1003185,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Tash_Seed",
+          "key": 1003186,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Var_Seed",
+          "key": 1003187,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Her_Costume",
+          "key": 1001954,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Cal_Costume",
+          "key": 1003145,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Dem_Costume",
+          "key": 1003146,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Tar_Costume",
+          "key": 1003147,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_DemZoo_Costume",
+          "key": 1003148,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Del_Costume",
+          "key": 1003149,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Pai_Costume",
+          "key": 1003150,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Tash_Costume",
+          "key": 1003151,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Var_Costume",
+          "key": 1003152,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Her_Furniture",
+          "key": 1002860,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Dem_Furniture",
+          "key": 1002861,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Del_Furniture",
+          "key": 1002868,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Permit_Kwe_Furniture",
+          "key": 1002869,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandWeapon_I",
+          "key": 1002086,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandWeapon_II",
+          "key": 1002087,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandWeapon_III",
+          "key": 1002088,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandWeapon_IV",
+          "key": 1002089,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_TwoHandWeapon_I",
+          "key": 1000401,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_TwoHandWeapon_II",
+          "key": 1000402,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_TwoHandWeapon_III",
+          "key": 1000403,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_TwoHandWeapon_IV",
+          "key": 1000404,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Wood_I",
+          "key": 1000405,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Wood_II",
+          "key": 1000406,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Wood_III",
+          "key": 1000407,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Wood_IV",
+          "key": 1000408,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Metal_I",
+          "key": 1000409,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Metal_II",
+          "key": 1000410,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Metal_III",
+          "key": 1000411,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_RangeWeapon_Metal_IV",
+          "key": 1000413,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandShield_I",
+          "key": 1000414,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandShield_II",
+          "key": 1000415,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandShield_III",
+          "key": 1000417,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_OneHandShield_IV",
+          "key": 1000418,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_PlateArmor_I",
+          "key": 1000419,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_PlateArmor_II",
+          "key": 1000420,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_PlateArmor_III",
+          "key": 1000421,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_PlateArmor_IV",
+          "key": 1000422,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_LeatherArmor_I",
+          "key": 1000428,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_LeatherArmor_II",
+          "key": 1000430,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_LeatherArmor_III",
+          "key": 1000432,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_LeatherArmor_IV",
+          "key": 1000433,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_FabricArmor_I",
+          "key": 1000434,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_FabricArmor_II",
+          "key": 1000435,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_FabricArmor_III",
+          "key": 1000436,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_FabricArmor_IV",
+          "key": 1000437,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Accessory_I",
+          "key": 1000530,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Accessory_II",
+          "key": 1000533,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Accessory_III",
+          "key": 1000535,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Accessory_IV",
+          "key": 1000536,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Beekeeping",
+          "key": 1000690,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Ent",
+          "key": 1000714,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Varnia",
+          "key": 1000755,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Scarecrow_Camouflage_Cloak",
+          "key": 1000841,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Spear_Fire",
+          "key": 1002149,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Spear_Wind",
+          "key": 1002161,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Spear_Lightning",
+          "key": 1002162,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_FishingRod_II",
+          "key": 1002292,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Equip_Felling_Axe_I",
+          "key": 1001746,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Equip_Pickaxe_I",
+          "key": 1003662,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Equip_Felling_Axe_II",
+          "key": 1003663,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Equip_Pickaxe_II",
+          "key": 1003664,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Posion_Aroww",
+          "key": 1001102,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Wells_HorseArmor",
+          "key": 1000641,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Book_Pumpkin_Helm",
+          "key": 1004110,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Clout",
+          "key": 700001,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Wood",
+          "key": 710001,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "IronStone",
+          "key": 720001,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "SilverOre",
+          "key": 720002,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "GoldOre",
+          "key": 720003,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "CopperOre",
+          "key": 720004,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "BismuthOre",
+          "key": 720010,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Ruby",
+          "key": 721501,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "GreenStone",
+          "key": 721502,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "BlueStone",
+          "key": 721503,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Diamond",
+          "key": 721504,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "RedStone",
+          "key": 721505,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "WhiteStone",
+          "key": 721506,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Leather",
+          "key": 740001,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Deer_Leather",
+          "key": 740002,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Wolf_Leather",
+          "key": 740003,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Bear_Leather",
+          "key": 740004,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Crocodile_Skin",
+          "key": 740005,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Animal_Bone",
+          "key": 795009,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Large_Bone",
+          "key": 1000660,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Wool",
+          "key": 1001117,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Spider_Web",
+          "key": 754006,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Ivory",
+          "key": 1000662,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Feather",
+          "key": 1000659,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Item_gimmick_snake_boss_scales_01",
+          "key": 1003634,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_BoiledPork",
+          "key": 80001,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_FruitTea",
+          "key": 80003,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_SamGyeTang",
+          "key": 80406,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_DeerAntler_Fruit_Tea",
+          "key": 80412,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Berry_Juice",
+          "key": 80413,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Ssari_Mushroom_Tea",
+          "key": 80505,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Songyi_Mushroom_Tea",
+          "key": 80509,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pyogo_Mushroom_Tea",
+          "key": 80510,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Honey_Tea",
+          "key": 80529,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Roast_Chicken",
+          "key": 80812,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Grilled_Meat_Fish",
+          "key": 1000038,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Sanjeok",
+          "key": 1000071,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Braised_Meat",
+          "key": 1000072,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Porridge",
+          "key": 1000076,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Meat_Pancake",
+          "key": 1000087,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fish_Sanjeok",
+          "key": 1000122,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Braised_Fish",
+          "key": 1000141,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fish_Porridge",
+          "key": 1000150,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Fish_Pancake",
+          "key": 1000154,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Braised_Vegetable",
+          "key": 1000158,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Vegetable_Porridge",
+          "key": 1000169,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Vegetable_Pancake",
+          "key": 1000199,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fruit_Porridge",
+          "key": 1000235,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Fruit_Pancake",
+          "key": 1000244,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Grain_Pancake",
+          "key": 1000257,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Fish_Sanjeok",
+          "key": 1000338,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Braised_Meat_Fish",
+          "key": 1000441,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Fish_Porridge",
+          "key": 1000445,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Meat_Fish_Pancake",
+          "key": 1000450,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Braised_Meat_Vegetable",
+          "key": 1000452,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Vegetable_Porridge",
+          "key": 1000453,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Meat_Vegetable_Pancake",
+          "key": 1000455,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Fruit_Porridge",
+          "key": 1000480,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Meat_Fruit_Pancake",
+          "key": 1000483,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Meat_Grain_Pancake",
+          "key": 1000492,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Braised_Fish_Vegetable",
+          "key": 1000501,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fish_Vegetable_Porridge",
+          "key": 1000502,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Fish_Vegetable_Pancake",
+          "key": 1000503,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fish_Fruit_Porridge",
+          "key": 1000504,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Fish_Fruit_Pancake",
+          "key": 1000505,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Fish_Grain_Pancake",
+          "key": 1000506,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Vegetable_Fruit_Porridge",
+          "key": 1000507,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Vegetable_Fruit_Pancake",
+          "key": 1000508,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Vegetable_Grain_Pancake",
+          "key": 1000510,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Pan_fried_Fruit_Grain_Pancake",
+          "key": 1000523,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Fish_Fruit_Sanjeok",
+          "key": 1000527,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Fish_Grain_Sanjeok",
+          "key": 1000557,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Meat_Fish_Vegetable_Egg",
+          "key": 1000585,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Nureumjeok",
+          "key": 1000616,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Sinseollo",
+          "key": 1000617,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Gungjung_Tteokbokki",
+          "key": 1000620,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Beef_Bone_Soup",
+          "key": 1000622,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Tteokgalbi",
+          "key": 1000636,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Jeonju_Bibimbap",
+          "key": 1000673,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Kimbap",
+          "key": 1000687,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fish_Soup",
+          "key": 1000701,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fish_Bulgogi",
+          "key": 1000704,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fish_Stew",
+          "key": 1000705,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Full_Course_of_Braised_Fish",
+          "key": 1000719,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Japchae",
+          "key": 1000775,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Surasang_00",
+          "key": 1000819,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Surasang_01",
+          "key": 1000860,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Surasang_02",
+          "key": 1000881,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_DeerAntler_Soup",
+          "key": 1000954,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Surasang_03",
+          "key": 1000956,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Surasang_04",
+          "key": 1000968,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Fruit_Wine",
+          "key": 1000976,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_High_Wine",
+          "key": 1000977,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Roast_Fish",
+          "key": 1000986,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Surasang_05",
+          "key": 1001060,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Seafood_Soup",
+          "key": 1001077,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Haemuljjim",
+          "key": 1001130,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Vegetable_Juice",
+          "key": 1001854,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Herbal_Tea",
+          "key": 1001885,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Recipe_Chocolate",
+          "key": 1003768,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Fang",
+          "key": 1000853,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        },
+        {
+          "entry": "Fine_Wood",
+          "key": 1000081,
+          "field": "price_list[*].price.price",
+          "op": "set",
+          "new": 1
+        }
+      ]
+    }
+  ]
+}

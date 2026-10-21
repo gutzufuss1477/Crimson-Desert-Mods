@@ -1,0 +1,21 @@
+{
+  "name": "Alden All-In-One Progression Shop",
+  "game": "Crimson Desert",
+  "nexusGame": "crimsondesert",
+  "nexusModId": 2066,
+  "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
+  "pageVersion": "14",
+  "sourceStatus": "published-recipe-with-local-game-inputs",
+  "sourceNote": "Exact declarative manifests from the current Nexus archives are included. Full modified game tables and UI files are not redistributed here. Rebuilding the complete overlay requires matching local game inputs and the corresponding transformation; no different-version builder is presented as this release.",
+  "currentFiles": [
+    {
+      "fileId": 14689,
+      "name": "Alden_AIO_Shop_All_Items_1_Copper_2.01.00",
+      "version": "15",
+      "category": "MAIN",
+      "sha256": "b268a52a8fa9ef44f191b61914834ef5725d341380e231f99e5aa17e4813276c",
+      "bytes": 76097,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=14689"
+    }
+  ]
+}
