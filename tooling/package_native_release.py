@@ -1,4 +1,4 @@
-"""Package the three approved ASI payloads; Python standard library only."""
+"""Package the approved ASI payloads; Python standard library only."""
 import argparse
 import hashlib
 import json
@@ -25,6 +25,11 @@ MODS = [
      "@tooling/out", "84853a8f7d4526ff759d436b5dc0184b14305b9061c5dd37f323deb2e3ae9056", [],
      "Level 5 mount stats. Use only one mount-stat variant: AllStats OR Speed, never both.\n"
      "Steelheart Horseshoes is a separate data mod and is not required for this ASI.\n"),
+    ("AllMountsLvL5Speed", "11", "mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/variants/all-mounts-level-5-speed",
+     "@tooling/out", "1a47f19999a48cdd7c77f03422da1075b454e6eab0cbff5073a9d7f9607a2962", [],
+     "Level 5 mount movement speed only; acceleration, turning and jump are unchanged.\n"
+     "Use only one mount-stat variant: Speed OR AllStats, never both.\n"
+     "Steelheart Horseshoes is a separate data mod and is not required for this ASI.\n"),
 ]
 
 
@@ -44,18 +49,25 @@ def main():
         filename = f"{name}_{TAG}.asi"
         payload = (binary_root / filename).read_bytes()
         if digest(payload) != expected:
-            raise ValueError(f"{filename}: not the approved, gameplay-tested binary")
+            raise ValueError(f"{filename}: not the approved release binary")
         files = {filename: payload}
         for extra in extras:
             label = "MinHook-LICENSE.txt" if "vendor/minhook" in extra else Path(extra).name
             files[label] = (source / extra).read_bytes()
+        gameplay_tested = name != "AllMountsLvL5Speed"
+        validation = ("Author confirmed all three mods working on 2026-10-30." if gameplay_tested else
+                      "Speed-only passed static/host/loader checks. It shares the gameplay-tested AllStats hook; a separate Speed-only gameplay test is pending.")
         report = dict(mod=name, mod_version=version, game_version="2.04.00", steam_build="26317560",
-                      exe_sha256=EXE_SHA, in_game_tested=True,
-                      gameplay_validation="Author confirmed all three mods working on 2026-10-30.",
+                      exe_sha256=EXE_SHA, in_game_tested=gameplay_tested,
+                      gameplay_validation=validation,
                       files_sha256={k: digest(v) for k, v in files.items()})
         files["BUILD_VALIDATION.txt"] = (json.dumps(report, indent=2) + "\n").encode()
+        validation_text = ("Updated native hooks and build checks for this exact Steam build. Tested in-game.\n\n" if gameplay_tested else
+                           "Updated for this exact Steam build. Static/host/loader checks passed.\n"
+                           "Uses the same hook as the gameplay-tested AllStats build, restricted to speed.\n"
+                           "A separate in-game test of Speed-only is pending.\n\n")
         files["README.txt"] = (f"{name} {version} - Crimson Desert 2.04.00 / Steam build 26317560\n\n"
-            "Updated native hooks and build checks for this exact Steam build. Tested in-game.\n\n"
+            + validation_text +
             "INSTALL\n"
             "1. Close the game. Keep your existing x64 ASI loader. If needed, obtain it from:\n"
             "   https://github.com/ThirteenAG/Ultimate-ASI-Loader\n"

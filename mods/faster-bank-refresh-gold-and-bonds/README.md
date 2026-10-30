@@ -6,7 +6,7 @@ Current ASI release: **1.2.1**. Tested in-game by the author on 30 October 2026.
 
 Independent gold-bank and bond-investment timers, defaulting to 15 in-game minutes. Preserve your INI. Investments/reinvestment remain manual and native payouts/risk are unchanged. Restart after configuration edits. Shortened saved deadlines are not restored by uninstalling.
 
-[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/asi-2.04.00-b26317560)
+[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/asi-2.04.00-b26317560-r2)
 
 ## Install / update
 

@@ -6,7 +6,7 @@ Current ASI release: **1.3.1**. Tested in-game by the author on 30 October 2026.
 
 Highlights ore with any headgear. Range 10–120 (default 60), GlowStrength 0.5–1.0 (default 0.5), with live INI reload. Fast travel and character switching remain available.
 
-[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/asi-2.04.00-b26317560)
+[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/asi-2.04.00-b26317560-r2)
 
 ## Install / update
 

@@ -6,8 +6,21 @@
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2365",
   "pageVersion": "11",
   "sourceStatus": "published-release",
-  "sourceNote": "Native update for Steam build 26317560. The author confirmed the released ASI working in gameplay on 2026-10-30. Older variants retain their labelled compatibility.",
+  "sourceNote": "AllStats and Speed-only v11 target Steam build 26317560. AllStats gameplay was confirmed on 2026-10-30; Speed-only passed static/host/loader checks and awaits a separate gameplay test. Steelheart remains an older data download.",
   "currentFiles": [
+    {
+      "fileId": 17991,
+      "name": "All Mounts LvL5 Speed Only 2.04.00 - b26317560",
+      "version": "11",
+      "category": "MAIN",
+      "gameVersion": "2.04.00",
+      "steamBuild": "26317560",
+      "inGameTested": false,
+      "validation": "1,135 host checks and loader/static checks passed. Runtime identical to gameplay-tested AllStats except speed-only filter. Separate gameplay test pending.",
+      "sha256": "79d1038d2bb5b0b03c44e83931da2cabe3157fad944a6dbda5b45f9877576838",
+      "bytes": 3365,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=17991"
+    },
     {
       "fileId": 17990,
       "name": "All Mounts LvL5 AllStats 2.04.00 - b26317560",
@@ -27,15 +40,6 @@
       "sha256": "380779eb23dc4c0268962f9e42b38f63b7e3d5351887c392ff9b778438a6c00c",
       "bytes": 956,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=14692"
-    },
-    {
-      "fileId": 16275,
-      "name": "All Mounts LvL 5 Speed 2.03.02",
-      "version": "10",
-      "category": "MAIN",
-      "sha256": "8f5c5c062b843314f859ac374c8164b0db2cef7395953a446fe68965c054999b",
-      "bytes": 2243,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16275"
     }
   ],
   "archivedFiles": [
@@ -47,6 +51,15 @@
       "sha256": "6afb23ec06ace4a98a327a062cce9607ad45186d689b336f5faad37bc502aa1c",
       "bytes": 2254,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16274"
+    },
+    {
+      "fileId": 16275,
+      "name": "All Mounts LvL 5 Speed 2.03.02",
+      "version": "10",
+      "category": "MAIN",
+      "sha256": "8f5c5c062b843314f859ac374c8164b0db2cef7395953a446fe68965c054999b",
+      "bytes": 2243,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16275"
     }
   ]
 }
