@@ -4,10 +4,23 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 3669,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3669",
-  "pageVersion": "1.1.0",
-  "sourceStatus": "release-workspace",
-  "sourceNote": "Source from the published-release workspace; binaries are downloaded from Nexus. No new runtime test was performed for this source import.",
+  "pageVersion": "1.2.1",
+  "sourceStatus": "published-release",
+  "sourceNote": "Native update for Steam build 26317560. The author confirmed the released ASI working in gameplay on 2026-10-30. Older variants retain their labelled compatibility.",
   "currentFiles": [
+    {
+      "fileId": 17989,
+      "name": "Bank Refresh 1.2.1 - 2.04.00 - Steam 26317560",
+      "version": "1.2.1",
+      "category": "MAIN",
+      "gameVersion": "2.04.00",
+      "steamBuild": "26317560",
+      "sha256": "21675d3f97916176a0295e23881c20196a6b00c21d41a64812948781dfd6cf57",
+      "bytes": 87235,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=17989"
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 17032,
       "name": "Bank Refresh 1.1.0 - Gold and Bonds (2.03.02)",

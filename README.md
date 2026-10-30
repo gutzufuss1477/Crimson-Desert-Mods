@@ -1,17 +1,25 @@
 # Crimson Desert — Mods
 
-Current Nexus-published mods by gutzufuss1477. Names and file versions follow Nexus Mods.
+Mods by gutzufuss1477 / Blablup.
 
-| Mod | Current files |
-|---|---|
-| [Alden All-In-One Progression Shop](mods/alden-all-in-one-progression-shop/) | 15 |
-| [Bank Refresh Save Patcher](mods/bank-refresh-save-patcher/) | 3 |
-| [Real infinite Horse Stamina with optional LvL5 Speed for all Horses](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 8, 10 |
-| [Healthbar always on](mods/healthbar-always-on/) | 2 |
-| [Mining Helmet Always On](mods/mining-helmet-always-on/) | 1.2.0 |
-| [Faster Bank Refresh - Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.1.0 |
+## Native ASI update: game 2.04.00, Steam build 26317560
 
-This repository contains source and declarative modifications. Downloads remain on the linked Nexus pages.
-Only the current public release is represented; private experiments and old release archives are not included.
+The three releases below were tested in-game by the author on 30 October 2026.
+They run through an x64 ASI loader. **DMM and data-archive mounting are not required.**
 
-See [distribution notes](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md).
+| Mod | Release | Download |
+|---|---|---|
+| [Mining Helmet Always On](mods/mining-helmet-always-on/) | 1.3.1 | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) |
+| [Faster Bank Refresh — Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.2.1 | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) |
+| [All Mounts LvL 5 All Stats](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 11 | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) |
+
+[Download the ASI release and SHA-256 checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/asi-2.04.00-b26317560).
+These packages target the later Steam build 26317560 specifically; the version label 2.04.00 alone does not identify the executable.
+
+Close the game, remove older ASIs for the same mod, then copy the new ASI into `Crimson Desert/bin64` beside `CrimsonDesert.exe`. Keep existing INI settings; use the supplied INI only for a new installation. Keep your existing x64 ASI loader, or obtain one from [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader). Do not load both AllStats and Speed.
+
+## Other mods
+
+[Alden shop](mods/alden-all-in-one-progression-shop/), [Healthbar](mods/healthbar-always-on/) and Steelheart Horseshoes use data modifications. This release does not update those downloads or claim compatibility with game 2.04.00. The older Speed-only download is also not part of this tested release. Existing historical source remains available. The obsolete Bank Save Patcher is excluded.
+
+See [build and validation](tooling/README.md), [distribution notes](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md). Original game data, executables, private diagnostics and credentials are excluded from this repository.

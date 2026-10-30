@@ -4,10 +4,23 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 3586,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3586",
-  "pageVersion": "1.2.0",
-  "sourceStatus": "release-workspace",
-  "sourceNote": "Source from the published-release workspace; binaries are downloaded from Nexus. No new runtime test was performed for this source import.",
+  "pageVersion": "1.3.1",
+  "sourceStatus": "published-release",
+  "sourceNote": "Native update for Steam build 26317560. The author confirmed the released ASI working in gameplay on 2026-10-30. Older variants retain their labelled compatibility.",
   "currentFiles": [
+    {
+      "fileId": 17988,
+      "name": "Mining Helmet Always On 2.04.00 - Steam 26317560",
+      "version": "1.3.1",
+      "category": "MAIN",
+      "gameVersion": "2.04.00",
+      "steamBuild": "26317560",
+      "sha256": "74a3f3b5800afe20cd242f515ae77bd510886a82e4dd4364b8fc1764bf53e4e9",
+      "bytes": 131026,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=17988"
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 17161,
       "name": "Mining Helmet Always On 2.03.02",

@@ -29,6 +29,8 @@
 .env.*
 *.pabgb
 *.pabgh
+*.staticinfobody
+*.staticinfoheader
 *.pak
 *.ucas
 *.utoc

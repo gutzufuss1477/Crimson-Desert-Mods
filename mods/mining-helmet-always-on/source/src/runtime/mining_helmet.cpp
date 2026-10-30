@@ -18,9 +18,9 @@
 
 // Standalone build. No FullMode/ore_only/direct_bridge implementation linked.
 namespace auto34 {
-constexpr char Version[]="1.2.0";
+constexpr char Version[]="1.3.1";
 constexpr uint32_t On=1417341355,Off=652747463,MineKey=1001881;
-constexpr uint16_t MineIndex=2345;
+constexpr uint16_t MineIndex=2502;
 constexpr size_t MaxTargets=2048;
 // Keep our existing mining effects through brief departures from the scan cache.
 // The shader continues to fade them at the user-configured visual cutoff.
@@ -77,7 +77,7 @@ using EffectFn=uint32_t*(__fastcall*)(void*,uint32_t*,const void*,const void*);
 using FrameFn=uintptr_t(__fastcall*)(uintptr_t);
 using NearbyFn=void(__fastcall*)(uintptr_t,uintptr_t);
 using QueryFn=void(__fastcall*)(uintptr_t,const float*,float,float,void*);
-using InfoFn=uintptr_t(__fastcall*)(const uint16_t*);
+using InfoFn=uintptr_t(__fastcall*)(uintptr_t,uint32_t);
 using RotateFn=void(__fastcall*)(float*,const float*);
 using EyeFn=float*(__fastcall*)(uintptr_t,float*);
 using OrientationFn=void(__fastcall*)(float*,const float*,float*,int,int,int);
@@ -132,10 +132,6 @@ void reloadIni() {
     }
     lastReport=result;
 }
-constexpr ByteGuard ExtraGuards[]={
-    {0x502ce0,{0x48,0x89,0x5c,0x24,0x10,0x57,0x48,0x83,0xec,0x30,0x48,0x8b,0x81,0x88,0x00,0x00}},
-    {0x141dce0,{0x48,0x8b,0xc4,0x48,0x89,0x58,0x08,0x48,0x89,0x70,0x10,0x48,0x89,0x78,0x18,0x55}}
-};
 struct Lease { Ref ref{}; ~Lease() { if(ref.acquired) releaseRef(&ref); } };
 struct Identity {
     uintptr_t actor{},component{}; uint32_t id{},owner{};
@@ -157,7 +153,7 @@ mh34::Ownership materialOwnership;
 bool identify(uintptr_t component,Identity& who) {
     uintptr_t vt{},parts{};
     who.component=component;
-    return read(component,vt) && vt==base+0x55b7898 && read(component+8,who.actor) && who.actor &&
+    return read(component,vt) && vt==base+0x5938938 && read(component+8,who.actor) && who.actor &&
         read(who.actor+0x60,who.id) && who.id && read(who.actor+0x90,who.owner) &&
         read(who.actor+0x68,parts) && parts && value<uintptr_t>(parts+0x30)==component;
 }
@@ -173,7 +169,7 @@ bool nativeInactive(uintptr_t player) {
     const auto parts=value<uintptr_t>(owner.ref.actor+0x68);
     const auto mode=parts?value<uintptr_t>(parts+0x178):0;
     uint16_t a{},b{};
-    return mode && value<uintptr_t>(mode)==base+0x558d140 &&
+    return mode && value<uintptr_t>(mode)==base+0x590cf78 &&
         read(mode+0x30,a) && read(mode+0x48,b) && a==0xffff && b==0xffff;
 }
 Target* find(const Identity& who) {
@@ -185,8 +181,8 @@ bool gameTime(uint64_t& time) {
     time=123456; return true;
 #else
     uintptr_t tls{}; uint8_t special{}; uint64_t delta{};
-    if(!read(__readgsqword(0x58),tls) || !tls || !read(tls+0x1ec,special) || !read(base+0x6d69438,delta)) return false;
-    time=reinterpret_cast<uint64_t(__fastcall*)()>(base+0x1416b80)()+(special?0:delta); return true;
+    if(!read(__readgsqword(0x58),tls) || !tls || !read(tls+0x1eb,special) || !read(base+0x71aecf8,delta)) return false;
+    time=reinterpret_cast<uint64_t(__fastcall*)()>(base+0x15f49a0)()+(special?0:delta); return true;
 #endif
 }
 bool send(uintptr_t mgr,const Target& t,uint32_t kind) {
@@ -226,7 +222,7 @@ uint32_t* __fastcall effectHook(void* self,uint32_t* result,const void* handler,
     const auto h=reinterpret_cast<uintptr_t>(handler),e=reinterpret_cast<uintptr_t>(event);
     const auto returned=effectOriginal(self,result,handler,event);
     Identity who{};
-    if(ready.load() && value<uintptr_t>(h)==base+0x57c3118 && value<uint16_t>(h+0x6c,0xffff)==MineIndex &&
+    if(ready.load() && value<uintptr_t>(h)==base+0x5d27610 && value<uint16_t>(h+0x6c,0xffff)==MineIndex &&
        identify(reinterpret_cast<uintptr_t>(self),who)) {
         ++miningCalls;
         AcquireSRWLockExclusive(&targetLock);
@@ -278,7 +274,7 @@ bool cameraGeometry(uintptr_t player,float* direction,float* worldUp,float* p,fl
     alignas(16) float rotation[4]{},position[4]{};
     if(eyePosition(player,position)!=position) return false;
     for(unsigned i=0;i<3;++i) if(!std::isfinite(position[i]) || std::fabs(position[i])>1e8f) return false;
-    // This is the exact camera branch of native 0x624300, without reading or
+    // This is the exact camera branch of native 0x6e30e0, without reading or
     // changing an active SpecialMode slot. The native helper mutates worldUp,
     // so both camera inputs above are local copies.
     orientation(rotation,direction,worldUp,3,2,-1);
@@ -291,17 +287,20 @@ bool cameraGeometry(uintptr_t player,float* direction,float* worldUp,float* p,fl
     std::memcpy(p,position,12);
     return true;
 }
+bool modeAxes(float* look,float* up) {
+    const auto info=modeInfo(0,13); // FindMine key 10, current table index 13.
+    return info && value<uint32_t>(info+8)==10 && value<uint8_t>(info+0x1d0)==1 &&
+        value<uint8_t>(info+0x208)==1 && readRaw(info+0x1f4,look,12) && readRaw(info+0x1e8,up,12);
+}
 bool geometry(uintptr_t root,uintptr_t player,float* p,float* look,float* up) {
     const auto parts=value<uintptr_t>(player+0x68),model=parts?value<uintptr_t>(parts+0x40):0;
     const auto vt=model?value<uintptr_t>(model):0,metadata=value<uintptr_t>(player+0x88);
     const auto type=metadata?value<uint8_t>(metadata+1):0;
     if(vt<base || vt>=imageEnd || (type!=1 && type!=3 && type!=4 && type!=5 && type!=6 && type!=8 && type!=9)) return false;
-    const uint16_t index=12; const auto info=modeInfo(&index);
-    if(!info || value<uint32_t>(info)!=10 || value<uint8_t>(info+0x1c8)!=1 || value<uint8_t>(info+0x200)!=1 ||
-       !readRaw(info+0x1ec,look,12) || !readRaw(info+0x1e0,up,12)) return false;
+    if(!modeAxes(look,up)) return false;
     const auto holder=value<uintptr_t>(root+0xd8),camera=holder?value<uintptr_t>(holder+8):0;
     alignas(16) float direction[4]{},worldUp[4]{};
-    return camera && readRaw(camera+0xd4,direction,12) && readRaw(base+0x5545e50,worldUp,12) &&
+    return camera && readRaw(camera+0xd4,direction,12) && readRaw(base+0x58e5890,worldUp,12) &&
         cameraGeometry(player,direction,worldUp,p,look,up);
 }
 void markTargetSeen(Target& target,uint64_t now,float distance2) {
@@ -313,8 +312,8 @@ void scan(uintptr_t root,uintptr_t mgr,uintptr_t player,uint32_t source,uint64_t
     if(!nearby) return;
     const float requested=scanRange.load(),limit=requested<45?45:requested;
     { QueryScope scope({nearby,requested}); nearbyCache(nearby,player); }
-    const auto entries=value<uintptr_t>(nearby+0x308); const auto n=value<uint32_t>(nearby+0x310);
-    if(!value<uint8_t>(nearby+0x318) || !entries || n>65536) return;
+    const auto entries=value<uintptr_t>(nearby+0x310); const auto n=value<uint32_t>(nearby+0x318);
+    if(!value<uint8_t>(nearby+0x320) || !entries || n>65536) return;
     ++scans; float farthest{};
     for(uint32_t i=0;i<n;++i) {
         const auto entry=entries+static_cast<uintptr_t>(i)*0x28;
@@ -397,7 +396,7 @@ void updateTargets(uintptr_t mgr,uint64_t now) {
     heldMiningEffects=heldCount;
 }
 void tick() {
-    const auto now=GetTickCount64(),root=value<uintptr_t>(base+0x6d69190),mgr=root?value<uintptr_t>(root+0x30):0;
+    const auto now=GetTickCount64(),root=value<uintptr_t>(base+0x71aea50),mgr=root?value<uintptr_t>(root+0x30):0;
     if(!root || !mgr) { suspend(0,false); session={}; phase=1; return; }
     Lease player; lookupPlayer(mgr,&player.ref,0,0);
     const auto id=player.ref.actor?value<uint32_t>(player.ref.actor+0x60):0;
@@ -439,11 +438,11 @@ void tick() {
 }
 uintptr_t __fastcall frameHook(uintptr_t self) {
     const auto result=frameOriginal(self);
-    if(!ready.load() || !(result&0xff) || value<DWORD>(base+0x6a652d4)!=GetCurrentThreadId() || pumping.test_and_set()) return result;
+    if(!ready.load() || !(result&0xff) || value<DWORD>(base+0x6e94c78)!=GetCurrentThreadId() || pumping.test_and_set()) return result;
     tick(); pumping.clear(); return result;
 }
 struct Slot { uintptr_t rva,expected; void* hook; bool installed{}; };
-Slot slots[]={ {0x55b7c28,0x8ea530,reinterpret_cast<void*>(effectHook)}, {0x5573418,0x3f41240,reinterpret_cast<void*>(frameHook)} };
+Slot slots[]={ {0x5938cd0,0x9d39c0,reinterpret_cast<void*>(effectHook)}, {0x58f0958,0x4238e90,reinterpret_cast<void*>(frameHook)} };
 bool exchange(Slot& slot,bool install) {
     auto** p=reinterpret_cast<void**>(base+slot.rva); DWORD old{},ignored{};
     if(!VirtualProtect(p,8,PAGE_READWRITE,&old)) return false;
@@ -455,25 +454,24 @@ bool exchange(Slot& slot,bool install) {
     return restored && changed;
 }
 bool install() {
-    constexpr uintptr_t used[]={0x8ea530,0x8e59d0,0x3f41240,0x8ae940,0x8b4570,0x1434880,0x17ee020,
-        0x1416b80,0x20efba0,0x9af360,0x4a2890,0x394790,0x502ce0,0x141dce0,0x9abde0};
+    constexpr uintptr_t used[]={0x9d39c0,0x9cec70,0x4238e90,0x9963e0,0x99ca80,0x1612cc0,0x1927700,
+        0x15f49a0,0x22acea0,0xab2520,0x5552c0,0x3e3fc0,0x5b6d20,0x15fbdf0,0xaaef60};
     for(auto rva:used) {
         bool good{}; uint8_t bytes[16]{};
         for(const auto& g:Guards) if(g.rva==rva) { good=readRaw(base+rva,bytes,16) && !std::memcmp(bytes,g.bytes,16); break; }
-        for(const auto& g:ExtraGuards) if(g.rva==rva) { good=readRaw(base+rva,bytes,16) && !std::memcmp(bytes,g.bytes,16); break; }
         if(!good) { log("refused","\"rva\":\"%llx\"",rva); return false; }
     }
     for(const auto& s:slots) if(value<uintptr_t>(base+s.rva)!=base+s.expected) { log("slot_conflict"); return false; }
-    lookupActor=reinterpret_cast<LookupFn>(base+0x8ae940); lookupPlayer=reinterpret_cast<PlayerFn>(base+0x8b4570);
-    modeOwner=reinterpret_cast<PlayerFn>(base+0x17ee020); releaseRef=reinterpret_cast<ReleaseFn>(base+0x1434880);
-    enqueueOriginal=reinterpret_cast<EnqueueFn>(base+0x8e59d0); effectOriginal=reinterpret_cast<EffectFn>(base+0x8ea530);
-    frameOriginal=reinterpret_cast<FrameFn>(base+0x3f41240); eventInit=reinterpret_cast<EventInitFn>(base+0x20efba0);
-    nearbyCache=reinterpret_cast<NearbyFn>(base+0x9af360); modeInfo=reinterpret_cast<InfoFn>(base+0x4a2890);
-    rotateVector=reinterpret_cast<RotateFn>(base+0x394790);
-    eyePosition=reinterpret_cast<EyeFn>(base+0x502ce0); orientation=reinterpret_cast<OrientationFn>(base+0x141dce0);
+    lookupActor=reinterpret_cast<LookupFn>(base+0x9963e0); lookupPlayer=reinterpret_cast<PlayerFn>(base+0x99ca80);
+    modeOwner=reinterpret_cast<PlayerFn>(base+0x1927700); releaseRef=reinterpret_cast<ReleaseFn>(base+0x1612cc0);
+    enqueueOriginal=reinterpret_cast<EnqueueFn>(base+0x9cec70); effectOriginal=reinterpret_cast<EffectFn>(base+0x9d39c0);
+    frameOriginal=reinterpret_cast<FrameFn>(base+0x4238e90); eventInit=reinterpret_cast<EventInitFn>(base+0x22acea0);
+    nearbyCache=reinterpret_cast<NearbyFn>(base+0xab2520); modeInfo=reinterpret_cast<InfoFn>(base+0x5552c0);
+    rotateVector=reinterpret_cast<RotateFn>(base+0x3e3fc0);
+    eyePosition=reinterpret_cast<EyeFn>(base+0x5b6d20); orientation=reinterpret_cast<OrientationFn>(base+0x15fbdf0);
     const auto initialized=MH_Initialize();
     if(initialized!=MH_OK && initialized!=MH_ERROR_ALREADY_INITIALIZED) { log("query_hook_init_failed"); return false; }
-    auto* queryAddress=reinterpret_cast<void*>(base+0x9abde0);
+    auto* queryAddress=reinterpret_cast<void*>(base+0xaaef60);
     if(MH_CreateHook(queryAddress,reinterpret_cast<void*>(queryHook),reinterpret_cast<void**>(&queryOriginal))!=MH_OK) { log("query_hook_create_failed"); return false; }
     auto* groupAddress=reinterpret_cast<void*>(base+ore_range::ReaderRva);
     if(!ore_range::guard(base,readRaw) ||
@@ -527,10 +525,10 @@ DWORD WINAPI worker(void*) {
     wchar_t local[MAX_PATH]{},dir[MAX_PATH]{},path[MAX_PATH]{},exe[MAX_PATH]{};
     if(!GetEnvironmentVariableW(L"LOCALAPPDATA",local,MAX_PATH)) return 0;
     swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn",local); CreateDirectoryW(dir,nullptr);
-    swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH120",local); CreateDirectoryW(dir,nullptr);
+    swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH131",local); CreateDirectoryW(dir,nullptr);
     GetModuleFileNameW(nullptr,exe,MAX_PATH); const auto name=wcsrchr(exe,L'\\');
     const bool game=name && !_wcsicmp(name+1,L"CrimsonDesert.exe");
-    if(!game) { swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH120\\smoke",local); CreateDirectoryW(dir,nullptr); }
+    if(!game) { swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH131\\smoke",local); CreateDirectoryW(dir,nullptr); }
     swprintf_s(path,L"%s\\mining-%lu.jsonl",dir,GetCurrentProcessId()); logFile=_wfsopen(path,L"wb",_SH_DENYNO);
     swprintf_s(statusPath,L"%s\\latest-status.txt",dir);
     if(!game) { status("wrong_process"); log("wrong_process"); return 0; }
@@ -538,7 +536,12 @@ DWORD WINAPI worker(void*) {
     if(!GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS|GET_MODULE_HANDLE_EX_FLAG_PIN,
         reinterpret_cast<LPCWSTR>(&worker),&pinned)) { status("pin_failed"); return 0; }
     char hash[65]{};
-    if(!mh067::Sha256File(exe,hash) || std::strcmp(hash,ExpectedSha)) { status("version_refused"); log("version_refused"); return 0; }
+    if(!mh067::Sha256File(exe,hash)) { status("hash_failed"); log("hash_failed"); return 0; }
+    if(std::strcmp(hash,ExpectedSha)) {
+        status("version_refused");
+        log("version_refused","\"expected_sha256\":\"%s\",\"actual_sha256\":\"%s\"",ExpectedSha,hash);
+        return 0;
+    }
     if(!ini.fromModule(pinned)) { status("ini_path_failed"); return 0; }
     reloadIni();
     base=reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));

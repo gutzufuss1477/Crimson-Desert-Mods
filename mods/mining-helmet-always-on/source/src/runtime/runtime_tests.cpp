@@ -40,8 +40,8 @@ void node(uintptr_t nodes,uintptr_t bucket,uint32_t index,uintptr_t nodeAddress,
 }
 mh34::View fixture() {
     memory.clear(); writes.clear();
-    set(Root+0x20,Manager); set(Manager+0x1228,uintptr_t{0x21000}); set(0x21000+0x160,uintptr_t{0x22000});
-    set(0x22000+0x538,Groups); set(Image+0x6c8cce8,Pool); set(Pool+0x58,Names);
+    set(Root+0x20,Manager); set(Manager+0x1280,uintptr_t{0x21000}); set(0x21000+0x160,uintptr_t{0x22000});
+    set(0x22000+0x560,Groups); set(Image+0x70cac60,Pool); set(Pool+0x58,Names);
     map(Groups,0x51000,0x52000,1); name(1,"GlobalMaterialGlobalParameter_Common",0x53000);
     node(0x52000,0x51000,0,0x54000,1,Group);
     reserve(Group,0x100); reserve(Buffer,484); set(Group+0x78,Buffer); set(Group+0x80,uint32_t{484});
@@ -110,8 +110,8 @@ auto34::Identity setupNative() {
     actor={}; parts={}; generic={}; mode={};
     field(actor,0x60,uint32_t{99}); field(actor,0x90,uint32_t{111}); field(actor,0x68,reinterpret_cast<uintptr_t>(parts.data()));
     field(parts,0x30,reinterpret_cast<uintptr_t>(generic.data())); field(parts,0x178,reinterpret_cast<uintptr_t>(mode.data()));
-    field(generic,0,Image+0x55b7898); field(generic,8,reinterpret_cast<uintptr_t>(actor.data()));
-    field(mode,0,Image+0x558d140); field(mode,0x30,uint16_t{0xffff}); field(mode,0x48,uint16_t{0xffff});
+    field(generic,0,Image+0x5938938); field(generic,8,reinterpret_cast<uintptr_t>(actor.data()));
+    field(mode,0,Image+0x590cf78); field(mode,0x30,uint16_t{0xffff}); field(mode,0x48,uint16_t{0xffff});
     lookupActor=lookup; lookupPlayer=player; modeOwner=player; releaseRef=release; eventInit=init; enqueueOriginal=enqueue; effectOriginal=effect;
     Identity id{}; assert(identify(reinterpret_cast<uintptr_t>(generic.data()),id)); return id;
 }
@@ -134,7 +134,7 @@ void lifecycle() {
     targets[0]=target; clearTargets(0x1234,false); assert(enqueues==calls+1); // Yield does not send native OFF.
     targets[0]=target;
     alignas(16) std::array<uint8_t,0xe0> handler{}; std::array<uint8_t,0xe8> event{};
-    field(handler,0,Image+0x57c3118); field(handler,0x6c,MineIndex); field(event,0,On);
+    field(handler,0,Image+0x5d27610); field(handler,0x6c,MineIndex); field(event,0,On);
     uint32_t result{}; assert(effectHook(generic.data(),&result,handler.data(),event.data())==&result);
     assert(result==42 && effects==1 && targets[0].mine);
     field(event,0,Off); targets[0].dispatched=true;
@@ -142,6 +142,29 @@ void lifecycle() {
     assert(mode==originalMode && releases==5);
 }
 unsigned eyeCalls{},orientationCalls{},rotationCalls{};
+std::array<uint8_t,0x220> modeRecord{};
+uintptr_t __fastcall modeLookup(uintptr_t unused,uint32_t index) {
+    assert(unused==0 && index==13); // New lookup ABI: EDX value, not RCX pointer.
+    return reinterpret_cast<uintptr_t>(modeRecord.data());
+}
+void currentModeLayout() {
+    using namespace auto34;
+    modeInfo=modeLookup; modeRecord={};
+    field(modeRecord,8,uint32_t{10});
+    field(modeRecord,0x1d0,uint8_t{1}); field(modeRecord,0x208,uint8_t{1});
+    field(modeRecord,0x1ec,1.0f); // Up Y, at vector base 0x1e8.
+    field(modeRecord,0x1fc,1.0f); // Forward Z, at vector base 0x1f4.
+    float look[3]{},up[3]{};
+    assert(modeAxes(look,up) && look[0]==0 && look[1]==0 && look[2]==1);
+    assert(up[0]==0 && up[1]==1 && up[2]==0);
+    const auto good=modeRecord;
+    for(const size_t offset:{size_t{8},size_t{0x1d0},size_t{0x208}}) {
+        modeRecord=good; modeRecord[offset]=0; assert(!modeAxes(look,up));
+    }
+    modeRecord={}; field(modeRecord,0,uint32_t{10});
+    field(modeRecord,0x1c8,uint8_t{1}); field(modeRecord,0x200,uint8_t{1});
+    assert(!modeAxes(look,up)); // Old layout must never pass the identity checks.
+}
 float expectedDirection[3]={1,0,0};
 float* __fastcall eye(uintptr_t player,float* p) {
     assert(player==99); ++eyeCalls;
@@ -245,7 +268,7 @@ void progressiveActivation() {
     assert(enqueues==3 && approachingRetries==2 && targets[0].probes==3);
     alignas(16) std::array<uint8_t,0xe0> handler{};
     std::array<uint8_t,0xe8> event{};
-    field(handler,0,Image+0x57c3118);
+    field(handler,0,Image+0x5d27610);
     field(handler,0x6c,MineIndex);
     field(event,0,On);
     uint32_t result{};
@@ -475,14 +498,14 @@ void groupRange() {
     original=groupNativeRead;changed=0;refused=0;
     std::array<uint8_t,0x1d8> record{};
     const char* label="Item_Collect_Ore";
-    field(record,0,uint32_t{1708});field(record,8,reinterpret_cast<uintptr_t>(&label));
+    field(record,8,uint32_t{1708});field(record,0,reinterpret_cast<uintptr_t>(&label));
     field(record,LevelOffset,int32_t{5});
     const auto before=record;
     assert(onRead(nullptr,record.data())==1 && groupNativeCalls==1 && changed==1);
     int32_t level{};std::memcpy(&level,record.data()+LevelOffset,4);assert(level==7);
     for(size_t i=0;i<record.size();++i)if(i<LevelOffset || i>=LevelOffset+4)assert(record[i]==before[i]);
     for(uint32_t key:{0u,1707u,1709u,1000632u,1711u,1000816u,0xffffffffu}) {
-        record=before;field(record,0,key);const auto saved=record;
+        record=before;field(record,8,key);const auto saved=record;
         onRead(nullptr,record.data());assert(record==saved);
     }
     for(int32_t prior:{-1,0,4,6,7,8,31,100}) {
@@ -508,6 +531,6 @@ void groupRange() {
 int main() {
     _set_error_mode(_OUT_TO_STDERR);
     _set_abort_behavior(0,_WRITE_ABORT_MSG|_CALL_REPORTFAULT);
-    groupRange(); materials(); lifecycle(); camera(); targetsLifecycle(); reentryRetention(); progressiveActivation(); ranges(); adjustableShader(); iniParsing(); iniFiles(); lanternYieldRecovery();
+    groupRange(); materials(); lifecycle(); currentModeLayout(); camera(); targetsLifecycle(); reentryRetention(); progressiveActivation(); ranges(); adjustableShader(); iniParsing(); iniFiles(); lanternYieldRecovery();
     std::puts("PASS: guarded ore group capacity, progressive ON activation, bounded retry, re-entry retention, lantern recovery, material ownership, extended queries, radial range and INI reload.");
 }

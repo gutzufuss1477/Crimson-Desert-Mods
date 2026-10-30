@@ -11,12 +11,11 @@ void require(bool ok,const char* message) {
     if(!ok) { std::fprintf(stderr,"FAIL: %s\n",message); std::exit(1); }
 }
 struct Info {
-    uint64_t reserved{};
     const char** holder{};
-    uint8_t padding[0x68]{};
-    uint8_t kind{};
+    uint16_t key{};
+    uint8_t blocked{},kind{};
 };
-static_assert(offsetof(Info,kind)==0x78);
+static_assert(offsetof(Info,kind)==0xb);
 struct Component {
     uintptr_t reserved{},actor{};
     uint8_t padding[0x100]{};
@@ -50,10 +49,10 @@ void* __fastcall lock_stub(void* guard,uintptr_t lock,uint8_t refFlag) {
     fixture->held=true; ++fixture->acquires;
     return guard;
 }
-uintptr_t __fastcall lookup_stub(const uint16_t* key) {
+uintptr_t __fastcall lookup_stub(uintptr_t,uint32_t key) {
     ++fixture->lookupCalls;
-    if(*key==7) return reinterpret_cast<uintptr_t>(&fixture->info[0]);
-    if(*key==8) return reinterpret_cast<uintptr_t>(&fixture->info[1]);
+    if(key==7) return reinterpret_cast<uintptr_t>(&fixture->info[0]);
+    if(key==8) return reinterpret_cast<uintptr_t>(&fixture->info[1]);
     return 0;
 }
 void __fastcall notify_stub(uintptr_t component,uint16_t key) {

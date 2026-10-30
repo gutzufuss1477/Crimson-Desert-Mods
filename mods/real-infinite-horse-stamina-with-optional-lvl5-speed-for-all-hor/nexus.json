@@ -4,10 +4,21 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2365,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2365",
-  "pageVersion": "7",
-  "sourceStatus": "release-workspace",
-  "sourceNote": "Source from the published-release workspace; binaries are downloaded from Nexus. No new runtime test was performed for this source import.",
+  "pageVersion": "11",
+  "sourceStatus": "published-release",
+  "sourceNote": "Native update for Steam build 26317560. The author confirmed the released ASI working in gameplay on 2026-10-30. Older variants retain their labelled compatibility.",
   "currentFiles": [
+    {
+      "fileId": 17990,
+      "name": "All Mounts LvL5 AllStats 2.04.00 - b26317560",
+      "version": "11",
+      "category": "OPTIONAL",
+      "gameVersion": "2.04.00",
+      "steamBuild": "26317560",
+      "sha256": "c1735ca998599aa5976053e88f0c7ae86d2c312beb3f9ca1f291695065ef549a",
+      "bytes": 3248,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=17990"
+    },
     {
       "fileId": 14692,
       "name": "Steelheart Horseshoes 20 Stamina Regen 2.01.00",
@@ -18,15 +29,6 @@
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=14692"
     },
     {
-      "fileId": 16274,
-      "name": "All Mounts LvL 5 All Stats 2.03.02",
-      "version": "10",
-      "category": "OPTIONAL",
-      "sha256": "6afb23ec06ace4a98a327a062cce9607ad45186d689b336f5faad37bc502aa1c",
-      "bytes": 2254,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16274"
-    },
-    {
       "fileId": 16275,
       "name": "All Mounts LvL 5 Speed 2.03.02",
       "version": "10",
@@ -34,6 +36,17 @@
       "sha256": "8f5c5c062b843314f859ac374c8164b0db2cef7395953a446fe68965c054999b",
       "bytes": 2243,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16275"
+    }
+  ],
+  "archivedFiles": [
+    {
+      "fileId": 16274,
+      "name": "All Mounts LvL 5 All Stats 2.03.02",
+      "version": "10",
+      "category": "OPTIONAL",
+      "sha256": "6afb23ec06ace4a98a327a062cce9607ad45186d689b336f5faad37bc502aa1c",
+      "bytes": 2254,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16274"
     }
   ]
 }

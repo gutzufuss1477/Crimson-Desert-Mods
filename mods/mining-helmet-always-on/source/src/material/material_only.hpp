@@ -4,7 +4,8 @@
 #include <cstring>
 #include <cmath>
 
-// The CPU material path verified by the Test33 live comparison. This header
+// CPU material path revalidated against the Steam 2.04.00 native readers.
+// Current in-game validation is still required. This header
 // cannot call gameplay functions or write player/global SpecialMode lists.
 namespace mh34 {
 using Read = bool(*)(uintptr_t,void*,size_t);
@@ -12,10 +13,10 @@ using Write = bool(*)(uintptr_t,const void*,size_t);
 template<class T> bool get(Read r,uintptr_t p,T& value) { return p && r(p,&value,sizeof(value)); }
 struct Spec { const char* name; uint32_t bytes; uintptr_t vtable; };
 inline constexpr Spec Specs[]={
-    {"_detectModePosition",12,0x5d0f8b0}, {"_detectModeLook",12,0x5d0f8b0},
-    {"_detectModeUp",12,0x5d0f8b0}, {"_detectModeAngle",4,0x5d0feb0},
-    {"_detectModeRadius",4,0x5d0feb0}, {"_useHatMode",4,0x5d119b0},
-    {"_highLightForVision",4,0x5d0feb0}, {"_specialModeType",4,0x5d119b0}
+    {"_detectModePosition",12,0x60cf030}, {"_detectModeLook",12,0x60cf030},
+    {"_detectModeUp",12,0x60cf030}, {"_detectModeAngle",4,0x60cea30},
+    {"_detectModeRadius",4,0x60cea30}, {"_useHatMode",4,0x60cde30},
+    {"_highLightForVision",4,0x60cea30}, {"_specialModeType",4,0x60cde30}
 };
 struct Binding { uintptr_t entry{},object{}; uint32_t id{},offset{}; };
 struct View {
@@ -62,9 +63,9 @@ inline bool valid(Read read,const View& v) {
 }
 inline bool resolve(Read read,uintptr_t root,uintptr_t base,View& output) {
     uintptr_t manager{},a{},b{},groups{},pool{},nameEntries{};
-    if(!get(read,root+0x20,manager) || !manager || !get(read,manager+0x1228,a) || !a ||
-       !get(read,a+0x160,b) || !b || !get(read,b+0x538,groups) || !groups ||
-       !get(read,base+0x6c8cce8,pool) || !pool || !get(read,pool+0x58,nameEntries) || !nameEntries) return false;
+    if(!get(read,root+0x20,manager) || !manager || !get(read,manager+0x1280,a) || !a ||
+       !get(read,a+0x160,b) || !b || !get(read,b+0x560,groups) || !groups ||
+       !get(read,base+0x70cac60,pool) || !pool || !get(read,pool+0x58,nameEntries) || !nameEntries) return false;
     View v{}; v.base=base;
     if(!names(read,nameEntries,groups,[&](const char* name,uintptr_t entry,uint32_t) {
         return !std::strcmp(name,"GlobalMaterialGlobalParameter_Common") && get(read,entry,v.group);
