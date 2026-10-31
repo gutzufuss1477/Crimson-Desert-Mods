@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "../mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/variants/all-mounts-level-5-all-stats/src/AllMountsLvL5AllStats_20400.c"
+#include "../mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/variants/all-mounts-level-5-all-stats/src/AllMountsLvL5AllStats_20402.c"
 
 
 static unsigned checks;

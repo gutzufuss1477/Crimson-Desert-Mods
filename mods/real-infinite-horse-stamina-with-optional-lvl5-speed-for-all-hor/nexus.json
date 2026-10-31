@@ -4,10 +4,69 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2365,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2365",
-  "pageVersion": "11",
+  "pageVersion": "12",
   "sourceStatus": "published-release",
-  "sourceNote": "AllStats and Speed-only v11 target Steam build 26317560. AllStats gameplay was confirmed on 2026-10-30; Speed-only passed static/host/loader checks and awaits a separate gameplay test. Steelheart remains an older data download.",
+  "sourceNote": "Updated for game 2.04.02, Steam build 26329202. Gameplay confirmed except Speed-only, which passed static/host/loader checks. Original game inputs remain local.",
   "currentFiles": [
+    {
+      "fileId": 18363,
+      "name": "All Mounts LvL5 Speed Only 2.04.02 - b26329202",
+      "version": "12",
+      "category": "MAIN",
+      "gameVersion": "2.04.02",
+      "steamBuild": "26329202",
+      "inGameTested": false,
+      "validation": "1,135 host checks plus static/loader checks passed. Separate Speed-only gameplay test pending.",
+      "sha256": "76ff2eac958075657993e80de856483d8fabb8003c06f7b1d2d412807290096a",
+      "bytes": 3364,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=18363"
+    },
+    {
+      "fileId": 18364,
+      "name": "All Mounts LvL5 AllStats 2.04.02 - b26329202",
+      "version": "12",
+      "category": "OPTIONAL",
+      "gameVersion": "2.04.02",
+      "steamBuild": "26329202",
+      "inGameTested": true,
+      "validation": "Author confirmed working in game on 2026-10-31.",
+      "sha256": "5ebee3af541a33364df0982eccb52e653d99364d43590ddf6cedc04ffc9b9bf0",
+      "bytes": 3247,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=18364"
+    },
+    {
+      "fileId": 18365,
+      "name": "Steelheart Horseshoes 20 Stamina Regen 2.04.02",
+      "version": "9",
+      "category": "MAIN",
+      "gameVersion": "2.04.02",
+      "steamBuild": "26329202",
+      "inGameTested": true,
+      "validation": "Author confirmed working in game on 2026-10-31.",
+      "sha256": "bebb5c744ef9643696c0e2b0ae14233d7a6c4bc6dd44e8ff8a76cad91202fc8c",
+      "bytes": 2051,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=18365"
+    }
+  ],
+  "archivedFiles": [
+    {
+      "fileId": 16274,
+      "name": "All Mounts LvL 5 All Stats 2.03.02",
+      "version": "10",
+      "category": "OPTIONAL",
+      "sha256": "6afb23ec06ace4a98a327a062cce9607ad45186d689b336f5faad37bc502aa1c",
+      "bytes": 2254,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16274"
+    },
+    {
+      "fileId": 16275,
+      "name": "All Mounts LvL 5 Speed 2.03.02",
+      "version": "10",
+      "category": "MAIN",
+      "sha256": "8f5c5c062b843314f859ac374c8164b0db2cef7395953a446fe68965c054999b",
+      "bytes": 2243,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16275"
+    },
     {
       "fileId": 17991,
       "name": "All Mounts LvL5 Speed Only 2.04.00 - b26317560",
@@ -40,26 +99,6 @@
       "sha256": "380779eb23dc4c0268962f9e42b38f63b7e3d5351887c392ff9b778438a6c00c",
       "bytes": 956,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=14692"
-    }
-  ],
-  "archivedFiles": [
-    {
-      "fileId": 16274,
-      "name": "All Mounts LvL 5 All Stats 2.03.02",
-      "version": "10",
-      "category": "OPTIONAL",
-      "sha256": "6afb23ec06ace4a98a327a062cce9607ad45186d689b336f5faad37bc502aa1c",
-      "bytes": 2254,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16274"
-    },
-    {
-      "fileId": 16275,
-      "name": "All Mounts LvL 5 Speed 2.03.02",
-      "version": "10",
-      "category": "MAIN",
-      "sha256": "8f5c5c062b843314f859ac374c8164b0db2cef7395953a446fe68965c054999b",
-      "bytes": 2243,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=16275"
     }
   ]
 }

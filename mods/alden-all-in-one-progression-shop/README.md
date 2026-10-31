@@ -1,22 +1,17 @@
 # Alden All-In-One Progression Shop
 
-Expand Alden's shop with progression blueprints, books, contracts, Abyss gear, materials and recipes. Supported catalog items cost one Copper. Install the matching game-version package through DMM.
+Current release: **v16**, for **Crimson Desert 2.04.02 / Steam build 26329202**. DMM 4.5.1 mount and gameplay confirmed by the author on 31 October 2026.
 
-[Current downloads and installation instructions on Nexus Mods](https://www.nexusmods.com/crimsondesert/mods/2066)
+The original 379-item catalog, stock and order are preserved: progression blueprints, books, contracts, Abyss gear, materials and recipes. Catalog purchase prices are 1 Copper. Only Alden changes among 440 store records; all other records remain byte-identical.
 
-## Current published files
+[Download v16 on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=18366) · [Release notes and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-2.04.02-b26329202)
 
-| File / variant | Nexus file version | Nexus file ID |
-|---|---|---|
-| Alden_AIO_Shop_All_Items_1_Copper_2.01.00 | 15 | 14689 |
+## Install / update
 
-File versions above are the actual download versions; the Nexus page version can differ.
-Only current published files are listed. Archived releases, comparisons and explicitly labelled tests are excluded.
+Close the game and unmount in DMM. Import `Alden_AIO_Shop_All_Items_1_Copper_2.04.02.zip` with DMM 4.5.1 or a compatible newer version. Disable/remove the previous Alden package, enable the new one and mount. Keep DMM's installed runtime and ASI loader. Restart and visit Alden. Do not copy the ZIP's internal `files/` folder manually.
 
-## Source and build
+To uninstall, close the game, unmount, disable Alden and remount the remaining mods. Purchased items and money spent are not rolled back. Other Alden/shop overlays or item-price edits may conflict.
 
-Exact declarative manifests from the current Nexus archives are included. Full modified game tables and UI files are not redistributed here. Rebuilding the complete overlay requires matching local game inputs and the corresponding transformation; no different-version builder is presented as this release.
+## Source and validation
 
-See `nexus.json` for the immutable file IDs and SHA-256 values.
-Build outputs, original game data, private diagnostics and credentials are kept out of Git.
-Third-party licenses remain with their respective source directories.
+Current recipes are in `recipes/2.04.02`. The builder preserves all non-target store records and checks all 502 purchase-price edits against exact vanilla input hashes. See [build instructions](../../tooling/README.md). Original and complete modified game tables stay outside Git; get the ready-to-install data package from Nexus. `nexus.json` records the exact file ID, version and checksum.

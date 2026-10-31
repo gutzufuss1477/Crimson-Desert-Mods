@@ -4,20 +4,22 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 3669,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3669",
-  "pageVersion": "1.2.1",
+  "pageVersion": "1.2.2",
   "sourceStatus": "published-release",
-  "sourceNote": "Native update for Steam build 26317560. The author confirmed the released ASI working in gameplay on 2026-10-30. Older variants retain their labelled compatibility.",
+  "sourceNote": "Updated for game 2.04.02, Steam build 26329202. Gameplay confirmed except Speed-only, which passed static/host/loader checks. Original game inputs remain local.",
   "currentFiles": [
     {
-      "fileId": 17989,
-      "name": "Bank Refresh 1.2.1 - 2.04.00 - Steam 26317560",
-      "version": "1.2.1",
+      "fileId": 18361,
+      "name": "Bank Refresh 1.2.2 - 2.04.02 - Steam 26329202",
+      "version": "1.2.2",
       "category": "MAIN",
-      "gameVersion": "2.04.00",
-      "steamBuild": "26317560",
-      "sha256": "21675d3f97916176a0295e23881c20196a6b00c21d41a64812948781dfd6cf57",
-      "bytes": 87235,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=17989"
+      "gameVersion": "2.04.02",
+      "steamBuild": "26329202",
+      "inGameTested": true,
+      "validation": "Author confirmed working in game on 2026-10-31.",
+      "sha256": "83302b6cbc20ece95017b6de088d2b7cc7aaf7df810ffe6d27b80921c25a8491",
+      "bytes": 87233,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=18361"
     }
   ],
   "archivedFiles": [
@@ -29,6 +31,17 @@
       "sha256": "c21c9dbc363d026af9ba2885bf0afdc96be86e9170fa26d096d8211ff08193c5",
       "bytes": 92533,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=17032"
+    },
+    {
+      "fileId": 17989,
+      "name": "Bank Refresh 1.2.1 - 2.04.00 - Steam 26317560",
+      "version": "1.2.1",
+      "category": "MAIN",
+      "gameVersion": "2.04.00",
+      "steamBuild": "26317560",
+      "sha256": "21675d3f97916176a0295e23881c20196a6b00c21d41a64812948781dfd6cf57",
+      "bytes": 87235,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=17989"
     }
   ]
 }

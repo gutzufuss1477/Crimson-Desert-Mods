@@ -1,0 +1,5 @@
+"""Steam 2.04.02 hotfix identity, verified locally on 2026-10-31."""
+NATIVE_VERSION = "2.04.02"
+NATIVE_BUILD = "26329202"
+NATIVE_TAG = "2.04.02_b26329202"
+NATIVE_EXE_SHA = "fec07be1b725a46624d31fcd74bf3730ea809765226cea6bde01607ab2d79f66"

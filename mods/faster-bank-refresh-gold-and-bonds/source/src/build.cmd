@@ -21,7 +21,7 @@ lib /nologo /OUT:out\minhook.lib out\buffer.obj out\hook.obj out\trampoline.obj 
 if errorlevel 1 exit /b 1
 rc /nologo /foout\bank_refresh.res bank_refresh.rc
 if errorlevel 1 exit /b 1
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\bank_refresh.obj bank_refresh.cpp /link /OUT:out\Bank_Refresh_2.04.00_b26317560.asi /MAP:out\Bank_Refresh_2.04.00_b26317560.map /DYNAMICBASE /NXCOMPAT /GUARD:CF /Brepro out\bank_refresh.res out\minhook.lib bcrypt.lib
+cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\bank_refresh.obj bank_refresh.cpp /link /OUT:out\Bank_Refresh_2.04.02_b26329202.asi /MAP:out\Bank_Refresh_2.04.02_b26329202.map /DYNAMICBASE /NXCOMPAT /GUARD:CF /Brepro out\bank_refresh.res out\minhook.lib bcrypt.lib
 if errorlevel 1 exit /b 1
 cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /Fe:out\hook_tests.exe /Fo:out\hook_tests.obj hook_tests.cpp /link out\minhook.lib bcrypt.lib
 if errorlevel 1 exit /b 1

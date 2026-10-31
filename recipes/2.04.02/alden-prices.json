@@ -1,0 +1,5170 @@
+{
+  "reader_rva": "0x17133b0",
+  "price_array_rva": "0x172d880",
+  "price_entry_rva": "0x17629f0",
+  "items": [
+    {
+      "key": 1002525,
+      "name": "Recipe_Item_Stat_AbyssGear_SwimSpeedRate_LV1",
+      "record_sha256": "71ab0180907c85f9c17a0cd3b1cd1f27ed2604ad4a3a9cf6a0a2ce3219a3a9ec",
+      "prices": [
+        {
+          "offset": 336,
+          "original": 961,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002528,
+      "name": "Recipe_Item_Stat_AbyssGear_FireResistance_LV1",
+      "record_sha256": "c02f78c1b450afeacfe69e7f400a050abf680422070e01ae75720b4a045852bb",
+      "prices": [
+        {
+          "offset": 337,
+          "original": 675,
+          "currency": 1
+        },
+        {
+          "offset": 357,
+          "original": 100,
+          "currency": 1004318
+        }
+      ]
+    },
+    {
+      "key": 1002529,
+      "name": "Recipe_Item_Stat_AbyssGear_IceResistance_LV1",
+      "record_sha256": "11b06e3681615d8ca8b0e2a3312126aafa152794c876ecb59a2bd80c603efedf",
+      "prices": [
+        {
+          "offset": 336,
+          "original": 800,
+          "currency": 1
+        },
+        {
+          "offset": 356,
+          "original": 100,
+          "currency": 1004318
+        }
+      ]
+    },
+    {
+      "key": 1002530,
+      "name": "Recipe_Item_Stat_AbyssGear_ElectricityResistance_LV1",
+      "record_sha256": "25343f66a44c2209e5bea44b83e3f2bb062228e27c965619b11efb49e1e4994e",
+      "prices": [
+        {
+          "offset": 344,
+          "original": 596,
+          "currency": 1
+        },
+        {
+          "offset": 364,
+          "original": 100,
+          "currency": 1004318
+        }
+      ]
+    },
+    {
+      "key": 1001423,
+      "name": "Recipe_Item_Skill_AbyssGear_LandMash_LV1",
+      "record_sha256": "e61208e82489eb98e290b9414bc10dddffbfa118a8519872b5715b673e604a1c",
+      "prices": [
+        {
+          "offset": 332,
+          "original": 1275,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002388,
+      "name": "Recipe_Item_Skill_AbyssGear_SoulStrike_LV1",
+      "record_sha256": "cec2ba60416a7d34e4e71cfed5ea5c4bd7277ee4dc7a875fb91052e8939c143b",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1231,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002390,
+      "name": "Recipe_Item_Skill_AbyssGear_CrowAttack_LV1",
+      "record_sha256": "58d0b360b7eb07d917611d8a543d0cfeb64d35d8d1533cf80413567bade9d296",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 850,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002478,
+      "name": "Recipe_Item_Skill_AbyssGear_FlashCombo_LV1",
+      "record_sha256": "da710a797154096267ed411b8ac9039c8c57f04a7cbf947e11064bc00455a95f",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1161,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002479,
+      "name": "Recipe_Item_Skill_AbyssGear_SwordAura_LV1",
+      "record_sha256": "15c5902c04b81bcbab210ddac300d5f9d4d696436aff03b54ca64b2ff53793f9",
+      "prices": [
+        {
+          "offset": 333,
+          "original": 1046,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000733,
+      "name": "Recipe_Item_Skill_AbyssGear_FrostBreath_LV1",
+      "record_sha256": "d3433b8d9e690969dff9771cfbacdda31e3f2ebc49f375ef599011339eddbe3e",
+      "prices": [
+        {
+          "offset": 335,
+          "original": 1221,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000734,
+      "name": "Recipe_Item_Skill_AbyssGear_FireBreath_LV1",
+      "record_sha256": "4746971d6102a66e7cad8ae98cf6d0f6be0cc21be5f3c98e4841add9638b94c9",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1031,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002558,
+      "name": "Recipe_Item_Skill_AbyssGear_LightningBreath_LV1",
+      "record_sha256": "4370f7e7752347833f1d43b0618d2e66c42016e3c7e9956dc7beee20d0cae364",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 959,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002481,
+      "name": "Recipe_Item_Skill_AbyssGear_EnlightenmentWave_LV1",
+      "record_sha256": "9eadedddeb514fce67c69a23e8f72d9a96fe5129b13c7332938cbab829756635",
+      "prices": [
+        {
+          "offset": 341,
+          "original": 1127,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002596,
+      "name": "Recipe_Item_Skill_AbyssGear_DarkenRobe_LV1",
+      "record_sha256": "f800895ffeba69cbb2ad0c3586c07fbeecf7e0cd8f805150428669c6b3e1a46d",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1188,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002483,
+      "name": "Recipe_Item_Skill_AbyssGear_DogClaw_LV1",
+      "record_sha256": "ccae3b2a898a622b4f51959513d39bd98396cef3022edab640d0b628b6a0013c",
+      "prices": [
+        {
+          "offset": 331,
+          "original": 907,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002639,
+      "name": "Recipe_Item_Skill_AbyssGear_Forgotten_General",
+      "record_sha256": "5505394071eb8ca31b79b35abe0339ecd5af992651cf2e01c44f11f62db54400",
+      "prices": [
+        {
+          "offset": 337,
+          "original": 1268,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002642,
+      "name": "Recipe_Item_Skill_AbyssGear_Ogre",
+      "record_sha256": "45396c5b027e52ade7bf2d3ddefbd8cc3a171aa7a1b9b445411e05a7bd0aff47",
+      "prices": [
+        {
+          "offset": 324,
+          "original": 1011,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002762,
+      "name": "Recipe_Item_Skill_AbyssGear_Antumbra_Spear",
+      "record_sha256": "5488a6eaa2234ad3d0c003255a4ac17f344f4f93296e83013212a6c3976866c7",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 892,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002489,
+      "name": "Recipe_Item_Skill_AbyssGear_CrowStorm_LV1",
+      "record_sha256": "f117be914a240e2e3fa82477701fc3b5e1d5f4c52f42840b489b462d809051bb",
+      "prices": [
+        {
+          "offset": 333,
+          "original": 952,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002769,
+      "name": "Recipe_Item_Skill_AbyssGear_SmashStorm_LV1",
+      "record_sha256": "4e8e8f09aeb925ca5cb0253ab0eff8013958ff844b626657014c97f3f632e296",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1309,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002856,
+      "name": "Recipe_Item_Skill_AbyssGear_CresecentAura_1_LV1",
+      "record_sha256": "9df72e86b04a44c6641b95db29914bff208b7009aae797c8365df9b5abeed5a9",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 1312,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002859,
+      "name": "Recipe_Item_Skill_AbyssGear_CresecentAura_2_LV1",
+      "record_sha256": "9b7c41c42e8fc016ac0cf10bb1175ffdaddddba9592569eff76c0713dcc72137",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 958,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002877,
+      "name": "Recipe_Item_Skill_AbyssGear_CresecentAura_3_LV1",
+      "record_sha256": "ea1ef3892bec6395511feed4fec4f9be29db0c2ff93aa10e35c0647ce363e9e3",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 1098,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002803,
+      "name": "Recipe_Item_Skill_AbyssGear_FrostSpike_LV1",
+      "record_sha256": "a066337ff551f1c685d53266f802fd4ee01d5bd67d0263b256ec9a7c798d58e2",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 907,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002494,
+      "name": "Recipe_Item_Skill_AbyssGear_AbsoluteDefense_LV1",
+      "record_sha256": "08965e1b25ae6c0b63d4fd429fa570f1df89e7375a195b0ff43fbe005f8f84f3",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 946,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002531,
+      "name": "Recipe_Item_Skill_AbyssGear_ArrowRain_LV1",
+      "record_sha256": "36f50a382dcc532ad46d1435566f8a4e0c73445a77478f1c9a90ecc89d07832b",
+      "prices": [
+        {
+          "offset": 333,
+          "original": 889,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002878,
+      "name": "Recipe_Item_Skill_AbyssGear_Merrick",
+      "record_sha256": "dd58c18b4954e0d0aca0fecbe0c17ebc5da838a21b5fa30b1889062df369500b",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 1330,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002480,
+      "name": "Recipe_Item_Skill_AbyssGear_LightningStab_LV1",
+      "record_sha256": "1d74348e6f6bc8c43c405ae67794d98006f5b9db4b808ffc6397f360beccbcba",
+      "prices": [
+        {
+          "offset": 337,
+          "original": 932,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002890,
+      "name": "Recipe_Item_Skill_AbyssGear_Antumbra_TwoHandRod",
+      "record_sha256": "f6798cbbf2df3b35d48bdc74fc1c291cb14a3b246550934db146de75ab1f01a8",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 1034,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002891,
+      "name": "Recipe_Item_Skill_AbyssGear_TarandusWarrior_WarHammer",
+      "record_sha256": "8b282c97c4d44e0efb1d90d3c3bf6031fa32b548b41675ac04988bb87b9065bf",
+      "prices": [
+        {
+          "offset": 345,
+          "original": 831,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003696,
+      "name": "Recipe_Item_Skill_AbyssGear_Bastier",
+      "record_sha256": "ddb36283e997c7e8cd1b7c1bde16428233203584ae24596be2c1835b5c4fb2e3",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 969,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002649,
+      "name": "Recipe_Item_Skill_AbyssGear_Karanda",
+      "record_sha256": "f211b9788371de1ea6d85ca68004acb99d38f1a0f724087a4abe3dfbcd5a4e40",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 1200,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002804,
+      "name": "Recipe_Item_Skill_AbyssGear_FrostDeath_LV1",
+      "record_sha256": "9098944d96dae1aa677d362f5d3046438e19d4217904f414fdd94a667ab51749",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1263,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002650,
+      "name": "Recipe_Item_Skill_AbyssGear_Primus",
+      "record_sha256": "ac5cfd248ddee1cf4c7aa42af76518f49f87e6a778583805ad91e31ac90314c3",
+      "prices": [
+        {
+          "offset": 326,
+          "original": 1237,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003719,
+      "name": "Recipe_Item_Skill_AbyssGear_DarkChase_LV1",
+      "record_sha256": "10e6d8ade625c2f0df990f2bd73d94d7493c7aa5e954e32dfe15457b44c65cdf",
+      "prices": [
+        {
+          "offset": 333,
+          "original": 1161,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003720,
+      "name": "Recipe_Item_Skill_AbyssGear_Leebur",
+      "record_sha256": "a9add1f52cf5b8ff66036bc3f5612fd0ca518d95d6bc48b861e744b3b0eeee24",
+      "prices": [
+        {
+          "offset": 326,
+          "original": 1360,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003721,
+      "name": "Recipe_Item_Skill_AbyssGear_QueenSpider",
+      "record_sha256": "ac3c69babd723845976574e39eb7c03b76f1e2e4b9fd06b43678a67e9ce85965",
+      "prices": [
+        {
+          "offset": 331,
+          "original": 1302,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003722,
+      "name": "Recipe_Item_Skill_AbyssGear_Praevus",
+      "record_sha256": "2feedaf95fd0c3303d380e85e2dcdae702bbc367d0b1a2f7f91d1bd0825462f6",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 897,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003723,
+      "name": "Recipe_Item_Skill_AbyssGear_Priscus",
+      "record_sha256": "98bd3d9beb57803629f2815e546b308d1cd2cf4e26fe8b17ff9edde4105a2ccc",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 1205,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003724,
+      "name": "Recipe_Item_Skill_AbyssGear_Skevald",
+      "record_sha256": "0817f0fd1fdfecfbe666dd91a87e9b62a65c4836317da3a6be33abf2f3ae290d",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 1065,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002534,
+      "name": "Recipe_Item_Skill_AbyssGear_AtorDrone_LV1",
+      "record_sha256": "c62f4f26d5603adc3d1d74aef67c41da7903018d16fe33c9e72915d7cab1dc81",
+      "prices": [
+        {
+          "offset": 333,
+          "original": 1138,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002490,
+      "name": "Recipe_Item_Skill_AbyssGear_PhantomStab_LV1",
+      "record_sha256": "fa96f873576ff066cda406d59e7663c37a5ccf59d1bb0063944631494b8f6c55",
+      "prices": [
+        {
+          "offset": 335,
+          "original": 950,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003725,
+      "name": "Recipe_Item_Skill_AbyssGear_LanFord",
+      "record_sha256": "950f7cc3f7a5d8ac42ad9c05ec4ec8f182af35ec2929d9f8d930fb6a3056cc14",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 968,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003726,
+      "name": "Recipe_Item_Skill_AbyssGear_ImpBoss",
+      "record_sha256": "91d01a6bbce1bf64732da0aacc1cfa3f40213c33b570319a862f4e30962d689b",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 853,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002648,
+      "name": "Recipe_Item_Skill_AbyssGear_Catfish_BodySlam_LV1",
+      "record_sha256": "f3b6238a74b8144440ec55b0ea61ae87f347c7b7d6cd37f4f0769372dbce2cd9",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 1042,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003727,
+      "name": "Recipe_Item_Skill_AbyssGear_Titan",
+      "record_sha256": "2a37f82fb33578710b7a06bacc17f166b045307b5f5f855c10910a580b9a427d",
+      "prices": [
+        {
+          "offset": 325,
+          "original": 1012,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002532,
+      "name": "Recipe_Item_Skill_AbyssGear_EnergyBurst_LV1",
+      "record_sha256": "93a4f9d1d18688e75b706ae66ac465eba343cdecc05581b899f03a48f3a1013d",
+      "prices": [
+        {
+          "offset": 335,
+          "original": 1136,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002651,
+      "name": "Recipe_Item_Skill_AbyssGear_Muscan",
+      "record_sha256": "ddceb7cb10a6ad1a44c01c9316c6cd9de9e825628cebe788704782554e4d61cd",
+      "prices": [
+        {
+          "offset": 326,
+          "original": 1343,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002568,
+      "name": "Recipe_Item_Skill_AbyssGear_Machine_AdditionalDamage_LV1",
+      "record_sha256": "d80933652162f67d58fabdfac50a38485f1e00bd7fcb0670a0bde799d8d8f977",
+      "prices": [
+        {
+          "offset": 348,
+          "original": 957,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002570,
+      "name": "Recipe_Item_Skill_AbyssGear_CommonHexe_AdditionalDamage_LV1",
+      "record_sha256": "dca668fed14dcf74eb3b7effae21dcbb2b4a86e8dd3d4b1c9c18e5be17cc3a3c",
+      "prices": [
+        {
+          "offset": 351,
+          "original": 1442,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002571,
+      "name": "Recipe_Item_Skill_AbyssGear_CommonHumanoid_AdditionalDamage_LV1",
+      "record_sha256": "ffb3b0c4a6086a5d77f4b221da073f69a119ccf88f7e21a5e5b1a036223ca3cc",
+      "prices": [
+        {
+          "offset": 355,
+          "original": 1643,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002574,
+      "name": "Recipe_Item_Skill_AbyssGear_CommonGolem_AdditionalDamage_LV1",
+      "record_sha256": "30ab492967b22fc07544acf480730a7a18eb5dc82aa628e57cb03eebcb01a774",
+      "prices": [
+        {
+          "offset": 352,
+          "original": 1619,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002579,
+      "name": "Recipe_Item_Skill_AbyssGear_Boss_AdditionalDamage_LV1",
+      "record_sha256": "a954df8de60f42ae9e2c3d117535497c7f7d3321ab2cbb5ccfed8817550010c0",
+      "prices": [
+        {
+          "offset": 345,
+          "original": 917,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003728,
+      "name": "Recipe_Item_Skill_AbyssGear_CommonAnimal_AdditionalDamage_LV1",
+      "record_sha256": "f6071e441fffd541aa427f86a3ea062f3790ebbe47b13e59fc301a2c7eb7cd6c",
+      "prices": [
+        {
+          "offset": 353,
+          "original": 1082,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003729,
+      "name": "Recipe_Item_Skill_AbyssGear_Creature_AdditionalDamage_LV1",
+      "record_sha256": "556492f4f47059b5a935e71634ac1f03759552adbf181cc35cb2a5c367303a14",
+      "prices": [
+        {
+          "offset": 349,
+          "original": 1095,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002541,
+      "name": "Recipe_Item_Skill_AbyssGear_AbyssGrass_Immune",
+      "record_sha256": "fc8ebfc839a86cfadd05688bc7110f10974b13c19d297f247dcf98e53d521e3b",
+      "prices": [
+        {
+          "offset": 337,
+          "original": 1008,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002544,
+      "name": "Recipe_Item_Skill_AbyssGear_Hyena_PoisonImmune",
+      "record_sha256": "6c32e11c5c7dab4b56ebe781e60bcb74e786116dfc9cbc6e0561a3a8b78d5656",
+      "prices": [
+        {
+          "offset": 338,
+          "original": 1355,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002545,
+      "name": "Recipe_Item_Skill_AbyssGear_Immune_Bismuth",
+      "record_sha256": "b181f0d31dc726f26186fc42c79904bbbf5847acbb70518f21ffe6148c910de0",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1294,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002546,
+      "name": "Recipe_Item_Skill_AbyssGear_DAM_UP_RotationBash",
+      "record_sha256": "76a976c1ed3d2b9974a7c48d8fd1b4ad1cfb4cdd08f735e4981167b8e38b7943",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 1728,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002594,
+      "name": "Recipe_Item_Skill_AbyssGear_AddMoneyDropRate_LV1",
+      "record_sha256": "cce135aeab404e3e201f6acd2fd7807d74b1456af675bda14646ce4a5f41f84d",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 2266,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003228,
+      "name": "Recipe_Item_Skill_AbyssGear_EquipDropRate_LV1",
+      "record_sha256": "33c1683204bbbb4f57a1f75c7d5e11f68bb84ce54ae790f3c13a49b416d88a01",
+      "prices": [
+        {
+          "offset": 337,
+          "original": 2392,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002643,
+      "name": "Recipe_Item_Skill_AbyssGear_BlockAmmoConsume_LV1",
+      "record_sha256": "bac9528a84ceb7521487ad1ffabe8834ff804cb0defec9a7e55479092b59aa94",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 1654,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002644,
+      "name": "Recipe_Item_Skill_AbyssGear_FoodSkillLevelUp_LV1",
+      "record_sha256": "b7dc581ab4ece0c95dcf86173a37cc3be32469000f6d53d7ce9ebc229a0ece02",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 1968,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002645,
+      "name": "Recipe_Item_Skill_AbyssGear_ReduceCraftMaterial_LV1",
+      "record_sha256": "e6fcb3fa957b79f111326ef9035457d5bcbe227d10efb10b695efa0de07f9656",
+      "prices": [
+        {
+          "offset": 343,
+          "original": 1973,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003736,
+      "name": "Recipe_Item_Skill_AbyssGear_AdditionalThief_LV1",
+      "record_sha256": "9e07d6f59abaa21b3438bc5400fc77a65c5957a7e6c1f6db07d0113346ad11bc",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 1942,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003737,
+      "name": "Recipe_Item_Skill_AbyssGear_CollectDrop_Ore_LV1",
+      "record_sha256": "3f0e67cd4ef3999fbb4189f983606d8c695250d78e12416757504a61005e38e3",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 2219,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003738,
+      "name": "Recipe_Item_Skill_AbyssGear_CollectDrop_Plant_LV1",
+      "record_sha256": "1c2b045b1c819d60ec59ca39db3f6692ca22fb194a5c4c1d65c6eec49788bd9d",
+      "prices": [
+        {
+          "offset": 341,
+          "original": 1730,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003739,
+      "name": "Recipe_Item_Skill_AbyssGear_CollectDrop_Animal_LV1",
+      "record_sha256": "4cec8558cb86a228fcc90ca350db98c9735435a312d2bca748f75806570065e5",
+      "prices": [
+        {
+          "offset": 342,
+          "original": 2026,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003740,
+      "name": "Recipe_Item_Skill_AbyssGear_ContributionExp_LV1",
+      "record_sha256": "8ca0c92f53d23e4d2b987c5f8956b49ab39757537f28acb3137e08bb0c699b1c",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 2325,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003741,
+      "name": "Recipe_Item_Skill_AbyssGear_SkillPointExp_LV1",
+      "record_sha256": "8705d77c529fc01e67bb674d8f84049c83a19313d62c0724742e45b4fef7f193",
+      "prices": [
+        {
+          "offset": 337,
+          "original": 2157,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002653,
+      "name": "Recipe_Item_Skill_AbyssGear_CollectDrop_Log_LV1",
+      "record_sha256": "b200fa7ba335a9839d339f9dd5543701c564ea0ab52012bd9f34baf107f049a8",
+      "prices": [
+        {
+          "offset": 339,
+          "original": 1939,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002654,
+      "name": "Recipe_Item_Skill_AbyssGear_AddFrendly_LV1",
+      "record_sha256": "4e40f17876d04baa30371881b0248af99da8ecf22ea273f1c9e7ec76838b6448",
+      "prices": [
+        {
+          "offset": 334,
+          "original": 1979,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003742,
+      "name": "Recipe_Item_Skill_AbyssGear_Equip_AddHorseExp_LV1",
+      "record_sha256": "eaeba2d5b805ce8eadb11d1b7d5e58cf71dac1f6cb83563a6e159fd47195b726",
+      "prices": [
+        {
+          "offset": 341,
+          "original": 1901,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003743,
+      "name": "Recipe_Item_Skill_AbyssGear_Equip_AddPetFriendly_LV1",
+      "record_sha256": "69a7c62b12d048ea41034fcb6c0fb4e2409de8c056b7e36b534f17d709be624b",
+      "prices": [
+        {
+          "offset": 344,
+          "original": 2132,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003730,
+      "name": "Recipe_Item_Skill_AbyssGear_AddKillSkillLevel_LV1",
+      "record_sha256": "043e3a521fe1c7433d4c2f6af7a6328d6a54447e67881d0d4cfbd9d8c0b13b37",
+      "prices": [
+        {
+          "offset": 341,
+          "original": 1642,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003731,
+      "name": "Recipe_Item_Skill_AbyssGear_Attack_HPRecover_LV1",
+      "record_sha256": "701b8b81105f2ebdcc0457735b53a0052a3be8cee967472907b06ff8521d10c3",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 2163,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003732,
+      "name": "Recipe_Item_Skill_AbyssGear_Attack_MPRecover_LV1",
+      "record_sha256": "640328ac0cc0478e4ba03737c54ad45d77e09ce865542ae029eca8a66610f08d",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 2177,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003733,
+      "name": "Recipe_Item_Skill_AbyssGear_Attack_SPRecover_LV1",
+      "record_sha256": "375215675f649a97482d5d94173514e0aa705839b13a306d0f32cdb0d421bf8d",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 1974,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003734,
+      "name": "Recipe_Item_Skill_AbyssGear_Combo_LV1",
+      "record_sha256": "3ad6bbdafcf0b4d0b4f2cdc8a59913c9e0819ab19364abc24bfa31c52c34345a",
+      "prices": [
+        {
+          "offset": 329,
+          "original": 1936,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 75001,
+      "name": "Abyss_Artifact",
+      "record_sha256": "adf6cda5c7a552c93d3e685ec5abdc19c291e79cbe4641478188f3b4c79df581",
+      "prices": [
+        {
+          "offset": 304,
+          "original": 2850,
+          "currency": 1
+        },
+        {
+          "offset": 324,
+          "original": 200,
+          "currency": 1004318
+        }
+      ]
+    },
+    {
+      "key": 1001436,
+      "name": "Recipe_Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_LeatherArmor_LV1",
+      "record_sha256": "b12dd7ca999ef12a05846c237a3553728b0c19db9a4abef553beea8c3e508cd6",
+      "prices": [
+        {
+          "offset": 365,
+          "original": 2079,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003758,
+      "name": "Recipe_Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_FabricArmor_LV1",
+      "record_sha256": "be6611348e28d0664818bf417bd52ced4ee60af98f7219651afb1d3f348047a6",
+      "prices": [
+        {
+          "offset": 364,
+          "original": 1686,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000426,
+      "name": "Recipe_Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_PlateArmor_LV1",
+      "record_sha256": "1b4a3ae696c3f1b2c40613c2a30cc524812f0be66ab4711b6a17f089392919d7",
+      "prices": [
+        {
+          "offset": 363,
+          "original": 2298,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002785,
+      "name": "Item_Stat_AbyssGear_DDD_LV1",
+      "record_sha256": "a35f0f18685eac7096b09ddfd2e7760224ae33659ed8bbfc14aa1fc879dbca49",
+      "prices": [
+        {
+          "offset": 443,
+          "original": 633,
+          "currency": 1
+        },
+        {
+          "offset": 463,
+          "original": 31,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002791,
+      "name": "Item_Stat_AbyssGear_CriticalRate_LV1",
+      "record_sha256": "80b1a2c73325895bccdf6f35d640cd09f49a20d03b7731291f037b4d126ceab8",
+      "prices": [
+        {
+          "offset": 457,
+          "original": 560,
+          "currency": 1
+        },
+        {
+          "offset": 477,
+          "original": 28,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002810,
+      "name": "Item_Stat_AbyssGear_AttackSpeedRate_LV1",
+      "record_sha256": "887d7be59f4e91edd4471645447cf1a6cdcd2a0a5c9255f96310582768ff34aa",
+      "prices": [
+        {
+          "offset": 457,
+          "original": 700,
+          "currency": 1
+        },
+        {
+          "offset": 477,
+          "original": 35,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002794,
+      "name": "Item_Stat_AbyssGear_DPV_LV1",
+      "record_sha256": "4d9edde3ae6d1bd78ef256fe106d62b5d5a97071adecabd4643c880db98fab23",
+      "prices": [
+        {
+          "offset": 443,
+          "original": 367,
+          "currency": 1
+        },
+        {
+          "offset": 463,
+          "original": 18,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002797,
+      "name": "Item_Stat_AbyssGear_ADR_LV1",
+      "record_sha256": "b5af1fb0fbc44261f30e6f71f631aa803c1e241456292e4f0e95635f92aae9cc",
+      "prices": [
+        {
+          "offset": 465,
+          "original": 513,
+          "currency": 1
+        },
+        {
+          "offset": 485,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002807,
+      "name": "Item_Stat_AbyssGear_GuardPVRate_LV1",
+      "record_sha256": "1b5bd11ff2ccbdfe6b9311e29d09bbab9682a872ff9a8fbb6a02546a57b2f97a",
+      "prices": [
+        {
+          "offset": 470,
+          "original": 247,
+          "currency": 1
+        },
+        {
+          "offset": 490,
+          "original": 12,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002813,
+      "name": "Item_Stat_AbyssGear_MoveSpeedRate_LV1",
+      "record_sha256": "934b2284e20a26f7fecee2c44368593ef2e7a0f6a86acde6befe23ca0ab5ade8",
+      "prices": [
+        {
+          "offset": 455,
+          "original": 500,
+          "currency": 1
+        },
+        {
+          "offset": 475,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002816,
+      "name": "Item_Stat_AbyssGear_ClimbSpeedRate_LV1",
+      "record_sha256": "fe08d1ccf256960437bd0d32173861d0543007f9933b5e1b9f08c2f28aa9efb5",
+      "prices": [
+        {
+          "offset": 468,
+          "original": 433,
+          "currency": 1
+        },
+        {
+          "offset": 488,
+          "original": 21,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002747,
+      "name": "Item_Stat_AbyssGear_StaminaRegen_LV1",
+      "record_sha256": "fb732658666b0386862d2fcf9b67c6eaeb41cb753df2afceda2936e02b6b7512",
+      "prices": [
+        {
+          "offset": 477,
+          "original": 320,
+          "currency": 1
+        },
+        {
+          "offset": 497,
+          "original": 16,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002822,
+      "name": "Item_Stat_AbyssGear_HpRegen_LV1",
+      "record_sha256": "894ec0c1d92f21d0c9e8f63d94440eeee4567c5c5810afe313a84e561b51706a",
+      "prices": [
+        {
+          "offset": 472,
+          "original": 260,
+          "currency": 1
+        },
+        {
+          "offset": 492,
+          "original": 13,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002752,
+      "name": "Item_Stat_AbyssGear_MpRegen_LV1",
+      "record_sha256": "8633461ddbdba5b0a57a9f44170fb736dace787ad63a531850e90915cf826287",
+      "prices": [
+        {
+          "offset": 472,
+          "original": 347,
+          "currency": 1
+        },
+        {
+          "offset": 492,
+          "original": 17,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002837,
+      "name": "Item_Stat_AbyssGear_SwimSpeedRate_LV1",
+      "record_sha256": "641f872a4d9274647eeecafae7f379f70a69dfd9b4fa595b385e4605200a4e6d",
+      "prices": [
+        {
+          "offset": 472,
+          "original": 400,
+          "currency": 1
+        },
+        {
+          "offset": 492,
+          "original": 20,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1001424,
+      "name": "Item_Stat_AbyssGear_FireResistance_LV1",
+      "record_sha256": "89a254924617d2604cdd0a065b3f2f5570b8d1abd4d7b8ee7655fffff4fa76d2",
+      "prices": [
+        {
+          "offset": 477,
+          "original": 400,
+          "currency": 1
+        },
+        {
+          "offset": 497,
+          "original": 20,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002167,
+      "name": "Item_Stat_AbyssGear_IceResistance_LV1",
+      "record_sha256": "e5bd519ed9707e146fbfafcb4bc127318142756fd75fe018915b3d1fef3ebfc0",
+      "prices": [
+        {
+          "offset": 476,
+          "original": 380,
+          "currency": 1
+        },
+        {
+          "offset": 496,
+          "original": 19,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002497,
+      "name": "Item_Stat_AbyssGear_ElectricityResistance_LV1",
+      "record_sha256": "e33fafa0ad424676ece7ca6f8ceba8381e963a8551369d94df325aeb56143e19",
+      "prices": [
+        {
+          "offset": 484,
+          "original": 413,
+          "currency": 1
+        },
+        {
+          "offset": 504,
+          "original": 20,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002896,
+      "name": "Item_Skill_AbyssGear_Machine_AdditionalDamage_LV1",
+      "record_sha256": "27629fe35c22befea41bbe98541fede9f6408277beb5e6e66dd082cf7b387616",
+      "prices": [
+        {
+          "offset": 483,
+          "original": 540,
+          "currency": 1
+        },
+        {
+          "offset": 503,
+          "original": 27,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002899,
+      "name": "Item_Skill_AbyssGear_CommonHexe_AdditionalDamage_LV1",
+      "record_sha256": "5002a363746ce5ee296f56998797c28a06dccd1c5d491f9262ff3415164fb48d",
+      "prices": [
+        {
+          "offset": 486,
+          "original": 540,
+          "currency": 1
+        },
+        {
+          "offset": 506,
+          "original": 27,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002902,
+      "name": "Item_Skill_AbyssGear_CommonHumanoid_AdditionalDamage_LV1",
+      "record_sha256": "5efa3b230da0c55f82a7513213cbb96cfc514b8d6810fe72fcbb2d832b97f433",
+      "prices": [
+        {
+          "offset": 490,
+          "original": 500,
+          "currency": 1
+        },
+        {
+          "offset": 510,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002905,
+      "name": "Item_Skill_AbyssGear_CommonGolem_AdditionalDamage_LV1",
+      "record_sha256": "faac6c56f96739a57fa2385961fbf8d1c81e05587c381405e00abddf70770553",
+      "prices": [
+        {
+          "offset": 487,
+          "original": 500,
+          "currency": 1
+        },
+        {
+          "offset": 507,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002908,
+      "name": "Item_Skill_AbyssGear_Boss_AdditionalDamage_LV1",
+      "record_sha256": "d638a0e7b28bdfe4349ae2a6415c4cdaf309cd9db507080abec12807b0714517",
+      "prices": [
+        {
+          "offset": 480,
+          "original": 547,
+          "currency": 1
+        },
+        {
+          "offset": 500,
+          "original": 27,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002911,
+      "name": "Item_Skill_AbyssGear_CommonAnimal_AdditionalDamage_LV1",
+      "record_sha256": "50ac400b7c23221161ddeb35a367c228dde30cf8bd79883077b985f3e92203a2",
+      "prices": [
+        {
+          "offset": 488,
+          "original": 520,
+          "currency": 1
+        },
+        {
+          "offset": 508,
+          "original": 26,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002914,
+      "name": "Item_Skill_AbyssGear_Creature_AdditionalDamage_LV1",
+      "record_sha256": "f4032cc32bfea7e7fe6073ef36449ba3318c65160eae64b2c489b921545baa66",
+      "prices": [
+        {
+          "offset": 487,
+          "original": 533,
+          "currency": 1
+        },
+        {
+          "offset": 507,
+          "original": 26,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003759,
+      "name": "Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_PlateArmor_LV1",
+      "record_sha256": "d5ddc4cbe7f82635e477cfff81f59f6dff29d0141de66324bc70a7f5ba9fedd3",
+      "prices": [
+        {
+          "offset": 513,
+          "original": 513,
+          "currency": 1
+        },
+        {
+          "offset": 533,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003762,
+      "name": "Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_LeatherArmor_LV1",
+      "record_sha256": "b467d8123b0f138af89114463839f7c957e67c2a795b738eae28c0af867ce74d",
+      "prices": [
+        {
+          "offset": 515,
+          "original": 500,
+          "currency": 1
+        },
+        {
+          "offset": 535,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003765,
+      "name": "Item_Skill_AbyssGear_AddCriticalRateByMaterialKey_FabricArmor_LV1",
+      "record_sha256": "b869ce0b4e0d6a138c95d5f1715ad9bc0cc6bade24c1fddb232da4f79553649b",
+      "prices": [
+        {
+          "offset": 511,
+          "original": 520,
+          "currency": 1
+        },
+        {
+          "offset": 531,
+          "original": 26,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002953,
+      "name": "Item_Skill_AbyssGear_AddKillSkillLevel_LV1",
+      "record_sha256": "ba977674b275261fac4dcb8930736207d70dd20230b38876186a743cfdd51477",
+      "prices": [
+        {
+          "offset": 486,
+          "original": 540,
+          "currency": 1
+        },
+        {
+          "offset": 506,
+          "original": 27,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003229,
+      "name": "Item_Skill_AbyssGear_EquipDropRate_LV1",
+      "record_sha256": "790fa22e4c6b2b5dd0425718efb55e899c98ee89cb23d9163913fc9c247fbdad",
+      "prices": [
+        {
+          "offset": 466,
+          "original": 427,
+          "currency": 1
+        },
+        {
+          "offset": 486,
+          "original": 21,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002920,
+      "name": "Item_Skill_AbyssGear_AddMoneyDropRate_LV1",
+      "record_sha256": "20be9f97459d7aef57be112f14eeb79cba70da960809812ddea06af90ec4ad81",
+      "prices": [
+        {
+          "offset": 462,
+          "original": 400,
+          "currency": 1
+        },
+        {
+          "offset": 482,
+          "original": 20,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002923,
+      "name": "Item_Skill_AbyssGear_BlockAmmoConsume_LV1",
+      "record_sha256": "084f3df5d8cc44a4a17f95138c0873191dd945d3f812e61f1177b120261dc2d8",
+      "prices": [
+        {
+          "offset": 479,
+          "original": 407,
+          "currency": 1
+        },
+        {
+          "offset": 499,
+          "original": 20,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002926,
+      "name": "Item_Skill_AbyssGear_FoodSkillLevelUp_LV1",
+      "record_sha256": "7320bf126e856790e1298a2c72eba06b9dfb6c43aecd7c378a7fcd377171c241",
+      "prices": [
+        {
+          "offset": 479,
+          "original": 527,
+          "currency": 1
+        },
+        {
+          "offset": 499,
+          "original": 26,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002929,
+      "name": "Item_Skill_AbyssGear_ReduceCraftMaterial_LV1",
+      "record_sha256": "9834b112251e5a2b22682cd6f8a257d7153946d3a12a7e071ce1df8b9bfa6fbd",
+      "prices": [
+        {
+          "offset": 468,
+          "original": 373,
+          "currency": 1
+        },
+        {
+          "offset": 488,
+          "original": 18,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002932,
+      "name": "Item_Skill_AbyssGear_AdditionalThief_LV1",
+      "record_sha256": "b629d1e1cdaca163485d2ed82bfbfc3fc6d696f9e314c4eba00c7a6f9a857ac2",
+      "prices": [
+        {
+          "offset": 499,
+          "original": 420,
+          "currency": 1
+        },
+        {
+          "offset": 519,
+          "original": 21,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002935,
+      "name": "Item_Skill_AbyssGear_CollectDrop_Ore_LV1",
+      "record_sha256": "2f0ee5a70fec10918c44ef212739c83d5ce9751fdcbaa0aeb8272098b722b413",
+      "prices": [
+        {
+          "offset": 461,
+          "original": 413,
+          "currency": 1
+        },
+        {
+          "offset": 481,
+          "original": 20,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002938,
+      "name": "Item_Skill_AbyssGear_CollectDrop_Plant_LV1",
+      "record_sha256": "c1e1a8671f35bce18bfd2d52e21fd25f62fbffe40e3498ec72f34eb72a6ae303",
+      "prices": [
+        {
+          "offset": 466,
+          "original": 433,
+          "currency": 1
+        },
+        {
+          "offset": 486,
+          "original": 21,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002941,
+      "name": "Item_Skill_AbyssGear_CollectDrop_Animal_LV1",
+      "record_sha256": "59a6eb8fafd3af721aa2c0ab163b40436f55a5faf3364a2502b7c9f5b30b8073",
+      "prices": [
+        {
+          "offset": 467,
+          "original": 420,
+          "currency": 1
+        },
+        {
+          "offset": 487,
+          "original": 21,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002944,
+      "name": "Item_Skill_AbyssGear_CollectDrop_Log_LV1",
+      "record_sha256": "b281411dc8cb3d05baef849b315c163f466e459bb5f7edcf5892b94375247b32",
+      "prices": [
+        {
+          "offset": 461,
+          "original": 427,
+          "currency": 1
+        },
+        {
+          "offset": 481,
+          "original": 21,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002947,
+      "name": "Item_Skill_AbyssGear_ContributionExp_LV1",
+      "record_sha256": "a4601f351ca1982f6d72d9e5bea6e22e35835c374f74e5429991ea6f89cd17eb",
+      "prices": [
+        {
+          "offset": 464,
+          "original": 500,
+          "currency": 1
+        },
+        {
+          "offset": 484,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002950,
+      "name": "Item_Skill_AbyssGear_SkillPointExp_LV1",
+      "record_sha256": "4cc2eccf7f23a01644c513313f1e86a54174d3a0bde89d2016f51175ed436498",
+      "prices": [
+        {
+          "offset": 459,
+          "original": 460,
+          "currency": 1
+        },
+        {
+          "offset": 479,
+          "original": 23,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002520,
+      "name": "Item_Skill_AbyssGear_AddFrendly_LV1",
+      "record_sha256": "d976984b32d92186c4b5bd9958b25011ea1ed6809be12cc09f417181183b77d8",
+      "prices": [
+        {
+          "offset": 459,
+          "original": 473,
+          "currency": 1
+        },
+        {
+          "offset": 479,
+          "original": 23,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002662,
+      "name": "Item_Skill_AbyssGear_Equip_AddHorseExp_LV1",
+      "record_sha256": "5ef6ecbc3a9fe4948d0ebd6c9f62e8af52ac7f2794715e1e3105a4ef071d9251",
+      "prices": [
+        {
+          "offset": 463,
+          "original": 460,
+          "currency": 1
+        },
+        {
+          "offset": 483,
+          "original": 23,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002538,
+      "name": "Item_Skill_AbyssGear_Equip_AddPetFriendly_LV1",
+      "record_sha256": "c8b0537523f469469f6d3910e21494c50e19ccba0568fb0897a8892e966739ba",
+      "prices": [
+        {
+          "offset": 473,
+          "original": 473,
+          "currency": 1
+        },
+        {
+          "offset": 493,
+          "original": 23,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003281,
+      "name": "Item_Skill_AbyssGear_Attack_HPRecover_LV1",
+      "record_sha256": "f735c62a32257b5321d07d0e4763694110c3ca191e3adb21a89d50ba0b232a48",
+      "prices": [
+        {
+          "offset": 461,
+          "original": 500,
+          "currency": 1
+        },
+        {
+          "offset": 481,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003290,
+      "name": "Item_Skill_AbyssGear_Attack_MPRecover_LV1",
+      "record_sha256": "36953c75da3c45e5845f9723e8ce3562365fc15734a5601a41e4e0860a163e79",
+      "prices": [
+        {
+          "offset": 461,
+          "original": 567,
+          "currency": 1
+        },
+        {
+          "offset": 481,
+          "original": 28,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003291,
+      "name": "Item_Skill_AbyssGear_Attack_SPRecover_LV1",
+      "record_sha256": "3cf1d980029b3d3e63aac05bd95b2071f7403bee81017ffa6515ae9b0e0b704b",
+      "prices": [
+        {
+          "offset": 461,
+          "original": 513,
+          "currency": 1
+        },
+        {
+          "offset": 481,
+          "original": 25,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1001067,
+      "name": "Item_Skill_AbyssGear_Combo_LV1",
+      "record_sha256": "4ede49d14c8e159874291d09d169eb7a7933eb056c08feaadcee69a591a1dab1",
+      "prices": [
+        {
+          "offset": 451,
+          "original": 693,
+          "currency": 1
+        },
+        {
+          "offset": 471,
+          "original": 34,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002863,
+      "name": "Item_Skill_AbyssGear_AbyssGrass_Immune",
+      "record_sha256": "58410eb31198a8e105b1e16bb5ba2700875dc4374181022ba1fb85db600f11c8",
+      "prices": [
+        {
+          "offset": 483,
+          "original": 360,
+          "currency": 1
+        },
+        {
+          "offset": 503,
+          "original": 18,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002865,
+      "name": "Item_Skill_AbyssGear_Hyena_PoisonImmune",
+      "record_sha256": "be69905a68e2dced2287efeeea6c7fae69158b930904cc8a67b1118f4e0d13f0",
+      "prices": [
+        {
+          "offset": 473,
+          "original": 360,
+          "currency": 1
+        },
+        {
+          "offset": 493,
+          "original": 18,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002866,
+      "name": "Item_Skill_AbyssGear_Immune_Bismuth",
+      "record_sha256": "73f7c0dc834cbf54d4e84ad826e9c15b0c42a9500e18829ae07cb36bc06eea06",
+      "prices": [
+        {
+          "offset": 476,
+          "original": 353,
+          "currency": 1
+        },
+        {
+          "offset": 496,
+          "original": 17,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002867,
+      "name": "Item_Skill_AbyssGear_DAM_UP_RotationBash",
+      "record_sha256": "17e7a7ff642b94a682d8309e6ccb2467b30efa764cf727d4bb50340f0eedab3d",
+      "prices": [
+        {
+          "offset": 481,
+          "original": 633,
+          "currency": 1
+        },
+        {
+          "offset": 501,
+          "original": 31,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002509,
+      "name": "Item_Skill_AbyssGear_LandMash_LV1",
+      "record_sha256": "deecf7296afa030121d2e1549facd20158c44dcf52008bcce9573d8fca558503",
+      "prices": [
+        {
+          "offset": 470,
+          "original": 1573,
+          "currency": 1
+        },
+        {
+          "offset": 490,
+          "original": 78,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002523,
+      "name": "Item_Skill_AbyssGear_SoulStrike_LV1",
+      "record_sha256": "18d3f5c81a50dc07792f414114bd03eb85e4add9a28525ac70fe4fb22c818f75",
+      "prices": [
+        {
+          "offset": 472,
+          "original": 1353,
+          "currency": 1
+        },
+        {
+          "offset": 492,
+          "original": 67,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002539,
+      "name": "Item_Skill_AbyssGear_CrowAttack_LV1",
+      "record_sha256": "37a5e916ee03acb0f6e37b88135a871298b03f31a817d46e627bbb0fe73805c5",
+      "prices": [
+        {
+          "offset": 469,
+          "original": 1593,
+          "currency": 1
+        },
+        {
+          "offset": 489,
+          "original": 79,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002548,
+      "name": "Item_Skill_AbyssGear_FlashCombo_LV1",
+      "record_sha256": "d9cd3880aa2790be28e4d3babd1e8778f75e6b285ee1387ac46e63e1a25a3748",
+      "prices": [
+        {
+          "offset": 469,
+          "original": 1347,
+          "currency": 1
+        },
+        {
+          "offset": 489,
+          "original": 67,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002569,
+      "name": "Item_Skill_AbyssGear_SwordAura_LV1",
+      "record_sha256": "755c0620acd82224cec8fdb1c910011595049294fda359b7f8597bdd36ca6d60",
+      "prices": [
+        {
+          "offset": 468,
+          "original": 1367,
+          "currency": 1
+        },
+        {
+          "offset": 488,
+          "original": 68,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002764,
+      "name": "Item_Skill_AbyssGear_FrostBreath_LV1",
+      "record_sha256": "5c203fc15607cf424a04526ab4cec0dc48e366de77e0858b5d87f751de4184f4",
+      "prices": [
+        {
+          "offset": 477,
+          "original": 1980,
+          "currency": 1
+        },
+        {
+          "offset": 497,
+          "original": 99,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002766,
+      "name": "Item_Skill_AbyssGear_FireBreath_LV1",
+      "record_sha256": "f54f495fdbcbf1e37f8ad3f2c371a636ceda4b92b30918ef74d3b557d89a9c92",
+      "prices": [
+        {
+          "offset": 469,
+          "original": 2013,
+          "currency": 1
+        },
+        {
+          "offset": 489,
+          "original": 100,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002848,
+      "name": "Item_Skill_AbyssGear_LightningBreath_LV1",
+      "record_sha256": "209e77e2ad1e8b407cde453ba83c20f4c2bd28f564214a40ad84da0a039208db",
+      "prices": [
+        {
+          "offset": 464,
+          "original": 2020,
+          "currency": 1
+        },
+        {
+          "offset": 484,
+          "original": 101,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002583,
+      "name": "Item_Skill_AbyssGear_EnlightenmentWave_LV1",
+      "record_sha256": "9d4000d7b2bab3426b7b35afed460ed50a4e2ac8e7425b26dbee1f1c6fa5ff57",
+      "prices": [
+        {
+          "offset": 474,
+          "original": 1620,
+          "currency": 1
+        },
+        {
+          "offset": 494,
+          "original": 81,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002580,
+      "name": "Item_Skill_AbyssGear_DarkenRobe_LV1",
+      "record_sha256": "b27e65fe6d5cfc80f795a53b65e4ea2751fefecee69bf92632f0568682d6c047",
+      "prices": [
+        {
+          "offset": 470,
+          "original": 2000,
+          "currency": 1
+        },
+        {
+          "offset": 490,
+          "original": 100,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002592,
+      "name": "Item_Skill_AbyssGear_DogClaw_LV1",
+      "record_sha256": "cac6b2f402113b2d4c7b5f34f28c733b522cd7acfd88bb0d4b48e75c2f396572",
+      "prices": [
+        {
+          "offset": 469,
+          "original": 1353,
+          "currency": 1
+        },
+        {
+          "offset": 489,
+          "original": 67,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003715,
+      "name": "Item_Skill_AbyssGear_Forgotten_General",
+      "record_sha256": "29d0a24480c17e037ec1b17587f320500f051032fb8a988b95b47e3c1e906e9c",
+      "prices": [
+        {
+          "offset": 469,
+          "original": 2013,
+          "currency": 1
+        },
+        {
+          "offset": 489,
+          "original": 100,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003668,
+      "name": "Item_Skill_AbyssGear_Ogre",
+      "record_sha256": "342c4376b7650d279bdb7d69a61c1647cc4ec97fba6e3182faee360a404a4439",
+      "prices": [
+        {
+          "offset": 449,
+          "original": 1973,
+          "currency": 1
+        },
+        {
+          "offset": 469,
+          "original": 98,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002552,
+      "name": "Item_Skill_AbyssGear_Antumbra_Spear",
+      "record_sha256": "e43fe1dc92cd23a29d05d2851e62134064e314b94db787c1cc65aad884e1808c",
+      "prices": [
+        {
+          "offset": 466,
+          "original": 1987,
+          "currency": 1
+        },
+        {
+          "offset": 486,
+          "original": 99,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002602,
+      "name": "Item_Skill_AbyssGear_CrowStorm_LV1",
+      "record_sha256": "0fd8c6c4df13b22c8ec5fef536414bbce0f7f376aed24209771a0685a5bf4dfa",
+      "prices": [
+        {
+          "offset": 468,
+          "original": 2027,
+          "currency": 1
+        },
+        {
+          "offset": 488,
+          "original": 101,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002805,
+      "name": "Item_Skill_AbyssGear_SmashStorm_LV1",
+      "record_sha256": "7c1379efb5b33cb00ead95a98383e9b4bc9adcc593f38f5fe85a0993a7d9e846",
+      "prices": [
+        {
+          "offset": 486,
+          "original": 1360,
+          "currency": 1
+        },
+        {
+          "offset": 506,
+          "original": 68,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002658,
+      "name": "Item_Skill_AbyssGear_CresecentAura_1_LV1",
+      "record_sha256": "1d6898c9c596c7c0dbfb18c13795554085514d841203e8a8b8985dcaefbc326b",
+      "prices": [
+        {
+          "offset": 468,
+          "original": 1567,
+          "currency": 1
+        },
+        {
+          "offset": 488,
+          "original": 78,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002659,
+      "name": "Item_Skill_AbyssGear_CresecentAura_2_LV1",
+      "record_sha256": "b0733cfee87bb1f5fa4bca4c8aaa73ba9d4ee71330eab59be5b4518a8bebebfc",
+      "prices": [
+        {
+          "offset": 465,
+          "original": 1633,
+          "currency": 1
+        },
+        {
+          "offset": 485,
+          "original": 81,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002660,
+      "name": "Item_Skill_AbyssGear_CresecentAura_3_LV1",
+      "record_sha256": "feb42ab1eca6563038ad38d16d9cb15b5dd11eec83cac91de42321249b87ffa3",
+      "prices": [
+        {
+          "offset": 468,
+          "original": 1633,
+          "currency": 1
+        },
+        {
+          "offset": 488,
+          "original": 81,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002843,
+      "name": "Item_Skill_AbyssGear_FrostSpike_LV1",
+      "record_sha256": "d25475d96fc7ee8f8b391ee7d7fb12c42f7035e10a435ccacb577bd70cfa1df7",
+      "prices": [
+        {
+          "offset": 476,
+          "original": 1967,
+          "currency": 1
+        },
+        {
+          "offset": 496,
+          "original": 98,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002849,
+      "name": "Item_Skill_AbyssGear_AbsoluteDefense_LV1",
+      "record_sha256": "61147a9aa333321d89e41e2cad584f871d19cb9d2f79cf918dcb4c7fab410790",
+      "prices": [
+        {
+          "offset": 481,
+          "original": 1367,
+          "currency": 1
+        },
+        {
+          "offset": 501,
+          "original": 68,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002852,
+      "name": "Item_Skill_AbyssGear_ArrowRain_LV1",
+      "record_sha256": "51e8b8c390280c9ff43bc7be02e893ef3bc93dbb8f980ae715901dfa65d7ea2f",
+      "prices": [
+        {
+          "offset": 486,
+          "original": 1573,
+          "currency": 1
+        },
+        {
+          "offset": 506,
+          "original": 78,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003685,
+      "name": "Item_Skill_AbyssGear_Merrick",
+      "record_sha256": "bb3f5b104ce4d0b4c6b2e6fb79d0aa2abe4f9038f11e3a45cfeac7a37e99526a",
+      "prices": [
+        {
+          "offset": 462,
+          "original": 1587,
+          "currency": 1
+        },
+        {
+          "offset": 482,
+          "original": 79,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002578,
+      "name": "Item_Skill_AbyssGear_LightningStab_LV1",
+      "record_sha256": "67800d85e14dc678fc24288fd9b6cb860e21a3b2175a0c46c2263938b6476b46",
+      "prices": [
+        {
+          "offset": 496,
+          "original": 1993,
+          "currency": 1
+        },
+        {
+          "offset": 516,
+          "original": 99,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003686,
+      "name": "Item_Skill_AbyssGear_Antumbra_TwoHandRod",
+      "record_sha256": "352dd91c6f3ecbef5eaedd756a399906cd43c455270b2185784a94b1e2fce338",
+      "prices": [
+        {
+          "offset": 489,
+          "original": 1600,
+          "currency": 1
+        },
+        {
+          "offset": 509,
+          "original": 80,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002887,
+      "name": "Item_Skill_AbyssGear_TarandusWarrior_WarHammer",
+      "record_sha256": "3ac923822dad628f20fe530a81006daee018daa69e07ab895a448ff73b306cb3",
+      "prices": [
+        {
+          "offset": 493,
+          "original": 1620,
+          "currency": 1
+        },
+        {
+          "offset": 513,
+          "original": 81,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1000121,
+      "name": "Item_Skill_AbyssGear_Bastier",
+      "record_sha256": "093fff2d5a3da30a2550194a757394758f0a9fe9813c52a5ee84c22f906efdb2",
+      "prices": [
+        {
+          "offset": 476,
+          "original": 2000,
+          "currency": 1
+        },
+        {
+          "offset": 496,
+          "original": 100,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002542,
+      "name": "Item_Skill_AbyssGear_Karanda",
+      "record_sha256": "6e642819c4f2752598fa324289a919aa06eceb4521b28f41249f0cae113b93ee",
+      "prices": [
+        {
+          "offset": 452,
+          "original": 1987,
+          "currency": 1
+        },
+        {
+          "offset": 472,
+          "original": 99,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002845,
+      "name": "Item_Skill_AbyssGear_FrostDeath_LV1",
+      "record_sha256": "3ed6a081dbd79c25bec620fb9f7cfd41f7f3a11c61dd7132cdd90ba5c7f3eb84",
+      "prices": [
+        {
+          "offset": 476,
+          "original": 2007,
+          "currency": 1
+        },
+        {
+          "offset": 496,
+          "original": 100,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002554,
+      "name": "Item_Skill_AbyssGear_Primus",
+      "record_sha256": "80884d4422ab09fa23b54133e6d8f575a149c061d21ad41278b0f8cd82a886f2",
+      "prices": [
+        {
+          "offset": 454,
+          "original": 1580,
+          "currency": 1
+        },
+        {
+          "offset": 474,
+          "original": 79,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002841,
+      "name": "Item_Skill_AbyssGear_DarkChase_LV1",
+      "record_sha256": "0314801396cba1d8bc88172da9c975b3caeadf8fb8eb27a41dca4b7c0ee2ebb5",
+      "prices": [
+        {
+          "offset": 514,
+          "original": 1973,
+          "currency": 1
+        },
+        {
+          "offset": 534,
+          "original": 98,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003699,
+      "name": "Item_Skill_AbyssGear_Leebur",
+      "record_sha256": "92ba066f725a373fc7743601c5cc01724b31f12a86f2b80be207bb08ce05ec56",
+      "prices": [
+        {
+          "offset": 451,
+          "original": 2007,
+          "currency": 1
+        },
+        {
+          "offset": 471,
+          "original": 100,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003691,
+      "name": "Item_Skill_AbyssGear_QueenSpider",
+      "record_sha256": "9db407ad8f0bee99aecd76a805c0e812c72cb8484c6650431390d0430d8125bd",
+      "prices": [
+        {
+          "offset": 460,
+          "original": 2027,
+          "currency": 1
+        },
+        {
+          "offset": 480,
+          "original": 101,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003718,
+      "name": "Item_Skill_AbyssGear_Praevus",
+      "record_sha256": "c6cf729c4146b91f7b9762016ee16db44a4fbea0530b04a07ca88037c3c2fd4a",
+      "prices": [
+        {
+          "offset": 458,
+          "original": 2033,
+          "currency": 1
+        },
+        {
+          "offset": 478,
+          "original": 101,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003702,
+      "name": "Item_Skill_AbyssGear_Priscus",
+      "record_sha256": "892bce2b076f9218a8c63b38c6bcfc4ccc1a35cd5704d72645c3a1e476bc35b1",
+      "prices": [
+        {
+          "offset": 458,
+          "original": 1973,
+          "currency": 1
+        },
+        {
+          "offset": 478,
+          "original": 98,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003692,
+      "name": "Item_Skill_AbyssGear_Skevald",
+      "record_sha256": "ea7a5bbfc284601e2f074f76cd0e452e7d6570b0f663af9a00f5f95433401b86",
+      "prices": [
+        {
+          "offset": 455,
+          "original": 1980,
+          "currency": 1
+        },
+        {
+          "offset": 475,
+          "original": 99,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002858,
+      "name": "Item_Skill_AbyssGear_AtorDrone_LV1",
+      "record_sha256": "9b4afe5c199a43a7fb4db9ce522ec0b8a16cf91ff4891fb397fa9a10a483d760",
+      "prices": [
+        {
+          "offset": 475,
+          "original": 1973,
+          "currency": 1
+        },
+        {
+          "offset": 495,
+          "original": 98,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002606,
+      "name": "Item_Skill_AbyssGear_PhantomStab_LV1",
+      "record_sha256": "21a1f0c7b0058e99ceb9cdc5db7e32f1edbb23b12c2d4b1f3c04a0f6f5829563",
+      "prices": [
+        {
+          "offset": 486,
+          "original": 2013,
+          "currency": 1
+        },
+        {
+          "offset": 506,
+          "original": 100,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003700,
+      "name": "Item_Skill_AbyssGear_LanFord",
+      "record_sha256": "1125eb74921cea24b812073cea79bf5906a8777ac1b63b261585497213633681",
+      "prices": [
+        {
+          "offset": 448,
+          "original": 1580,
+          "currency": 1
+        },
+        {
+          "offset": 468,
+          "original": 79,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003714,
+      "name": "Item_Skill_AbyssGear_ImpBoss",
+      "record_sha256": "2c755151cf1d394889370f4fc845f07aade96bbd8f10f4ba17087b76916f8c77",
+      "prices": [
+        {
+          "offset": 455,
+          "original": 1587,
+          "currency": 1
+        },
+        {
+          "offset": 475,
+          "original": 79,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1001893,
+      "name": "Item_Skill_AbyssGear_Catfish_BodySlam_LV1",
+      "record_sha256": "617fd2fb0cfbef9ad8e531cbb7176bc7633910508f0f01fa34f0ecd74d8e6d35",
+      "prices": [
+        {
+          "offset": 482,
+          "original": 1573,
+          "currency": 1
+        },
+        {
+          "offset": 502,
+          "original": 78,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002496,
+      "name": "Item_Skill_AbyssGear_Titan",
+      "record_sha256": "a40662f33231f4bb0af07830828083489106ccb2986113e6e3098bc2fdafa384",
+      "prices": [
+        {
+          "offset": 450,
+          "original": 1627,
+          "currency": 1
+        },
+        {
+          "offset": 470,
+          "original": 81,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002855,
+      "name": "Item_Skill_AbyssGear_EnergyBurst_LV1",
+      "record_sha256": "fc75faca78b0322b92ea0de2032458660dc64eff8d5819310b7be2dae8d14c9d",
+      "prices": [
+        {
+          "offset": 477,
+          "original": 1593,
+          "currency": 1
+        },
+        {
+          "offset": 497,
+          "original": 79,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1002510,
+      "name": "Item_Skill_AbyssGear_Muscan",
+      "record_sha256": "4e8c5ad819e3f9f5338cd3c2bb99713f4c09e3919933515e88c81e644d306b71",
+      "prices": [
+        {
+          "offset": 451,
+          "original": 1580,
+          "currency": 1
+        },
+        {
+          "offset": 471,
+          "original": 79,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003153,
+      "name": "Permit_Her_Equipment",
+      "record_sha256": "8e93eade2ca38ca7c745a2a03032eec2403828274687f647b586b10c28ea4ba8",
+      "prices": [
+        {
+          "offset": 419,
+          "original": 1716,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003154,
+      "name": "Permit_Kha_Equipment",
+      "record_sha256": "982843bd96813ad2e9684e53978821206da3a1cec0674cc8df411d413a086f52",
+      "prices": [
+        {
+          "offset": 416,
+          "original": 1625,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003155,
+      "name": "Permit_Cal_Equipment",
+      "record_sha256": "c0a9a39112a7019c065eea9c376521cbb2ffa5088f45e443a369ea552886d602",
+      "prices": [
+        {
+          "offset": 419,
+          "original": 1742,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003156,
+      "name": "Permit_Dem_Equipment",
+      "record_sha256": "ed2467186d3e761a8e12653fac0214d10fc681c7d4d2c2b0522ec4c9e11d8e80",
+      "prices": [
+        {
+          "offset": 419,
+          "original": 1664,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003157,
+      "name": "Permit_Tar_Equipment",
+      "record_sha256": "65c44d7c68ef899414b3d83b7a74db2db9c022f1419853e8ca04b06efa7376e0",
+      "prices": [
+        {
+          "offset": 416,
+          "original": 1729,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003158,
+      "name": "Permit_Str_Equipment",
+      "record_sha256": "e9ffb7a8cf03fe3c20dfc0d0217992c2a074ca54e27fe0acee2855f95f6cae7b",
+      "prices": [
+        {
+          "offset": 429,
+          "original": 1820,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003159,
+      "name": "Permit_Del_Equipment",
+      "record_sha256": "f01143daeb9597f6119a9d1b3dc78a9faef52b17364f55c83c0021959d4f4eec",
+      "prices": [
+        {
+          "offset": 419,
+          "original": 1664,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003160,
+      "name": "Permit_Pai_Equipment",
+      "record_sha256": "3779a397f6cf218c66f5c0247f2b773df5b52effbd19ef906ccea1093b9a0cb2",
+      "prices": [
+        {
+          "offset": 416,
+          "original": 1651,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003161,
+      "name": "Permit_Skog_Equipment",
+      "record_sha256": "267fa76701a70916f9ff98782babdf615319a9fe89d1467699fc9fd624934093",
+      "prices": [
+        {
+          "offset": 420,
+          "original": 1781,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003162,
+      "name": "Permit_Odeck_Equipment",
+      "record_sha256": "10c1e3912ce744b4d4cf7a022a992b3a3f76cfbd2ec88129e5627c2866be892d",
+      "prices": [
+        {
+          "offset": 418,
+          "original": 1677,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003163,
+      "name": "Permit_Var_Equipment",
+      "record_sha256": "9a1ffd7914669cbbce8507ff54d0fa9642c0b54412b55de6da6c2d6135df00f3",
+      "prices": [
+        {
+          "offset": 419,
+          "original": 1716,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003164,
+      "name": "Permit_Tash_Equipment",
+      "record_sha256": "e55978d9cc3eafc347fce31a5626257e7bb97cb249f926eb13148b621570396f",
+      "prices": [
+        {
+          "offset": 417,
+          "original": 1703,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003172,
+      "name": "Permit_Her_General",
+      "record_sha256": "723b0c17e30613e43c8c240522eb6f4f508abab315be544527172c62404daabd",
+      "prices": [
+        {
+          "offset": 417,
+          "original": 975,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003173,
+      "name": "Permit_Cal_General",
+      "record_sha256": "f97825ef8a2e8c64e8d0dd1850c6d1c00500cacef6342ccdfcab35b38bb99529",
+      "prices": [
+        {
+          "offset": 417,
+          "original": 1014,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003174,
+      "name": "Permit_Del_General",
+      "record_sha256": "f97747dab69653481bbe54d02a163543bcf2d9f507cf0592e9d28f5b3dfe1b1a",
+      "prices": [
+        {
+          "offset": 417,
+          "original": 858,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003175,
+      "name": "Permit_Pai_General",
+      "record_sha256": "101128570231e36764b3aa23c4ee03a8c31512702841310f2f50dd56688d920e",
+      "prices": [
+        {
+          "offset": 414,
+          "original": 897,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003176,
+      "name": "Permit_Bei_General",
+      "record_sha256": "905b644eb6e3dd3ea98b1a32c64b7a2a5524709e769a0a76fc05d09b01db87f5",
+      "prices": [
+        {
+          "offset": 414,
+          "original": 819,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003177,
+      "name": "Permit_Dem_General",
+      "record_sha256": "954a55333e8efc89a1023b592ba2833b08094456eed26cf0bc478c62db4e70a0",
+      "prices": [
+        {
+          "offset": 417,
+          "original": 988,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003178,
+      "name": "Permit_Tash_General",
+      "record_sha256": "30d180a81fc496cd4368670b7f58350a69cf63bf22ab7a2ffb6c25c4a9980057",
+      "prices": [
+        {
+          "offset": 415,
+          "original": 832,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003179,
+      "name": "Permit_Var_General",
+      "record_sha256": "07c09e596f0344c4f89b2765ce7a649e1b7bb82ac0459ac6620362ffe007e70a",
+      "prices": [
+        {
+          "offset": 417,
+          "original": 793,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003180,
+      "name": "Permit_Vellua_General",
+      "record_sha256": "5984b3038b16b005a61e820eec91d6ec9e2fb7f162e6b31499b2fef0feebc751",
+      "prices": [
+        {
+          "offset": 417,
+          "original": 806,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003181,
+      "name": "Permit_Skog_General",
+      "record_sha256": "329f4cd319984555b2b12226c349c3f179f5b5dc226a8bb60b0fa17f6cb97f25",
+      "prices": [
+        {
+          "offset": 418,
+          "original": 897,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003329,
+      "name": "Permit_Her_Tavern",
+      "record_sha256": "18c18a0905af7ed35a193fd903d6e5506c04e75eb19695faec4c5e424a9c1ae7",
+      "prices": [
+        {
+          "offset": 409,
+          "original": 1053,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003330,
+      "name": "Permit_Cal_Tavern",
+      "record_sha256": "c019366962ca44bec9ec09f48ebc4c0f0d13f142e2c81028984513bd83b11fb7",
+      "prices": [
+        {
+          "offset": 409,
+          "original": 1040,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003331,
+      "name": "Permit_Kha_Tavern",
+      "record_sha256": "b73e5993fc7da83fefd53d593cd4951745eac5723ad30cc40a2dc1a488806fc8",
+      "prices": [
+        {
+          "offset": 406,
+          "original": 1040,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003332,
+      "name": "Permit_Dem_Tavern",
+      "record_sha256": "4d49695d2b63752b08edcbd364d5a683729d9354aa644e712c751923c8dbe3c4",
+      "prices": [
+        {
+          "offset": 409,
+          "original": 1092,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003333,
+      "name": "Permit_Del_Tavern",
+      "record_sha256": "6642e9dfc21242a6f1f4a8bc45444575a3cd6fcaa73c734a617fd5385ce99909",
+      "prices": [
+        {
+          "offset": 409,
+          "original": 1066,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003334,
+      "name": "Permit_Pai_Tavern",
+      "record_sha256": "ad57acf14fc1fa897f206f1362b13504dc915263542de110bba733efb6ae9ed9",
+      "prices": [
+        {
+          "offset": 406,
+          "original": 1235,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003335,
+      "name": "Permit_Tash_Tavern",
+      "record_sha256": "3f5ed4eb2ccdccc368761707b59e720ec4b679424fbaa32b19cac4bc61ec569b",
+      "prices": [
+        {
+          "offset": 407,
+          "original": 1040,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003336,
+      "name": "Permit_Var_Tavern",
+      "record_sha256": "ab5c869d0c410bc7632628341854f2c53784326f5d2ce7bd002551dd41b1f87e",
+      "prices": [
+        {
+          "offset": 409,
+          "original": 1079,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001778,
+      "name": "Permit_Her_Seed",
+      "record_sha256": "f0f9be630a8e253778e7c0682515657c34333516c7b80827ec1fc9e04555e619",
+      "prices": [
+        {
+          "offset": 421,
+          "original": 858,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003182,
+      "name": "Permit_Cal_Seed",
+      "record_sha256": "3cdb75ed47d950b4c39131dc8a4a289a54ded0d226153d26da54929a4c576ed0",
+      "prices": [
+        {
+          "offset": 421,
+          "original": 754,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003183,
+      "name": "Permit_Dem_Seed",
+      "record_sha256": "ad9a1216ad96a88f1a970cee6ba126a1ac51db41c4bc372b9cc8aae7420bb15d",
+      "prices": [
+        {
+          "offset": 421,
+          "original": 702,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003184,
+      "name": "Permit_Del_Seed",
+      "record_sha256": "e205947599a926af7760da3171f6d7918a472a7c7c324ceb9df46732bc919637",
+      "prices": [
+        {
+          "offset": 421,
+          "original": 715,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003185,
+      "name": "Permit_Pai_Seed",
+      "record_sha256": "bed4f7fe55a09e091ee09c25d9070cddbc4a0a8f194b1e77afc6c57607d1b1d4",
+      "prices": [
+        {
+          "offset": 418,
+          "original": 793,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003186,
+      "name": "Permit_Tash_Seed",
+      "record_sha256": "4bed9a53a6c42a3a0cadb336a08965e19a51efce370972e97c190eec21a6c56a",
+      "prices": [
+        {
+          "offset": 419,
+          "original": 819,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003187,
+      "name": "Permit_Var_Seed",
+      "record_sha256": "dc20fd812bb0e729af2183c4223d6667f12311f9e067f085e4764a8ef0c1b0e1",
+      "prices": [
+        {
+          "offset": 421,
+          "original": 793,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001954,
+      "name": "Permit_Her_Costume",
+      "record_sha256": "1380b2d9a848c1de558e2569f1e80b985f4d67b444a4cdfd5b126e2988a4c0f8",
+      "prices": [
+        {
+          "offset": 413,
+          "original": 1560,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003145,
+      "name": "Permit_Cal_Costume",
+      "record_sha256": "1631f0cde44ee7b5267d616728d33bb5f4cb0bb492517458411f050c70ac6aa1",
+      "prices": [
+        {
+          "offset": 413,
+          "original": 1339,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003146,
+      "name": "Permit_Dem_Costume",
+      "record_sha256": "e1048b79d022f5bf8b33cf0417817fde76a922748d1356ced0c6569be8f17269",
+      "prices": [
+        {
+          "offset": 413,
+          "original": 1430,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003147,
+      "name": "Permit_Tar_Costume",
+      "record_sha256": "2b20a135941fe4d117085432be86cb4d0600a924d9e7a648be797448833c61b3",
+      "prices": [
+        {
+          "offset": 410,
+          "original": 1300,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003148,
+      "name": "Permit_DemZoo_Costume",
+      "record_sha256": "0380f1d628afa988907f900fec348aba003e16dff1a8ff31bf3ca717a7f138b6",
+      "prices": [
+        {
+          "offset": 426,
+          "original": 1339,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003149,
+      "name": "Permit_Del_Costume",
+      "record_sha256": "3becc60c682f9d46b3ba319d8ea742067419f33c31659fff2151326dfbf36786",
+      "prices": [
+        {
+          "offset": 413,
+          "original": 1365,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003150,
+      "name": "Permit_Pai_Costume",
+      "record_sha256": "595d3f1daa9b21b52ab3dbc2c5c4cf68991ee4c43ee56ce2b908d8cb6db1f1d9",
+      "prices": [
+        {
+          "offset": 410,
+          "original": 1430,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003151,
+      "name": "Permit_Tash_Costume",
+      "record_sha256": "5efe54be08f8abf0e4d5258ea65cbd65949ab9b7d48d823521a1021c4e4bb507",
+      "prices": [
+        {
+          "offset": 411,
+          "original": 1508,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003152,
+      "name": "Permit_Var_Costume",
+      "record_sha256": "5fa7ef0157e2e417ff531190ef9c4a83a83fa60bff2fddd41a89714c864622ae",
+      "prices": [
+        {
+          "offset": 413,
+          "original": 1443,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002860,
+      "name": "Permit_Her_Furniture",
+      "record_sha256": "b53bffc0964c73b955603dface8a76c512b89810174a5b02b90874e503ff52d8",
+      "prices": [
+        {
+          "offset": 412,
+          "original": 845,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002861,
+      "name": "Permit_Dem_Furniture",
+      "record_sha256": "012517be00478417ea257199661485b31da65c8df657b35fa146a51963eb3b21",
+      "prices": [
+        {
+          "offset": 412,
+          "original": 975,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002868,
+      "name": "Permit_Del_Furniture",
+      "record_sha256": "2e3952dca2e634a2099287cc7d50eccf6ecf0478139bdef992f287b3713c8622",
+      "prices": [
+        {
+          "offset": 412,
+          "original": 884,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002869,
+      "name": "Permit_Kwe_Furniture",
+      "record_sha256": "82b7413c19e8142b648e085c118ae4895c404951c20092d89ca30aad04b12f18",
+      "prices": [
+        {
+          "offset": 409,
+          "original": 923,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002086,
+      "name": "Recipe_Book_OneHandWeapon_I",
+      "record_sha256": "2182ad8d56b8d98ca62674096145d58043270f741f6355e093ec53a69977105a",
+      "prices": [
+        {
+          "offset": 353,
+          "original": 250,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002087,
+      "name": "Recipe_Book_OneHandWeapon_II",
+      "record_sha256": "02861bb13148ccd2e58b132ab2786ee7c58487e0251463b6fe1473bc8b43232b",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 1400,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002088,
+      "name": "Recipe_Book_OneHandWeapon_III",
+      "record_sha256": "ec3fb36468d28db7869a19a518fe16f60886670bd017bfdcd64588cfcff63e21",
+      "prices": [
+        {
+          "offset": 355,
+          "original": 5000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002089,
+      "name": "Recipe_Book_OneHandWeapon_IV",
+      "record_sha256": "bbfaf122679ffff12872335e6d2443cce226863ced0dcea623b69187fd78adad",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 10000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000401,
+      "name": "Recipe_Book_TwoHandWeapon_I",
+      "record_sha256": "adc84db59d7c523a7fe80c2991feb694efa97cd9c5c8b5f152db445b05cf7aa4",
+      "prices": [
+        {
+          "offset": 353,
+          "original": 250,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000402,
+      "name": "Recipe_Book_TwoHandWeapon_II",
+      "record_sha256": "a43d4f0a309e0afe33aaa6298832f4e8c7c74c27a3774ec6e1b52d874d7741f3",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 1400,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000403,
+      "name": "Recipe_Book_TwoHandWeapon_III",
+      "record_sha256": "e0f6d4035ba53e400e4cecea798a98172410ab23582ac3d28e4a47acbb482528",
+      "prices": [
+        {
+          "offset": 355,
+          "original": 5000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000404,
+      "name": "Recipe_Book_TwoHandWeapon_IV",
+      "record_sha256": "b24b034ebc746cc5d43cd744982d57d3eb7894cc2cd07dafd152d96cf54b79b0",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 10000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000405,
+      "name": "Recipe_Book_RangeWeapon_Wood_I",
+      "record_sha256": "c714f61089a7d3d55a6bf9452a3cbc2f15dced26f06a7908972702a70ca6f152",
+      "prices": [
+        {
+          "offset": 356,
+          "original": 250,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000406,
+      "name": "Recipe_Book_RangeWeapon_Wood_II",
+      "record_sha256": "17d102fb31a702c3e04fef3f0bea6ffb6bee49aae9735c4dc03689513403bedb",
+      "prices": [
+        {
+          "offset": 357,
+          "original": 1400,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000407,
+      "name": "Recipe_Book_RangeWeapon_Wood_III",
+      "record_sha256": "bbda3d5813d7af31145ac49cdb58f1641b294afd9a1bcea0b875fa20157c6441",
+      "prices": [
+        {
+          "offset": 358,
+          "original": 5000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000408,
+      "name": "Recipe_Book_RangeWeapon_Wood_IV",
+      "record_sha256": "e9af11b7daca203a42019a2c008eaa1b6b88178b5d3f0728371e1339a26f9898",
+      "prices": [
+        {
+          "offset": 357,
+          "original": 10000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000409,
+      "name": "Recipe_Book_RangeWeapon_Metal_I",
+      "record_sha256": "91f11e9152e4909ce1bffb146311a32971668dd45a023dc85fd4b565af3d759d",
+      "prices": [
+        {
+          "offset": 357,
+          "original": 250,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000410,
+      "name": "Recipe_Book_RangeWeapon_Metal_II",
+      "record_sha256": "0ca21398733000f9c68aba7c12e5dd27261bbc3916c5f0a5349f1e46dc20aa86",
+      "prices": [
+        {
+          "offset": 358,
+          "original": 1400,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000411,
+      "name": "Recipe_Book_RangeWeapon_Metal_III",
+      "record_sha256": "4617d10c41ed1258dfc38dd70c81413acfbdc60dc99fbb4dae7d18e449bcb734",
+      "prices": [
+        {
+          "offset": 359,
+          "original": 5000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000413,
+      "name": "Recipe_Book_RangeWeapon_Metal_IV",
+      "record_sha256": "07137aaed6d5461437d2f1acfbf50565200603c92791e7cbd9ce673a232d6f61",
+      "prices": [
+        {
+          "offset": 358,
+          "original": 10000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000414,
+      "name": "Recipe_Book_OneHandShield_I",
+      "record_sha256": "688fbb809aab0babbe17666c0d2eff23309d792ba0959ff262825d46e02fa13e",
+      "prices": [
+        {
+          "offset": 353,
+          "original": 50,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000415,
+      "name": "Recipe_Book_OneHandShield_II",
+      "record_sha256": "4b5ffefe5f2e48c109e9c6dd39639a827edc300890a9671ceb6501d084bc2198",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 200,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000417,
+      "name": "Recipe_Book_OneHandShield_III",
+      "record_sha256": "17f1dfb8add21af6686fad9912f35463c5d4686a7291f0984c2c3c8d927945a1",
+      "prices": [
+        {
+          "offset": 355,
+          "original": 1200,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000418,
+      "name": "Recipe_Book_OneHandShield_IV",
+      "record_sha256": "c5a4376436890fda7e93ae953a2b523c8d71b162f54cddc17af00938549fa5f8",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 3000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000419,
+      "name": "Recipe_Book_PlateArmor_I",
+      "record_sha256": "021932acac59115b8ce8cf824f297b9d21866c80ca609a8320cd8ab782f5f529",
+      "prices": [
+        {
+          "offset": 360,
+          "original": 60,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000420,
+      "name": "Recipe_Book_PlateArmor_II",
+      "record_sha256": "2f4eced54a2a67495a091c3a5fd385d26b2de42eb6e44a34709df2067f9899fd",
+      "prices": [
+        {
+          "offset": 361,
+          "original": 260,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000421,
+      "name": "Recipe_Book_PlateArmor_III",
+      "record_sha256": "9fd75d4454b9f7692e11f678e791d746d36f0bb532c1e463c2709fd13236a846",
+      "prices": [
+        {
+          "offset": 362,
+          "original": 1320,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000422,
+      "name": "Recipe_Book_PlateArmor_IV",
+      "record_sha256": "1a1ddbe8b2d8c0d50970bc71254dbaae7b284ab9967b6773ff1dbaf227e7d803",
+      "prices": [
+        {
+          "offset": 361,
+          "original": 3340,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000428,
+      "name": "Recipe_Book_LeatherArmor_I",
+      "record_sha256": "89e6f28b587ec70e0ffc6b2537efd3fbae004da86bc8157f3e5afd88cf14d7d0",
+      "prices": [
+        {
+          "offset": 362,
+          "original": 54,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000430,
+      "name": "Recipe_Book_LeatherArmor_II",
+      "record_sha256": "7f37a708081d9fe52be6cc7fc3b8de799d68dab8152ccd1a4f027db7be51b6e4",
+      "prices": [
+        {
+          "offset": 363,
+          "original": 240,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000432,
+      "name": "Recipe_Book_LeatherArmor_III",
+      "record_sha256": "dc6142bd309e12dc47513a938d1697b1e25729b7515bfbcf2846ea025a61a055",
+      "prices": [
+        {
+          "offset": 364,
+          "original": 1260,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000433,
+      "name": "Recipe_Book_LeatherArmor_IV",
+      "record_sha256": "88d7f967c0d932b8b5183fbfd8172952672e1efa8b722379bdf91315de80ef47",
+      "prices": [
+        {
+          "offset": 363,
+          "original": 3200,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000434,
+      "name": "Recipe_Book_FabricArmor_I",
+      "record_sha256": "ddc5b3cb041ed169991a5c29bf13249e35877b684b83fb1a4dd8eb099d03346c",
+      "prices": [
+        {
+          "offset": 358,
+          "original": 50,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000435,
+      "name": "Recipe_Book_FabricArmor_II",
+      "record_sha256": "352a93a53997c39acfb3f0974bd644df863f0b3e776c5d3ffde8fdfb69f38e7a",
+      "prices": [
+        {
+          "offset": 359,
+          "original": 230,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000436,
+      "name": "Recipe_Book_FabricArmor_III",
+      "record_sha256": "08ec64f15ce156161fffac042bf9e631830636d21522fc667711618153c63821",
+      "prices": [
+        {
+          "offset": 360,
+          "original": 1280,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000437,
+      "name": "Recipe_Book_FabricArmor_IV",
+      "record_sha256": "61fd4bb6f468a7d89277a4c01e791d2cca817675fe1631b6f0582636505590b0",
+      "prices": [
+        {
+          "offset": 359,
+          "original": 3150,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000530,
+      "name": "Recipe_Book_Accessory_I",
+      "record_sha256": "f75196e6e3d986e4f10b76e3b32d9d4368023f2f4395bb6368d35ca5f9e9a520",
+      "prices": [
+        {
+          "offset": 352,
+          "original": 50,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000533,
+      "name": "Recipe_Book_Accessory_II",
+      "record_sha256": "904511553ce433bd0810f63c98fc79b94d3d699591279db475e3238f7e342a26",
+      "prices": [
+        {
+          "offset": 353,
+          "original": 200,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000535,
+      "name": "Recipe_Book_Accessory_III",
+      "record_sha256": "071c9abe6f507eaeb0906b482c5f8516347b47b3cf47a9095f78d4c5ea2b904c",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 1200,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000536,
+      "name": "Recipe_Book_Accessory_IV",
+      "record_sha256": "f7199520414e91507d5d4441fced0a995891a2b26ff7be66df0c68c7581e4d99",
+      "prices": [
+        {
+          "offset": 353,
+          "original": 3000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000690,
+      "name": "Recipe_Book_Beekeeping",
+      "record_sha256": "6bef9bbddedf4740b9c4f60c09a51efee57772442fdd229147194f3be3e2b12e",
+      "prices": [
+        {
+          "offset": 341,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000714,
+      "name": "Recipe_Book_Ent",
+      "record_sha256": "f327481431881571410ad62e2ef1595efc44bf20da63d74c848d2ae696ac71ba",
+      "prices": [
+        {
+          "offset": 388,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000755,
+      "name": "Recipe_Book_Varnia",
+      "record_sha256": "2388622645ee7abc3d289939975bb1162f1eae110f32d32146ca3ec01fa787a3",
+      "prices": [
+        {
+          "offset": 350,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000841,
+      "name": "Recipe_Book_Scarecrow_Camouflage_Cloak",
+      "record_sha256": "9219231ee0b6d151ed5bd0fe23cb82a8498b983ca62878872bca402dcfd115d3",
+      "prices": [
+        {
+          "offset": 363,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002149,
+      "name": "Recipe_Book_Spear_Fire",
+      "record_sha256": "bfba29a830dadc04db61de285a3fd1033f7936876df05999c282294aa3443a2f",
+      "prices": [
+        {
+          "offset": 338,
+          "original": 2000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002161,
+      "name": "Recipe_Book_Spear_Wind",
+      "record_sha256": "3d4138edec0ca54ec3aa5d3bb23e459b9f06e164b095dee4e1d9882dcec94193",
+      "prices": [
+        {
+          "offset": 338,
+          "original": 2000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002162,
+      "name": "Recipe_Book_Spear_Lightning",
+      "record_sha256": "3c1dc30eb9eb101919bd5a25c6f5378820efbcdd0f5d4f60cf1801f3168441a9",
+      "prices": [
+        {
+          "offset": 343,
+          "original": 2000,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1002292,
+      "name": "Recipe_Book_FishingRod_II",
+      "record_sha256": "53acdac6005d9de69706bf20ca17c8df29494e817f94b694f5f98985509287b0",
+      "prices": [
+        {
+          "offset": 347,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001746,
+      "name": "Recipe_Book_Equip_Felling_Axe_I",
+      "record_sha256": "e6ca4fc2142cd0a3dc205523e2dc5488a23b44b00061dda91f862538a9ec553c",
+      "prices": [
+        {
+          "offset": 360,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003662,
+      "name": "Recipe_Book_Equip_Pickaxe_I",
+      "record_sha256": "5d68675344eb851b82babbc0da42a9c6cd4265786e0fcade9a5d21d5172dbabb",
+      "prices": [
+        {
+          "offset": 349,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003663,
+      "name": "Recipe_Book_Equip_Felling_Axe_II",
+      "record_sha256": "bb638b2898b6f63fd46a7c376cd632ed42e68d03001bbb9f0d790e32af1cc16c",
+      "prices": [
+        {
+          "offset": 367,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003664,
+      "name": "Recipe_Book_Equip_Pickaxe_II",
+      "record_sha256": "9ac6fb54a4b22b3ec86408f62ed722d0f3340d4d284894eb0b51904e7a2bdd2e",
+      "prices": [
+        {
+          "offset": 359,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001102,
+      "name": "Recipe_Book_Posion_Aroww",
+      "record_sha256": "1123e0d1cb1fcccac4f996e2c2cf56c98b9dd9335a45e1b9f9ca47002c4da724",
+      "prices": [
+        {
+          "offset": 340,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000641,
+      "name": "Recipe_Book_Wells_HorseArmor",
+      "record_sha256": "da6b275cf2637eb56539f9aed3232554090c737c18000563e05c6654d170dfc8",
+      "prices": [
+        {
+          "offset": 354,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1004110,
+      "name": "Recipe_Book_Pumpkin_Helm",
+      "record_sha256": "9039a6d187337777bd3495e04d7d4a18cfb5b8bf04d9477370946bcfe849fd6d",
+      "prices": [
+        {
+          "offset": 393,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 700001,
+      "name": "Clout",
+      "record_sha256": "d3f9b40cfb97a37166e2f18c7295fca6ce59cbc94b8b4804e5fb4e55b07ef644",
+      "prices": [
+        {
+          "offset": 300,
+          "original": 8,
+          "currency": 1
+        },
+        {
+          "offset": 320,
+          "original": 2,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 710001,
+      "name": "Wood",
+      "record_sha256": "3fd37f18634939890d42e3ec49429ea51ddf54fa6917ff6444f765beb43266c0",
+      "prices": [
+        {
+          "offset": 302,
+          "original": 10,
+          "currency": 1
+        },
+        {
+          "offset": 322,
+          "original": 3,
+          "currency": 13
+        }
+      ]
+    },
+    {
+      "key": 720001,
+      "name": "IronStone",
+      "record_sha256": "6692b78cf5ec385d8c9e2a52bbfa5074539e25617a182b565b3450cb221b1f57",
+      "prices": [
+        {
+          "offset": 307,
+          "original": 18,
+          "currency": 1
+        },
+        {
+          "offset": 327,
+          "original": 5,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 720002,
+      "name": "SilverOre",
+      "record_sha256": "8b275f865630e3c5b0b69e3c8e30f8257884e6985a5e00f075310e531887b033",
+      "prices": [
+        {
+          "offset": 307,
+          "original": 135,
+          "currency": 1
+        },
+        {
+          "offset": 327,
+          "original": 34,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 720003,
+      "name": "GoldOre",
+      "record_sha256": "4f78d393790167ecd7f77da6a927f1cd7166c08adb409068515948da70633e0a",
+      "prices": [
+        {
+          "offset": 305,
+          "original": 270,
+          "currency": 1
+        },
+        {
+          "offset": 325,
+          "original": 68,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 720004,
+      "name": "CopperOre",
+      "record_sha256": "7a2346463a119ddc08d359743cd1924b2792aee3a69e537428e51c1422569a38",
+      "prices": [
+        {
+          "offset": 307,
+          "original": 45,
+          "currency": 1
+        },
+        {
+          "offset": 327,
+          "original": 11,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 720010,
+      "name": "BismuthOre",
+      "record_sha256": "7961e22427ee443d575da8af449cdcaf018e726e1aef08c765f56490c458208c",
+      "prices": [
+        {
+          "offset": 308,
+          "original": 270,
+          "currency": 1
+        },
+        {
+          "offset": 328,
+          "original": 68,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 721501,
+      "name": "Ruby",
+      "record_sha256": "3b6bf8f6a94b84a264c0af708e57d7e179ab51ee4bb5daa7acc07a7d2539960b",
+      "prices": [
+        {
+          "offset": 302,
+          "original": 250,
+          "currency": 1
+        },
+        {
+          "offset": 322,
+          "original": 63,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 721502,
+      "name": "GreenStone",
+      "record_sha256": "7c8800f951f10ec619ae46e21cb34b525b3759272720b46490c08b80040bfa40",
+      "prices": [
+        {
+          "offset": 308,
+          "original": 250,
+          "currency": 1
+        },
+        {
+          "offset": 328,
+          "original": 63,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 721503,
+      "name": "BlueStone",
+      "record_sha256": "6be081bb36fd00bf387fee531b607c8f17b6c0c15ba6162ac64c1c8744f25e38",
+      "prices": [
+        {
+          "offset": 307,
+          "original": 250,
+          "currency": 1
+        },
+        {
+          "offset": 327,
+          "original": 63,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 721504,
+      "name": "Diamond",
+      "record_sha256": "b5c1c503a449354c2a84cff01200112cfc03723157e2d6851604f05824dc1833",
+      "prices": [
+        {
+          "offset": 305,
+          "original": 600,
+          "currency": 1
+        },
+        {
+          "offset": 325,
+          "original": 150,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 721505,
+      "name": "RedStone",
+      "record_sha256": "95a3928dfde4b5c2e5550207744f5c3152482f735a80c7adfb754344a000695b",
+      "prices": [
+        {
+          "offset": 315,
+          "original": 135,
+          "currency": 1
+        },
+        {
+          "offset": 335,
+          "original": 34,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 721506,
+      "name": "WhiteStone",
+      "record_sha256": "6d960a7bb8e702d14e67d23a99adf058ac0993ed49afaee6a7752334d6fecf23",
+      "prices": [
+        {
+          "offset": 317,
+          "original": 270,
+          "currency": 1
+        },
+        {
+          "offset": 337,
+          "original": 68,
+          "currency": 14
+        }
+      ]
+    },
+    {
+      "key": 740001,
+      "name": "Leather",
+      "record_sha256": "8a37ea06047f591235080ba9c8fe1a7af34baf786662c84d81c30842c93e60b8",
+      "prices": [
+        {
+          "offset": 305,
+          "original": 8,
+          "currency": 1
+        },
+        {
+          "offset": 325,
+          "original": 2,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 740002,
+      "name": "Deer_Leather",
+      "record_sha256": "138c1aff2cf6bc6ee90678a7a82aeead08d2bc84f842a26cc908353eb3feb1d2",
+      "prices": [
+        {
+          "offset": 315,
+          "original": 8,
+          "currency": 1
+        },
+        {
+          "offset": 335,
+          "original": 2,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 740003,
+      "name": "Wolf_Leather",
+      "record_sha256": "59d671db8cca5232f7d73efc2116c34863490b791d0c7be5016a2df10cab641d",
+      "prices": [
+        {
+          "offset": 316,
+          "original": 60,
+          "currency": 1
+        },
+        {
+          "offset": 336,
+          "original": 12,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 740004,
+      "name": "Bear_Leather",
+      "record_sha256": "b0452dfb98c787bc14d262a4d4d068a5a43d59194488844caac3b4bc0e73a848",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 20,
+          "currency": 1
+        },
+        {
+          "offset": 330,
+          "original": 4,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 740005,
+      "name": "Crocodile_Skin",
+      "record_sha256": "b50ab810ef2e8956e0091d756c6254f45e4fcde91c49d0eae58eb5007d444789",
+      "prices": [
+        {
+          "offset": 312,
+          "original": 60,
+          "currency": 1
+        },
+        {
+          "offset": 332,
+          "original": 12,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 795009,
+      "name": "Animal_Bone",
+      "record_sha256": "a55039050c481de5e9cfe5969a80482b3ca724ac8d8ad825d0ec660ec2f7168b",
+      "prices": [
+        {
+          "offset": 349,
+          "original": 8,
+          "currency": 1
+        },
+        {
+          "offset": 369,
+          "original": 2,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1000660,
+      "name": "Large_Bone",
+      "record_sha256": "bcc3ce80ad68f124d4da0745ad57fb648ea096c5ac587f7f544a0c240fb6e32f",
+      "prices": [
+        {
+          "offset": 348,
+          "original": 60,
+          "currency": 1
+        },
+        {
+          "offset": 368,
+          "original": 12,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1001117,
+      "name": "Wool",
+      "record_sha256": "6acc3e815730eb36bb8ec24d000591b73779d6091eff89bc8f99514777f43d07",
+      "prices": [
+        {
+          "offset": 299,
+          "original": 20,
+          "currency": 1
+        },
+        {
+          "offset": 319,
+          "original": 4,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 754006,
+      "name": "Spider_Web",
+      "record_sha256": "a999e31b7e3aeb80cfe3b9e38f25b0ad2bd186e7572d8c1f369ede49b4e1a944",
+      "prices": [
+        {
+          "offset": 303,
+          "original": 8,
+          "currency": 1
+        },
+        {
+          "offset": 323,
+          "original": 2,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1000662,
+      "name": "Ivory",
+      "record_sha256": "38ea162eeb635239c6a6d8a5e91ff478fe65c87f9f1e39afec13e884de4bcf79",
+      "prices": [
+        {
+          "offset": 311,
+          "original": 120,
+          "currency": 1
+        },
+        {
+          "offset": 331,
+          "original": 24,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1000659,
+      "name": "Feather",
+      "record_sha256": "edb94a6b328248466ff6316c2def6b25fe5ff3244d22c42852eac6714b0bf14d",
+      "prices": [
+        {
+          "offset": 305,
+          "original": 8,
+          "currency": 1
+        },
+        {
+          "offset": 325,
+          "original": 2,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1003634,
+      "name": "Item_gimmick_snake_boss_scales_01",
+      "record_sha256": "1acbf3d714d02ed5f29a7eb601ea8818ab8b15e4bdd1d977d2ddaaab90c50aff",
+      "prices": [
+        {
+          "offset": 343,
+          "original": 1,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80001,
+      "name": "Recipe_BoiledPork",
+      "record_sha256": "bb3746bb11fb48719bed3062c18f851d2d36e6149736c5b7129ada17c903cd0c",
+      "prices": [
+        {
+          "offset": 307,
+          "original": 565,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80003,
+      "name": "Recipe_FruitTea",
+      "record_sha256": "a8caa7bb3f5dc5e17daec18c2bfc34215b7c9f51a58031eeabb7b47c7e1014fb",
+      "prices": [
+        {
+          "offset": 305,
+          "original": 10,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80406,
+      "name": "Recipe_SamGyeTang",
+      "record_sha256": "4ac94d58e362ebec44ed89904d66a228155db5e832f254b8a60f6598c75a123e",
+      "prices": [
+        {
+          "offset": 307,
+          "original": 1700,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80412,
+      "name": "Recipe_DeerAntler_Fruit_Tea",
+      "record_sha256": "240ebc5eb3f67f144b0725eaa9308f4b8d8c55cbf49e716d223e2d6b6b709d49",
+      "prices": [
+        {
+          "offset": 321,
+          "original": 68,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80413,
+      "name": "Recipe_Berry_Juice",
+      "record_sha256": "9fc1fe66775d4e942876cf02b9f20dbaa18c37040b0b13aa4c4b0dcea50de600",
+      "prices": [
+        {
+          "offset": 313,
+          "original": 10,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80505,
+      "name": "Recipe_Ssari_Mushroom_Tea",
+      "record_sha256": "18bc141637480eeb9df6aed288c69ce457cb7fabf8d9e360cee31b152fa1f0dc",
+      "prices": [
+        {
+          "offset": 315,
+          "original": 105,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80509,
+      "name": "Recipe_Songyi_Mushroom_Tea",
+      "record_sha256": "ff537c7e58c571fcce1ac490a3fe0dad9e36d3850414a6d8666e774420d61d26",
+      "prices": [
+        {
+          "offset": 316,
+          "original": 132,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80510,
+      "name": "Recipe_Pyogo_Mushroom_Tea",
+      "record_sha256": "02c3ba15bba93dd141b7891c0f1e239c781330a18a0cf064a226bbc4aaf6a3ac",
+      "prices": [
+        {
+          "offset": 315,
+          "original": 125,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80529,
+      "name": "Recipe_Honey_Tea",
+      "record_sha256": "45b5543160cb62df59ec72e7663f68b27a82b4f6258db5b8cd7d44c24349a185",
+      "prices": [
+        {
+          "offset": 306,
+          "original": 100,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 80812,
+      "name": "Recipe_Roast_Chicken",
+      "record_sha256": "8377f2a58e7b95fa1c3a656d25856ab385721597f14a4c23792eec142a1ab537",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 125,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000038,
+      "name": "Recipe_Grilled_Meat_Fish",
+      "record_sha256": "325b2380600a62e2eb9c378543eb64d1a4fdb489b059335e5376269bc201762f",
+      "prices": [
+        {
+          "offset": 316,
+          "original": 205,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000071,
+      "name": "Recipe_Meat_Sanjeok",
+      "record_sha256": "a15ed84ec60b8855ed55e9154a0560a43a4b46105320bf98ff113336dc8e8d75",
+      "prices": [
+        {
+          "offset": 311,
+          "original": 70,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000072,
+      "name": "Recipe_Braised_Meat",
+      "record_sha256": "294f5170d1ae55c32f7812bed63781e68a329e429095079369ba88b2e9fed5a5",
+      "prices": [
+        {
+          "offset": 311,
+          "original": 70,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000076,
+      "name": "Recipe_Meat_Porridge",
+      "record_sha256": "aaee818faaaed09804a14e2af62ab485cdb18f9809dcad8e931a4d96cbd7caf8",
+      "prices": [
+        {
+          "offset": 312,
+          "original": 70,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000087,
+      "name": "Recipe_Pan_fried_Meat_Pancake",
+      "record_sha256": "cd779091649353823ea2150b31f6d99812c2e84d342acbde1f8ccceb8b2d54e6",
+      "prices": [
+        {
+          "offset": 321,
+          "original": 72,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000122,
+      "name": "Recipe_Fish_Sanjeok",
+      "record_sha256": "f5d6db718ffdf03f64acc4b726c9d0eb3a95939247accefd4e17facd254f5a5a",
+      "prices": [
+        {
+          "offset": 311,
+          "original": 185,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000141,
+      "name": "Recipe_Braised_Fish",
+      "record_sha256": "136a483562a13eb9d262650239875c0f9643047f1ea89fb883e40497c92c1677",
+      "prices": [
+        {
+          "offset": 311,
+          "original": 185,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000150,
+      "name": "Recipe_Fish_Porridge",
+      "record_sha256": "b28c682d1f56b184b576bedf6dd354d9642c40dd0218b86ea171fc45cbcbc24a",
+      "prices": [
+        {
+          "offset": 312,
+          "original": 210,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000154,
+      "name": "Recipe_Pan_fried_Fish_Pancake",
+      "record_sha256": "51c4b678f073462d51ec619fbdb626a7c556f1abc82b8c5546c24cb4aa621755",
+      "prices": [
+        {
+          "offset": 321,
+          "original": 190,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000158,
+      "name": "Recipe_Braised_Vegetable",
+      "record_sha256": "cf5002829d462e5c63a54b6192cc16b3eb8a4184d650ee469008f344f66234ab",
+      "prices": [
+        {
+          "offset": 316,
+          "original": 105,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000169,
+      "name": "Recipe_Vegetable_Porridge",
+      "record_sha256": "e2ea506ebed9fde730a2c6dcc11ab4a1fb35019d781d4db399dcb0ee9212a1df",
+      "prices": [
+        {
+          "offset": 317,
+          "original": 90,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000199,
+      "name": "Recipe_Pan_fried_Vegetable_Pancake",
+      "record_sha256": "bddfb6ad4d1e290bdb3f3fa65b686961be9f16ba7f03a9b0ea6c896d68a6b950",
+      "prices": [
+        {
+          "offset": 326,
+          "original": 102,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000235,
+      "name": "Recipe_Fruit_Porridge",
+      "record_sha256": "98df3ece32635d58870a77b14c2fe28e632e0de8b088c9ba866d43c4a224876a",
+      "prices": [
+        {
+          "offset": 313,
+          "original": 90,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000244,
+      "name": "Recipe_Pan_fried_Fruit_Pancake",
+      "record_sha256": "46f738aef00422cdcdd77735a659c914480d9c70db01319f969700862a298ad4",
+      "prices": [
+        {
+          "offset": 322,
+          "original": 75,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000257,
+      "name": "Recipe_Pan_fried_Grain_Pancake",
+      "record_sha256": "28c4d522002a64b0aeda3b0f2cf02f96bc43e025b098a30aa79ae585889b26bc",
+      "prices": [
+        {
+          "offset": 322,
+          "original": 62,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000338,
+      "name": "Recipe_Meat_Fish_Sanjeok",
+      "record_sha256": "0b310e2eaeb56cab0d3de5e397a459cd1d3ca963de3cc70075d2330bfe8d1df3",
+      "prices": [
+        {
+          "offset": 316,
+          "original": 365,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000441,
+      "name": "Recipe_Braised_Meat_Fish",
+      "record_sha256": "acc5890b35b9dbbdf07a58c19817f71c639bc99c4572711612695394c0543dc3",
+      "prices": [
+        {
+          "offset": 316,
+          "original": 265,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000445,
+      "name": "Recipe_Meat_Fish_Porridge",
+      "record_sha256": "8a0766a5d4de9cbdf032b5226533efece46a3d9b058af5301f5605d2c1370e42",
+      "prices": [
+        {
+          "offset": 317,
+          "original": 290,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000450,
+      "name": "Recipe_Pan_fried_Meat_Fish_Pancake",
+      "record_sha256": "a00f6fd7ad7ffdd6c7cf3f37496258b78df9a6906967ab45a70100db1e6e36de",
+      "prices": [
+        {
+          "offset": 326,
+          "original": 362,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000452,
+      "name": "Recipe_Braised_Meat_Vegetable",
+      "record_sha256": "a6ae2979be19e636c9722a7a664adef5d1cf9776aa27b2ff3b34c1ecf732b4a7",
+      "prices": [
+        {
+          "offset": 321,
+          "original": 205,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000453,
+      "name": "Recipe_Meat_Vegetable_Porridge",
+      "record_sha256": "33134e5a99e008f6fba377cd709d342fa2b24d271dc8bc7ea11cca1330a87ec2",
+      "prices": [
+        {
+          "offset": 322,
+          "original": 210,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000455,
+      "name": "Recipe_Pan_fried_Meat_Vegetable_Pancake",
+      "record_sha256": "bdfbe572a92cbdc4e3cf0eb24a8577995ee80bd43d821ab2dc31e7a24b8effae",
+      "prices": [
+        {
+          "offset": 331,
+          "original": 197,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000480,
+      "name": "Recipe_Meat_Fruit_Porridge",
+      "record_sha256": "b47a172cd056337c362e71d857ae441f3cfc94b1b41312f46774c663856d20a1",
+      "prices": [
+        {
+          "offset": 318,
+          "original": 180,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000483,
+      "name": "Recipe_Pan_fried_Meat_Fruit_Pancake",
+      "record_sha256": "9d94c72a0e5bc91d204b9efe1df51710f492c1939aba6f94409d5d6e9dff0d39",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 185,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000492,
+      "name": "Recipe_Pan_fried_Meat_Grain_Pancake",
+      "record_sha256": "e059dbc180560791ba78220eadf1412215362cda5baa7ba11a586321b6ca24ac",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 200,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000501,
+      "name": "Recipe_Braised_Fish_Vegetable",
+      "record_sha256": "12e53d1dbaeb9880ae8d4d842061cfdad63866cdaa5538dcaf932a4a4ba87b74",
+      "prices": [
+        {
+          "offset": 321,
+          "original": 605,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000502,
+      "name": "Recipe_Fish_Vegetable_Porridge",
+      "record_sha256": "6ce7674547466abf7b1b75ca229aa92d258b9935d0570c38e141a81789ad72d4",
+      "prices": [
+        {
+          "offset": 322,
+          "original": 370,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000503,
+      "name": "Recipe_Pan_fried_Fish_Vegetable_Pancake",
+      "record_sha256": "8994ada0f37f8fadfa1cd3d7fd7afd48cf16b2ad639a2cc83dbf338a9b1a0a14",
+      "prices": [
+        {
+          "offset": 331,
+          "original": 360,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000504,
+      "name": "Recipe_Fish_Fruit_Porridge",
+      "record_sha256": "ff93bc310193a5c01263113ba0645948d05ed56cf1a905547f4de83bed24817c",
+      "prices": [
+        {
+          "offset": 318,
+          "original": 590,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000505,
+      "name": "Recipe_Pan_fried_Fish_Fruit_Pancake",
+      "record_sha256": "70eed658b1b77a130cbd2206e97feee0dc717aa4675b6946aaefa263f73469a7",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 610,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000506,
+      "name": "Recipe_Pan_fried_Fish_Grain_Pancake",
+      "record_sha256": "13d5300a4097a39df3e6bf8b53a0c631364bbdf687c430cc20fad2fb0bd2bc3b",
+      "prices": [
+        {
+          "offset": 327,
+          "original": 365,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000507,
+      "name": "Recipe_Vegetable_Fruit_Porridge",
+      "record_sha256": "1ded14a2d054d9ed4fb2e88cd43cde83a3a8d530dd5dcb3bc5191fe87cb4023f",
+      "prices": [
+        {
+          "offset": 323,
+          "original": 175,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000508,
+      "name": "Recipe_Pan_fried_Vegetable_Fruit_Pancake",
+      "record_sha256": "734033d6217eeeb524cb9ba30efb32449289f0086b240a488e548622964a8422",
+      "prices": [
+        {
+          "offset": 332,
+          "original": 165,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000510,
+      "name": "Recipe_Pan_fried_Vegetable_Grain_Pancake",
+      "record_sha256": "537a0f15bb9fca10974b43c73a672c3fa1ebaf3503d393b939337df67d7b21e3",
+      "prices": [
+        {
+          "offset": 332,
+          "original": 167,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000523,
+      "name": "Recipe_Pan_fried_Fruit_Grain_Pancake",
+      "record_sha256": "05529a07119a53ba429ffe86dbf29e4e745193c7390606270f21e3ddf340d8f2",
+      "prices": [
+        {
+          "offset": 328,
+          "original": 170,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000527,
+      "name": "Recipe_Meat_Fish_Fruit_Sanjeok",
+      "record_sha256": "ab1b6245df094bd31ee6d80dc20fb18d936a0d13cd92e894711d932069af409b",
+      "prices": [
+        {
+          "offset": 322,
+          "original": 1040,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000557,
+      "name": "Recipe_Meat_Fish_Grain_Sanjeok",
+      "record_sha256": "2857385401c3ca7952fb9b43f20bd4fd81de31d24c0156568e49c3c40b6f6306",
+      "prices": [
+        {
+          "offset": 322,
+          "original": 775,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000585,
+      "name": "Recipe_Meat_Fish_Vegetable_Egg",
+      "record_sha256": "9e7f499f574a532c7c02472b830c161b663d0e5067897f86e573316abe3d32f4",
+      "prices": [
+        {
+          "offset": 322,
+          "original": 657,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000616,
+      "name": "Recipe_Nureumjeok",
+      "record_sha256": "70a935410b65c0873a0cf9fbf1e5c12d612f3d3a01dff0017c953afe3e87d5f5",
+      "prices": [
+        {
+          "offset": 309,
+          "original": 1025,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000617,
+      "name": "Recipe_Sinseollo",
+      "record_sha256": "9a058d8118a730d83ddf868d71cd0551d5747d7a94eeb64fbbbd591110cc16d0",
+      "prices": [
+        {
+          "offset": 308,
+          "original": 660,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000620,
+      "name": "Recipe_Gungjung_Tteokbokki",
+      "record_sha256": "45e14c30b0821f699f68bf61db5bcfac02eb9b6f9f4620dc246f48a2ae699d86",
+      "prices": [
+        {
+          "offset": 318,
+          "original": 515,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000622,
+      "name": "Recipe_Beef_Bone_Soup",
+      "record_sha256": "c87a6809526f7a2a3aa6770b98c9a89c62893a09c7feafb553e5d08a9b632659",
+      "prices": [
+        {
+          "offset": 313,
+          "original": 530,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000636,
+      "name": "Recipe_Tteokgalbi",
+      "record_sha256": "aaabca72f0ee0dc71cf314c132db54296de2abdcb9e62289445a37748180e6b8",
+      "prices": [
+        {
+          "offset": 309,
+          "original": 562,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000673,
+      "name": "Recipe_Jeonju_Bibimbap",
+      "record_sha256": "7afae69cba51c07a6b6e15c74e9145dd1cd7d99bd9c3add171f4e3f7047fbef7",
+      "prices": [
+        {
+          "offset": 314,
+          "original": 562,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000687,
+      "name": "Recipe_Kimbap",
+      "record_sha256": "fd365dfdc31cb413eb930c0b3fb1ed58d921d6e1ed4ba8c70b5a85c1883152db",
+      "prices": [
+        {
+          "offset": 305,
+          "original": 760,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000701,
+      "name": "Recipe_Fish_Soup",
+      "record_sha256": "071e06d3b3d7f9ab7a5c15d14a91f407dd45211340b80092141309ba09bbc01d",
+      "prices": [
+        {
+          "offset": 308,
+          "original": 785,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000704,
+      "name": "Recipe_Fish_Bulgogi",
+      "record_sha256": "51afd300f1ffe60d6c89175b375017b76f0a63248020c9fa7aeaa2ae4ebe4a33",
+      "prices": [
+        {
+          "offset": 311,
+          "original": 640,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000705,
+      "name": "Recipe_Fish_Stew",
+      "record_sha256": "8b69da01b7ca91a6f75635e501cfb6efdb83972db4c002851d51fab5a57937e2",
+      "prices": [
+        {
+          "offset": 308,
+          "original": 667,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000719,
+      "name": "Recipe_Full_Course_of_Braised_Fish",
+      "record_sha256": "5539ba24b41b83fcd483f051d5d25985f4844a90e0c387de61dbb6c243d739e4",
+      "prices": [
+        {
+          "offset": 326,
+          "original": 702,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000775,
+      "name": "Recipe_Japchae",
+      "record_sha256": "c3e4de2091937b5180da1b7c2e6a3fb7ad4c1ea16b1eea79204b61fd33825ee4",
+      "prices": [
+        {
+          "offset": 306,
+          "original": 247,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000819,
+      "name": "Recipe_Surasang_00",
+      "record_sha256": "85839162271102886c4b747c3dfdf6d8e3bd6a2d219038f9980f9d066bc93405",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 3655,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000860,
+      "name": "Recipe_Surasang_01",
+      "record_sha256": "d85cfd5d0b982bf3f0b7f61b11b5cd2b3ab28a1d9114632c85d986ce8d3db144",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 3247,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000881,
+      "name": "Recipe_Surasang_02",
+      "record_sha256": "6ad88ca5255343fc9c468f70354473851902447b9a1b5a224fd4ff7fe225be0b",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 2810,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000954,
+      "name": "Recipe_DeerAntler_Soup",
+      "record_sha256": "f39390f833b8765513356890c7cd0425f703f63042b59530ba36f0d366a03cc0",
+      "prices": [
+        {
+          "offset": 314,
+          "original": 285,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000956,
+      "name": "Recipe_Surasang_03",
+      "record_sha256": "2b6faf149204c5dbcf95cd3083dc830d8df8f9c9606fb0b6d6fa864416e6925b",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 2785,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000968,
+      "name": "Recipe_Surasang_04",
+      "record_sha256": "6a8264e1751b1a8cc73a9df2ba0686313394eb00f0ae22a93c181678fc2c0133",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 2810,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000976,
+      "name": "Recipe_Fruit_Wine",
+      "record_sha256": "fbc1f93d68e64992b3987bb803bcdc6f279b8bc34cf1353ca6d44a72d644009a",
+      "prices": [
+        {
+          "offset": 309,
+          "original": 95,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000977,
+      "name": "Recipe_High_Wine",
+      "record_sha256": "e5938a78f2aa9e1a617cdd164eef722e0e12f613b761dec74bfa6a6814daa259",
+      "prices": [
+        {
+          "offset": 308,
+          "original": 115,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000986,
+      "name": "Recipe_Roast_Fish",
+      "record_sha256": "65ace975d72a3ec8e74a5d64047e4e29929c3c8dade52eca87eae7992d3ce195",
+      "prices": [
+        {
+          "offset": 309,
+          "original": 245,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001060,
+      "name": "Recipe_Surasang_05",
+      "record_sha256": "2abbff27910081472a64a5202e9479c96ce2483a067af1c5e0c3519e7dbfacef",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 2805,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001077,
+      "name": "Recipe_Seafood_Soup",
+      "record_sha256": "e37480ec59c2bc8e47fad8aa5068e970a1a04adb5eff9bf77f56e0c968f1ad63",
+      "prices": [
+        {
+          "offset": 311,
+          "original": 365,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001130,
+      "name": "Recipe_Haemuljjim",
+      "record_sha256": "0ddc894f3f067b495b10115f40d42ee46a59ebc960bd161e6ca7669250d80b84",
+      "prices": [
+        {
+          "offset": 309,
+          "original": 655,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001854,
+      "name": "Recipe_Vegetable_Juice",
+      "record_sha256": "382c7affefe56476ce0c836cb6241a273b8c25e0f60a0920a5fad441808537d7",
+      "prices": [
+        {
+          "offset": 319,
+          "original": 10,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1001885,
+      "name": "Recipe_Herbal_Tea",
+      "record_sha256": "6a65d8290d474e8bf7a074d7706cb6ae91095ead4638269255dbe5683d53e59f",
+      "prices": [
+        {
+          "offset": 309,
+          "original": 105,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1003768,
+      "name": "Recipe_Chocolate",
+      "record_sha256": "7d5ebb33eacb9d4d7b1b53ea23f037c05e98b7a5a355aa7b3c55561daab347ed",
+      "prices": [
+        {
+          "offset": 308,
+          "original": 500,
+          "currency": 1
+        }
+      ]
+    },
+    {
+      "key": 1000853,
+      "name": "Fang",
+      "record_sha256": "b5d17bad69cf63deb074b9bec88af2e60b68000d4b04d8ee5478ea9f405221c6",
+      "prices": [
+        {
+          "offset": 310,
+          "original": 20,
+          "currency": 1
+        },
+        {
+          "offset": 330,
+          "original": 4,
+          "currency": 15
+        }
+      ]
+    },
+    {
+      "key": 1000081,
+      "name": "Fine_Wood",
+      "record_sha256": "c72890118919dcb093e01cb0028ebc7c337a1be808b0399dfc99cab139f8b486",
+      "prices": [
+        {
+          "offset": 307,
+          "original": 25,
+          "currency": 1
+        },
+        {
+          "offset": 327,
+          "original": 6,
+          "currency": 13
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,29 @@
 # Horse stamina and mount stats
 
-## Game 2.04.00 / Steam build 26317560
+Updated for **Crimson Desert 2.04.02 / Steam build 26329202**.
 
-Current ASI releases: **AllStats 11** and **Speed-only 11**. AllStats was tested in-game by the author on 30 October 2026. Speed-only passed static/host/loader checks; its separate gameplay test is pending. Native hooks and build/layout checks were updated for this exact Steam build.
+| Download | Version | Installation | Validation |
+|---|---|---|---|
+| All Mounts LvL 5 All Stats | 12 | ASI loader | Gameplay confirmed 31 October 2026 |
+| All Mounts LvL 5 Speed-only | 12 | ASI loader | Static/host/loader checks passed; separate gameplay test pending |
+| Steelheart Horseshoes 20 Stamina Regen | 9 | DMM 4.5.1+ | Mount and gameplay confirmed 31 October 2026 |
 
-All Mounts LvL 5 All Stats changes mount speed, acceleration, turning and jump. Speed-only changes movement speed alone. Steelheart is not required. Use only one mount variant; never load AllStats and Speed together.
+AllStats changes mount speed, acceleration, turning and jump. Speed-only changes movement speed alone. **Use AllStats OR Speed-only, never both.** These ASIs do not require Steelheart or DMM.
 
-[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/asi-2.04.00-b26317560-r2)
+Steelheart raises the equipped horseshoes' stamina-regeneration buff from level 4 to 20. Equip the item. It can be used alone or with either mount ASI.
 
-## Install / update
+[Downloads on Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-2.04.02-b26329202)
 
-Close the game. Remove old/test ASIs for the same mod, including duplicate manager-installed copies. Copy the released ASI into `Crimson Desert/bin64` beside `CrimsonDesert.exe`. Keep your existing INI; copy a supplied INI only for a new installation. An [x64 ASI loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) is required and is not included. **DMM and archive mounting are not required.**
+## Install a mount ASI
+
+Close the game. Remove older/test ASIs for the same mod, including duplicate manager-installed copies. Copy the released ASI into `Crimson Desert/bin64` beside `CrimsonDesert.exe`. Preserve existing INI settings; copy a supplied INI only for a new installation. An [x64 ASI loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) is required and is not included. **DMM and data-archive mounting are not required.**
 
 To uninstall, close the game and remove this mod's ASI.
 
-## Older variants
+## Install Steelheart
 
-Steelheart Horseshoes v8 targets game 2.01.00 and is a separate data mod. The older Speed-only v10 download targets game 2.03.02 and is archived. Steelheart remains a historical data download for its labelled version and is not confirmed for game 2.04.00.
+Close the game and unmount in DMM. Import `Steelheart_Horseshoes_20_Stamina_Regen_2.04.02.zip` into DMM 4.5.1 or a compatible newer release. Disable the previous Steelheart version, enable the new package and mount. Keep DMM's installed runtime and ASI loader. Restart the game. To uninstall, close the game, unmount, disable Steelheart and remount the remaining mods.
 
 ## Source and validation
 
-Build from repository root: `tooling/build_allstats_204.cmd` and `tooling/build_speed_204.cmd`. See [build instructions and validation](../../tooling/README.md). `nexus.json` records immutable file IDs and package SHA-256 values. AllStats retains its gameplay-tested ASI. The Speed-only hook code is identical except for the narrower speed-only stat filter, with 1,135 passing host checks. Its independent gameplay test remains pending. Build outputs, game-derived inputs and private diagnostics stay out of Git. Third-party licenses remain with their source.
+Build the ASIs with `tooling/build_allstats_204.cmd` and `tooling/build_speed_204.cmd`. Both passed 1,135 host checks plus native/loader checks. Speed-only shares the AllStats hook with a narrower stat filter. Steelheart uses the current item table and changes only the relevant equip-buff. See [build instructions](../../tooling/README.md) and `nexus.json` for exact IDs/hashes. Older downloads remain archived for their labelled game versions.

@@ -4,10 +4,25 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2066,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
-  "pageVersion": "14",
-  "sourceStatus": "published-recipe-with-local-game-inputs",
-  "sourceNote": "Exact declarative manifests from the current Nexus archives are included. Full modified game tables and UI files are not redistributed here. Rebuilding the complete overlay requires matching local game inputs and the corresponding transformation; no different-version builder is presented as this release.",
+  "pageVersion": "16",
+  "sourceStatus": "published-release",
+  "sourceNote": "Updated for game 2.04.02, Steam build 26329202. Gameplay confirmed except Speed-only, which passed static/host/loader checks. Original game inputs remain local.",
   "currentFiles": [
+    {
+      "fileId": 18366,
+      "name": "Alden_AIO_Shop_All_Items_1_Copper_2.04.02",
+      "version": "16",
+      "category": "MAIN",
+      "gameVersion": "2.04.02",
+      "steamBuild": "26329202",
+      "inGameTested": true,
+      "validation": "Author confirmed working in game on 2026-10-31.",
+      "sha256": "0befb5d4a58658d82f892797c788fe97d3f88d8336bfde671c8bc2e20a40797c",
+      "bytes": 82676,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=18366"
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 14689,
       "name": "Alden_AIO_Shop_All_Items_1_Copper_2.01.00",

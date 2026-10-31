@@ -1,0 +1,18 @@
+{
+  "name": "Steelheart_Horseshoes_20_Stamina_Regen_2.04.02",
+  "version": "2.04.02",
+  "author": "Blablup",
+  "description": "Sets the Steelheart Horseshoes stamina-regeneration equip-buff level from 4 to 20.",
+  "patches": [
+    {
+      "description": "Steelheart stamina regeneration equip-buff: level 4 -> 20",
+      "file": "gamedata/binarystaticinfo__/bin/iteminfo.staticinfobody",
+      "target": "gamedata/binarystaticinfo__/bin/iteminfo.staticinfobody",
+      "offset": 4762136,
+      "original": "6E420F0004000000",
+      "patched": "6E420F0014000000"
+    }
+  ],
+  "dmm_offsetautorelocate_disable": true,
+  "dmm_v3upgrade_disable": true
+}

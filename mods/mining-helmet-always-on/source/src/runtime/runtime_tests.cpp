@@ -41,7 +41,7 @@ void node(uintptr_t nodes,uintptr_t bucket,uint32_t index,uintptr_t nodeAddress,
 mh34::View fixture() {
     memory.clear(); writes.clear();
     set(Root+0x20,Manager); set(Manager+0x1280,uintptr_t{0x21000}); set(0x21000+0x160,uintptr_t{0x22000});
-    set(0x22000+0x560,Groups); set(Image+0x70cac60,Pool); set(Pool+0x58,Names);
+    set(0x22000+0x560,Groups); set(Image+0x70cdc60,Pool); set(Pool+0x58,Names);
     map(Groups,0x51000,0x52000,1); name(1,"GlobalMaterialGlobalParameter_Common",0x53000);
     node(0x52000,0x51000,0,0x54000,1,Group);
     reserve(Group,0x100); reserve(Buffer,484); set(Group+0x78,Buffer); set(Group+0x80,uint32_t{484});
@@ -110,8 +110,8 @@ auto34::Identity setupNative() {
     actor={}; parts={}; generic={}; mode={};
     field(actor,0x60,uint32_t{99}); field(actor,0x90,uint32_t{111}); field(actor,0x68,reinterpret_cast<uintptr_t>(parts.data()));
     field(parts,0x30,reinterpret_cast<uintptr_t>(generic.data())); field(parts,0x178,reinterpret_cast<uintptr_t>(mode.data()));
-    field(generic,0,Image+0x5938938); field(generic,8,reinterpret_cast<uintptr_t>(actor.data()));
-    field(mode,0,Image+0x590cf78); field(mode,0x30,uint16_t{0xffff}); field(mode,0x48,uint16_t{0xffff});
+    field(generic,0,Image+0x593a9c8); field(generic,8,reinterpret_cast<uintptr_t>(actor.data()));
+    field(mode,0,Image+0x590f028); field(mode,0x30,uint16_t{0xffff}); field(mode,0x48,uint16_t{0xffff});
     lookupActor=lookup; lookupPlayer=player; modeOwner=player; releaseRef=release; eventInit=init; enqueueOriginal=enqueue; effectOriginal=effect;
     Identity id{}; assert(identify(reinterpret_cast<uintptr_t>(generic.data()),id)); return id;
 }
@@ -134,7 +134,7 @@ void lifecycle() {
     targets[0]=target; clearTargets(0x1234,false); assert(enqueues==calls+1); // Yield does not send native OFF.
     targets[0]=target;
     alignas(16) std::array<uint8_t,0xe0> handler{}; std::array<uint8_t,0xe8> event{};
-    field(handler,0,Image+0x5d27610); field(handler,0x6c,MineIndex); field(event,0,On);
+    field(handler,0,Image+0x5d2a360); field(handler,0x6c,MineIndex); field(event,0,On);
     uint32_t result{}; assert(effectHook(generic.data(),&result,handler.data(),event.data())==&result);
     assert(result==42 && effects==1 && targets[0].mine);
     field(event,0,Off); targets[0].dispatched=true;
@@ -268,7 +268,7 @@ void progressiveActivation() {
     assert(enqueues==3 && approachingRetries==2 && targets[0].probes==3);
     alignas(16) std::array<uint8_t,0xe0> handler{};
     std::array<uint8_t,0xe8> event{};
-    field(handler,0,Image+0x5d27610);
+    field(handler,0,Image+0x5d2a360);
     field(handler,0x6c,MineIndex);
     field(event,0,On);
     uint32_t result{};

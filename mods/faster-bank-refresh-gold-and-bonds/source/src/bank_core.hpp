@@ -9,9 +9,9 @@ enum class BankType : uint8_t { gold, bonds };
 inline constexpr uint32_t maximum_minutes(BankType type) {
     return type==BankType::bonds ? 10080 : 4320;
 }
-inline constexpr char ExpectedSha[] = "d4855c08998638f07fa8fae08bd6249261f10c8fec2215effc29cb339e7fa525";
+inline constexpr char ExpectedSha[] = "fec07be1b725a46624d31fcd74bf3730ea809765226cea6bde01607ab2d79f66";
 
-// Observed in 2.04.00 Calendar conversion at RVA 0x228dd50, not an ordinary wall-clock struct.
+// Native calendar layout; its use in both refresh paths was rechecked for 2.04.02.
 struct Calendar {
     uint32_t day, hour, minute, second, millisecond;
     uint8_t weekday, unused;

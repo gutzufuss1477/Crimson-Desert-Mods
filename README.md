@@ -1,25 +1,27 @@
 # Crimson Desert — Mods
 
-Mods by gutzufuss1477 / Blablup.
+Mods by gutzufuss1477 / Blablup. Updated **31 October 2026** for **game 2.04.02 / Steam build 26329202**.
 
-## Native ASI update: game 2.04.00, Steam build 26317560
+| Mod / variant | Version | Install | Download |
+|---|---|---|---|
+| [Mining Helmet Always On](mods/mining-helmet-always-on/) | 1.3.2 | ASI loader | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) |
+| [Faster Bank Refresh — Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.2.2 | ASI loader | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) |
+| [All Mounts LvL 5 All Stats / Speed-only](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 12 | ASI loader | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) |
+| [Steelheart Horseshoes](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 9 | DMM 4.5.1+ | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) |
+| [Alden All-In-One Progression Shop](mods/alden-all-in-one-progression-shop/) | 16 | DMM 4.5.1+ | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2066) |
 
-Mining Helmet, Bank Refresh and AllStats were tested in-game by the author on 30 October 2026. Speed-only uses the same mount hook as AllStats, restricted to speed; static/host/loader checks passed, but a separate Speed-only gameplay test is pending.
-They run through an x64 ASI loader. **DMM and data-archive mounting are not required.**
+Mining Helmet, Bank Refresh, AllStats, Alden and Steelheart were confirmed working in-game by the author. Speed-only passed static/host/loader checks and uses the AllStats hook with a narrower stat filter; its separate gameplay test is pending.
 
-| Mod | Release | Download |
-|---|---|---|
-| [Mining Helmet Always On](mods/mining-helmet-always-on/) | 1.3.1 | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) |
-| [Faster Bank Refresh — Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.2.1 | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) |
-| [All Mounts LvL 5 All Stats / Speed-only](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 11 | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) |
+[GitHub release, native/Steelheart downloads and all six package checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-2.04.02-b26329202). The ready-to-install Alden data overlay is available on Nexus; its source and recipes are in this repository. These packages target the exact Steam build above.
 
-[Download the ASI release and SHA-256 checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/asi-2.04.00-b26317560-r2).
-These packages target the later Steam build 26317560 specifically; the version label 2.04.00 alone does not identify the executable.
+## Install
 
-Close the game, remove older ASIs for the same mod, then copy the new ASI into `Crimson Desert/bin64` beside `CrimsonDesert.exe`. Keep existing INI settings; use the supplied INI only for a new installation. Keep your existing x64 ASI loader, or obtain one from [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader). Do not load both AllStats and Speed.
+For an ASI, close the game, remove older copies of the same mod and copy the ASI into `Crimson Desert/bin64` beside `CrimsonDesert.exe`. Preserve your existing INI. Keep an existing [x64 ASI loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader); it is not bundled. These ASIs do not require DMM. Never load AllStats and Speed-only together.
 
-## Other mods
+For Alden or Steelheart, close the game and unmount in DMM. Import the matching ZIP with DMM 4.5.1 or a compatible newer release, disable the previous version, enable the update and mount. Keep DMM's runtime and loader, then restart the game. See each mod's README for details.
 
-[Alden shop](mods/alden-all-in-one-progression-shop/), [Healthbar](mods/healthbar-always-on/) and Steelheart Horseshoes use data modifications. This release does not update those downloads or claim compatibility with game 2.04.00. Existing historical source remains available. The obsolete Bank Save Patcher is excluded.
+## Excluded from this update
 
-See [build and validation](tooling/README.md), [distribution notes](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md). Original game data, executables, private diagnostics and credentials are excluded from this repository.
+Healthbar is still being tested after a Multitarget issue with Kliff; no Healthbar 2.04.02 release is included here. Existing Healthbar files remain historical. The obsolete Bank Save Patcher is excluded.
+
+See [build and validation](tooling/README.md), [distribution notes](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md). Original game inputs, complete game tables, executables, private diagnostics and credentials are excluded from Git.
