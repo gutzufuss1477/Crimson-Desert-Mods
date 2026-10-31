@@ -14,6 +14,7 @@ import zipfile
 from collections import Counter
 
 from .staticinfo import Table, unique_offset
+from .dmm_builder import healthbar_ui
 
 VERSION = "2.04.02"
 STEAM_BUILD = "26329202"
@@ -66,6 +67,33 @@ def patch(table: str, offset: int, original: bytes, replacement: bytes, descript
 def manifest(slug: str, description: str, patches: list[dict], version: str = VERSION) -> dict:
     return dict(name=slug, version=version, author="Blablup", description=description,
                 patches=patches, dmm_offsetautorelocate_disable=True, dmm_v3upgrade_disable=True)
+
+
+def healthbar(inputs: Inputs) -> tuple[dict[str, bytes], list[dict], dict]:
+    characters = inputs.table("characterinfo")
+    patches = []
+    marker = bytes.fromhex("FBB0010001000000FA000000")
+    for key, name in ((1, "Kliff"), (1002113, "Kliff_AI"), (1004085, "Yann")):
+        r = characters.require(key, name)
+        pos = unique_offset(r.data, marker) + 8
+        patches.append(patch("characterinfo", r.start + pos, struct.pack("<I", 250),
+                             struct.pack("<I", 91002), f"{name}: HP range helper -> Equip_Passive_ShowHPUI"))
+    skills = inputs.table("skill")
+    target = skills.require(1201, "Passive_Player_BasicSkill")
+    source = skills.require(91002, "Equip_Passive_ShowHPUI")
+    replacement = bytearray(target.data[:target.prefix_size] + source.data[source.prefix_size:])
+    pos = unique_offset(replacement, struct.pack("<I", source.key))
+    if pos != 70 or len(replacement) != 408:
+        raise ValueError("HP skill payload/self-reference layout changed")
+    struct.pack_into("<I", replacement, pos, target.key)
+    rebuilt = skills.replace({target.key: bytes(replacement)})
+    files = {
+        (BINARY / "skill.staticinfobody").as_posix(): rebuilt.body,
+        (BINARY / "skill.staticinfoheader").as_posix(): rebuilt.header,
+    }
+    return files, patches, dict(skill_records=len(skills.records), changed_skill_keys=[1201],
+                               preserved_skill_records=len(skills.records) - 1,
+                               character_offsets=[p["offset"] for p in patches])
 
 
 def steelheart(inputs: Inputs) -> tuple[list[dict], dict]:
@@ -169,6 +197,7 @@ def package(output: Path, slug: str, description: str, patches: list[dict], file
         f"{slug}\n\n{description}\n\n"
         f"Built against Crimson Desert {inputs.version}, Steam build {inputs.steam_build}.\n"
         "Replace the previous version; do not enable old and new versions together.\n"
+        "Healthbar: enable only one presentation variant.\n"
         "This package uses the new binarystaticinfo paths and StaticInfo format.\n"
         "Use DMM 4.5.1 or a newer compatible version. Import this ZIP through DMM.\n"
         "Do not copy the files/ folders directly into the game directory.\n"
@@ -200,9 +229,27 @@ def main():
     parser.add_argument("--inputs", type=Path, required=True, help="Extracted vanilla root containing 0008 and 0012")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--game-version", choices=PROFILES, default=VERSION)
-    parser.add_argument("--mods", nargs="+", choices=["steelheart", "alden"], default=["steelheart", "alden"])
+    parser.add_argument("--mods", nargs="+", choices=["healthbar", "steelheart", "alden"], default=["healthbar", "steelheart", "alden"])
     args = parser.parse_args()
     version = args.game_version
+    if "healthbar" in args.mods:
+        inputs = Inputs(args.inputs, version)
+        files, patches, validation = healthbar(inputs)
+        for extension in ("html", "css"):
+            inputs.read(UI / f"subtitletagview.{extension}")
+        for variant, label in (("multi", "vanilla_multitarget"), ("classic", "classic_vanilla_single_target"), ("caites", "Caites")):
+            html, css = healthbar_ui(inputs.root, variant)
+            variant_files = files | {(UI / "subtitletagview.html").as_posix(): html,
+                                     (UI / "subtitletagview.css").as_posix(): css}
+            description = f"Persistent enemy HP bars ({label}) for Crimson Desert {version}."
+            style = "compact thin red bars" if variant == "caites" else "classic red bars with dark frame"
+            behavior = "single target; no native multitarget patch" if variant == "classic" else "multiple targets; requires NativeFix2 ASI helper"
+            description += f" {style}; {behavior}. Use package_healthbar_204 to include the helper in a DMM import ZIP."
+            variant_validation = validation | {"ui_revision": "VisualFix3", "show_hp_buff_tag_preserved": True,
+                "style": style, "target_mode": "single" if variant == "classic" else "multi",
+                "requires_native_helper": variant != "classic", "visual_gameplay_tested": False}
+            print(package(args.output, f"Healthbar_always_on_{label}_{version}",
+                          description, patches, variant_files, inputs, variant_validation))
     if "steelheart" in args.mods:
         inputs = Inputs(args.inputs, version)
         patches, validation = steelheart(inputs)

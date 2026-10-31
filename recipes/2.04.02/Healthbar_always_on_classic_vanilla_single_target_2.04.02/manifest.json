@@ -1,0 +1,34 @@
+{
+  "name": "Healthbar - Classic Vanilla Single Target",
+  "version": "2.04.02",
+  "author": "Blablup",
+  "description": "Classic red bars with a dark frame, one target. Crimson Desert 2.04.02, Steam 26329202. DMM data mod; no separate Healthbar ASI helper required.",
+  "patches": [
+    {
+      "description": "Kliff: HP range helper -> Equip_Passive_ShowHPUI",
+      "file": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "target": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "offset": 525,
+      "original": "FA000000",
+      "patched": "7A630100"
+    },
+    {
+      "description": "Kliff_AI: HP range helper -> Equip_Passive_ShowHPUI",
+      "file": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "target": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "offset": 7707,
+      "original": "FA000000",
+      "patched": "7A630100"
+    },
+    {
+      "description": "Yann: HP range helper -> Equip_Passive_ShowHPUI",
+      "file": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "target": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "offset": 22554,
+      "original": "FA000000",
+      "patched": "7A630100"
+    }
+  ],
+  "dmm_offsetautorelocate_disable": true,
+  "dmm_v3upgrade_disable": true
+}

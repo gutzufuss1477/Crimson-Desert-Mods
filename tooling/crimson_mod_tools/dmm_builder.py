@@ -445,7 +445,10 @@ def build_healthbar_skill_overlay(game_root: Path) -> tuple[bytes, bytes]:
 def healthbar_ui(game_root: Path, variant: str) -> tuple[bytes, bytes]:
     html = (game_root / UI_REL / "subtitletagview.html").read_bytes().decode("utf-8-sig")
     css = (game_root / UI_REL / "subtitletagview.css").read_bytes().decode("utf-8-sig")
-    html, a = re.subn(r'\s+ShowHPBuffTag="CheckShowHP"', "", html, count=1)
+    # The current RootSubtitleTag initializer returns an error when this
+    # attribute is absent or empty. It also resolves the player's ShowHP tag
+    # used to enable HP updates. All variants require this initialization.
+    a = html.count('ShowHPBuffTag="CheckShowHP"')
     html, b = re.subn(
         r'css="no-pickable fit-all cpp-head-up !cpp-none"',
         'css="no-pickable fit-all cpp-head-up"',
@@ -460,6 +463,19 @@ def healthbar_ui(game_root: Path, variant: str) -> tuple[bytes, bytes]:
     )
     if (a, b, c) != (1, 1, 1):
         raise RuntimeError(f"Healthbar HTML schema changed: {(a, b, c)}")
+
+    if variant in ("multi", "caites"):
+        # A visible HPGauge cannot escape opacity:0 on its HeadUp ancestor.
+        # Keep the normal HeadUp out of the vanilla show/hide layer list;
+        # actor tracking and the separate subtitle/detection controls remain.
+        html, parent_count = re.subn(
+            r'(<component name="HeadUp"[^>]*?) selector-show-layer-list="\.cpp-head-up"',
+            r'\1',
+            html,
+            count=1,
+        )
+        if parent_count != 1:
+            raise RuntimeError("Healthbar HeadUp visibility selector changed")
 
     lines = css.replace("\r\n", "\n").replace("\r", "\n").split("\n")
     selectors = [
@@ -505,21 +521,19 @@ def healthbar_ui(game_root: Path, variant: str) -> tuple[bytes, bytes]:
         ".headup-hp-stat-gauge-tip { position: absolute; width: 13px; height: 9px; top: 50%; background-image: textureid(hud_nametag_bg_boss_edge_00); translate-x: -50%; background-color: #c86161; background-blend-mode: overlay; translate-y: -50%; left: 50%; opacity: 0; }",
     ]
     start = positions[0]
-    lines[start : start + 9] = compact if variant in ("caites", "multi") else classic
-    if variant == "caites":
+    # Nexus author screenshots use the framed classic appearance for Vanilla.
+    # Only Caites is compact. Both multitarget variants share native behavior.
+    lines[start : start + 9] = compact if variant == "caites" else classic
+    if variant in ("multi", "caites"):
         lines += [
             "",
-            "/* Keep active compact enemy HP bars visible. */",
-            ".cpp-head-up #HPGauge { display: flex; opacity: 1; }",
-            ".cpp-head-up.cpp-hide #HPGauge { display: flex; opacity: 1; animation: none; }",
-        ]
-    elif variant == "multi":
-        lines += [
-            "",
-            "/* Preserve multiple emitted enemy HP bars. */",
-            ".headup-hp-stat-wrap.cpp-show { display: flex; opacity: 1; }",
+            "/* UIFix1: preserve emitted HP bars at both visibility layers. */",
+            ".cpp-head-up { opacity: 1; animation: none; }",
+            ".cpp-head-up.cpp-show { opacity: 1; animation: none; }",
+            ".cpp-head-up.cpp-hide { opacity: 1; animation: none; }",
+            ".headup-hp-stat-wrap.cpp-show { display: flex; opacity: 1; animation: none; }",
             ".headup-hp-stat-wrap.cpp-hide { display: flex; opacity: 1; animation: none; }",
-            ".cpp-head-up #HPGauge { display: flex; opacity: 1; }",
+            ".cpp-head-up #HPGauge { display: flex; opacity: 1; animation: none; }",
             ".cpp-head-up.cpp-hide #HPGauge { display: flex; opacity: 1; animation: none; }",
         ]
     elif variant != "classic":
