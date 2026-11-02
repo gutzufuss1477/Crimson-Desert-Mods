@@ -3,7 +3,7 @@
 ## Steam build 26361232 release and remaining candidates
 
 Bank, All Stats and Vanilla Multitarget were confirmed working through DMM 4.6.4
-on build 26361232 on 2 November 2026. Mining and Speed Only remain candidates;
+on build 26361232 on 2 November 2026. Mining remains a candidate. Speed Only v13 is also published after 1,135 host checks and a fresh current-build resolver check; its separate gameplay confirmation is pending.
 Classic/Caites have current data/style/host validation but no separate current-build gameplay test. Published releases below retain
 their historical validation claims; rebuilding this source does not reproduce
 those historical binaries.
@@ -115,3 +115,5 @@ Vanilla Multitarget and Classic were confirmed in game; Caites preserves the pre
 ## Promote validated b26361232 payloads
 
 Run python tooling/package_release_b26361232.py --candidates dist/candidate-b26361232 --output dist/release-b26361232. The approval record limits publication to Bank, All Stats and three Healthbar variants. Only README/validation metadata and Healthbar manifest version text change; all native/data/UI payloads must remain identical. The GitHub folder excludes complete game-data/UI packages.
+
+Speed Only was subsequently authorized as a supplemental release. Run `python tooling/package_speed_release_b26361232.py --candidates dist/candidate-b26361232 --output dist/release-speed-b26361232`. Its separate approval records the passed technical checks and the pending gameplay test. The packager preserves the validated ASI exactly and emits a ZIP plus `SHA256SUMS-SpeedOnly.txt`, without replacing any existing release artifact.

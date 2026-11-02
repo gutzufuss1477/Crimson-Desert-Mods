@@ -56,6 +56,20 @@
       "nexus_mod_id": 2365,
       "title": "All Mounts Level 5 - All Stats",
       "in_game_tested": true
+    },
+    {
+      "file": "AllMountsLvL5Speed_v13_b26361232.zip",
+      "sha256": "ace03eeea95a0e456ced06f7aac845d51e36895a12d39a1fa053dbe99d10187c",
+      "bytes": 98567,
+      "native_sha256": "645aceba179450f9f6614145f2aa0a652bb64330a70863eb3606f66d9bccd751",
+      "version": "13",
+      "kind": "speed",
+      "nexus_mod_id": 2365,
+      "steam_build": "26361232",
+      "in_game_tested": false,
+      "host_checks": 1135,
+      "structural_checks_passed": true,
+      "functional_payload_unchanged": true
     }
   ],
   "github_helper": {
@@ -64,8 +78,8 @@
     "bytes": 93578
   },
   "excluded_candidates": [
-    "mining",
-    "speed"
+    "mining"
   ],
-  "healthbar_data_build_specific": true
+  "healthbar_data_build_specific": true,
+  "github_supplemental_checksums": "SHA256SUMS-SpeedOnly.txt"
 }

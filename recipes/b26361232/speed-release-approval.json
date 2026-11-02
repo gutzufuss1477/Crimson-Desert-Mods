@@ -1,0 +1,12 @@
+{
+  "steam_build": "26361232",
+  "date": "2026-11-02",
+  "scope": "Publish Speed Only v13 alongside All Stats; separate gameplay test explicitly pending.",
+  "native_sha256": "645aceba179450f9f6614145f2aa0a652bb64330a70863eb3606f66d9bccd751",
+  "exe_sha256": "df531a585bf84ceb47779304cc8b3caaf976aea88424c32605885623cd4519c7",
+  "static_and_host_tests_passed": true,
+  "host_checks": 1135,
+  "current_installed_executable_rechecked": true,
+  "gameplay_tested": false,
+  "runtime_difference_from_allstats": "Speed-only SubIndex 15 filter and status filename; same structural resolver and hook."
+}

@@ -6,7 +6,7 @@
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3669",
   "pageVersion": "1.3.0",
   "sourceStatus": "published-release",
-  "sourceNote": "Updated Bank, All Stats and Healthbar for Steam 26361232. Required native code is resolved structurally; compatible address shifts may be tolerated, not guaranteed. Healthbar data/UI remain build-specific. Mining and Speed Only candidates are not included.",
+  "sourceNote": "Updated Bank, All Stats, Speed Only and Healthbar for Steam 26361232. Required native code is resolved structurally; compatible address shifts may be tolerated, not guaranteed. Healthbar data/UI remain build-specific. Mining remains an unpublished candidate. Speed Only v13 is technically validated; its separate gameplay test is pending.",
   "currentFiles": [
     {
       "fileId": 19040,
