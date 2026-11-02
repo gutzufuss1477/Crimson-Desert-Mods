@@ -1,5 +1,16 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## v17.1 — 2 November 2026 — game 2.04.05
+
+- Fixes the two compiled category keyguides retaining an axis-control press/release override, which made keyboard and Xbox LT/RT input skip a category.
+- Uses the game's normal tab-key input setting; no artificial cooldown. Updates matching HTML and helper UI guards.
+- Keeps all 567 items, prices, stock, layout and translations unchanged.
+- Original native input replay, rapid repeated press/release tests, compiled UI regression checks and native callback tests pass. The author confirmed the fix in game.
+
+Update both the data mod and included **Alden Category Tabs.asi**. Tier II/III Abyss Gear remains intentionally excluded from the shop; higher-tier crafting is left to the player.
+
+[Download v17.1 on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19112). Published through Nexus API v3; v17 is archived. The downloadable archive was verified against the local SHA-256 checksum.
+
 ## v17 — 2 November 2026 — game 2.04.05
 
 - Expands the previous 379-item catalog to 567 items from the installed base-game/update data, including rubber and additional crafting/progression items.

@@ -2,9 +2,9 @@
 #include <cstdint>
 namespace alden::profile {
 inline constexpr char ExeHash[]="df531a585bf84ceb47779304cc8b3caaf976aea88424c32605885623cd4519c7";
-inline constexpr char HtmlHash[]="aca740ed39003eba089b408e1c1f0d297c4aea16be5533a4f664682b4d7f9188";
+inline constexpr char HtmlHash[]="83007609be36014f5389a1cd54aba8809b1be6eba189176adbf274889bcf22fb";
 inline constexpr char CssHash[]="3c821c0cb91e31448a73b0bf889e06b7a486effab7d4d4fd6ea256460ffc6441";
-inline constexpr char BinaryUiHash[]="1cc3f443992213aa34b25b0cecebdeec3196299beeee7890d0ac3a1568a4e7e4";
+inline constexpr char BinaryUiHash[]="6632acca3e3253b8bc61158abeff1ac6701589d668857b3d60144d05d5f64590";
 inline constexpr std::uintptr_t RootVtable = 0x59e69f0;
 inline constexpr std::uintptr_t StockVtable = 0x5a45c80;
 inline constexpr std::uintptr_t TabVtable = 0x5a24dc8;

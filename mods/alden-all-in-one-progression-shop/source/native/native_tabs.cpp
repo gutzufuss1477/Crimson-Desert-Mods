@@ -1,4 +1,4 @@
-// Alden category tabs, release 17, Steam build 26361232. Copyright 2026 Blablup. MIT.
+// Alden category tabs, v17.1, Steam build 26361232. Copyright 2026 Blablup. MIT.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -263,7 +263,7 @@ DWORD WINAPI initialize(void*) {
     const auto logPath=std::wstring(self)+L".log";
     logfile=CreateFileW(logPath.c_str(),GENERIC_WRITE,FILE_SHARE_READ|FILE_SHARE_WRITE,nullptr,
                         CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,nullptr);
-    log("Alden Category Tabs v17 / Steam 26361232 / localized category UI");
+    log("Alden Category Tabs v17.1 / Steam 26361232 / single-step keyboard and controller tabs");
     const auto leaf=wcsrchr(exe,L'\\');
     if(!leaf || _wcsicmp(leaf+1,L"CrimsonDesert.exe")) { log("REFUSED: wrong process"); return 2; }
     char hash[65]{};

@@ -51,7 +51,7 @@ settings should be preserved. AllStats and Speed Only are alternatives.
 
 At the initial build-26361232 release, Alden v16 and Steelheart v9 retained their
 byte-identical relevant inputs and all 503 patch preimages. Alden has since been
-updated to v17 with an expanded catalog and localized tabs; see below.
+updated to v17.1 with an expanded catalog, localized tabs and the tab-input fix; see below.
 Healthbar keeps the three existing UI styles and updates the skill overlay for
 the current ability ID. Full game-data/UI packages remain local/Nexus-only under
 the repository distribution policy.
@@ -69,9 +69,9 @@ tooling\build_speed_204.cmd
 
 Each command runs its host tests. Mining covers configuration, lifecycle, camera/material handling and ore range; Bank covers scheduling, hooks and initialization; each mount variant has 1,135 checks. Exact-build native bytes/vtable slots were checked against the target executable. The author confirmed Mining, Bank and AllStats working in game on 31 October 2026. Speed-only's separate gameplay test is pending.
 
-## Alden v17 — localized category shop
+## Alden v17.1 — localized category shop and tab-input fix
 
-The complete v17 package is published on [Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19088).
+The complete v17.1 package is published on [Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19112).
 It contains 567 items, eight category tabs and 15 language variants, and requires
 both the DMM data mod and the bundled ASI. Build the native helper and its
 callback tests with Visual Studio C++ x64 tools:
@@ -92,7 +92,15 @@ tables and compiled UI overlays remain local/Nexus-only. The historical
 `build_204 --mods alden` workflow below reconstructs the earlier 379-item catalog;
 it does not generate the v17 compiled UI or localization additions.
 
-See [release notes and checksums](../releases/alden-v17-b26361232.md) for the scope
+The v17.1 fix sets the two compiled category keyguides to the normal native
+press/release gate. `source/fix_tab_input.py` applies the scoped, hash-guarded
+change to the v17 UI; `source/test_tab_input.py path/to/v17.zip` checks the patch
+and refuses incompatible or already-patched inputs. The corresponding source
+directory is `mods/alden-all-in-one-progression-shop/source/`.
+`recipes/alden-v17.1-b26361232/` records the new manifest and payload hashes;
+the v17 catalog, price patches, stock and translations remain unchanged.
+
+See [release notes and checksums](../releases/alden-v17.1-b26361232.md) for the scope
 of the author-confirmed game tests and the exact published package.
 
 ## Historical data recipes (Alden v16 / Steelheart v9)
