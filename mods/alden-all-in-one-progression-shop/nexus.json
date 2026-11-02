@@ -4,10 +4,26 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2066,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
-  "pageVersion": "16",
+  "pageVersion": "17",
   "sourceStatus": "published-release",
-  "sourceNote": "Updated for game 2.04.02, Steam build 26329202. Gameplay confirmed except Speed-only, which passed static/host/loader checks. Original game inputs remain local.",
+  "sourceNote": "v17 published on Nexus 2026-11-02. Category filtering/purchases confirmed in 18c; English localization/wrapping confirmed in TEST 19. Final UI/catalog/language data are identical to TEST 19; native change is diagnostic text only.",
   "currentFiles": [
+    {
+      "fileId": 19088,
+      "name": "Alden_AIO_Shop_All_Items_1_Copper_2.04.05",
+      "version": "17",
+      "category": "MAIN",
+      "gameVersion": "2.04.05",
+      "steamBuild": "26361232",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "v17 published on Nexus 2026-11-02. Category filtering/purchases confirmed in 18c; English localization/wrapping confirmed in TEST 19. Final UI/catalog/language data are identical to TEST 19; native change is diagnostic text only.",
+      "sha256": "fd58e30d115be02d195d2cc7d13dfb1b1a0a12c085191b80adff703b75297449",
+      "bytes": 4451226,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19088"
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 18366,
       "name": "Alden_AIO_Shop_All_Items_1_Copper_2.04.02",
@@ -20,9 +36,7 @@
       "sha256": "0befb5d4a58658d82f892797c788fe97d3f88d8336bfde671c8bc2e20a40797c",
       "bytes": 82676,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=18366"
-    }
-  ],
-  "archivedFiles": [
+    },
     {
       "fileId": 14689,
       "name": "Alden_AIO_Shop_All_Items_1_Copper_2.01.00",
@@ -32,5 +46,6 @@
       "bytes": 76097,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=14689"
     }
-  ]
+  ],
+  "dmmMinimumVersion": "4.6.4"
 }

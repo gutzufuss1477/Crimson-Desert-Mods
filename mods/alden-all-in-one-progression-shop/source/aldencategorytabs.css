@@ -1,0 +1,15 @@
+/* Alden localized tabs. Auto width follows the game's text metrics.
+   Flex wrapping uses the existing 96px gap above the unchanged item list. */
+.alden-category-bar { position: absolute; left: 0px; top: 472px; width: 770px; height: 90px; z-index: 25; }
+.alden-category-headers { position: absolute; left: 0px; top: 0px; width: 770px; height: 90px; display: flex; flex-wrap: wrap; align-items: flex-start; align-content: flex-start; }
+.alden-category-tab { position: relative; display: inline-block; width: auto; min-width: 48px; height: 40px; margin-right: 4px; margin-bottom: 4px; background-color: #171612df; border-width: 1px; border-style: solid; border-color: #756345; }
+.alden-category-tab.cpp-checked { background-color: #534329f0; border-color: #dcc493; }
+.alden-category-tab.hover { background-color: #413722ee; border-color: #d8bf8e; }
+.alden-tab-label { position: relative; display: inline-block; width: auto; min-width: 32px; height: 24px; line-height: 24px; padding-left: 8px; padding-right: 8px; white-space: nowrap; text-align: center; font-size: 20px; color: #eee6d3; }
+.alden-tab-count { position: absolute; left: 0px; top: 24px; width: 100%; height: 16px; line-height: 16px; text-align: center; font-size: 15px; color: #b6aa92; }
+.alden-category-tab.cpp-checked .alden-tab-label { color: #ffe6b4; }
+.alden-category-tab.cpp-checked .alden-tab-count { color: #ead4ae; }
+.alden-tab-keygroup { position: absolute; left: 0px; top: 0px; width: 770px; height: 90px; }
+.alden-tab-prev { position: absolute; left: -38px; top: 4px; width: 32px; height: 32px; }
+.alden-tab-next { position: absolute; right: -34px; top: 4px; width: 32px; height: 32px; }
+.alden-category-bar #KeyGuideButtonTextWrap { display: none; }

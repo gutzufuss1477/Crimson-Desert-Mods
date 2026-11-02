@@ -1,0 +1,27 @@
+{
+  "result": "PASS",
+  "release": "17",
+  "game": "2.04.05",
+  "steam_build": "26361232",
+  "date": "2026-11-02",
+  "catalog_items": 567,
+  "language_variants": 15,
+  "ui_catalog_stock_price_and_language_payloads_identical_to_test19": true,
+  "native_change_from_test19": "Diagnostic version string and source comment only.",
+  "native_tests_pass": true,
+  "wrong_host_refusal_pass": true,
+  "in_game": {
+    "category_tabs_and_purchases": "author confirmed",
+    "english_labels_and_wrapping": "author confirmed",
+    "all_other_languages_visually_tested": false
+  },
+  "executable_sha256": "df531a585bf84ceb47779304cc8b3caaf976aea88424c32605885623cd4519c7",
+  "asi_sha256": "49cde4ca6fc84e5d0f44e07164f7263e4cd6fa2a0541fcb0433110677dc70c22",
+  "test19_sha256": "8f5762016b777fe65de9eeac9749a01458d70452c282be8811bb3a500888af06",
+  "package_sha256": "fd58e30d115be02d195d2cc7d13dfb1b1a0a12c085191b80adff703b75297449",
+  "package_bytes": 4451226,
+  "published": true,
+  "nexus_file_id": 19088,
+  "public_source_rebuild_matches_released_asi": true,
+  "catalog_manifest_payload_crosschecks_pass": true
+}

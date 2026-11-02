@@ -49,8 +49,9 @@ Healthbar ZIPs. The two Multitarget variants include `Healthbar Multitarget.asi`
 Classic Single Target has no helper. No loader DLL is bundled. Existing INI
 settings should be preserved. AllStats and Speed Only are alternatives.
 
-Alden v16 and Steelheart v9 do not need rebuilding for this build: their relevant
-vanilla inputs are byte-identical and all 503 patch preimages still match.
+At the initial build-26361232 release, Alden v16 and Steelheart v9 retained their
+byte-identical relevant inputs and all 503 patch preimages. Alden has since been
+updated to v17 with an expanded catalog and localized tabs; see below.
 Healthbar keeps the three existing UI styles and updates the skill overlay for
 the current ability ID. Full game-data/UI packages remain local/Nexus-only under
 the repository distribution policy.
@@ -68,7 +69,33 @@ tooling\build_speed_204.cmd
 
 Each command runs its host tests. Mining covers configuration, lifecycle, camera/material handling and ore range; Bank covers scheduling, hooks and initialization; each mount variant has 1,135 checks. Exact-build native bytes/vtable slots were checked against the target executable. The author confirmed Mining, Bank and AllStats working in game on 31 October 2026. Speed-only's separate gameplay test is pending.
 
-## Data recipes
+## Alden v17 — localized category shop
+
+The complete v17 package is published on [Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19088).
+It contains 567 items, eight category tabs and 15 language variants, and requires
+both the DMM data mod and the bundled ASI. Build the native helper and its
+callback tests with Visual Studio C++ x64 tools:
+
+```bat
+mods\alden-all-in-one-progression-shop\source\native\build.cmd
+```
+
+The source includes the fixed executable/UI hashes used by the published
+package. The native tests cover loader/UI thread handoff, category membership,
+purchase-record identity, shop reopening, other-merchant isolation and cleanup.
+The source's `translations.json` and `aldencategorytabs.css` define the new labels
+and their layout.
+
+`recipes/alden-v17-b26361232/` records the exact manifest, ordered 567-item stock
+list, category assignments and functional payload hashes. The complete game
+tables and compiled UI overlays remain local/Nexus-only. The historical
+`build_204 --mods alden` workflow below reconstructs the earlier 379-item catalog;
+it does not generate the v17 compiled UI or localization additions.
+
+See [release notes and checksums](../releases/alden-v17-b26361232.md) for the scope
+of the author-confirmed game tests and the exact published package.
+
+## Historical data recipes (Alden v16 / Steelheart v9)
 
 Use Python 3.11+ and locally extracted, unmodified game files for the supported build. Keep the `0008/gamedata/binarystaticinfo__/bin` extraction paths. No original game inputs are distributed. The builder rejects unexpected hashes and preserves non-target records.
 
