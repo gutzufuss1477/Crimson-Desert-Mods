@@ -1,10 +1,12 @@
 # Mining Helmet Always On
 
+> Current source note (2 November 2026): the adaptive 1.4.0 candidate targets Steam 26361232 and awaits gameplay confirmation. The published 1.3.2 release below is for the previous build; it is not the current-build update.
+
 Current release: **1.3.2**, Crimson Desert **2.04.02 / Steam build 26329202**. Confirmed working in-game by the author on 31 October 2026. Updated native addresses and exact-build checks; the released ASI retains the tested bytes.
 
-Highlights ore with any headgear. Range 10–120 (default 60), GlowStrength 0.5–1.0 (default 0.5), with live INI reload. Fast travel and character switching remain available. Remove the old separate Mining_Ore_Group_Range test ASI. Status: `%LOCALAPPDATA%/MiningHelmetAlwaysOn/MH132/latest-status.txt`.
+Highlights ore with any headgear. Range 10â€“120 (default 60), GlowStrength 0.5â€“1.0 (default 0.5), with live INI reload. Fast travel and character switching remain available. Remove the old separate Mining_Ore_Group_Range test ASI. Status: `%LOCALAPPDATA%/MiningHelmetAlwaysOn/MH132/latest-status.txt`.
 
-[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-2.04.02-b26329202)
+[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) Â· [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-2.04.02-b26329202)
 
 ## Install / update
 

@@ -1,4 +1,4 @@
-// Bank Refresh 1.2.2 - Copyright (c) 2026 Blablup, MIT.
+// Bank Refresh 1.3.0 - Copyright (c) 2026 Blablup, MIT.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -6,29 +6,17 @@
 #include <atomic>
 #include <cstdio>
 #include <cstring>
+#include "../../../../tooling/native/profiles_26361232.hpp"
 #include "bank_core.hpp"
 #include "hash_core.hpp"
 #include "vendor/minhook/include/MinHook.h"
 
 namespace {
 using namespace bank_refresh;
-constexpr uintptr_t RefreshRva=0x2df40f0, LookupRva=0xad0ac0;
-constexpr uintptr_t LockRva=0x3e2eb0, NotifyRva=0x2deaac0, TimerReturnRva=0x2df4086;
-constexpr uintptr_t BondRefreshRva=0x2df5450, BondTimerReturnRva=0x2df407a;
-struct Guard { uintptr_t rva; uint8_t bytes[16]; };
-constexpr Guard Guards[] = {
-    {LookupRva, {0x4c,0x8b,0xdc,0x49,0x89,0x5b,0x08,0x49,0x89,0x6b,0x18,0x56,0x57,0x41,0x56,0x48}},
-    {LockRva, {0x48,0x89,0x5c,0x24,0x08,0x57,0x48,0x83,0xec,0x20,0x48,0x89,0x11,0x48,0x8b,0xda}},
-    {NotifyRva, {0x48,0x89,0x5c,0x24,0x10,0x48,0x89,0x6c,0x24,0x18,0x56,0x57,0x41,0x56,0x48,0x83}}
-};
-constexpr Guard GoldGuards[] = {
-    {RefreshRva, {0x48,0x8b,0xc4,0x66,0x44,0x89,0x48,0x20,0x4c,0x89,0x40,0x18,0x48,0x89,0x50,0x10}},
-    {0x2df4081, {0xe8,0x6a,0x00,0x00,0x00,0x48,0x83,0xc3,0x02,0x48,0x3b,0xdd,0x75,0xc9,0x45,0x89}}
-};
-constexpr Guard BondGuards[] = {
-    {BondRefreshRva, {0x48,0x89,0x5c,0x24,0x18,0x66,0x44,0x89,0x4c,0x24,0x20,0x48,0x89,0x54,0x24,0x10}},
-    {0x2df4075, {0xe8,0xd6,0x13,0x00,0x00,0xeb,0x0a,0x48,0x8d,0x54,0x24,0x20,0xe8,0x6a,0x00,0x00}}
-};
+uintptr_t RefreshRva=0x2df40f0, LookupRva=0xad0ac0;
+uintptr_t LockRva=0x3e2eb0, NotifyRva=0x2deaac0, TimerReturnRva=0x2df4086;
+uintptr_t BondRefreshRva=0x2df5450, BondTimerReturnRva=0x2df407a;
+cd::Addresses addresses;
 using RefreshFn=int*(__fastcall*)(uintptr_t,int*,const Calendar*,uint16_t);
 using LookupFn=uintptr_t(__fastcall*)(uintptr_t,uint32_t);
 using LockFn=void*(__fastcall*)(void*,uintptr_t,uint8_t);
@@ -92,8 +80,8 @@ bool locked_adjust(uintptr_t component,uint16_t key,uint64_t now,uint64_t limit)
     bool changed=false;
     __try {
         __try {
-            auto records=*reinterpret_cast<BankRecord**>(component+0x110);
-            const auto count=*reinterpret_cast<uint32_t*>(component+0x118);
+            auto records=*reinterpret_cast<BankRecord**>(component+0x130);
+            const auto count=*reinterpret_cast<uint32_t*>(component+0x138);
             size_t bytes{};
             BankRecord snapshot[32]{};
             uint32_t index{};
@@ -156,14 +144,6 @@ bool read_interval(const wchar_t* section,const wchar_t* ini,uint32_t& minutes,B
     const DWORD size=GetPrivateProfileStringW(section,L"IntervalGameMinutes",L"",setting,64,ini);
     return size<63 && parse_game_minutes(setting,minutes,type);
 }
-template<size_t N> bool guards_match(const Guard (&guards)[N]) {
-    for(const auto& g:guards) {
-        uint8_t actual[16]{};
-        if(!value(base+g.rva,actual) || std::memcmp(actual,g.bytes,16)!=0) return false;
-    }
-    return true;
-}
-
 InitResult initialize_impl() {
     wchar_t directory[32768]{},iniPath[32768]{},exe[32768]{};
     const DWORD n=GetModuleFileNameW(module,directory,32768);
@@ -189,10 +169,13 @@ InitResult initialize_impl() {
     if(GetPrivateProfileIntW(L"BankRefresh",L"DiagnosticOnly",0,iniPath)!=0) return InitResult::legacy_diagnostic;
     char hash[65]{};
     if(!mh067::Sha256File(exe,hash)) return InitResult::hash_failed;
-    if(std::strcmp(hash,ExpectedSha)!=0) return InitResult::unknown_build;
     base=reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
-    if(!guards_match(Guards) || (goldEnabled && !guards_match(GoldGuards)) ||
-        (bondsEnabled && !guards_match(BondGuards))) return InitResult::byte_mismatch;
+    cd::Image image;
+    if(!cd::loaded_image(image) || !addresses.resolve(image,cd::bank_plan)) return InitResult::unknown_build;
+    RefreshRva=addresses.rva(0x2df40f0);LookupRva=addresses.rva(0xad0ac0);
+    LockRva=addresses.rva(0x3e2eb0);NotifyRva=addresses.rva(0x2deaac0);
+    TimerReturnRva=addresses.rva(0x2df4086);BondRefreshRva=addresses.rva(0x2df5450);
+    BondTimerReturnRva=addresses.rva(0x2df407a);
     lookupBank=reinterpret_cast<LookupFn>(base+LookupRva);
     lockBank=reinterpret_cast<LockFn>(base+LockRva);
     notifyBank=reinterpret_cast<NotifyFn>(base+NotifyRva);
@@ -220,6 +203,9 @@ InitResult initialize_impl() {
 }
 DWORD WINAPI initialize(void*) {
     const auto result=initialize_impl();
+#ifndef BANK_REFRESH_TESTING
+    cd::write_status(L"Bank_Refresh.status.txt",result==InitResult::active?"active":"inactive",addresses,static_cast<uint32_t>(result));
+#endif
 #ifdef BANK_REFRESH_TESTING
     testInitResult=result;
 #endif

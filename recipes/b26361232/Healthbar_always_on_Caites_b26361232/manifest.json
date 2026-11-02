@@ -1,0 +1,34 @@
+{
+  "name": "Healthbar_always_on_Caites_b26361232",
+  "version": "b26361232",
+  "author": "Blablup",
+  "description": "Persistent enemy HP bars (Caites) for Crimson Desert b26361232. compact thin red bars; multiple targets; requires the bundled Healthbar Multitarget ASI helper. Use package_healthbar_204 to include the helper in a DMM import ZIP.",
+  "patches": [
+    {
+      "description": "Kliff: HP range helper -> Equip_Passive_ShowHPUI",
+      "file": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "target": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "offset": 525,
+      "original": "FA000000",
+      "patched": "7A630100"
+    },
+    {
+      "description": "Kliff_AI: HP range helper -> Equip_Passive_ShowHPUI",
+      "file": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "target": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "offset": 7707,
+      "original": "FA000000",
+      "patched": "7A630100"
+    },
+    {
+      "description": "Yann: HP range helper -> Equip_Passive_ShowHPUI",
+      "file": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "target": "gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody",
+      "offset": 22554,
+      "original": "FA000000",
+      "patched": "7A630100"
+    }
+  ],
+  "dmm_offsetautorelocate_disable": true,
+  "dmm_v3upgrade_disable": true
+}

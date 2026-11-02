@@ -1,0 +1,20 @@
+{
+  "steam_build": "26361232",
+  "confirmed_on": "2026-11-02",
+  "gameplay_confirmed": [
+    "bank",
+    "allstats",
+    "healthbar_vanilla_multitarget"
+  ],
+  "dmm_version": "4.6.4",
+  "native_sha256": {
+    "allstats": "c1ac972194dfd11b8733fc528df315ff7daef7b0d255f844d9cda2912f48dd3b",
+    "bank": "1da23de1a1dfdfa74c8eb8c846c29bd18c6ce614bcc065262053ff1ab050fb1f",
+    "healthbar": "c0b8348c153ef1fea7594d9b3b23ce4f2c8c86e5fd519f9c142e5d84b4026b32"
+  },
+  "other_healthbar_variants": "Data/style/host validated; no separate gameplay confirmation on this build",
+  "excluded_candidates": [
+    "mining",
+    "speed"
+  ]
+}

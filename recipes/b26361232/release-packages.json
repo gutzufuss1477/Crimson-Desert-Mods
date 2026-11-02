@@ -1,0 +1,71 @@
+{
+  "steam_build": "26361232",
+  "functional_payloads_unchanged": true,
+  "gameplay_confirmed": [
+    "bank",
+    "allstats",
+    "healthbar_vanilla_multitarget"
+  ],
+  "files": [
+    {
+      "file": "Healthbar_always_on_vanilla_multitarget_v4_b26361232.zip",
+      "sha256": "f70bf306ff14b6523ff1b5f6e3065440d46b35576d3e2803e4888075d36d01fe",
+      "bytes": 242722,
+      "version": "4",
+      "kind": "healthbar",
+      "nexus_mod_id": 2406,
+      "title": "Healthbar - Vanilla Multitarget",
+      "in_game_tested": true
+    },
+    {
+      "file": "Healthbar_always_on_classic_vanilla_single_target_v4_b26361232.zip",
+      "sha256": "5b9d88ebeb3fa7c5daa0069ba597af3812844573227ffec5ead73442d5581bb9",
+      "bytes": 149371,
+      "version": "4",
+      "kind": "healthbar",
+      "nexus_mod_id": 2406,
+      "title": "Healthbar - Classic Vanilla Single Target",
+      "in_game_tested": false
+    },
+    {
+      "file": "Healthbar_always_on_Caites_v4_b26361232.zip",
+      "sha256": "6355c60d1728638546e0019c621671399effafd0966d9bb65821a221ca200a37",
+      "bytes": 242702,
+      "version": "4",
+      "kind": "healthbar",
+      "nexus_mod_id": 2406,
+      "title": "Healthbar - Caites Multitarget",
+      "in_game_tested": false
+    },
+    {
+      "file": "Bank_Refresh_v1.3.0_b26361232.zip",
+      "sha256": "5d9d8e8d52867b3aa619005503c9763b2eaf517818e652b20f38e2b9f5d65050",
+      "bytes": 111616,
+      "version": "1.3.0",
+      "kind": "bank",
+      "nexus_mod_id": 3669,
+      "title": "Faster Bank Refresh - Gold and Bonds",
+      "in_game_tested": true
+    },
+    {
+      "file": "AllMountsLvL5AllStats_v13_b26361232.zip",
+      "sha256": "eaf9a3c4a087a789297cebde5d8e1d3eda448b510849350b295248a22d0d4588",
+      "bytes": 98415,
+      "version": "13",
+      "kind": "allstats",
+      "nexus_mod_id": 2365,
+      "title": "All Mounts Level 5 - All Stats",
+      "in_game_tested": true
+    }
+  ],
+  "github_helper": {
+    "file": "Healthbar_Multitarget_Helper_v4_b26361232.zip",
+    "sha256": "bfbf2a61dc7b6e1485cbb9084614d48a95ac19d55c6b1fd17e28b610b6b8c2b7",
+    "bytes": 93578
+  },
+  "excluded_candidates": [
+    "mining",
+    "speed"
+  ],
+  "healthbar_data_build_specific": true
+}

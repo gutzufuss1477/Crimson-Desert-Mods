@@ -10,9 +10,9 @@ if errorlevel 1 exit /b 2
 pushd "%~dp0"
 if not exist out mkdir out
 set "MOD=..\mods\real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor\variants"
-cl /nologo /O2 /GS- /Oi /LD /Fo:out\stats.obj "%MOD%\all-mounts-level-5-all-stats\src\AllMountsLvL5AllStats_20402.c" /link /OUT:out\AllMountsLvL5AllStats_2.04.02_b26329202.asi /NODEFAULTLIB /ENTRY:DllMain /DYNAMICBASE /NXCOMPAT /Brepro
+cl /nologo /std:c++20 /EHsc /O2 /MT /guard:cf /LD /Fo:out\stats.obj "%MOD%\all-mounts-level-5-all-stats\src\AllMountsLvL5AllStats_adaptive.cpp" /link /OUT:out\AllMountsLvL5AllStats.asi bcrypt.lib /DYNAMICBASE /NXCOMPAT /Brepro
 if errorlevel 1 exit /b 1
-cl /nologo /O2 /MT /DALL_STATS /Fe:out\stats_tests.exe /Fo:out\stats_tests.obj allstats_tests.c
+cl /nologo /TP /std:c++20 /EHsc /O2 /MT /DALL_STATS /Fe:out\stats_tests.exe /Fo:out\stats_tests.obj allstats_tests.c /link bcrypt.lib
 if errorlevel 1 exit /b 1
 out\stats_tests.exe
 if errorlevel 1 exit /b 1

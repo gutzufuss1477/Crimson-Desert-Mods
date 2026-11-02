@@ -66,6 +66,10 @@ def verify(inputs, output, expected_count=5):
                 if inputs.version == "2.04.02":
                     after.require(1000061, "Passive_Immune_BuffedActionRestriction")
                     after.require(15066, "Skill_Oongka_RocketPack_Start")
+                elif inputs.version == "b26361232":
+                    after.require(1000062, "Passive_Immune_BuffedActionRestriction")
+                    if 1000061 in after.by_key:
+                        raise ValueError("Healthbar restored the obsolete ability ID")
                 if len(manifest["patches"]) != 3:
                     raise ValueError("Wrong character patch count")
             else:

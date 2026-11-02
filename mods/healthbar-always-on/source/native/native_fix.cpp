@@ -9,14 +9,15 @@
 #include <cstring>
 #include <string>
 #include "hash_core.hpp"
+#include "../../../../tooling/native/profiles_26361232.hpp"
 
 namespace healthbar {
-constexpr uintptr_t UpdateRva=0xedfc10, SlotRva=0x59ea750, HeadUpVtableRva=0x59ec0e8;
-constexpr uintptr_t ContextRva=0xedfdca, WordRva=0xedfdd0;
+uintptr_t UpdateRva=0xedfc10, SlotRva=0x59ea750, HeadUpVtableRva=0x59ec0e8;
+uintptr_t ContextRva=0xedfdca, WordRva=0xedfdd0;
 constexpr uint8_t Context[]={0x8b,0x43,0x04,0x39,0x86,0xa4,0x01,0x00,0x00,0x75,0x1f,
     0x48,0x8b,0x5b,0x08,0x48,0x8b,0x8b,0xe0,0x00,0x00,0x00,0x48,0x85,0xc9,0x74,0x21};
 constexpr uint8_t UpdateHead[]={0x48,0x89,0x5c,0x24,0x08,0x55,0x56,0x57,0x41,0x54,0x41,0x55,0x41,0x56,0x41,0x57};
-constexpr char ExeHash[]="fec07be1b725a46624d31fcd74bf3730ea809765226cea6bde01607ab2d79f66";
+cd::Addresses addresses;
 constexpr char HtmlHash[]="0c5d73a5bf41ae660159d401a900ba0c425037544ee0c7589b97f719edeec9c1";
 constexpr char CssHash[]="82ed06b4f93cbacf26ce94be76c09940777131def32d45ac512b6ab01ddfc985";
 constexpr char FramedCssHash[]="df27c0bb1abd0323497cf41974a28865191533864e6510044a615a5b88997ea4";
@@ -158,10 +159,10 @@ DWORD WINAPI initialize(void*) {
     const std::wstring logPath=std::wstring(modulePath)+L".log";
     logfile=CreateFileW(logPath.c_str(),GENERIC_WRITE,FILE_SHARE_READ|FILE_SHARE_WRITE,nullptr,
         CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,nullptr);
-    log("Healthbar NativeFix2 TEST; game 2.04.02 / Steam 26329202; VisualFix3 variant selection");
+    log("Healthbar v4 candidate; structural resolver; baseline Steam 26361232");
     const wchar_t* leaf=wcsrchr(exe,L'\\');
-    if(!leaf || _wcsicmp(leaf+1,L"CrimsonDesert.exe") || !matching_file(exe,ExeHash)) {
-        log("REFUSED: executable name/hash mismatch"); return 2;
+    if(!leaf || _wcsicmp(leaf+1,L"CrimsonDesert.exe")) {
+        log("REFUSED: wrong executable name"); return 2;
     }
     const std::wstring directory(exe,static_cast<size_t>(leaf-exe+1));
     const UiMode mode=mounted_ui(directory);
@@ -169,6 +170,14 @@ DWORD WINAPI initialize(void*) {
     if(mode==UiMode::single) { log("CLASSIC SINGLE TARGET: no native patch or hook installed"); return 0; }
     log(mode==UiMode::framed ? "MODE: Vanilla Multitarget, classic framed bars" : "MODE: Caites/legacy UIFix2, compact thin bars");
     base=reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
+    cd::Image image;
+    if(!cd::loaded_image(image) || !addresses.resolve(image,cd::healthbar_plan)) {
+        log(addresses.failure);return 4;
+    }
+    UpdateRva=addresses.rva(0xedfc10);SlotRva=addresses.rva(0x59ea750);
+    HeadUpVtableRva=addresses.rva(0x59ec0e8);ContextRva=addresses.rva(0xedfdca);
+    WordRva=addresses.rva(0xedfdd0);
+
     uint8_t bytes[sizeof(Context)]{},head[sizeof(UpdateHead)]{};
     uintptr_t slot{};
     if(!read(base+ContextRva,bytes,sizeof(bytes)) || std::memcmp(bytes,Context,sizeof(bytes)) ||
@@ -189,7 +198,7 @@ DWORD WINAPI initialize(void*) {
     DWORD unused{};
     if(!VirtualProtect(reinterpret_cast<void*>(base+SlotRva),8,protection,&unused)) log("WARNING: vtable protection restore failed");
     if(before!=reinterpret_cast<void*>(slot)) { log("REFUSED: vtable changed concurrently"); return 7; }
-    log("ARMED: hash/byte/UI guards passed; waiting for the first root UI update");
+    log("ARMED: structural/code/vtable/UI guards passed; waiting for the first root UI update");
     Sleep(45000);
     char status[160];
     _snprintf_s(status,sizeof(status),_TRUNCATE,"45-second check: UI calls=%llu patch=%d",frames.load(),patchState.load());

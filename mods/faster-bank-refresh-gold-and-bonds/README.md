@@ -1,17 +1,21 @@
 # Faster Bank Refresh — Gold and Bonds
 
-Current release: **1.2.2**, Crimson Desert **2.04.02 / Steam build 26329202**. Confirmed working in-game by the author on 31 October 2026. Updated native addresses and exact-build checks; the released ASI retains the tested bytes.
+**Release 1.3.0**, baseline **Steam build 26361232**. Gold and active bond timers confirmed working in game on 2 November 2026. The released ASI is unchanged from the tested candidate.
 
-Independent gold-bank and bond-investment timers, defaulting to 15 in-game minutes. Preserve your INI. Investments/reinvestment remain manual; native payouts and risk are unchanged. Restart after INI edits. Native bank checks may briefly delay refresh after the countdown reaches zero. Shortened saved deadlines are not restored by uninstalling.
+Independent timers default to 15 in-game minutes. Investments/reinvestment remain manual; native payouts and risk are unchanged. Normal bank checks may briefly delay refresh after zero. Shortened saved deadlines are not restored by uninstalling.
 
-[Download on Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) · [GitHub release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-2.04.02-b26329202)
+[Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) · [GitHub release](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26361232)
 
-## Install / update
+## Install
 
-Close the game. Remove older/test ASIs for the same mod, including duplicate manager-installed copies. Copy the released ASI into `Crimson Desert/bin64` beside `CrimsonDesert.exe`. Preserve existing INI settings; copy a supplied INI only for a new installation. An [x64 ASI loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader) is required and is not included. **DMM and data-archive mounting are not required.**
+Close the game, remove previous versions/manual duplicates, import the complete ZIP in DMM under ASI Mods, enable and mount. DMM imports the included INI too; preserve existing settings. Import/deployment was verified with DMM 4.6.4. Keep the existing ASI loader and DmmRuntime.asi.
 
-To uninstall, close the game and remove this mod's ASI.
+Manual alternative: put Bank_Refresh.asi and Bank_Refresh.ini beside CrimsonDesert.exe in bin64 with an [x64 ASI loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader). DMM is optional. Restart after INI edits. Close the game before disabling/removing the plugin.
 
-## Source and validation
+## Compatibility
 
-Build: `source/src/build.cmd`. See [build instructions](../../tooling/README.md). `nexus.json` records the published file IDs and package hashes. Build outputs, game inputs and private diagnostics stay out of Git. Third-party licenses remain with their source.
+The ASI now finds validated code structures instead of relying on fixed addresses or one executable hash. It may keep working after game updates that only move code. Changed code/layouts or ambiguous matches are refused before hooks are installed. Future compatibility is not guaranteed.
+
+Bank's records/count fields were updated for the new object layout. Startup status: %LOCALAPPDATA%/CrimsonDesertMods/Bank_Refresh.status.txt.
+
+Build: source/src/build.cmd. Validation includes 24,565 core checks, 284 hook checks, 33 initialization cases, two production loads and current/previous executable resolver checks; the old bank layout is deliberately refused. See [tooling](../../tooling/README.md) and nexus.json for hashes/file IDs.

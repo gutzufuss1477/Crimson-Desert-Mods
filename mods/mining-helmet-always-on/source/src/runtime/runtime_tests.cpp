@@ -529,6 +529,12 @@ void groupRange() {
     assert(ini37::DefaultRange==60 && ini37::MaximumRange<=128);
 }
 int main() {
+    // Explicit baseline addresses for synthetic memory only; production always resolves.
+    for(const auto& n:cd::mining_nodes)cd::mining_addresses.set(n.id,n.id);
+    for(const auto& n:cd::mining_globals)cd::mining_addresses.set(n.id,n.id);
+    for(const auto& n:cd::mining_vtables)cd::mining_addresses.set(n.id,n.id);
+    for(const auto& n:cd::mining_aliases)cd::mining_addresses.set(n.id,n.id);
+
     _set_error_mode(_OUT_TO_STDERR);
     _set_abort_behavior(0,_WRITE_ABORT_MSG|_CALL_REPORTFAULT);
     groupRange(); materials(); lifecycle(); currentModeLayout(); camera(); targetsLifecycle(); reentryRetention(); progressiveActivation(); ranges(); adjustableShader(); iniParsing(); iniFiles(); lanternYieldRecovery();

@@ -13,7 +13,7 @@ cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\native_tests.exe /Fo:out\nat
 if errorlevel 1 exit /b 1
 out\native_tests.exe
 if errorlevel 1 exit /b 1
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\native_fix.obj native_fix.cpp /link /OUT:out\Healthbar_Multitarget_NativeFix2_2.04.02_b26329202.asi /MAP:out\native_fix.map /DYNAMICBASE /NXCOMPAT /GUARD:CF /Brepro bcrypt.lib
+cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\native_fix.obj native_fix.cpp /link /OUT:"out\Healthbar Multitarget.asi" /MAP:out\native_fix.map /DYNAMICBASE /NXCOMPAT /GUARD:CF /Brepro bcrypt.lib
 if errorlevel 1 exit /b 1
 popd
 exit /b 0

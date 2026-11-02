@@ -1,6 +1,7 @@
+#define MOUNT_TESTING
 #include <stdio.h>
 #include <string.h>
-#include "../mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/variants/all-mounts-level-5-speed/src/AllMountsLvL5Speed_20402.c"
+#include "../mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/variants/all-mounts-level-5-speed/src/AllMountsLvL5Speed_adaptive.cpp"
 
 
 static unsigned checks;
@@ -11,7 +12,7 @@ int main(void) {
     EXCEPTION_RECORD_MIN record;
     EXCEPTION_POINTERS_MIN pointers;
     // A small host PE must be refused before the guarded game RVAs are read.
-    REQUIRE(DllMain(0,DLL_PROCESS_ATTACH,0)==1);
+    REQUIRE(initialize_mount(0)==1);
     for(stat=2;stat<=4;++stat) for(sub=14;sub<=19;++sub) for(invalid=0;invalid<7;++invalid) {
         U8* field=actor+0x230;
         int eligible;

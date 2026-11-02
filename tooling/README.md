@@ -1,6 +1,63 @@
 # Build and validation
 
-Current native release: Crimson Desert 2.04.02, Steam build 26329202. Build with Visual Studio C++ x64 tools and the Windows SDK:
+## Steam build 26361232 release and remaining candidates
+
+Bank, All Stats and Vanilla Multitarget were confirmed working through DMM 4.6.4
+on build 26361232 on 2 November 2026. Mining and Speed Only remain candidates;
+Classic/Caites have current data/style/host validation but no separate current-build gameplay test. Published releases below retain
+their historical validation claims; rebuilding this source does not reproduce
+those historical binaries.
+
+The five native build commands listed below now produce stable ASI filenames.
+They share `native/resolver.hpp` and `native/profiles_26361232.hpp`. Build and run
+the additional resolver checks against a locally installed or copied executable:
+
+```bat
+tooling\native\build_tests.cmd
+tooling\native\out\resolver_tests.exe "<path-to-build-26361232>\CrimsonDesert.exe"
+tooling\native\out\resolver_tests.exe "<path-to-build-26329202>\CrimsonDesert.exe" previous
+```
+
+The test maps a private, non-executable copy. It validates all four resolver plans,
+changed code, ambiguous matches, call/global references, RTTI/vtable identity,
+our Mount/Healthbar hook coexistence, malformed input and rebased data pointers.
+It does not execute game code. On the previous build, Bank must refuse the old
+object layout; Mount, Mining and the Healthbar helper still resolve. The new
+Healthbar **data packages** are specific to build 26361232.
+
+Resolution uses unique normalized code fingerprints and structural references,
+not fixed addresses or an unconditional bypass of the executable hash. Function
+address displacements may move; opcodes, field offsets and constants must match.
+Bank was adapted to the new records/count fields at 0x130/0x138. A changed or
+ambiguous plan disables that ASI before hooks are installed. Other mods changing
+the same validated functions can still prevent resolution. This improves
+resilience to address shifts, not arbitrary game changes.
+
+Build all three Healthbar data variants from fresh vanilla inputs, then package:
+
+```powershell
+$env:PYTHONPATH = 'tooling'
+python -m crimson_mod_tools.build_204 --game-version b26361232 --inputs <vanilla-root> --output dist/healthbar-data-b26361232 --mods healthbar
+python -m crimson_mod_tools.verify_data_204 --game-version b26361232 --inputs <vanilla-root> --output dist/healthbar-data-b26361232 --expected-count 3
+python tooling/package_candidates_b26361232.py --healthbar-data dist/healthbar-data-b26361232 --output dist/candidate-b26361232
+```
+
+`recipes/b26361232/native-candidates.json` records hashes of the validated local
+binaries. A different rebuild must be validated before replacing those hashes.
+The candidate packager produces four standalone ASI ZIPs and three complete
+Healthbar ZIPs. The two Multitarget variants include `Healthbar Multitarget.asi`;
+Classic Single Target has no helper. No loader DLL is bundled. Existing INI
+settings should be preserved. AllStats and Speed Only are alternatives.
+
+Alden v16 and Steelheart v9 do not need rebuilding for this build: their relevant
+vanilla inputs are byte-identical and all 503 patch preimages still match.
+Healthbar keeps the three existing UI styles and updates the skill overlay for
+the current ability ID. Full game-data/UI packages remain local/Nexus-only under
+the repository distribution policy.
+
+## Published 2.04.02 releases (historical)
+
+Published native release: Crimson Desert 2.04.02, Steam build 26329202. Build with Visual Studio C++ x64 tools and the Windows SDK:
 
 ```bat
 mods\mining-helmet-always-on\source\src\build.cmd
@@ -54,3 +111,7 @@ python -m crimson_mod_tools.package_healthbar_204 --data-dir dist/healthbar-data
 The combined packager checks the native and UI hashes, preserves all data payloads and character patches, and places the native helper at the ZIP root with a readable filename. Each ZIP has one real JSON manifest; diagnostic reports use `.txt`. There are no nested archives or bundled loader DLLs. An alternate compiler may produce different native bytes; validate them before changing the accepted hash.
 
 Vanilla Multitarget and Classic were confirmed in game; Caites preserves the previously confirmed compact UI payloads and native patch. DMM 4.5.1 imported the combined package, deployed the helper and activated it in-game. These three full game-data/UI packages are distributed on Nexus. GitHub contains the source, recipes, helper and hashes.
+
+## Promote validated b26361232 payloads
+
+Run python tooling/package_release_b26361232.py --candidates dist/candidate-b26361232 --output dist/release-b26361232. The approval record limits publication to Bank, All Stats and three Healthbar variants. Only README/validation metadata and Healthbar manifest version text change; all native/data/UI payloads must remain identical. The GitHub folder excludes complete game-data/UI packages.

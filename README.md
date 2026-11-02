@@ -1,30 +1,31 @@
 # Crimson Desert — Mods
 
-Mods by gutzufuss1477 / Blablup. Updated **31 October 2026** for **game 2.04.02 / Steam build 26329202**.
+Mods by gutzufuss1477 / Blablup. Bank, Mount All Stats and Healthbar updated on **2 November 2026** for **Steam build 26361232**.
 
-| Mod / variant | Version | Install | Download |
-|---|---|---|---|
-| [Mining Helmet Always On](mods/mining-helmet-always-on/) | 1.3.2 | ASI loader | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3586) |
-| [Faster Bank Refresh — Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.2.2 | ASI loader | [Nexus](https://www.nexusmods.com/crimsondesert/mods/3669) |
-| [All Mounts LvL 5 All Stats / Speed-only](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 12 | ASI loader | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) |
-| [Steelheart Horseshoes](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 9 | DMM 4.5.1+ | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2365) |
-| [Alden All-In-One Progression Shop](mods/alden-all-in-one-progression-shop/) | 16 | DMM 4.5.1+ | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2066) |
-| [Healthbar: Vanilla Multitarget / Classic Single Target / Caites](mods/healthbar-always-on/) | 3 | DMM 4.5.1; helper bundled for Multitarget | [Nexus](https://www.nexusmods.com/crimsondesert/mods/2406?tab=files) |
+| Mod / variant | Release | Current-build status |
+|---|---|---|
+| [Bank Refresh — Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.3.0 | Both timers gameplay-confirmed; adaptive ASI |
+| [All Mounts Level 5 All Stats](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 13 | Gameplay-confirmed; adaptive ASI |
+| [Healthbar — three variants](mods/healthbar-always-on/) | 4 | Vanilla Multitarget gameplay-confirmed; Classic/Caites data/style/host validated |
+| [Steelheart Horseshoes](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 9, unchanged | Relevant data identical; guarded patch verified |
+| [Alden Shop](mods/alden-all-in-one-progression-shop/) | 16, unchanged | Relevant data identical; 502 patch preimages verified |
+| [Mining Helmet](mods/mining-helmet-always-on/) | Published 1.3.2 for previous build | New 1.4.0 source/candidate awaiting current gameplay confirmation |
+| Mount Speed Only | Published 12 for previous build | New 13 source/candidate awaiting separate gameplay confirmation |
 
-Mining Helmet, Bank Refresh, AllStats, Alden and Steelheart were confirmed working in-game by the author. Speed-only passed static/host/loader checks and uses the AllStats hook with a narrower stat filter; its separate gameplay test is pending.
+[Current release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26361232). Full Healthbar data/UI ZIPs are on [Nexus](https://www.nexusmods.com/crimsondesert/mods/2406?tab=files); GitHub hosts only its helper, source and recipes.
 
-[GitHub release, native/Steelheart downloads and all six package checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-2.04.02-b26329202). The ready-to-install Alden data overlay is available on Nexus; its source and recipes are in this repository. These packages target the exact Steam build above.
+## Installation
 
-## Install
+Import complete ZIPs into DMM. Enable native plugins under **ASI Mods**, then mount. Bundled INIs are imported and deployed too; preserve existing settings when updating. Bank and All Stats also support manual installation with an x64 ASI loader and do not require DMM. Avoid duplicate manual/manager copies; keep the existing loader and DmmRuntime.asi.
 
-For an ASI, close the game, remove older copies of the same mod and copy the ASI into `Crimson Desert/bin64` beside `CrimsonDesert.exe`. Preserve your existing INI. Keep an existing [x64 ASI loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader); it is not bundled. These ASIs do not require DMM. Never load AllStats and Speed-only together.
+Healthbar: choose **one** complete variant, enable its data mod and the bundled helper for either Multitarget style, mount and restart. DMM 4.6.4 import/deployment was verified. Never combine All Stats and Speed Only.
 
-For Alden or Steelheart, close the game and unmount in DMM. Import the matching ZIP with DMM 4.5.1 or a compatible newer release, disable the previous version, enable the update and mount. Keep DMM's runtime and loader, then restart the game. See each mod's README for details.
+## Game updates
 
-Healthbar v3 restores the two Multitarget modes and keeps the three distinct presentations. Import one complete Nexus ZIP into DMM, enable its data component and (for Multitarget) the included **Healthbar Multitarget** plugin in **ASI Mods**, then mount and restart. No separate helper download or manual file copy is needed. [Healthbar source, validation and installation](mods/healthbar-always-on/).
+The ASI now finds validated code structures instead of relying on fixed addresses or one executable hash. It may keep working after game updates that only move code. Changed code/layouts or ambiguous matches are refused before hooks are installed. Future compatibility is not guaranteed.
 
-## Excluded from this update
+This applies to the newly released Bank/All Stats ASIs and Healthbar's native helper. Healthbar data/UI still target the listed build. Alden and Steelheart remain data mods; their current inputs were verified unchanged, not made universally compatible.
 
-The obsolete Bank Save Patcher is excluded.
+Mining and Speed Only are not part of this release. The obsolete Bank Save Patcher remains excluded.
 
-See [build and validation](tooling/README.md), [distribution notes](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md). Original game inputs, complete game tables, executables, private diagnostics and credentials are excluded from Git.
+See [build and validation](tooling/README.md), [distribution](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md). Game inputs, full game tables/UI, executables and private diagnostics stay out of Git.

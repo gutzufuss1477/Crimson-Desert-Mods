@@ -18,11 +18,11 @@ cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\range_ini_tests.exe /Fo:out\
 if not "%errorlevel%"=="0" exit /b %errorlevel%
 out\range_ini_tests.exe
 if not "%errorlevel%"=="0" exit /b %errorlevel%
-cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\range_ini.obj mining_helmet.cpp /link /OUT:out\Mining_Helmet_Always_On_2.04.02_b26329202.asi /MAP:out\range_ini.map /DYNAMICBASE /NXCOMPAT /GUARD:CF out\minhook.lib bcrypt.lib user32.lib
+cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /guard:cf /LD /Fo:out\range_ini.obj mining_helmet.cpp /link /OUT:out\Mining_Helmet_Always_On.asi /MAP:out\range_ini.map /DYNAMICBASE /NXCOMPAT /GUARD:CF out\minhook.lib bcrypt.lib user32.lib
 if not "%errorlevel%"=="0" exit /b %errorlevel%
 cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MT /Fe:out\load_smoke.exe /Fo:out\load_smoke.obj ..\material\load_smoke.cpp
 if not "%errorlevel%"=="0" exit /b %errorlevel%
-out\load_smoke.exe "%CD%\out\Mining_Helmet_Always_On_2.04.02_b26329202.asi"
+out\load_smoke.exe "%CD%\out\Mining_Helmet_Always_On.asi"
 if not "%errorlevel%"=="0" exit /b %errorlevel%
 popd
 exit /b 0

@@ -57,7 +57,7 @@ inline bool valid(Read read,const View& v) {
         const auto& f=v.fields[i]; uintptr_t object{},vt{}; uint32_t id{}; uint16_t word{};
         if(!f.entry || !get(read,f.entry,object) || object!=f.object ||
            !get(read,f.entry-4,id) || id!=f.id || !get(read,f.entry+8,word) || word*4u!=f.offset ||
-           f.offset+Specs[i].bytes>size || !get(read,object,vt) || vt!=v.base+Specs[i].vtable) return false;
+           f.offset+Specs[i].bytes>size || !get(read,object,vt) || vt!=v.base+cd::mining_addresses.rva(static_cast<uint32_t>(Specs[i].vtable))) return false;
     }
     return true;
 }
@@ -65,7 +65,7 @@ inline bool resolve(Read read,uintptr_t root,uintptr_t base,View& output) {
     uintptr_t manager{},a{},b{},groups{},pool{},nameEntries{};
     if(!get(read,root+0x20,manager) || !manager || !get(read,manager+0x1280,a) || !a ||
        !get(read,a+0x160,b) || !b || !get(read,b+0x560,groups) || !groups ||
-       !get(read,base+0x70cdc60,pool) || !pool || !get(read,pool+0x58,nameEntries) || !nameEntries) return false;
+       !get(read,base+cd::mining_addresses.rva(0x70cdc60),pool) || !pool || !get(read,pool+0x58,nameEntries) || !nameEntries) return false;
     View v{}; v.base=base;
     if(!names(read,nameEntries,groups,[&](const char* name,uintptr_t entry,uint32_t) {
         return !std::strcmp(name,"GlobalMaterialGlobalParameter_Common") && get(read,entry,v.group);

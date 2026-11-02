@@ -18,7 +18,7 @@ from .dmm_builder import healthbar_ui
 
 VERSION = "2.04.02"
 STEAM_BUILD = "26329202"
-PROFILES = {"2.04.02": "26329202"}
+PROFILES = {"2.04.02": "26329202", "b26361232": "26361232"}
 ROOT = Path(__file__).resolve().parents[2]
 BINARY = Path("0008/gamedata/binarystaticinfo__/bin")
 UI = Path("0012/ui/xml/gamemain/play")
@@ -243,7 +243,7 @@ def main():
                                      (UI / "subtitletagview.css").as_posix(): css}
             description = f"Persistent enemy HP bars ({label}) for Crimson Desert {version}."
             style = "compact thin red bars" if variant == "caites" else "classic red bars with dark frame"
-            behavior = "single target; no native multitarget patch" if variant == "classic" else "multiple targets; requires NativeFix2 ASI helper"
+            behavior = "single target; no native multitarget patch" if variant == "classic" else "multiple targets; requires the bundled Healthbar Multitarget ASI helper"
             description += f" {style}; {behavior}. Use package_healthbar_204 to include the helper in a DMM import ZIP."
             variant_validation = validation | {"ui_revision": "VisualFix3", "show_hp_buff_tag_preserved": True,
                 "style": style, "target_mode": "single" if variant == "classic" else "multi",

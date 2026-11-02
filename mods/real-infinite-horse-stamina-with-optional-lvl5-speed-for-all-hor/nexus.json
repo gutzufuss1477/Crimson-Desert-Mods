@@ -4,10 +4,22 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2365,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2365",
-  "pageVersion": "12",
+  "pageVersion": "13",
   "sourceStatus": "published-release",
-  "sourceNote": "Updated for game 2.04.02, Steam build 26329202. Gameplay confirmed except Speed-only, which passed static/host/loader checks. Original game inputs remain local.",
+  "sourceNote": "Updated Bank, All Stats and Healthbar for Steam 26361232. Required native code is resolved structurally; compatible address shifts may be tolerated, not guaranteed. Healthbar data/UI remain build-specific. Mining and Speed Only candidates are not included.",
   "currentFiles": [
+    {
+      "fileId": 19041,
+      "name": "All Mounts LvL5 All Stats v13 - b26361232",
+      "version": "13",
+      "category": "OPTIONAL",
+      "steamBuild": "26361232",
+      "sha256": "eaf9a3c4a087a789297cebde5d8e1d3eda448b510849350b295248a22d0d4588",
+      "bytes": 98415,
+      "inGameTested": true,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=19041",
+      "validation": "Gameplay confirmed 2026-11-02 through DMM 4.6.4; payload unchanged from tested candidate."
+    },
     {
       "fileId": 18363,
       "name": "All Mounts LvL5 Speed Only 2.04.02 - b26329202",
@@ -20,19 +32,6 @@
       "sha256": "76ff2eac958075657993e80de856483d8fabb8003c06f7b1d2d412807290096a",
       "bytes": 3364,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=18363"
-    },
-    {
-      "fileId": 18364,
-      "name": "All Mounts LvL5 AllStats 2.04.02 - b26329202",
-      "version": "12",
-      "category": "OPTIONAL",
-      "gameVersion": "2.04.02",
-      "steamBuild": "26329202",
-      "inGameTested": true,
-      "validation": "Author confirmed working in game on 2026-10-31.",
-      "sha256": "5ebee3af541a33364df0982eccb52e653d99364d43590ddf6cedc04ffc9b9bf0",
-      "bytes": 3247,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=18364"
     },
     {
       "fileId": 18365,
@@ -99,6 +98,19 @@
       "sha256": "380779eb23dc4c0268962f9e42b38f63b7e3d5351887c392ff9b778438a6c00c",
       "bytes": 956,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=14692"
+    },
+    {
+      "fileId": 18364,
+      "name": "All Mounts LvL5 AllStats 2.04.02 - b26329202",
+      "version": "12",
+      "category": "ARCHIVED",
+      "gameVersion": "2.04.02",
+      "steamBuild": "26329202",
+      "inGameTested": true,
+      "validation": "Author confirmed working in game on 2026-10-31.",
+      "sha256": "5ebee3af541a33364df0982eccb52e653d99364d43590ddf6cedc04ffc9b9bf0",
+      "bytes": 3247,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=18364"
     }
   ]
 }

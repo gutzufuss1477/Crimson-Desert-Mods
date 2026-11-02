@@ -1,3 +1,5 @@
+#include "../../../../../tooling/native/profiles_26361232.hpp"
+namespace cd { inline Addresses mining_addresses; }
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -18,7 +20,7 @@
 
 // Standalone build. No FullMode/ore_only/direct_bridge implementation linked.
 namespace auto34 {
-constexpr char Version[]="1.3.2";
+constexpr char Version[]="1.4.0";
 constexpr uint32_t On=1417341355,Off=652747463,MineKey=1001881;
 constexpr uint16_t MineIndex=2502;
 constexpr size_t MaxTargets=2048;
@@ -153,7 +155,7 @@ mh34::Ownership materialOwnership;
 bool identify(uintptr_t component,Identity& who) {
     uintptr_t vt{},parts{};
     who.component=component;
-    return read(component,vt) && vt==base+0x593a9c8 && read(component+8,who.actor) && who.actor &&
+    return read(component,vt) && vt==base+cd::mining_addresses.rva(0x593a9c8) && read(component+8,who.actor) && who.actor &&
         read(who.actor+0x60,who.id) && who.id && read(who.actor+0x90,who.owner) &&
         read(who.actor+0x68,parts) && parts && value<uintptr_t>(parts+0x30)==component;
 }
@@ -169,7 +171,7 @@ bool nativeInactive(uintptr_t player) {
     const auto parts=value<uintptr_t>(owner.ref.actor+0x68);
     const auto mode=parts?value<uintptr_t>(parts+0x178):0;
     uint16_t a{},b{};
-    return mode && value<uintptr_t>(mode)==base+0x590f028 &&
+    return mode && value<uintptr_t>(mode)==base+cd::mining_addresses.rva(0x590f028) &&
         read(mode+0x30,a) && read(mode+0x48,b) && a==0xffff && b==0xffff;
 }
 Target* find(const Identity& who) {
@@ -181,8 +183,8 @@ bool gameTime(uint64_t& time) {
     time=123456; return true;
 #else
     uintptr_t tls{}; uint8_t special{}; uint64_t delta{};
-    if(!read(__readgsqword(0x58),tls) || !tls || !read(tls+0x1eb,special) || !read(base+0x71b1ce8,delta)) return false;
-    time=reinterpret_cast<uint64_t(__fastcall*)()>(base+0x15f5550)()+(special?0:delta); return true;
+    if(!read(__readgsqword(0x58),tls) || !tls || !read(tls+0x1eb,special) || !read(base+cd::mining_addresses.rva(0x71b1ce8),delta)) return false;
+    time=reinterpret_cast<uint64_t(__fastcall*)()>(base+cd::mining_addresses.rva(0x15f5550))()+(special?0:delta); return true;
 #endif
 }
 bool send(uintptr_t mgr,const Target& t,uint32_t kind) {
@@ -222,7 +224,7 @@ uint32_t* __fastcall effectHook(void* self,uint32_t* result,const void* handler,
     const auto h=reinterpret_cast<uintptr_t>(handler),e=reinterpret_cast<uintptr_t>(event);
     const auto returned=effectOriginal(self,result,handler,event);
     Identity who{};
-    if(ready.load() && value<uintptr_t>(h)==base+0x5d2a360 && value<uint16_t>(h+0x6c,0xffff)==MineIndex &&
+    if(ready.load() && value<uintptr_t>(h)==base+cd::mining_addresses.rva(0x5d2a360) && value<uint16_t>(h+0x6c,0xffff)==MineIndex &&
        identify(reinterpret_cast<uintptr_t>(self),who)) {
         ++miningCalls;
         AcquireSRWLockExclusive(&targetLock);
@@ -300,7 +302,7 @@ bool geometry(uintptr_t root,uintptr_t player,float* p,float* look,float* up) {
     if(!modeAxes(look,up)) return false;
     const auto holder=value<uintptr_t>(root+0xd8),camera=holder?value<uintptr_t>(holder+8):0;
     alignas(16) float direction[4]{},worldUp[4]{};
-    return camera && readRaw(camera+0xd4,direction,12) && readRaw(base+0x58e7890,worldUp,12) &&
+    return camera && readRaw(camera+0xd4,direction,12) && readRaw(base+cd::mining_addresses.rva(0x58e7890),worldUp,12) &&
         cameraGeometry(player,direction,worldUp,p,look,up);
 }
 void markTargetSeen(Target& target,uint64_t now,float distance2) {
@@ -396,7 +398,7 @@ void updateTargets(uintptr_t mgr,uint64_t now) {
     heldMiningEffects=heldCount;
 }
 void tick() {
-    const auto now=GetTickCount64(),root=value<uintptr_t>(base+0x71b1a40),mgr=root?value<uintptr_t>(root+0x30):0;
+    const auto now=GetTickCount64(),root=value<uintptr_t>(base+cd::mining_addresses.rva(0x71b1a40)),mgr=root?value<uintptr_t>(root+0x30):0;
     if(!root || !mgr) { suspend(0,false); session={}; phase=1; return; }
     Lease player; lookupPlayer(mgr,&player.ref,0,0);
     const auto id=player.ref.actor?value<uint32_t>(player.ref.actor+0x60):0;
@@ -438,15 +440,15 @@ void tick() {
 }
 uintptr_t __fastcall frameHook(uintptr_t self) {
     const auto result=frameOriginal(self);
-    if(!ready.load() || !(result&0xff) || value<DWORD>(base+0x6e97c78)!=GetCurrentThreadId() || pumping.test_and_set()) return result;
+    if(!ready.load() || !(result&0xff) || value<DWORD>(base+cd::mining_addresses.rva(0x6e97c78))!=GetCurrentThreadId() || pumping.test_and_set()) return result;
     tick(); pumping.clear(); return result;
 }
 struct Slot { uintptr_t rva,expected; void* hook; bool installed{}; };
 Slot slots[]={ {0x593ad60,0x9d3a80,reinterpret_cast<void*>(effectHook)}, {0x58f2a08,0x423a790,reinterpret_cast<void*>(frameHook)} };
 bool exchange(Slot& slot,bool install) {
-    auto** p=reinterpret_cast<void**>(base+slot.rva); DWORD old{},ignored{};
+    auto** p=reinterpret_cast<void**>(base+cd::mining_addresses.rva(static_cast<uint32_t>(slot.rva))); DWORD old{},ignored{};
     if(!VirtualProtect(p,8,PAGE_READWRITE,&old)) return false;
-    auto* original=reinterpret_cast<void*>(base+slot.expected);
+    auto* original=reinterpret_cast<void*>(base+cd::mining_addresses.rva(static_cast<uint32_t>(slot.expected)));
     const auto before=InterlockedCompareExchangePointer(p,install?slot.hook:original,install?original:slot.hook);
     const bool changed=before==(install?original:slot.hook);
     if(changed) slot.installed=install; // Also track changes if protection restoration fails.
@@ -454,26 +456,19 @@ bool exchange(Slot& slot,bool install) {
     return restored && changed;
 }
 bool install() {
-    constexpr uintptr_t used[]={0x9d3a80,0x9ced30,0x423a790,0x9964a0,0x99cb40,0x1613870,0x19282d0,
-        0x15f5550,0x22ae050,0xab25e0,0x555330,0x3e4000,0x5b6d90,0x15fc9a0,0xaaf020};
-    for(auto rva:used) {
-        bool good{}; uint8_t bytes[16]{};
-        for(const auto& g:Guards) if(g.rva==rva) { good=readRaw(base+rva,bytes,16) && !std::memcmp(bytes,g.bytes,16); break; }
-        if(!good) { log("refused","\"rva\":\"%llx\"",rva); return false; }
-    }
-    for(const auto& s:slots) if(value<uintptr_t>(base+s.rva)!=base+s.expected) { log("slot_conflict"); return false; }
-    lookupActor=reinterpret_cast<LookupFn>(base+0x9964a0); lookupPlayer=reinterpret_cast<PlayerFn>(base+0x99cb40);
-    modeOwner=reinterpret_cast<PlayerFn>(base+0x19282d0); releaseRef=reinterpret_cast<ReleaseFn>(base+0x1613870);
-    enqueueOriginal=reinterpret_cast<EnqueueFn>(base+0x9ced30); effectOriginal=reinterpret_cast<EffectFn>(base+0x9d3a80);
-    frameOriginal=reinterpret_cast<FrameFn>(base+0x423a790); eventInit=reinterpret_cast<EventInitFn>(base+0x22ae050);
-    nearbyCache=reinterpret_cast<NearbyFn>(base+0xab25e0); modeInfo=reinterpret_cast<InfoFn>(base+0x555330);
-    rotateVector=reinterpret_cast<RotateFn>(base+0x3e4000);
-    eyePosition=reinterpret_cast<EyeFn>(base+0x5b6d90); orientation=reinterpret_cast<OrientationFn>(base+0x15fc9a0);
+    for(const auto& s:slots) if(value<uintptr_t>(base+cd::mining_addresses.rva(static_cast<uint32_t>(s.rva)))!=base+cd::mining_addresses.rva(static_cast<uint32_t>(s.expected))) { log("slot_conflict"); return false; }
+    lookupActor=reinterpret_cast<LookupFn>(base+cd::mining_addresses.rva(0x9964a0)); lookupPlayer=reinterpret_cast<PlayerFn>(base+cd::mining_addresses.rva(0x99cb40));
+    modeOwner=reinterpret_cast<PlayerFn>(base+cd::mining_addresses.rva(0x19282d0)); releaseRef=reinterpret_cast<ReleaseFn>(base+cd::mining_addresses.rva(0x1613870));
+    enqueueOriginal=reinterpret_cast<EnqueueFn>(base+cd::mining_addresses.rva(0x9ced30)); effectOriginal=reinterpret_cast<EffectFn>(base+cd::mining_addresses.rva(0x9d3a80));
+    frameOriginal=reinterpret_cast<FrameFn>(base+cd::mining_addresses.rva(0x423a790)); eventInit=reinterpret_cast<EventInitFn>(base+cd::mining_addresses.rva(0x22ae050));
+    nearbyCache=reinterpret_cast<NearbyFn>(base+cd::mining_addresses.rva(0xab25e0)); modeInfo=reinterpret_cast<InfoFn>(base+cd::mining_addresses.rva(0x555330));
+    rotateVector=reinterpret_cast<RotateFn>(base+cd::mining_addresses.rva(0x3e4000));
+    eyePosition=reinterpret_cast<EyeFn>(base+cd::mining_addresses.rva(0x5b6d90)); orientation=reinterpret_cast<OrientationFn>(base+cd::mining_addresses.rva(0x15fc9a0));
     const auto initialized=MH_Initialize();
     if(initialized!=MH_OK && initialized!=MH_ERROR_ALREADY_INITIALIZED) { log("query_hook_init_failed"); return false; }
-    auto* queryAddress=reinterpret_cast<void*>(base+0xaaf020);
+    auto* queryAddress=reinterpret_cast<void*>(base+cd::mining_addresses.rva(0xaaf020));
     if(MH_CreateHook(queryAddress,reinterpret_cast<void*>(queryHook),reinterpret_cast<void**>(&queryOriginal))!=MH_OK) { log("query_hook_create_failed"); return false; }
-    auto* groupAddress=reinterpret_cast<void*>(base+ore_range::ReaderRva);
+    auto* groupAddress=reinterpret_cast<void*>(base+cd::mining_addresses.rva(static_cast<uint32_t>(ore_range::ReaderRva)));
     if(!ore_range::guard(base,readRaw) ||
        MH_CreateHook(groupAddress,reinterpret_cast<void*>(ore_range::onRead),reinterpret_cast<void**>(&ore_range::original))!=MH_OK) {
         MH_RemoveHook(queryAddress); log("group_hook_refused"); return false;
@@ -525,10 +520,10 @@ DWORD WINAPI worker(void*) {
     wchar_t local[MAX_PATH]{},dir[MAX_PATH]{},path[MAX_PATH]{},exe[MAX_PATH]{};
     if(!GetEnvironmentVariableW(L"LOCALAPPDATA",local,MAX_PATH)) return 0;
     swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn",local); CreateDirectoryW(dir,nullptr);
-    swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH132",local); CreateDirectoryW(dir,nullptr);
+    swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH140",local); CreateDirectoryW(dir,nullptr);
     GetModuleFileNameW(nullptr,exe,MAX_PATH); const auto name=wcsrchr(exe,L'\\');
     const bool game=name && !_wcsicmp(name+1,L"CrimsonDesert.exe");
-    if(!game) { swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH132\\smoke",local); CreateDirectoryW(dir,nullptr); }
+    if(!game) { swprintf_s(dir,L"%s\\MiningHelmetAlwaysOn\\MH140\\smoke",local); CreateDirectoryW(dir,nullptr); }
     swprintf_s(path,L"%s\\mining-%lu.jsonl",dir,GetCurrentProcessId()); logFile=_wfsopen(path,L"wb",_SH_DENYNO);
     swprintf_s(statusPath,L"%s\\latest-status.txt",dir);
     if(!game) { status("wrong_process"); log("wrong_process"); return 0; }
@@ -537,9 +532,11 @@ DWORD WINAPI worker(void*) {
         reinterpret_cast<LPCWSTR>(&worker),&pinned)) { status("pin_failed"); return 0; }
     char hash[65]{};
     if(!mh067::Sha256File(exe,hash)) { status("hash_failed"); log("hash_failed"); return 0; }
-    if(std::strcmp(hash,ExpectedSha)) {
-        status("version_refused");
-        log("version_refused","\"expected_sha256\":\"%s\",\"actual_sha256\":\"%s\"",ExpectedSha,hash);
+    log("build_identity","\"sha256\":\"%s\"",hash);
+    cd::Image image;
+    if(!cd::loaded_image(image) || !cd::mining_addresses.resolve(image,cd::mining_plan)) {
+        status("resolver_refused");
+        log("resolver_refused","\"symbol\":%u,\"reason\":\"%s\"",cd::mining_addresses.failed_id,cd::mining_addresses.failure);
         return 0;
     }
     if(!ini.fromModule(pinned)) { status("ini_path_failed"); return 0; }

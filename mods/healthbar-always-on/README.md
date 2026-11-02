@@ -1,38 +1,29 @@
-# Healthbar always on
+# Healthbar Always On
 
-**Release 3**, for **Crimson Desert 2.04.02 / Steam build 26329202**.
+**Release 4**, for **Steam build 26361232**.
 
-| Variant | Appearance | Targets | Included components |
+| Variant | Appearance | Targets | Components |
 |---|---|---|---|
-| Vanilla Multitarget | Classic red bars with a dark frame | Multiple | DMM data + Healthbar Multitarget ASI |
-| Classic Vanilla Single Target | Classic red bars with a dark frame | One | DMM data |
-| Caites Multitarget | Compact thin red bars, no thick frame | Multiple | DMM data + Healthbar Multitarget ASI |
+| Vanilla Multitarget | Framed red bars | Multiple | DMM data + bundled ASI |
+| Classic Vanilla Single Target | Framed red bars | One | DMM data only |
+| Caites Multitarget | Compact thin red bars | Multiple | DMM data + bundled ASI |
 
-[Downloads on Nexus](https://www.nexusmods.com/crimsondesert/mods/2406?tab=files). Choose **one** variant. Each Nexus ZIP is a complete DMM import package; no separate helper download is needed.
+[Complete Nexus downloads](https://www.nexusmods.com/crimsondesert/mods/2406?tab=files) · [Source/helper release](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26361232)
 
-## Installation
+## Install
 
-1. Close the game. Unmount and remove the previous Healthbar variant from DMM.
-2. Import the complete ZIP with DMM 4.5.1 and enable the Healthbar data mod.
-3. For Multitarget, also enable **Healthbar Multitarget** in **ASI Mods**. DMM imports it from the same ZIP, but may leave its checkbox off. Keep the existing loader, or install one through DMM if missing.
-4. Mount and restart the game. No manual file copying or custom installer is required.
+Close the game and unmount/remove the old Healthbar variant. Import **one complete ZIP** in DMM. Enable the data mod and, for Multitarget, the included **Healthbar Multitarget** under ASI Mods. Keep DMM's ASI loader, mount and restart. No separate helper download or manual file copy is needed. DMM 4.6.4 import/deployment was verified.
 
-Close the game before switching variants; remove the old variant, import the new one and restart after mounting. The shared helper recognizes the selected style and does not patch Classic. Never enable duplicate helper copies. Remove older manually installed Healthbar test ASIs before migrating to DMM; retain unrelated mods, the ASI loader and DmmRuntime.asi.
+Remove old manual NativeFix/Healthbar helpers before migrating. Never enable multiple variants or duplicate helpers. The helper selects the style automatically and remains inactive with Classic. Close the game before changing or uninstalling variants; remount the remaining mods afterwards.
 
-To uninstall, close the game, disable/remove the Healthbar data and helper in DMM and mount the remaining mods.
+## Updates and validation
 
-## Validation and compatibility
+The native helper gains structural code detection: The ASI now finds validated code structures instead of relying on fixed addresses or one executable hash. It may keep working after game updates that only move code. Changed code/layouts or ambiguous matches are refused before hooks are installed. Future compatibility is not guaranteed.
 
-Vanilla Multitarget's framed appearance, target switching and removal on death were confirmed with Kliff. Classic Single Target was separately confirmed working. Caites uses the exact previously confirmed compact UI payloads and the same native patch. Other characters and HP-value accuracy were not separately tested. The combined ZIP import was observed in DMM; DMM deployed the helper to bin64 and its startup log selected the expected UI mode.
+**The DMM data/UI packages remain specific to build 26361232.** Classic is data-only and does not gain ASI-based update resilience. Conflicting changes to the same skill or subtitletagview HTML/CSS can prevent correct operation.
 
-The packages preserve the current 2,159-skill table except the intended ability, and apply three guarded character patches. Compatibility checks passed alongside Alden and Steelheart. The helper requires the exact supported executable and UI hashes; conflicting edits to subtitletagview.html/css or the same skill are unsupported.
+The skill overlay was rebuilt from current vanilla inputs, preserving the new ability ID and all unrelated records. Three previous visual styles remain unchanged. Vanilla Multitarget was confirmed working in game on 2 November 2026. Classic and Caites passed current data/style/host checks, but were not separately replaytested on this build. Other characters were not separately tested.
 
-## Source and build
+Released functional payloads are unchanged from the validated candidates. Native patch guards, atomicity, Classic isolation and native target cleanup remain tested. Build the helper with source/native/build.cmd; see [tooling](../../tooling/README.md) for data recipes and packaging. Full game data/UI assets remain Nexus-only.
 
-The UI initializer requires ShowHPBuffTag; the Multitarget path also needed a guarded two-byte native branch patch. Vanilla and Classic share the framed geometry; only Caites uses compact geometry. Native eligibility, tracking and cleanup still run through the original UI update.
-
-Build the helper with `source/native/build.cmd`; it runs the variant/atomic-patch/branch tests before compiling. The released `Healthbar Multitarget.asi` is the byte-identical NativeFix2 build, renamed for a readable DMM entry. Its SHA-256 is `6a8cd4012899d734016ece0f452349b21556e0bfea04c1302e41d36e380b5455`.
-
-See [build instructions](../../tooling/README.md) for the local-input data builder and combined ZIP packager. Full game tables/UI assets, original inputs, executables and private diagnostics are excluded from GitHub. Ready-to-install complete packages are on Nexus; source, recipes and package hashes are recorded here.
-
-Credits: Blablup / gutzufuss1477; [Caites - Persistent HP Bars](https://www.nexusmods.com/crimsondesert/mods/2409) for the original work and compact presentation. The native helper's MIT license applies only to original helper code.
+Credits: Blablup / gutzufuss1477; [Caites — Persistent HP Bars](https://www.nexusmods.com/crimsondesert/mods/2409). The helper's MIT license covers only original helper code.

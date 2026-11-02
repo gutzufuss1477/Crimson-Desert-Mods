@@ -14,7 +14,7 @@ inline Reader original{};
 inline std::atomic<unsigned> changed{},refused{};
 template<class Read> bool guard(uintptr_t base,Read read) {
     std::array<uint8_t,16> head{};
-    return read(base+ReaderRva,head.data(),head.size()) && head==ReaderHead;
+    return read(base+cd::mining_addresses.rva(static_cast<uint32_t>(ReaderRva)),head.data(),head.size()) && head==ReaderHead;
 }
 inline bool eligible(uint32_t key,std::string_view name,int32_t level,uint8_t useDefault) {
     return key==1708 && name=="Item_Collect_Ore" && level==5 && useDefault==0;

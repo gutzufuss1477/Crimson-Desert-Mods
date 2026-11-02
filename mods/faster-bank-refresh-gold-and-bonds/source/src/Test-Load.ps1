@@ -10,7 +10,7 @@ New-Item -ItemType Directory -Path $root | Out-Null
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'out\load_tests.exe') -Destination (Join-Path $root 'CrimsonDesert.exe')
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'out\load_tests.exe') -Destination $root
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'out\bank_refresh_instrumented.dll') -Destination $root
-Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'out\Bank_Refresh_2.04.02_b26329202.asi') -Destination $root
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'out\Bank_Refresh.asi') -Destination $root
 $ini=Join-Path $root 'Bank_Refresh.ini'
 $cases=@(
     @{name='missing INI'; ini=$null; result=4},
@@ -58,7 +58,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot '..\Bank_Refresh.ini') -Destinat
 if ($LASTEXITCODE -ne 0) { throw 'Wrong-process guard failed.' }
 $before=@(Get-ChildItem -LiteralPath $root -File | Sort-Object Name | ForEach-Object { $_.Name + ':' + (File-Digest $_.FullName) })
 foreach ($hostName in @('load_tests.exe','CrimsonDesert.exe')) {
-    & (Join-Path $root $hostName) (Join-Path $root 'Bank_Refresh_2.04.02_b26329202.asi') 0
+    & (Join-Path $root $hostName) (Join-Path $root 'Bank_Refresh.asi') 0
     if ($LASTEXITCODE -ne 0) { throw 'Production binary load check failed.' }
 }
 $after=@(Get-ChildItem -LiteralPath $root -File | Sort-Object Name | ForEach-Object { $_.Name + ':' + (File-Digest $_.FullName) })
