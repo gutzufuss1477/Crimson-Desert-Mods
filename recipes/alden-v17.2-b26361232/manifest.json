@@ -1,0 +1,11 @@
+{
+  "format": "crimson_browser_mod_v1",
+  "id": "AldenShop",
+  "title": "Alden Shop",
+  "author": "Blablup",
+  "version": "17.2",
+  "enabled": true,
+  "priority": 1,
+  "files_dir": "files",
+  "description": "567 items, localized category tabs added at runtime. Optional original Better Inventory 3.3; either load order. No shared UI files replaced."
+}

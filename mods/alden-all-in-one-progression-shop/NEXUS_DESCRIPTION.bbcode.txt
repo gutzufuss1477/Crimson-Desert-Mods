@@ -1,0 +1,62 @@
+Make Alden your shop for crafting and progression supplies: [b]567 items at 1 Copper[/b], organized into eight category tabs.
+
+[url=https://ko-fi.com/gutzufuss]☕ Support my mods on Ko-fi[/url]
+Optional support helps me keep making updates. Thank you!
+
+[b]Update v17.2 — 3 November 2026[/b]
+Alden's category tabs now work alongside the [url=https://www.nexusmods.com/crimsondesert/mods/452]original Better Inventory and Trade UI 3.3[/url] without shared UI file conflicts. Better Inventory is optional, remains a separate mod and does not need an Alden-specific version. Either DMM load order produces the same files for these two mods.
+The normal buy grid is preserved without Better Inventory; its larger buy grid is preserved when it is installed. Categories, buying and tab switching were confirmed in game with original Better Inventory on a non-DLC installation, with no DMM file conflicts.
+[b]Completely replace the old Alden package and its Alden Category Tabs.asi.[/b] Do not copy over an old Alden folder: obsolete shared UI files must be removed.
+The 567 items, 1 Copper prices, stock and all 15 language variants remain unchanged. The single-step Xbox LT/RT and keyboard tab fix from v17.1 is retained.
+For [b]Crimson Desert 2.04.05 / Steam build 26361232[/b]. Includes the expanded catalog, including rubber. DLC installations and DLC data tables have not been validated; no DLC-exclusive items are added.
+
+[b]Abyss Gear tiers[/b]
+Tiered Abyss Gear is deliberately sold at [b]Tier I[/b]. Tier II and III, including Vitality II/III, are not sold: you can still craft/synthesize the higher tiers yourself. This update does not change that progression choice.
+
+[b]Categories[/b]
+[list]
+[*][b]All — 567:[/b] the complete catalog, grouped by category.
+[*][b]Abyss — 94:[/b] 93 Abyss Gears and the Abyss Artifact.
+[*][b]Abyss Plans — 93:[/b] Abyss Gear blueprints.
+[*][b]Books — 71:[/b] crafting and progression books/manuals.
+[*][b]Recipes — 95:[/b] cooking recipes and alchemy/artifact formulas.
+[*][b]Blueprints — 125:[/b] wagon, housing and garden plans.
+[*][b]Materials — 39:[/b] selected crafting and upgrade materials.
+[*][b]Contracts — 50:[/b] supply contracts.
+[/list]
+Tab counts show catalog size, not remaining stock. Click a tab or use the game's displayed left/right tab controls. Reopening the shop returns to All. Other merchants do not receive this category bar.
+
+[b]Automatic tab language[/b]
+The tab labels follow your game's text language. All 15 variants are included: English, German, French, Italian, Spanish (Spain/Latin America), Portuguese (Brazil), Polish, Russian, Turkish, Arabic, Japanese, Korean and Simplified/Traditional Chinese. Custom category labels are mod translations.
+Tab widths follow the text. Longer translations can wrap onto a second row above the item list. English localization and wrapping were confirmed in game; all language files passed data validation.
+
+[b]Requirements[/b]
+Windows PC, [b]Crimson Desert 2.04.05 / Steam build 26361232[/b], and [b]DMM with its ASI loader enabled[/b]. Tested with DMM 4.6.4. Install both the data mod and the included [b]Alden Category Tabs.asi[/b] helper.
+
+[b]Install / update[/b]
+[list=1]
+[*]Close the game and unmount in DMM.
+[*]Completely replace previous Alden shop packages, including test builds. Remove the old mod entry/folder through DMM instead of merging into it, so obsolete UI files are not retained.
+[*]Import [b]Alden_Shop.zip[/b] and enable the data mod.
+[*]Import/replace and enable the included [b]Alden Category Tabs.asi[/b] in DMM's ASI Mods section. Use the helper supplied with this package.
+[*]Mount, restart the game and visit Alden.
+[/list]
+Do not manually copy the ZIP's internal files/ folder into the game. Only one Alden data mod and one Alden Category Tabs helper should be active.
+
+[b]Compatibility[/b]
+[list]
+[*][b]Better Inventory and Trade UI 3.3:[/b] optional and installed separately from its original page. Follow its author's installation instructions, including the DLC-specific texture instructions. Alden bundles no Better Inventory assets and replaces no inventory textures.
+[*][b]Load order:[/b] Alden v17.2 and original Better Inventory 3.3 have no shared replacement paths, so neither overwrites the other's files. No compatibility patch or combined package is required.
+[*][b]Without Better Inventory:[/b] the native two-column/four-row buy grid remains. With Better Inventory, its three-column/five-row buy grid remains.
+[*][b]Other mods:[/b] Alden still replaces shop/data and localization files. Other Alden/shop data, item-price or LocalStringInfo replacements may conflict. Support for unrelated shop UI replacements is not established.
+[*][b]Validation:[/b] original Better Inventory with Alden was confirmed in game without DLC. Alden alone and reversed load order passed technical checks but have no separate gameplay confirmation. DLC installations/data tables are unverified.
+[/list]
+All other merchant records are preserved. The category helper targets the stated executable build and recognized buy UI; future game/UI updates may require a mod update.
+
+[b]Uninstall[/b]
+Close the game, unmount, disable Alden Shop, its price patch [b]and[/b] Alden Category Tabs ASI, then remount the remaining mods. Purchased items and spent money are not rolled back. Older files remain archived for their labelled game versions.
+
+[url=https://github.com/gutzufuss1477/Crimson-Desert-Mods]Source and release documentation on GitHub[/url]
+
+[b]Credits[/b]
+Thanks to the Crimson Desert modding community and the mod-manager/tool creators. Developed with AI assistance.

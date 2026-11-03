@@ -58,6 +58,9 @@ void __fastcall fill(Ptr p) {
 void setup() {
     alden::base=0x140000000;
     alden::ready=true;
+#ifdef ALDEN_RUNTIME_UI
+    alden::categoryStylesAvailable=true; alden::categoryStyleFailure=false;
+#endif
     alden::originalFill=fill; alden::originalCount=count; alden::originalTab=tab; alden::originalDestroy=destroy;
     alden::originalInit=init;initError=bindError=0;selectorPresent=true;
     root.fill(0);stock.fill(0);bar.fill(0);
@@ -104,6 +107,17 @@ int main() {
     using namespace alden;
     constexpr unsigned expected[]={567,94,93,71,95,125,39,50};
     fixture::setup();states[0]={};unsigned initialization=99;
+#ifdef ALDEN_RUNTIME_UI
+    categoryStylesAvailable=false;
+    fixture::shown=true;
+    init_hook(fixture::r(),reinterpret_cast<Ptr>(&initialization));
+    check(initialization==0 && !states[0].root && !fixture::shown,"missing category styles preserve native initialization and explicitly hide tabs");
+    categoryStylesAvailable=true; categoryStyleFailure=true;
+    fixture::shown=true;
+    init_hook(fixture::r(),reinterpret_cast<Ptr>(&initialization));
+    check(initialization==0 && !states[0].root && !fixture::shown,"failed CSS registration leaves native list unfiltered and explicitly hides tabs");
+    categoryStyleFailure=false;
+#endif
     check(init_hook(fixture::r(),reinterpret_cast<Ptr>(&initialization))==reinterpret_cast<Ptr>(&initialization),"native initialization result preserved");
     check(initialization==0 && states[0].bar==fixture::b() && !fixture::shown,"compiled category UI binds and starts hidden");
     fixture::setup();states[0]={};fixture::selectorPresent=false;

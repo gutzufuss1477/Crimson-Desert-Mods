@@ -1,15 +1,41 @@
-# Alden localized category tabs
+# Alden category tabs v17.2
 
-The source targets published **v17.1**, fixing skipped tabs with keyboard and Xbox LT/RT. The author confirmed the input fix in game. Use the release's matching data/UI package and ASI together.
+The ASI inserts eight category controls into the supported buy UI in memory. The package contains the existing 19 Alden data/language files and its own `aldencategorytabs.css`. None of its 20 game paths overlaps the 36 original Better Inventory 3.3 paths. Both DMM load orders therefore produce identical effective files. No Better Inventory assets are bundled.
 
-`native/` contains the helper source, its generated game/UI guards and native callback tests for Steam build 26361232. Run `native/build.cmd` with Visual Studio C++ build tools installed. The script runs the callback tests and compiles the ASI.
+The native 2×4 buy grid remains without Better Inventory; the original Better Inventory 3×5 grid remains when installed separately. Replace old Alden files and its matching ASI completely when updating. See the [installation instructions](../).
 
-`translations.json` contains the eight tab labels for each of the 15 language variants. `aldencategorytabs.css` contains the mod's tab layout rules.
+## Build
 
-The helper's filter and purchase behavior is unchanged from the user-confirmed 18c version. Localized labels and wrapping were subsequently confirmed in English in TEST 19. v17.1 updates its diagnostic text and UI hashes; filtering and purchasing code remain unchanged.
+Use Python with Capstone and Visual Studio x64 C++ build tools:
 
-`fix_tab_input.py` applies the input correction to author-supplied v17 HTML and compiled UI, with exact input hashes and reversible, control-specific byte edits. Both category keyguides now explicitly use the native `need-trigger-downonce-release=True` setting. Their compiled v17 donor controls had retained the axis-control override `False`, causing DownOnce and Release to both activate the tab. No cooldown or custom input polling is added. Run `python test_tab_input.py path/to/v17.zip` for the artifact regression check. An isolated execution of the original game input routine reproduced two activations with the old attribute and one with the fixed attribute. The author subsequently confirmed the fix in game; physical input devices were not separately specified.
+```powershell
+python build_runtime_shop.py --alden C:\Inputs\Alden17.1.zip --better-inventory C:\Inputs\BetterInventory3.3.zip --vanilla-ui C:\Inputs\npcstorebuyview2_game.uibinary --exe C:\Inputs\CrimsonDesert.exe --output C:\Output\AldenRuntime
+```
 
-The [v17 recipe](../../../recipes/alden-v17-b26361232/) records the manifest, ordered stock list, category assignments and released payload hashes. It contains no complete game tables or compiled UI. The native helper can be built directly from this directory; building the complete data/localization/UI package additionally requires the author's local extraction and package-building workflow. The repository's historical data builder still targets the earlier 379-item Alden catalog.
+All four inputs are checked against exact hashes for game 2.04.05 / Steam 26361232. Better Inventory is a build-time verification input, not a runtime dependency. The build checks augmented tree hashes, reversibility and the unchanged buy-grid subtree. Generated game-derived headers, fixtures and complete game assets belong in the local output directory, outside Git.
 
-The complete DMM package is published as v17.1 on [Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19112). The [v17.1 recipe](../../../recipes/alden-v17.1-b26361232/) records its final manifest and payload hashes. All 22 game payloads are byte-identical to the confirmed input-fix candidate; the final helper changes only its diagnostic version text. All 15 language files were validated; English labels and wrapping were visually confirmed in game.
+`runtime_build_inputs.py` provides read-only archive and dependency-list helpers. `ui_binary.py` decodes the build-specific tree for validation. `native/build_runtime.cmd` runs in the generated output directory and compiles the helper and regression hosts. The build reuses licensed [MinHook 1.3.4 source](../../mining-helmet-always-on/source/src/vendor/minhook/) and includes its license. `native/build.cmd` remains the legacy v17.1 build entry.
+
+## Runtime behavior
+
+The UI decoder hook at RVA `0x41e6d90` recognizes exact vanilla or original Better Inventory 3.3 buy trees. Four reversible edits insert Alden's tab subtree and root selector/counts. The original grid, other UI bytes and all 46 stylesheet dependencies remain unchanged. A per-call borrowed memory reader supplies the augmented bytes to the original decoder once; the loader retains ownership of the source buffer. The original cursor advances only after successful complete decoding. Unsupported UI passes through unchanged.
+
+When the native loader at `0x41bbf30` loads `NpcStore2.css`, the helper compiles its authored CSS through `0x41ac150` and registers/binds it through `0x41a7e60`. Cached CSS uses the native reuse path. The compiler receives a private mutable copy, and compiled output is released through the game's destructor. This follows the observed load order: UI preloading can precede stylesheet initialization.
+
+Category callbacks activate only after successful style registration. Optional style failure preserves native view construction, hides the category bar and retains the complete unfiltered shop. Executable hash, function bytes, memory-reader vtable and mounted category CSS are guarded. Legacy Alden buy-UI replacements are refused, exposing an incomplete upgrade. Hook activation rolls back on failure. Existing category filtering, purchase identity, localized labels and single-step input remain in use.
+
+## Validation
+
+The author confirmed the candidate's categories, buying, tab switching and absence of DMM conflicts with original Better Inventory on a non-DLC installation on 3 November 2026. v17.2 keeps the exact runtime source and all 20 game payloads from that candidate; the generated native header changes only its diagnostic version string. The final ZIP has not been separately run in game.
+
+Native regressions cover category callbacks, purchase/stock identity, reopen, merchant isolation, thread ownership, reentrancy, unsupported/truncated input, EOF/decode failures and nested/concurrent loads. The isolated host executes the original 64-byte memory-read routine, actual dependency-consumer branch flow and real MinHook redirects/trampolines/cleanup. The dependency consumer reproduces the old missing-CSS abort and verifies normal UI binding with late CSS registration, including optional style failure. CSS compiler/decoder and renderer calls are fixtures, not a complete game execution.
+
+Static checks preserve all 706 price patches and 19 data/language payloads, restore exact input trees when edits are reversed and show identical effective files in both DMM orders. The native mounted-file guard accepts standalone/Better Inventory fixtures and rejects missing CSS or obsolete Alden UI. The helper refuses loading into an unrelated process.
+
+Alden alone and reversed load order lack separate gameplay confirmation. No DLC installation/tester was available; DLC data tables are unvalidated. Optional-texture fixture checks do not prove DLC compatibility. No DLC-exclusive content is added. See the [release recipe](../../../recipes/alden-v17.2-b26361232/).
+
+## Catalog, localization and input provenance
+
+The [v17 catalog](../../../recipes/alden-v17-b26361232/) remains unchanged: 567 items, eight categories and deliberate Tier I limits for tiered Abyss Gear. `translations.json` holds all 15 language variants; `aldencategorytabs.css` defines label sizing/wrapping. English labels/wrapping were confirmed in game; all language files were data-validated.
+
+The v17.1 `fix_tab_input.py` / `test_tab_input.py` artifacts document the retained input fix. Both tab keyguides use the native `need-trigger-downonce-release=True` setting, preventing press and release from advancing twice. No artificial cooldown or input polling is added. Historical versions remain in Git history and their release recipes. Earlier local compatibility experiment builders are not release entry points or dependencies.

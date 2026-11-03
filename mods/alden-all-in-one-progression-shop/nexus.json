@@ -4,15 +4,34 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2066,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
-  "pageVersion": "17.1",
+  "pageVersion": "17.2",
   "sourceStatus": "published-release",
-  "sourceNote": "v17.1 published through Nexus API v3 on 2026-11-02. Author confirmed the input-fix candidate in game; all 22 final game payloads are identical. Final native change is diagnostic version text only. Downloaded release SHA-256 verified.",
+  "sourceNote": "v17.2 published through Nexus API v3 on 2026-11-03. Author confirmed categories, purchasing, tab switching and no DMM conflicts with original Better Inventory 3.3 without DLC. All 20 final game payloads and native runtime logic match the confirmed candidate; diagnostic version text and packaging changed. Standalone/reversed order are technically validated only; DLC remains unverified. Published download SHA-256 verified.",
   "currentFiles": [
+    {
+      "fileId": 19380,
+      "name": "Alden Shop 17.2 - All Items 1 Copper",
+      "version": "17.2",
+      "category": "MAIN",
+      "gameVersion": "2.04.05",
+      "steamBuild": "26361232",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "v17.2 published through Nexus API v3 on 2026-11-03. Author confirmed categories, purchasing, tab switching and no DMM conflicts with original Better Inventory 3.3 without DLC. All 20 final game payloads and native runtime logic match the confirmed candidate; diagnostic version text and packaging changed. Standalone/reversed order are technically validated only; DLC remains unverified. Published download SHA-256 verified.",
+      "sha256": "703dac49f53942f9a6163c9700d7b7c23056605b7fca3e325e8ab885f2ca076a",
+      "bytes": 4531222,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19380",
+      "betterInventoryVersion": "3.3",
+      "sharedUiFileConflicts": false,
+      "dlcCompatibilityValidated": false
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 19112,
       "name": "Alden_AIO_Shop_All_Items_1_Copper_2.04.05",
       "version": "17.1",
-      "category": "MAIN",
+      "category": "ARCHIVED",
       "gameVersion": "2.04.05",
       "steamBuild": "26361232",
       "runtimeBehaviorAuthorConfirmed": true,
@@ -21,9 +40,7 @@
       "sha256": "f4b7b6205074e11f92b621e99f4da959f61ff2b2098328016d99009e6925bd3b",
       "bytes": 4450759,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19112"
-    }
-  ],
-  "archivedFiles": [
+    },
     {
       "fileId": 19088,
       "name": "Alden_AIO_Shop_All_Items_1_Copper_2.04.05",

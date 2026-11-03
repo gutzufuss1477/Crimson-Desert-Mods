@@ -10,6 +10,10 @@
 #include "hash_core.hpp"
 #include "filter_core.hpp"
 #include "profile_generated.hpp"
+#ifdef ALDEN_RUNTIME_UI
+#include "ui_patch_core.hpp"
+#include "vendor/minhook/include/MinHook.h"
+#endif
 
 namespace alden {
 using Ptr=std::uintptr_t;
@@ -67,6 +71,10 @@ bool on_ui_thread(const State& s) { return s.ownerThread && s.ownerThread==GetCu
 State* by_root(Ptr root) { for(auto& s:states) if(s.root==root) return &s; return nullptr; }
 State* by_stock(Ptr stock) { for(auto& s:states) if(s.root && s.stock==stock) return &s; return nullptr; }
 
+#ifdef ALDEN_RUNTIME_UI
+#include "runtime_ui.hpp"
+#endif
+
 bool is_alden(Ptr stock) {
     Ptr vtable{}; std::uint16_t index{},key{}; std::uint8_t mode{},housing{},alternate{};
     if(!value(stock,vtable) || vtable!=base+profile::StockVtable ||
@@ -113,6 +121,14 @@ Ptr __fastcall init_hook(Ptr root,Ptr result) {
             reinterpret_cast<void*>(root),reinterpret_cast<void*>(bar),reinterpret_cast<void*>(vt),reinterpret_cast<void*>(stock));
         log(message); return returned;
     }
+#ifdef ALDEN_RUNTIME_UI
+    if(!category_controls_ready()) {
+        function<FillFn>(profile::Hide)(bar);
+        *slot={};
+        log("INIT BYPASS: category styles unavailable; tabs hidden and complete native shop list retained");
+        return returned;
+    }
+#endif
     *slot={root,stock,bar,0,false,false,GetCurrentThreadId(),0};
     show_bar(*slot,false);
     char message[160];
@@ -233,19 +249,39 @@ bool mounted_ui(const std::wstring& directory) {
         if(!line.empty() && line.back()=='\r') line.pop_back();
         const char* expected=nullptr; unsigned bit=0; std::size_t offset=0;
         const std::string html="file\tui/xml/gamemain/play/npcstorebuyview2.html\t";
+#ifdef ALDEN_RUNTIME_UI
+        const std::string css="file\tui/xml/gamemain/play/aldencategorytabs.css\t";
+#else
         const std::string css="file\tui/xml/gamemain/play/npcstore2.css\t";
+#endif
         const std::string binary="file\tui/bin__/npcstorebuyview2_game.uibinary\t";
+#ifdef ALDEN_RUNTIME_UI
+        // No HTML/binary replacement is required. When a compiled buy UI is
+        // mounted, it must be one of the supported unmodified game/BI inputs.
+        if(line.compare(0,css.size(),css)==0) { expected=runtime::CssHash; bit=2; offset=css.size(); }
+        if(line.compare(0,binary.size(),binary)==0) { expected=runtime::VanillaInputHash; bit=4; offset=binary.size(); }
+#else
         if(line.compare(0,html.size(),html)==0) { expected=profile::HtmlHash; bit=1; offset=html.size(); }
         if(line.compare(0,css.size(),css)==0) { expected=profile::CssHash; bit=2; offset=css.size(); }
         if(line.compare(0,binary.size(),binary)==0) { expected=profile::BinaryUiHash; bit=4; offset=binary.size(); }
+#endif
         if(!expected) continue;
         if(seen&bit) return false;
         wchar_t path[32768]{}; char digest[65]{};
         if(!MultiByteToWideChar(CP_UTF8,MB_ERR_INVALID_CHARS,line.c_str()+offset,-1,path,32768) ||
-           !mh067::Sha256File(path,digest) || std::strcmp(expected,digest)) return false;
+           !mh067::Sha256File(path,digest)) return false;
+#ifdef ALDEN_RUNTIME_UI
+        if(std::strcmp(expected,digest) && !(bit==4 && !std::strcmp(digest,runtime::BetterInputHash))) return false;
+#else
+        if(std::strcmp(expected,digest)) return false;
+#endif
         seen|=bit;
     }
+#ifdef ALDEN_RUNTIME_UI
+    return (seen&2)!=0;
+#else
     return seen==7;
+#endif
 }
 bool exchange(Ptr slot,Ptr expected,Ptr desired) {
     if(slot%sizeof(Ptr)) return false;
@@ -263,13 +299,24 @@ DWORD WINAPI initialize(void*) {
     const auto logPath=std::wstring(self)+L".log";
     logfile=CreateFileW(logPath.c_str(),GENERIC_WRITE,FILE_SHARE_READ|FILE_SHARE_WRITE,nullptr,
                         CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,nullptr);
+#ifdef ALDEN_RUNTIME_UI
+    log(runtime::Version);
+#else
     log("Alden Category Tabs v17.1 / Steam 26361232 / single-step keyboard and controller tabs");
+#endif
     const auto leaf=wcsrchr(exe,L'\\');
     if(!leaf || _wcsicmp(leaf+1,L"CrimsonDesert.exe")) { log("REFUSED: wrong process"); return 2; }
     char hash[65]{};
     if(!mh067::Sha256File(exe,hash) || std::strcmp(hash,profile::ExeHash)) { log("REFUSED: unsupported game build"); return 3; }
     const std::wstring directory(exe,static_cast<std::size_t>(leaf-exe+1));
-    if(!mounted_ui(directory)) { log("REFUSED: category HTML/CSS/compiled UI missing or different"); return 4; }
+    if(!mounted_ui(directory)) {
+#ifdef ALDEN_RUNTIME_UI
+        log("REFUSED: own category CSS missing/different or legacy/unsupported buy UI overlay; remove old Alden UI files");
+#else
+        log("REFUSED: category HTML/CSS/compiled UI missing or different");
+#endif
+        return 4;
+    }
     base=reinterpret_cast<Ptr>(GetModuleHandleW(nullptr));
     for(const auto& guard:profile::Guards) {
         unsigned char bytes[16]{};
@@ -293,14 +340,27 @@ DWORD WINAPI initialize(void*) {
     HMODULE pinned{};
     if(!GetModuleHandleExW(GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS|GET_MODULE_HANDLE_EX_FLAG_PIN,
         reinterpret_cast<LPCWSTR>(&init_hook),&pinned)) return 7;
+#ifdef ALDEN_RUNTIME_UI
+    if(!prepare_runtime_hook()) return 9;
+#endif
     std::size_t installed=0;
     for(const auto& h:hooks) {
         if(!exchange(h.slot,h.expected,h.replacement)) {
             while(installed) { const auto& prior=hooks[--installed]; exchange(prior.slot,prior.replacement,prior.expected); }
+#ifdef ALDEN_RUNTIME_UI
+            discard_runtime_hook();
+#endif
             log("REFUSED: concurrent hook change; previous hooks rolled back"); return 8;
         }
         ++installed;
     }
+#ifdef ALDEN_RUNTIME_UI
+    if(!enable_runtime_hook()) {
+        while(installed) { const auto& prior=hooks[--installed]; exchange(prior.slot,prior.replacement,prior.expected); }
+        discard_runtime_hook();
+        log("REFUSED: UI decoder hook activation failed; callback hooks rolled back"); return 10;
+    }
+#endif
     ready=true;
     log("ARMED: five UI callbacks installed; waiting for Alden buy screen");
     return 0;

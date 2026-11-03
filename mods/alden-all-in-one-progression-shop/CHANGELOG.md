@@ -1,5 +1,16 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## v17.2 — 3 November 2026 — game 2.04.05
+
+- Add category tabs at runtime instead of replacing shared shop HTML, compiled UI or shop CSS.
+- Support the original, separately installed Better Inventory and Trade UI 3.3 without file conflicts or a required load order.
+- Preserve the native buy grid without Better Inventory and Better Inventory's grid when installed.
+- Preserve all 567 items, 706 price patches, stock, 15 languages and single-step tab input.
+- Categories, purchasing and tab switching confirmed in game with original Better Inventory on a non-DLC installation.
+- Update installation instructions: completely replace old Alden files and the matching ASI. DLC installations remain unverified.
+
+[Download v17.2 on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19380). See the [release validation](../../recipes/alden-v17.2-b26361232/validation.json) for confirmation scope.
+
 ## v17.1 — 2 November 2026 — game 2.04.05
 
 - Fixes the two compiled category keyguides retaining an axis-control press/release override, which made keyboard and Xbox LT/RT input skip a category.
