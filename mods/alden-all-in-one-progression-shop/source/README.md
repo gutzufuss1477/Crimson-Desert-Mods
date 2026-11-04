@@ -1,6 +1,6 @@
-# Alden v17.2.1 source — unchanged v17.2 category runtime
+# Alden v17.2.2 source
 
-v17.2.1 replaces only the price manifest with DMM v3.1 field intents. The category ASI and all 20 game payloads are unchanged from v17.2; its diagnostic version intentionally remains 17.2. The build instructions below describe that runtime base.
+v17.2.2 rebuilds the category ASI with the official shared Microsoft runtime and final version metadata. The functional C++ code is unchanged. All 20 game payloads and the DMM v3.1 field-level prices from 17.2.1 are retained; the package and helper both report 17.2.2.
 
 The [field converter](../../../tooling/crimson_mod_tools/field_patches_204.py) exposes `alden_prices` and `steelheart_stamina`. Supply the official DMM parser, the vanilla ItemInfo body, legacy manifests and the catalog item IDs. Conversion requires an exact parser round-trip and byte-identical effects to the original patches. No parser binary or third-party assets are redistributed. The parser binding used for game 2.04.05 comes from [dmm-parser commit cb1296e](https://github.com/exodiaprivate-eng/dmm-parser/commit/cb1296e8261818e0f6661a21de258ae2cdc8a161); later schemas may target a different game build.
 
@@ -20,7 +20,7 @@ The native 2×4 buy grid remains without Better Inventory; the original Better I
 
 ## Build
 
-Use Python with Capstone and Visual Studio x64 C++ build tools:
+Use Python with Capstone and Visual Studio x64 C++ build tools, including the Windows SDK resource compiler:
 
 ```powershell
 python build_runtime_shop.py --alden C:\Inputs\Alden17.1.zip --better-inventory C:\Inputs\BetterInventory3.3.zip --vanilla-ui C:\Inputs\npcstorebuyview2_game.uibinary --exe C:\Inputs\CrimsonDesert.exe --output C:\Output\AldenRuntime
@@ -29,6 +29,10 @@ python build_runtime_shop.py --alden C:\Inputs\Alden17.1.zip --better-inventory 
 All four inputs are checked against exact hashes for game 2.04.05 / Steam 26361232. Better Inventory is a build-time verification input, not a runtime dependency. The build checks augmented tree hashes, reversibility and the unchanged buy-grid subtree. Generated game-derived headers, fixtures and complete game assets belong in the local output directory, outside Git.
 
 `runtime_build_inputs.py` provides read-only archive and dependency-list helpers. `ui_binary.py` decodes the build-specific tree for validation. `native/build_runtime.cmd` runs in the generated output directory and compiles the helper and regression hosts. The build reuses licensed [MinHook 1.3.4 source](../../mining-helmet-always-on/source/src/vendor/minhook/) and includes its license. `native/build.cmd` remains the legacy v17.1 build entry.
+
+The working-tree runtime build now uses `/MD` consistently for the helper, MinHook and regression hosts, with Control Flow Guard on every object and ASLR/DEP retained. It uses the official shared Microsoft runtime instead of embedding a separate static copy. Install the current [Microsoft Visual C++ v14 Redistributable, x64](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist) when needed. Runtime DLLs are not bundled. `version.rc` reads the generated `version_generated.h` for honest product/version metadata; this is not an Authenticode signature.
+
+The current builder produces **17.2.2** for both package and helper, without a prerelease flag. It reuses the validated 17.2.1 field-level price targets from the checked-in recipe instead of the legacy fixed-offset manifest. All 20 game payloads and price effects are unchanged. The final runtime differs from the gameplay-confirmed build only in diagnostic/version metadata; native regressions and direct Defender scans passed afterward. The compiler/runtime change does not guarantee clearance by other antivirus engines.
 
 ## Runtime behavior
 
@@ -40,7 +44,7 @@ Category callbacks activate only after successful style registration. Optional s
 
 ## Validation
 
-The author confirmed the candidate's categories, buying, tab switching and absence of DMM conflicts with original Better Inventory on a non-DLC installation on 3 November 2026. v17.2 keeps the exact runtime source and all 20 game payloads from that candidate; the generated native header changes only its diagnostic version string. The final ZIP has not been separately run in game.
+The author confirmed the category runtime with original Better Inventory on a non-DLC installation on 3 November 2026 and confirmed the shared-runtime rebuild in game on 4 November 2026. Final changes from that confirmed rebuild are the diagnostic version, VERSIONINFO strings and removal of the prerelease flag. Native regression tests and direct Defender scans were repeated on the final 17.2.2 ASI. The exact final ZIP has not been separately run in game.
 
 Native regressions cover category callbacks, purchase/stock identity, reopen, merchant isolation, thread ownership, reentrancy, unsupported/truncated input, EOF/decode failures and nested/concurrent loads. The isolated host executes the original 64-byte memory-read routine, actual dependency-consumer branch flow and real MinHook redirects/trampolines/cleanup. The dependency consumer reproduces the old missing-CSS abort and verifies normal UI binding with late CSS registration, including optional style failure. CSS compiler/decoder and renderer calls are fixtures, not a complete game execution.
 

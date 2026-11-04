@@ -1,0 +1,26 @@
+{
+  "CheckedAt": "2026-11-04T14:24:51.3519266+01:00",
+  "Status": {
+    "AMProductVersion": "4.18.26100.4",
+    "AMEngineVersion": "1.1.26100.4",
+    "AntivirusSignatureVersion": "1.463.117.0",
+    "AntivirusSignatureLastUpdated": "2026-11-03T23:44:28+01:00",
+    "AntivirusEnabled": true,
+    "RealTimeProtectionEnabled": true
+  },
+  "DisableRemediation": true,
+  "Scans": [
+    {
+      "FileName": "Alden Category Tabs.asi",
+      "SHA256": "3cc2566209ab1ea9e8692c04280cb61764a533356fc398867e151306b0400ec4",
+      "ExitCode": 0,
+      "Output": "Scan finished. No threats found."
+    },
+    {
+      "FileName": "Alden_Shop.zip",
+      "SHA256": "ab97e1f5e67348f4ab1763aaf3c03f0c1d945d48b5f59460a79a81ac8f57f3af",
+      "ExitCode": 0,
+      "Output": "Scan finished. No threats found."
+    }
+  ]
+}

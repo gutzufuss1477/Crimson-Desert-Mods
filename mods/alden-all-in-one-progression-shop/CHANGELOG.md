@@ -1,5 +1,15 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## v17.2.2 — 4 November 2026 — game 2.04.05
+
+- Rebuild the category helper with the official shared Microsoft C++ runtime and proper version metadata; retain ASLR/DEP and apply Control Flow Guard to all compiled objects.
+- The replacement ASI passes a direct local Defender scan using the same signature version that detected the previous helper. Other scanners and future signatures are not guaranteed; no vendor false-positive verdict has been received.
+- Keep all shop logic, 567 items, 706 prices, stock, eight tabs, 15 languages and existing Better Inventory / Equip All Armor compatibility.
+- Author confirmed the new runtime in game. Final ASI preserves its functional code and uses release version 17.2.2 throughout.
+- Requires the official Microsoft Visual C++ v14 Redistributable (x64). Replace both the old package and category helper. DLC data remain unverified.
+
+[Download v17.2.2](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19508) · [Validation and checksums](../../releases/alden-v17.2.2-b26361232.md). Previous v17.2.1 is archived.
+
 ## v17.2.1 — 4 November 2026 — game 2.04.05
 
 - Fix the outdated/partially skipped 1 Copper patch with original Character Creator Enhanced 9.1.32 / Equip All Armor.

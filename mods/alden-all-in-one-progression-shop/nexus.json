@@ -4,15 +4,42 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2066,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
-  "pageVersion": "17.2.1",
+  "pageVersion": "17.2.2",
   "sourceStatus": "published-release",
-  "sourceNote": "Alden_Shop v17.2.1 published through Nexus API v3 on 2026-11-04. The author confirmed Alden, Steelheart, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The final packages preserve the confirmed field targets, effects and runtime payloads; only release metadata and readmes changed. The exact final ZIPs were not separately run in game. DLC installations/data remain unverified. Both data-application orders, idempotence and exact original effects passed regression checks. Published download SHA-256 verified.",
+  "sourceNote": "Published via Nexus API v3 on 2026-11-04. Runtime confirmed in game; final helper changes only diagnostic/version metadata. Final native regressions and direct ASI/ZIP Defender scans passed (signature 1.463.117.0). All 20 game files and 706 price targets retained. Other antivirus vendors and DLC data remain unverified.",
   "currentFiles": [
+    {
+      "fileId": 19508,
+      "name": "Alden Shop 17.2.2 - All Items 1 Copper",
+      "version": "17.2.2",
+      "category": "MAIN",
+      "gameVersion": "2.04.05",
+      "steamBuild": "26361232",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "Published via Nexus API v3 on 2026-11-04. Runtime confirmed in game; final helper changes only diagnostic/version metadata. Final native regressions and direct ASI/ZIP Defender scans passed (signature 1.463.117.0). All 20 game files and 706 price targets retained. Other antivirus vendors and DLC data remain unverified.",
+      "sha256": "ab97e1f5e67348f4ab1763aaf3c03f0c1d945d48b5f59460a79a81ac8f57f3af",
+      "bytes": 4449605,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19508",
+      "dlcCompatibilityValidated": false,
+      "dmmMinimumVersion": "4.6.4",
+      "characterCreatorVersion": "9.1.32",
+      "originalEquipAllArmorCompatible": true,
+      "betterInventoryVersion": "3.3",
+      "sharedUiFileConflicts": false,
+      "categoryAsiVersion": "17.2.2",
+      "categoryAsiSha256": "3cc2566209ab1ea9e8692c04280cb61764a533356fc398867e151306b0400ec4",
+      "microsoftRuntime": "Visual C++ v14 x64, current supported release",
+      "localDefenderResult": "No threats found",
+      "publishedDownloadSha256Verified": true
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 19467,
       "name": "Alden Shop 17.2.1 - All Items 1 Copper",
       "version": "17.2.1",
-      "category": "MAIN",
+      "category": "ARCHIVED",
       "gameVersion": "2.04.05",
       "steamBuild": "26361232",
       "runtimeBehaviorAuthorConfirmed": true,
@@ -28,9 +55,7 @@
       "betterInventoryVersion": "3.3",
       "sharedUiFileConflicts": false,
       "categoryAsiVersion": "17.2"
-    }
-  ],
-  "archivedFiles": [
+    },
     {
       "fileId": 19380,
       "name": "Alden Shop 17.2 - All Items 1 Copper",

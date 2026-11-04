@@ -1,54 +1,56 @@
-ALDEN SHOP v17.2
-Crimson Desert 2.04.05 / Steam build 26361232
+ALDEN SHOP 17.2.2
+Crimson Desert 2.04.05 / Steam build 26361232; DMM 4.6.4 or later.
 https://www.nexusmods.com/crimsondesert/mods/2066
 
-567 items at 1 Copper, eight category tabs, 15 game text languages.
-Category tabs now work alongside the original Better Inventory and Trade UI
-3.3 without shared UI file replacements or a required load order.
-Better Inventory is optional and installed separately from its original page.
+567 items at 1 Copper, eight categories and 15 game text languages.
+The category helper now uses the official shared Microsoft C++ runtime,
+with version information and Control Flow Guard on all compiled objects.
+Shop behavior, items, stock, language files and price targets are unchanged.
+Original Better Inventory and Equip All Armor compatibility is retained.
+
+REQUIREMENTS
+Microsoft Visual C++ v14 Redistributable (x64), current supported release:
+https://aka.ms/vc14/vc_redist.x64.exe
+No Microsoft runtime DLLs are bundled. Enable DMM's ASI loader.
 
 INSTALL / UPDATE
-1. Close the game and unmount in DMM (4.6.4 or later).
-2. Completely replace the previous Alden mod, including old test versions.
-   Do not copy over an existing Alden folder: obsolete UI files must be removed.
-3. Import Alden_Shop.zip. Enable Alden Shop and its 1 Copper price patch.
-4. Replace and enable the included Alden Category Tabs.asi in ASI Mods.
-   Enable DMM's ASI loader. Use only one Alden mod and one category helper.
+1. Close the game and unmount in DMM.
+2. Completely replace the previous Alden package, including test versions.
+   Do not merge into an old folder or keep duplicate price patches.
+3. Import Alden_Shop.zip. Enable Alden Shop and Alden Shop - 1 Copper.
+4. Replace/enable the included Alden Category Tabs.asi in ASI Mods.
+   Keep only one Alden category helper active.
 5. Mount, restart the game and visit Alden.
 
-If using Better Inventory, follow its author's installation instructions,
-including the DLC-specific texture instructions. Alden includes no Better
-Inventory assets and requires no modified version or combined package.
-Either DMM load order produces the same files for these two mods.
-
-CATEGORIES
-All 567; Abyss 94; Abyss Plans 93; Books 71; Recipes 95;
-Blueprints 125; Materials 39; Contracts 50.
-Click a tab or use the displayed keyboard/controller tab controls.
-Labels follow the game's text language; longer labels can wrap.
-Tiered Abyss Gear remains Tier I. Craft higher tiers yourself.
-The catalog, stock and 706 price patches are unchanged from v17.1.
-
 COMPATIBILITY
-Without Better Inventory, the native 2-column / 4-row buy grid is preserved.
-With original Better Inventory 3.3, its 3-column / 5-row grid is preserved.
-No shared shop HTML, compiled UI, shop CSS or inventory textures are replaced.
-Other shop-data, item-price or localization replacements may still conflict.
-The helper targets the exact supported game build and recognized buy UI.
+Same 567 items, 706 field-level price changes and all 20 game files as 17.2.1.
+Original Better Inventory and Trade UI 3.3 and Character Creator Enhanced
+9.1.32 / Equip All Armor remain separate and optional. No modified third-party
+mod, combined package or compatibility patch is required. Follow their authors'
+installation instructions, including Better Inventory's DLC texture rules.
+Alden replaces no shared shop UI files; either Better Inventory order works.
+Tiered Abyss Gear remains Tier I. No DLC-exclusive items are added.
+Other mods changing the same shop data, prices or localization may conflict.
 
-The author confirmed categories, buying, tab switching and no DMM conflicts
-with original Better Inventory on a non-DLC installation. The release keeps
-the tested candidate's runtime logic and all 20 game payloads unchanged;
-only diagnostic version text and release packaging have changed.
-Standalone and reversed-order cases passed technical checks, but have no
-separate gameplay confirmation. DLC installations/data tables are unverified;
-no DLC-exclusive items are added and universal DLC support is not claimed.
+VALIDATION
+The author confirmed the new runtime in game on 4 November 2026. The final
+helper keeps the confirmed functional code; only its diagnostic/version
+metadata was finalized to 17.2.2. All game files and price targets are unchanged.
+Native category and runtime UI tests passed, including vanilla/Better Inventory
+fixtures, purchase identity, single-step input and wrong-process refusal.
+DLC installations/data remain unverified.
+
+The previous ASI's Defender warning was reproducible. The replacement ASI
+passed a direct local Microsoft Defender scan on 4 November 2026 with
+signature 1.463.117.0, which detected the old ASI. This is not a guarantee
+for other antivirus engines or future signatures; no vendor false-positive
+determination has been received. Antivirus settings were not changed.
+The ASI is unsigned. Report any remaining warning with the file name,
+antivirus product and detection name; do not disable protection to install it.
 
 UNINSTALL
 Close the game, unmount, disable Alden Shop, its price patch and category ASI,
-then remount the remaining mods. Purchases and spent money are not rolled back.
+then remount. Purchased items and money spent are not rolled back.
 
-CREDITS
-gutzufuss1477 / Blablup. Developed with AI assistance.
-MinHook 1.3.4 license is included. Source and release documentation:
-https://github.com/gutzufuss1477/Crimson-Desert-Mods
+Blablup / gutzufuss1477. Developed with AI assistance. MIT; MinHook license
+included. Source: https://github.com/gutzufuss1477/Crimson-Desert-Mods

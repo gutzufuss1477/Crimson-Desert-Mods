@@ -22,7 +22,8 @@ from runtime_build_inputs import (ALDEN_SHA256, BETTER_SHA256, BINARY, HTML,
 from ui_binary import Reader, number, string, strings
 
 HERE = Path(__file__).resolve().parent
-VERSION = '17.2'
+VERSION = '17.2.2'
+HELPER_VERSION = VERSION
 EXE_SHA = 'df531a585bf84ceb47779304cc8b3caaf976aea88424c32605885623cd4519c7'
 VANILLA_SHA = '68ab1eb625358434a8d65912d5a904085bcafb620c8d4ca88087d12dc8de396b'
 CSS = 'files/0012/ui/xml/gamemain/play/aldencategorytabs.css'
@@ -130,8 +131,13 @@ def build(args):
     out = args.output.resolve(); out.mkdir(parents=True, exist_ok=True)
     native = out / 'native-build'; native.mkdir(exist_ok=True)
     for file in (HERE / 'native').iterdir():
-        if file.is_file() and file.suffix in {'.cpp', '.hpp', '.cmd'}:
+        if file.is_file() and file.suffix in {'.cpp', '.hpp', '.cmd', '.rc'}:
             (native / file.name).write_bytes(file.read_bytes())
+    version_parts = [int(part) for part in HELPER_VERSION.split('-')[0].split('.')]
+    version_parts += [0] * (4 - len(version_parts))
+    (native / 'version_generated.h').write_text(
+        '#pragma once\n#define ALDEN_FILE_VERSION ' + ','.join(map(str, version_parts)) +
+        '\n#define ALDEN_FILE_FLAGS 0\n#define ALDEN_VERSION_TEXT "' + HELPER_VERSION + '\\0"\n')
     vendor = HERE.parents[1] / 'mining-helmet-always-on/source/src/vendor/minhook'
     # This existing repository dependency carries its complete license/provenance.
     shutil.copytree(vendor, native / 'vendor/minhook', dirs_exist_ok=True)
@@ -141,7 +147,7 @@ def build(args):
     footer = string('UI/GameMain/Play/NpcStoreBuyView2.html') + bytes(5)
     assert vanilla.endswith(footer) and better[BINARY].endswith(footer)
     code = ['#pragma once', '#include <span>', '#include <cstddef>', '#include <cstdint>', 'namespace alden::runtime {',
-            f'inline constexpr char Version[]="Alden Category Tabs {VERSION} / Steam 26361232 / runtime UI augmentation";',
+            f'inline constexpr char Version[]="Alden Category Tabs {HELPER_VERSION} / Steam 26361232 / runtime UI augmentation";',
             f'inline constexpr char CssHash[]="{sha(css)}";',
             f'inline constexpr char VanillaInputHash[]="{sha(vanilla)}";',
             f'inline constexpr char BetterInputHash[]="{sha(better[BINARY])}";',
@@ -203,12 +209,15 @@ def build(args):
         if log_path.exists() and log_path.stat().st_mtime_ns >= start and 'REFUSED: wrong process' in log_path.read_text(errors='replace'): break
         time.sleep(.1)
     else: raise ValueError('Wrong-process guard failed')
-    prices = json.loads(alden['Alden_AIO_Shop_All_Items_1_Copper_2.04.05.json'])
-    prices.update(name='Alden Shop - 1 Copper', version=VERSION,
-                  description='567 items; enable with Alden Shop and the matching category ASI.')
+    # Keep the validated field-level price targets, including Equip All Armor
+    # compatibility; do not reintroduce the legacy fixed-offset price manifest.
+    prices = json.loads((HERE.parents[2] / 'recipes/alden-v17.2.1-b26361232/field-patches.json').read_text(encoding='utf-8'))
+    assert prices['format'] == 3 and prices['format_minor'] == 1
+    assert sum(len(target['intents']) for target in prices['targets']) == 706
+    prices['modinfo']['version'] = VERSION
     manifest = dict(format='crimson_browser_mod_v1', id='AldenShop', title='Alden Shop', author='Blablup',
                     version=VERSION, enabled=True, priority=1, files_dir='files',
-                    description='567 items, localized category tabs added at runtime. Optional original Better Inventory 3.3; either load order. No shared UI files replaced.')
+                    description='567 items with localized runtime categories and field-level 1 Copper prices. Compatible data edits for original Equip All Armor; optional original Better Inventory 3.3.')
     payload.update({'Alden Category Tabs.asi': asi_path.read_bytes(),
                     'Preise.json': json.dumps(prices, ensure_ascii=False, indent=2).encode(),
                     'manifest.json': json.dumps(manifest, ensure_ascii=False, indent=2).encode(),
@@ -218,7 +227,7 @@ def build(args):
     dest = out / 'Alden_Shop.zip'
     with zipfile.ZipFile(dest, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(payload.items()):
-            info = zipfile.ZipInfo(name, (2026, 11, 3, 0, 0, 0)); info.compress_type = zipfile.ZIP_DEFLATED
+            info = zipfile.ZipInfo(name, (2026, 11, 4, 0, 0, 0)); info.compress_type = zipfile.ZIP_DEFLATED
             z.writestr(info, data)
     with zipfile.ZipFile(dest) as z:
         assert z.testzip() is None and all(z.read(n) == v for n, v in payload.items())

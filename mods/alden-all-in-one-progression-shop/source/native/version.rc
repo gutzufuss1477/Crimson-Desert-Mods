@@ -1,0 +1,31 @@
+#include <winver.h>
+#include "version_generated.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION ALDEN_FILE_VERSION
+ PRODUCTVERSION ALDEN_FILE_VERSION
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS ALDEN_FILE_FLAGS
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_DLL
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Blablup\0"
+            VALUE "FileDescription", "Alden Shop category tabs for Crimson Desert\0"
+            VALUE "FileVersion", ALDEN_VERSION_TEXT
+            VALUE "InternalName", "AldenCategoryTabs\0"
+            VALUE "LegalCopyright", "Copyright 2026 Blablup. MIT license.\0"
+            VALUE "OriginalFilename", "Alden Category Tabs.asi\0"
+            VALUE "ProductName", "Alden Shop\0"
+            VALUE "ProductVersion", ALDEN_VERSION_TEXT
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0409, 1200
+    END
+END

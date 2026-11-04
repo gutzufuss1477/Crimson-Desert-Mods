@@ -1,31 +1,33 @@
 # Alden All-In-One Progression Shop
 
-Current release: **v17.2.1**, for **Crimson Desert 2.04.05 / Steam build 26361232**. Fixes the outdated/partially skipped 1 Copper patch when original **Character Creator Enhanced — Equip All Armor** is enabled. All 706 price edits now target item IDs and fields, preserving armor changes when record sizes move. Both application orders passed data checks. Character Creator stays optional, separate and unchanged.
+Current release: **v17.2.2**, for **Crimson Desert 2.04.05 / Steam build 26361232**. Rebuilds the category helper with the official shared Microsoft C++ runtime and complete version information. The final helper and ZIP pass local Microsoft Defender scans; shop functionality and the existing compatibility fixes are preserved.
 
-The v17.2 category system remains unchanged: original **Better Inventory and Trade UI 3.3** is optional and separate, with no shared UI replacement files or required load order. The included ASI is byte-identical to v17.2 and still reports that version.
+The author confirmed the new runtime in game on **4 November 2026**. The final ASI changes only diagnostic/version metadata from that confirmed build, with native regressions and direct Defender scans repeated afterward. Both the package and helper report **17.2.2**. The exact final archive was not separately run in game; DLC installations/data remain unverified.
 
-The author confirmed Alden, Steelheart, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The final packages preserve the confirmed field targets, effects and runtime payloads; only release metadata and readmes changed. The exact final ZIPs were not separately run in game. DLC installations/data remain unverified.
+The shop offers **567 items at 1 Copper**: All (567), Abyss (94), Abyss Plans (93), Books (71), Recipes (95), Blueprints (125), Materials (39) and Contracts (50). All 20 game payloads and all 706 field-level price targets are unchanged from 17.2.1. Eight tabs follow the game text language across all 15 variants, with automatic widths/wrapping and single-step keyboard/controller input. Tiered Abyss Gear stays at Tier I; craft higher tiers yourself. No DLC-exclusive items are added.
 
-The catalog contains **567 items at 1 Copper**: All (567), Abyss (94), Abyss Plans (93), Books (71), Recipes (95), Blueprints (125), Materials (39) and Contracts (50). Labels follow the game text language, with all 15 variants included. Tab widths follow the label and can wrap onto a second row. Stock, the effect of all 706 prices and single-step keyboard/controller input are unchanged. Other merchant records are preserved.
+[Download v17.2.2 on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19508) · [Changelog](CHANGELOG.md) · [Release notes and checksums](../../releases/alden-v17.2.2-b26361232.md) · [Validation recipe](../../recipes/alden-v17.2.2-b26361232/)
 
-Tiered Abyss Gear is deliberately offered at Tier I. Tier II/III, including Vitality II/III, are not sold, leaving higher-tier crafting to the player. No DLC-exclusive items are added.
+## Requirements and installation
 
-[Download v17.2.1 on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19467)
+Use **DMM 4.6.4+** with its ASI loader and the current **[Microsoft Visual C++ v14 Redistributable, x64](https://aka.ms/vc14/vc_redist.x64.exe)**. Microsoft runtime DLLs are not bundled.
 
-[Changelog](CHANGELOG.md) · [Release notes and checksums](../../releases/alden-v17.2.1-b26361232.md) · [Manifest and validation recipe](../../recipes/alden-v17.2.1-b26361232/) · [Unchanged catalog](../../recipes/alden-v17-b26361232/)
+Close the game and unmount in DMM. Completely replace the previous Alden mod, including old test versions; do not merge into an old folder. Import `Alden_Shop.zip`, enable **Alden Shop** and **Alden Shop - 1 Copper**, and replace/enable the included **Alden Category Tabs.asi** under ASI Mods. Mount and restart. Keep only one Alden data mod, price patch and helper active. Do not manually copy the internal `files/` folder into the game.
 
-## Install / update
+## Compatibility
 
-Close the game and unmount in **DMM 4.6.4 or later**. Completely replace the previous Alden mod, including test builds. **Do not merge into an old Alden folder:** obsolete UI replacements must be removed. Import `Alden_Shop.zip`, enable Alden Shop and its 1 Copper price patch, and replace/enable the included **Alden Category Tabs.asi** in ASI Mods. Enable DMM's ASI loader, mount and restart. Only one Alden data mod and one category helper should be active. Do not manually copy the internal `files/` folder into the game.
+Original **[Better Inventory and Trade UI 3.3](https://www.nexusmods.com/crimsondesert/mods/452)** remains optional and separate, with no shared UI replacement paths or required load order. Follow its author's installation instructions, including the DLC-specific texture rules. The native 2×4 buy grid remains without it; its 3×5 grid remains when installed.
 
-If using [Better Inventory](https://www.nexusmods.com/crimsondesert/mods/452), follow its author's installation instructions, including the DLC-specific texture instructions. Alden supplies no Better Inventory files. Either order is valid for these two mods. Without it, the native 2×4 buy grid remains; with it, the original Better Inventory 3×5 grid remains.
+Original **[Character Creator Enhanced 9.1.32 / Equip All Armor](https://www.nexusmods.com/crimsondesert/mods/837)** remains optional and unmodified. Alden's field-level price targets preserve armor changes in either application order. No combined mod or extra compatibility patch is needed. Other mods changing the same shop data, prices or localization can still conflict.
 
-To uninstall, close the game, unmount, disable Alden Shop, its price patch **and ASI**, then remount. Purchased items and spent money are not rolled back. Other shop/data, item-price or localization replacements can still conflict; unrelated shop UI replacements are not validated.
+The combined setup with Steelheart v10 was previously confirmed in DMM and in game without DLC. All 706 price targets and the 20 game payloads are preserved in this release. Standalone/reversed-order cases have technical checks but no separate gameplay confirmation; DLC data remain unvalidated.
 
-## Source and validation
+## Antivirus validation
 
-[Source/build instructions](source/) describe the guarded runtime augmentation and native regression tests. The package contains 19 unchanged data/language files plus Alden's own stylesheet, with zero paths shared by the 36-file original Better Inventory package. Both overlay orders are byte-identical. All 15 language files passed data validation; English labels and wrapping were previously confirmed in game.
+Reports against the old 17.2/17.2.1 helper were reproducible. The final 17.2.2 ASI and ZIP each passed direct local Microsoft Defender scans on 4 November 2026 using signature **1.463.117.0**, which detected the old ASI. No protection settings were changed. This does not establish clearance by other engines or future signatures, and no vendor false-positive determination has been received. The ASI is unsigned. Report any remaining warning with its file name, antivirus product and detection name; do not disable protection to install it.
 
-The real DMM mount applied all 5,855 item edits from Equip All Armor, Alden and Steelheart. The mounted table was independently checked: all 706 Alden prices equal 1 and Steelheart's buff level equals 20. See the release recipe for data-level regression results.
+## Uninstall and source
 
-Complete game data/localization and generated game-derived fixtures stay outside Git. Download the complete package from Nexus; `nexus.json` records its version, file ID and checksum.
+Close the game, unmount, disable Alden Shop, its price patch **and category ASI**, then remount. Purchased items and money spent are not rolled back.
+
+[Build instructions and runtime behavior](source/) cover the source, exact game/UI guards and native tests. The complete game-data package remains Nexus-only. Git contains source, patch manifests, catalog/localization recipes, hashes and validation records.
