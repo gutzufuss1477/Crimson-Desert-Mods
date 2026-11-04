@@ -1,4 +1,4 @@
-#include "profiles_26361232.hpp"
+#include "bank_profiles.hpp"
 #include <fstream>
 #include <iterator>
 #include <cstdio>
@@ -6,6 +6,9 @@
 #include <string>
 
 void require(bool ok,const char* reason) { if(!ok){std::fprintf(stderr,"FAIL: %s\n",reason);std::exit(1);} }
+bool resolve_mod(const cd::Image& image, const cd::Plan& plan, cd::Addresses& addresses) {
+    return &plan == &cd::bank_plan ? cd::resolve_bank(image, addresses) : addresses.resolve(image, plan);
+}
 int main(int argc,char** argv) {
     require(argc>=2,"provide local EXE snapshot");
     std::ifstream input(argv[1],std::ios::binary);
@@ -30,7 +33,7 @@ int main(int argc,char** argv) {
     const bool previous=argc>2 && std::strcmp(argv[2],"previous")==0;
     for(unsigned i=0;i<4;++i) {
         cd::Addresses addresses;const auto tick=GetTickCount64();
-        const bool ok=addresses.resolve(image,*plans[i]);
+        const bool ok=resolve_mod(image,*plans[i],addresses);
         std::printf("PLAN %s %s %llu ms id=%x reason=%s\n",names[i],ok?"PASS":"REFUSED",GetTickCount64()-tick,addresses.failed_id,addresses.failure);
         if(previous && i==2) require(!ok,"old bank layout must be rejected");
         else require(ok,"complete plan");
@@ -78,7 +81,7 @@ int main(int argc,char** argv) {
     memory[branch]=memory[branch+1]=0x90;std::memcpy(memory+slot,&wrong,8);
     cd::Addresses mining;
     require(mining.resolve(image,cd::mining_plan),"Mining tolerates our installed Mount/Healthbar hooks");
-    if(!previous) { cd::Addresses bank;require(bank.resolve(image,cd::bank_plan),"Bank tolerates our installed Mount/Healthbar hooks"); }
+    if(!previous) { cd::Addresses bank;require(cd::resolve_bank(image,bank),"Bank tolerates our installed Mount/Healthbar hooks"); }
     memory[site]=saved;memory[branch]=before0;memory[branch+1]=before1;std::memcpy(memory+slot,&original,8);
     // Masked address bytes still require agreement between independent references.
     const auto& global=cd::mining_globals[0];require(global.count>=2,"multiple global witnesses");
@@ -88,15 +91,24 @@ int main(int argc,char** argv) {
     require(!mining.resolve(image,cd::mining_plan) && mining.failed_id==global.id,"inconsistent global references refused");
     std::memcpy(memory+field,&displacement,4);
     if(!previous) {
-        cd::Addresses bank;require(bank.resolve(image,cd::bank_plan),"call edge fixture");
+        cd::Addresses bank;require(cd::resolve_bank(image,bank),"call edge fixture");
         const cd::Node* derived=nullptr;
         for(const auto& node:cd::bank_nodes)if(node.owner){derived=&node;break;}
         require(derived!=nullptr,"derived lookup witness");
         const auto call=bank.rva(derived->owner)+derived->field;
         const auto delta=image.get<int32_t>(call);const int32_t bad=delta+1;
         std::memcpy(memory+call,&bad,4);
-        require(!bank.resolve(image,cd::bank_plan),"changed call destination refused");
+        require(!cd::resolve_bank(image,bank),"changed call destination refused");
         std::memcpy(memory+call,&delta,4);
+        require(cd::resolve_bank(image,bank),"restore bank lookup");
+        // Gold's mov rcx,[rax+disp32] distinguishes the two layouts.
+        const auto member=bank.rva(cd::bank_gold_id)+4191;
+        const auto offset=image.get<uint32_t>(member);
+        require(offset==0x210 || offset==0x218,"recognized gold member");
+        memory[member]=0x20;  // unaudited +0x220
+        require(!cd::resolve_bank(image,bank) && !bank.rva(cd::bank_gold_id) && !bank.rva(0x2df5450),
+                "unknown gold layout disarms both timers");
+        memory[member]=static_cast<uint8_t>(offset);
     }
     cd::Image malformed;require(!malformed.init(memory,100,true),"truncated image refused");
     // Exercise live-pointer semantics in a non-executable relocated fixture.
@@ -129,7 +141,7 @@ int main(int argc,char** argv) {
     }
     require(image.init(memory,size),"ASLR mapped image");
     for(unsigned i=0;i<4;++i) {
-        cd::Addresses addresses;const bool ok=addresses.resolve(image,*plans[i]);
+        cd::Addresses addresses;const bool ok=resolve_mod(image,*plans[i],addresses);
         require(ok==!(previous && i==2),"ASLR resolution / old bank rejection");
     }
     std::puts("PASS: SHA, code mutation, missing/ambiguous patterns, call/global mismatch, vtable mismatch, coexistence, malformed image and rebased-pointer fixture; no game code executed");

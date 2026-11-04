@@ -1,4 +1,4 @@
-// Bank Refresh 1.3.0 - Copyright (c) 2026 Blablup, MIT.
+// Bank Refresh 1.3.1 - Copyright (c) 2026 Blablup, MIT.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -6,7 +6,7 @@
 #include <atomic>
 #include <cstdio>
 #include <cstring>
-#include "../../../../tooling/native/profiles_26361232.hpp"
+#include "../../../../tooling/native/bank_profiles.hpp"
 #include "bank_core.hpp"
 #include "hash_core.hpp"
 #include "vendor/minhook/include/MinHook.h"
@@ -171,7 +171,7 @@ InitResult initialize_impl() {
     if(!mh067::Sha256File(exe,hash)) return InitResult::hash_failed;
     base=reinterpret_cast<uintptr_t>(GetModuleHandleW(nullptr));
     cd::Image image;
-    if(!cd::loaded_image(image) || !addresses.resolve(image,cd::bank_plan)) return InitResult::unknown_build;
+    if(!cd::loaded_image(image) || !cd::resolve_bank(image,addresses)) return InitResult::unknown_build;
     RefreshRva=addresses.rva(0x2df40f0);LookupRva=addresses.rva(0xad0ac0);
     LockRva=addresses.rva(0x3e2eb0);NotifyRva=addresses.rva(0x2deaac0);
     TimerReturnRva=addresses.rva(0x2df4086);BondRefreshRva=addresses.rva(0x2df5450);
