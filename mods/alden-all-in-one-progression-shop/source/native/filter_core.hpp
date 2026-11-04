@@ -10,7 +10,12 @@ inline unsigned category(std::uint32_t id) {
     }
     return lo<sizeof(Catalog)/sizeof(Catalog[0]) && Catalog[lo].id==id ? Catalog[lo].tab : 255;
 }
-struct Row { std::uintptr_t stock; std::uint32_t item; };
+struct Row { std::uintptr_t stock; std::uint32_t item; std::uint32_t index; };
+inline unsigned category(const Row& row) {
+    if(row.index<ModOfferCount) return category(row.item);
+    const auto original=row.index-ModOfferCount;
+    return original<OriginalOfferCount && OriginalItems[original]==row.item ? 8 : 255;
+}
 // Validate the complete input before writing. Retain the original stock pointers
 // and their order, including the original purchase and stock indices they own.
 inline bool select_rows(const Row* input,std::size_t count,unsigned tab,
@@ -18,9 +23,9 @@ inline bool select_rows(const Row* input,std::size_t count,unsigned tab,
     written=0;
     if(tab>=TabCount || count>capacity || (count && (!input || !output))) return false;
     for(std::size_t i=0;i<count;++i)
-        if(!input[i].stock || category(input[i].item)==255) return false;
+        if(!input[i].stock || category(input[i])==255) return false;
     for(std::size_t i=0;i<count;++i)
-        if(tab==0 || category(input[i].item)==tab) output[written++]=input[i].stock;
+        if(tab==0 || category(input[i])==tab) output[written++]=input[i].stock;
     return true;
 }
 }

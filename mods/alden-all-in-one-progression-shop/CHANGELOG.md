@@ -1,5 +1,17 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## v17.3 — 4 November 2026 — game 2.04.05
+
+- Add an Original category containing Alden's 40 native offers with their original stock limits and unlock/restock conditions.
+- Preserve normal prices for 31 original items. Nine items shared with the mod catalog retain the existing 1 Copper price in both places, with separate stock records.
+- Keep all existing 567 mod offers, stock identities, Tier I progression and 706 field-level price changes unchanged.
+- Add the ninth category label in all 15 game text languages. All now contains up to 607 offers (598 distinct items); availability still follows game conditions.
+- Retain original Better Inventory and Equip All Armor compatibility, single-step input and no shared UI replacement files.
+- Original tab, original stocks and price exceptions confirmed in game by the author. Final package changes only the readme from the tested package; ASI and game payloads are identical.
+- Replace both the Alden data package and category ASI. Restored offers use new stock/save identities; historical vanilla purchase counters are not migrated. DLC data remain unverified.
+
+[Download v17.3](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19550) · [Validation and checksums](../../releases/alden-v17.3-b26361232.md). Previous v17.2.2 is archived.
+
 ## v17.2.2 — 4 November 2026 — game 2.04.05
 
 - Rebuild the category helper with the official shared Microsoft C++ runtime and proper version metadata; retain ASLR/DEP and apply Control Flow Guard to all compiled objects.

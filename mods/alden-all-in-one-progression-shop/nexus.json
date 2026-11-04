@@ -4,15 +4,48 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2066,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
-  "pageVersion": "17.2.2",
+  "pageVersion": "17.3",
   "sourceStatus": "published-release",
-  "sourceNote": "Published via Nexus API v3 on 2026-11-04. Runtime confirmed in game; final helper changes only diagnostic/version metadata. Final native regressions and direct ASI/ZIP Defender scans passed (signature 1.463.117.0). All 20 game files and 706 price targets retained. Other antivirus vendors and DLC data remain unverified.",
+  "sourceNote": "Published via Nexus API v3 on 2026-11-04. Original tab, native stocks and expected prices gameplay-confirmed. Final ASI and all 20 game payloads match the confirmed package; readme-only finalization. Native/data checks and final local Defender scans passed. Published download SHA-256 verified. DLC data remain unverified.",
   "currentFiles": [
+    {
+      "fileId": 19550,
+      "name": "Alden Shop 17.3 - Original Shop and Categories",
+      "version": "17.3",
+      "category": "MAIN",
+      "gameVersion": "2.04.05",
+      "steamBuild": "26361232",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "Published via Nexus API v3 on 2026-11-04. Original tab, native stocks and expected prices gameplay-confirmed. Final ASI and all 20 game payloads match the confirmed package; readme-only finalization. Native/data checks and final local Defender scans passed. Published download SHA-256 verified. DLC data remain unverified.",
+      "sha256": "9ef0f129764d47f398c04eba47e9a87c4a611395f7c8f4b9bf4a2c2c25ec0da8",
+      "bytes": 4450500,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19550",
+      "dlcCompatibilityValidated": false,
+      "dmmMinimumVersion": "4.6.4",
+      "characterCreatorVersion": "9.1.32",
+      "originalEquipAllArmorCompatible": true,
+      "betterInventoryVersion": "3.3",
+      "sharedUiFileConflicts": false,
+      "categoryAsiVersion": "17.3",
+      "categoryAsiSha256": "99d814cd7152052086e1cb841d9d1c77d6682377735947dd72c8aa1e3eee50ac",
+      "microsoftRuntime": "Visual C++ v14 x64, current supported release",
+      "localDefenderResult": "No threats found",
+      "publishedDownloadSha256Verified": true,
+      "catalogOffers": 607,
+      "distinctItems": 598,
+      "originalOffers": 40,
+      "categories": 9,
+      "originalTabStocksAndPricesConfirmed": true,
+      "gamePayloadAndAsiMatchConfirmedPackage": true
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 19508,
       "name": "Alden Shop 17.2.2 - All Items 1 Copper",
       "version": "17.2.2",
-      "category": "MAIN",
+      "category": "ARCHIVED",
       "gameVersion": "2.04.05",
       "steamBuild": "26361232",
       "runtimeBehaviorAuthorConfirmed": true,
@@ -32,9 +65,7 @@
       "microsoftRuntime": "Visual C++ v14 x64, current supported release",
       "localDefenderResult": "No threats found",
       "publishedDownloadSha256Verified": true
-    }
-  ],
-  "archivedFiles": [
+    },
     {
       "fileId": 19467,
       "name": "Alden Shop 17.2.1 - All Items 1 Copper",

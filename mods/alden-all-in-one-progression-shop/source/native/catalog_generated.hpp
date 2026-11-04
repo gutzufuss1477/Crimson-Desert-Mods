@@ -572,5 +572,17 @@ inline constexpr CatalogEntry Catalog[] = {
     {1006855u, 5},
     {1006856u, 5},
 };
-inline constexpr std::size_t TabCount = 8;
+inline constexpr std::uint32_t ModOfferCount = 567;
+// Original Store_Her_General stock order, independently checked by the builder.
+inline constexpr std::uint32_t OriginalItems[] = {
+    6001, 1003172, 1003678, 1004663, 1004650, 11001, 950003, 950010,
+    950004, 950002, 950001, 1003848, 950006, 950007, 10026, 790002,
+    950005, 1000149, 950008, 1001466, 1001551, 1001552, 1001553,
+    1001556, 1001563, 1001594, 1001595, 1001508, 1001153, 1002112,
+    1002116, 1002117, 1002672, 1002673, 1000878, 700001, 1000659,
+    795009, 1001117, 1000853,
+};
+inline constexpr std::uint32_t OriginalOfferCount = sizeof(OriginalItems)/sizeof(OriginalItems[0]);
+inline constexpr std::uint32_t OfferCount = ModOfferCount + OriginalOfferCount;
+inline constexpr std::size_t TabCount = 9;
 }

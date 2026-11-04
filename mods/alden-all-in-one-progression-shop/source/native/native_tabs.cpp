@@ -164,7 +164,7 @@ unsigned char __fastcall count_hook(Ptr stock,unsigned count) {
         if(!valid) break;
         const auto info=function<InfoFn>(profile::ItemInfo)(0,index);
         rows[n].stock=record;
-        valid=value(info+8,rows[n].item) && category(rows[n].item)!=255;
+        valid=value(info+8,rows[n].item) && value(record+0x28,rows[n].index) && category(rows[n])!=255;
     }
     std::size_t selected{};
     if(!valid || !select_rows(rows,count,s->tab,reinterpret_cast<Ptr*>(entries),capacity,selected)) {
@@ -210,7 +210,7 @@ void __fastcall fill_hook(Ptr root) {
     if(active) select_tab(*s,0);
     show_bar(*s,active);
     s->busy=false;
-    log(active ? "OPEN: Alden, eight tabs, default All" : "HIDDEN: another merchant or unsupported TabBar");
+    log(active ? "OPEN: Alden, nine tabs including Original, default All" : "HIDDEN: another merchant or unsupported TabBar");
 }
 
 void __fastcall tab_hook(Ptr root,Ptr bar,bool preview,unsigned previous,unsigned selected,Ptr header) {

@@ -144,7 +144,7 @@ bool __fastcall deserialize_hook(Ptr loader,Ptr stream) {
     // The outer loader checks the ORIGINAL stream for unread bytes. Only its
     // cursor is advanced; its buffer pointer, ownership and size never change.
     reinterpret_cast<MemoryReader*>(stream)->cursor=source.size;
-    log("UI AUGMENTED: native buy UI + eight categories; original grid preserved; no shared UI file replacement");
+    log("UI AUGMENTED: native buy UI + nine categories; original grid preserved; no shared UI file replacement");
     return true;
 }
 

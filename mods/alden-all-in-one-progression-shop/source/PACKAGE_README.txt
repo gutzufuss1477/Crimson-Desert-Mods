@@ -1,29 +1,34 @@
-ALDEN SHOP 17.2.2
+ALDEN SHOP 17.3
 Crimson Desert 2.04.05 / Steam build 26361232; DMM 4.6.4 or later.
 https://www.nexusmods.com/crimsondesert/mods/2066
 
-567 items at 1 Copper, eight categories and 15 game text languages.
-The category helper now uses the official shared Microsoft C++ runtime,
-with version information and Control Flow Guard on all compiled objects.
-Shop behavior, items, stock, language files and price targets are unchanged.
-Original Better Inventory and Equip All Armor compatibility is retained.
+567 mod offers at 1 Copper plus Alden's 40 original offers.
+Nine categories, including Original, in 15 game text languages.
+The Original tab preserves native stock limits and unlock/restock conditions.
+31 original items retain their normal prices. The nine items also offered in
+mod categories remain 1 Copper in both places, with separate stock records.
+All contains up to 607 offers (598 distinct items). Conditions and sold-out
+stock can reduce the visible selection. Tab numbers indicate catalog sizes.
+Existing mod offers and stock identities remain unchanged. Restored original
+offers get new stock/save identities; past vanilla purchase counters are not
+migrated. The game's current unlock conditions still apply.
 
 REQUIREMENTS
-Microsoft Visual C++ v14 Redistributable (x64), current supported release:
+Microsoft Visual C++ v14 Redistributable (x64):
 https://aka.ms/vc14/vc_redist.x64.exe
 No Microsoft runtime DLLs are bundled. Enable DMM's ASI loader.
 
 INSTALL / UPDATE
 1. Close the game and unmount in DMM.
-2. Completely replace the previous Alden package, including test versions.
+2. Completely replace the previous Alden package.
    Do not merge into an old folder or keep duplicate price patches.
 3. Import Alden_Shop.zip. Enable Alden Shop and Alden Shop - 1 Copper.
 4. Replace/enable the included Alden Category Tabs.asi in ASI Mods.
-   Keep only one Alden category helper active.
+   Keep only one Alden category helper active. Both parts must be 17.3.
 5. Mount, restart the game and visit Alden.
 
 COMPATIBILITY
-Same 567 items, 706 field-level price changes and all 20 game files as 17.2.1.
+The same 706 field-level price edits are retained.
 Original Better Inventory and Trade UI 3.3 and Character Creator Enhanced
 9.1.32 / Equip All Armor remain separate and optional. No modified third-party
 mod, combined package or compatibility patch is required. Follow their authors'
@@ -33,20 +38,12 @@ Tiered Abyss Gear remains Tier I. No DLC-exclusive items are added.
 Other mods changing the same shop data, prices or localization may conflict.
 
 VALIDATION
-The author confirmed the new runtime in game on 4 November 2026. The final
-helper keeps the confirmed functional code; only its diagnostic/version
-metadata was finalized to 17.2.2. All game files and price targets are unchanged.
-Native category and runtime UI tests passed, including vanilla/Better Inventory
-fixtures, purchase identity, single-step input and wrong-process refusal.
-DLC installations/data remain unverified.
-
-The previous ASI's Defender warning was reproducible. The replacement ASI
-passed a direct local Microsoft Defender scan on 4 November 2026 with
-signature 1.463.117.0, which detected the old ASI. This is not a guarantee
-for other antivirus engines or future signatures; no vendor false-positive
-determination has been received. Antivirus settings were not changed.
-The ASI is unsigned. Report any remaining warning with the file name,
-antivirus product and detection name; do not disable protection to install it.
+The builder checks stock data, all 15 language files, native category callbacks,
+purchase-record identity and the vanilla/Better Inventory UI fixtures.
+The author confirmed the Original tab, original stock limits and prices
+(including the nine 1 Copper exceptions) in game on 4 November 2026.
+DLC installations/data remain unverified. The official shared Microsoft runtime and Control Flow Guard
+build settings from 17.2.2 are retained. The ASI is unsigned.
 
 UNINSTALL
 Close the game, unmount, disable Alden Shop, its price patch and category ASI,

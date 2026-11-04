@@ -11,6 +11,7 @@ import json
 import shutil
 import struct
 import subprocess
+import sys
 import time
 import zipfile
 import capstone
@@ -20,9 +21,10 @@ from runtime_build_inputs import (ALDEN_SHA256, BETTER_SHA256, BINARY, HTML,
                                  CSS as SHARED_CSS, EXPECTED_OUTPUT_HASHES,
                                  read_archive, unique, stylesheet_list, crlf)
 from ui_binary import Reader, number, string, strings
+from original_shop import add_header, add_original_stock, add_localization, ORIGINAL_IDS
 
 HERE = Path(__file__).resolve().parent
-VERSION = '17.2.2'
+VERSION = '17.3'
 HELPER_VERSION = VERSION
 EXE_SHA = 'df531a585bf84ceb47779304cc8b3caaf976aea88424c32605885623cd4519c7'
 VANILLA_SHA = '68ab1eb625358434a8d65912d5a904085bcafb620c8d4ca88087d12dc8de396b'
@@ -113,6 +115,11 @@ def build(args):
     # dependencies. Category CSS is bound later by the native stylesheet hook.
     if outputs[0] != alden[BINARY] or [sha(data) for data in outputs] != EXPECTED_OUTPUT_HASHES:
         raise ValueError('Runtime augmentation differs from known category trees')
+    # Validate the known eight-tab input first, then add the Original header.
+    expected_outputs = [add_header(data) for data in outputs]
+    edits = make_edits(add_header(alden[BINARY]), vanilla)
+    outputs = [apply_edits(d, edits) for d in [vanilla, better[BINARY]]]
+    assert outputs == expected_outputs
     assert all(stylesheet_list(before)[2] == stylesheet_list(after)[2]
                for before,after in zip([vanilla,better[BINARY]],outputs))
     for old, new in zip([vanilla, better[BINARY]], outputs):
@@ -128,11 +135,22 @@ def build(args):
     assert len(payload) == 20 and not set(payload) & set(better)
     assert all(v == alden[n] for n, v in payload.items() if n != CSS)
 
+    sys.path.insert(0, str(args.parser_dir.resolve()))
+    import dmm_parser
+    prices = json.loads((HERE.parents[2] / 'recipes/alden-v17.2.1-b26361232/field-patches.json').read_text(encoding='utf-8'))
+    stock_report = add_original_stock(payload, args.vanilla_data, dmm_parser, prices)
+    localization_report = add_localization(payload, dmm_parser)
+    assert len(payload) == 20 and not set(payload) & set(better)
+
     out = args.output.resolve(); out.mkdir(parents=True, exist_ok=True)
     native = out / 'native-build'; native.mkdir(exist_ok=True)
     for file in (HERE / 'native').iterdir():
         if file.is_file() and file.suffix in {'.cpp', '.hpp', '.cmd', '.rc'}:
             (native / file.name).write_bytes(file.read_bytes())
+    original_catalog = (native / 'catalog_generated.hpp').read_text()
+    assert 'TabCount = 9' in original_catalog
+    embedded_ids = original_catalog.split('OriginalItems[] = {', 1)[1].split('}', 1)[0]
+    assert tuple(int(s.strip()) for s in embedded_ids.split(',') if s.strip()) == ORIGINAL_IDS
     version_parts = [int(part) for part in HELPER_VERSION.split('-')[0].split('.')]
     version_parts += [0] * (4 - len(version_parts))
     (native / 'version_generated.h').write_text(
@@ -211,13 +229,12 @@ def build(args):
     else: raise ValueError('Wrong-process guard failed')
     # Keep the validated field-level price targets, including Equip All Armor
     # compatibility; do not reintroduce the legacy fixed-offset price manifest.
-    prices = json.loads((HERE.parents[2] / 'recipes/alden-v17.2.1-b26361232/field-patches.json').read_text(encoding='utf-8'))
     assert prices['format'] == 3 and prices['format_minor'] == 1
     assert sum(len(target['intents']) for target in prices['targets']) == 706
     prices['modinfo']['version'] = VERSION
     manifest = dict(format='crimson_browser_mod_v1', id='AldenShop', title='Alden Shop', author='Blablup',
                     version=VERSION, enabled=True, priority=1, files_dir='files',
-                    description='567 items with localized runtime categories and field-level 1 Copper prices. Compatible data edits for original Equip All Armor; optional original Better Inventory 3.3.')
+                    description='567 mod offers at 1 Copper plus 40 original Alden offers with native stocks and conditions. Nine localized runtime tabs. Original prices except nine shared 1 Copper items. Optional original Better Inventory 3.3.')
     payload.update({'Alden Category Tabs.asi': asi_path.read_bytes(),
                     'Preise.json': json.dumps(prices, ensure_ascii=False, indent=2).encode(),
                     'manifest.json': json.dumps(manifest, ensure_ascii=False, indent=2).encode(),
@@ -232,7 +249,8 @@ def build(args):
     with zipfile.ZipFile(dest) as z:
         assert z.testzip() is None and all(z.read(n) == v for n, v in payload.items())
     report = dict(version=VERSION, package_path=str(dest), package_sha256=sha(dest.read_bytes()),
-                  asi_sha256=sha(asi_path.read_bytes()), game_payload_files=20, unchanged_data_and_language_files=19,
+                  asi_sha256=sha(asi_path.read_bytes()), game_payload_files=20,
+                  original_stock=stock_report, localization=localization_report,
                   shared_paths_with_original_better_inventory=[], native_buy_grid_preserved=True,
                   order_independent_file_overlay=True, input_hashes=[sha(vanilla), sha(better[BINARY])],
                   output_hashes=[sha(v) for v in outputs], native_callbacks_and_runtime_tests='PASS',
@@ -244,6 +262,6 @@ def build(args):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    for arg in ['alden', 'better-inventory', 'vanilla-ui', 'exe', 'output']:
+    for arg in ['alden', 'better-inventory', 'vanilla-ui', 'vanilla-data', 'parser-dir', 'exe', 'output']:
         p.add_argument('--' + arg, type=Path, required=True)
     build(p.parse_args())

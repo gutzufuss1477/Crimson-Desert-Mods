@@ -16,10 +16,10 @@ namespace fixture {
 using alden::Ptr;
 alignas(16) std::array<unsigned char,0x400> root{},stock{},bar{};
 std::array<unsigned char,32> storeInfo{};
-std::array<std::array<unsigned char,32>,567> items{};
-std::array<std::array<unsigned char,0x68>,567> records{},descriptions{};
-std::array<Ptr,567> pointers{};
-std::array<Ptr,567> allPointers{};
+std::array<std::array<unsigned char,32>,alden::OfferCount> items{};
+std::array<std::array<unsigned char,0x68>,alden::OfferCount> records{},descriptions{};
+std::array<Ptr,alden::OfferCount> pointers{};
+std::array<Ptr,alden::OfferCount> allPointers{};
 unsigned fillCalls{},countCalls{},passthroughTab{},selected{},destroyCalls{};
 unsigned initError{},bindError{};
 bool selectorPresent=true;
@@ -51,9 +51,9 @@ Ptr __fastcall destroy(Ptr p,unsigned) { ++destroyCalls; return p; }
 void __fastcall fill(Ptr p) {
     check(p==r(),"fill own root"); ++fillCalls;
     pointers=allPointers;
-    put(s()+0x188,567u);
+    put(s()+0x188,alden::OfferCount);
     put(s()+0x120,0u);
-    alden::count_hook(s(),567);
+    alden::count_hook(s(),alden::OfferCount);
 }
 void setup() {
     alden::base=0x140000000;
@@ -70,12 +70,13 @@ void setup() {
     put(s(),alden::base+alden::profile::StockVtable);
     put(s()+0x17a,std::uint16_t{7});
     put(s()+0x180,reinterpret_cast<Ptr>(pointers.data()));
-    put(s()+0x188,567u); put(s()+0x18c,567u);
-    put(b(),alden::base+alden::profile::TabVtable); put(b()+0xd0,8u);
+    put(s()+0x188,alden::OfferCount); put(s()+0x18c,alden::OfferCount);
+    put(b(),alden::base+alden::profile::TabVtable); put(b()+0xd0,static_cast<unsigned>(alden::TabCount));
     put(reinterpret_cast<Ptr>(storeInfo.data())+8,std::uint16_t{3101});
-    for(unsigned i=0;i<567;++i) {
-        // Reverse the catalog's numeric-ID order so preservation is observable.
-        const auto id=alden::Catalog[566-i].id;
+    for(unsigned i=0;i<alden::OfferCount;++i) {
+        // Reverse mod-ID order; original stock has separate identities for overlaps.
+        const auto id=i<alden::ModOfferCount ? alden::Catalog[alden::ModOfferCount-1-i].id :
+            alden::OriginalItems[i-alden::ModOfferCount];
         put(reinterpret_cast<Ptr>(items[i].data())+8,id);
         const Ptr rec=reinterpret_cast<Ptr>(records[i].data());
         put(rec+0x38,reinterpret_cast<Ptr>(descriptions[i].data()));
@@ -105,7 +106,7 @@ Ptr resolve_test_function(Ptr rva) {
 
 int main() {
     using namespace alden;
-    constexpr unsigned expected[]={567,94,93,71,95,125,39,50};
+    constexpr unsigned expected[]={607,94,93,71,95,125,39,50,40};
     fixture::setup();states[0]={};unsigned initialization=99;
 #ifdef ALDEN_RUNTIME_UI
     categoryStylesAvailable=false;
@@ -149,17 +150,17 @@ int main() {
     check(!states[0].root && fixture::destroyCalls==1,"destruction clears binding even on a different thread");
     std::thread loaderAgain([&] { init_hook(fixture::r(),reinterpret_cast<Ptr>(&initialization)); });
     loaderAgain.join();fill_hook(fixture::r());
-    check(fixture::shown && states[0].tab==0 && get<unsigned>(fixture::s()+0x100)==567,"recreated root takes fresh ownership and opens All");
+    check(fixture::shown && states[0].tab==0 && get<unsigned>(fixture::s()+0x100)==OfferCount,"recreated root takes fresh ownership and opens All");
     fixture::setup();
     fill_hook(fixture::r());
     check(fixture::shown && fixture::selected==0,"Alden opens All with visible tabs");
-    for(unsigned tab=1;tab<8;++tab) {
+    for(unsigned tab=1;tab<TabCount;++tab) {
         tab_hook(fixture::r(),fixture::b(),false,tab-1,tab,0);
         check(get<unsigned>(fixture::s()+0x100)==expected[tab],"correct category count");
         unsigned selected=0;
-        for(unsigned original=0;original<567;++original) {
-            const auto id=Catalog[566-original].id;
-            if(category(id)!=tab) continue;
+        for(unsigned original=0;original<OfferCount;++original) {
+            const auto id=get<std::uint32_t>(reinterpret_cast<Ptr>(fixture::items[original].data())+8);
+            if(category(Row{fixture::allPointers[original],id,original})!=tab) continue;
             const auto pointer=fixture::pointers[selected++];
             check(pointer==fixture::allPointers[original],"display and purchase use original stock record");
             check(get<unsigned>(pointer+0x28)==original,"original purchase index retained");
@@ -168,8 +169,30 @@ int main() {
         fixture::fill(fixture::r()); // Native stock refresh after buying/restocking.
         check(get<unsigned>(fixture::s()+0x100)==expected[tab],"stock refresh retains selected filter");
     }
-    tab_hook(fixture::r(),fixture::b(),false,7,0,0);
+    tab_hook(fixture::r(),fixture::b(),false,8,0,0);
     check(fixture::pointers==fixture::allPointers,"All restores complete original order");
+    unsigned overlaps=0;
+    for(unsigned i=0;i<OriginalOfferCount;++i) {
+        const auto modTab=category(OriginalItems[i]);
+        if(modTab==255) continue;
+        ++overlaps;
+        const auto originalPointer=fixture::allPointers[ModOfferCount+i];
+        tab_hook(fixture::r(),fixture::b(),false,0,8,0);
+        check(fixture::pointers[i]==originalPointer,"Original tab selects the separate vanilla stock record");
+        tab_hook(fixture::r(),fixture::b(),false,8,modTab,0);
+        const auto visible=get<unsigned>(fixture::s()+0x100);
+        check(std::find(fixture::pointers.begin(),fixture::pointers.begin()+visible,originalPointer)==fixture::pointers.begin()+visible,
+              "shared item never reuses original purchase record in a mod category");
+        unsigned matches=0;
+        for(unsigned n=0;n<visible;++n) {
+            const auto index=get<unsigned>(fixture::pointers[n]+0x28);
+            const auto item=get<std::uint32_t>(reinterpret_cast<Ptr>(fixture::items[index].data())+8);
+            if(item==OriginalItems[i]) { ++matches;check(index<ModOfferCount,"shared mod offer retains its old stock index"); }
+        }
+        check(matches==1,"each shared item still has one existing mod offer");
+    }
+    check(overlaps==9,"all nine overlapping items have independent stock records");
+    tab_hook(fixture::r(),fixture::b(),false,1,0,0);
     const auto fills=fixture::fillCalls;
     tab_hook(fixture::r(),fixture::b(),true,0,6,0);
     tab_hook(fixture::r(),fixture::b(),false,0,99,0);
@@ -181,10 +204,10 @@ int main() {
     check(fixture::passthroughTab==1,"unrelated tab routed unchanged");
     tab_hook(fixture::r(),fixture::b(),false,0,6,0);
     fill_hook(fixture::r());
-    check(fixture::selected==0 && get<unsigned>(fixture::s()+0x100)==567,"reopen resets All");
+    check(fixture::selected==0 && get<unsigned>(fixture::s()+0x100)==OfferCount,"reopen resets All");
     put(reinterpret_cast<Ptr>(fixture::storeInfo.data())+8,std::uint16_t{1234});
     fill_hook(fixture::r());
-    check(!fixture::shown && get<unsigned>(fixture::s()+0x100)==567,"other merchants unchanged and bar hidden");
+    check(!fixture::shown && get<unsigned>(fixture::s()+0x100)==OfferCount,"other merchants unchanged and bar hidden");
     fixture::setup();
     put(reinterpret_cast<Ptr>(fixture::items[300].data())+8,0xffffffffu);
     tab_hook(fixture::r(),fixture::b(),false,0,6,0);
@@ -197,14 +220,27 @@ int main() {
     fixture::setup();states[0].tab=6;put(fixture::s()+0x188,0u);
     count_hook(fixture::s(),0);
     check(get<unsigned>(fixture::s()+0x100)==0 && !states[0].fault,"empty stock handled");
+    fixture::setup();states[0].tab=8;
+    // Game conditions may suppress offers. Native indices need not be contiguous.
+    fixture::pointers[0]=fixture::allPointers[ModOfferCount+5];
+    fixture::pointers[1]=fixture::allPointers[ModOfferCount+38];
+    fixture::pointers[2]=fixture::allPointers[0];
+    put(fixture::s()+0x188,3u); count_hook(fixture::s(),3);
+    check(get<unsigned>(fixture::s()+0x100)==2 && !states[0].fault &&
+          fixture::pointers[0]==fixture::allPointers[ModOfferCount+5] &&
+          fixture::pointers[1]==fixture::allPointers[ModOfferCount+38],"conditional original availability preserves sparse native indices");
+    fixture::setup();states[0].tab=8;
+    put(fixture::allPointers[ModOfferCount]+0x28,0xffffffffu);
+    count_hook(fixture::s(),OfferCount);
+    check(states[0].fault && fixture::pointers==fixture::allPointers,"unrecognized original index falls back without partial writes");
     fixture::setup();states[0].tab=6;states[0].ownerThread=0;
-    count_hook(fixture::s(),567);
+    count_hook(fixture::s(),alden::OfferCount);
     check(fixture::pointers==fixture::allPointers,"other UI thread passes through");
     destroy_hook(fixture::r(),1);
     check(states[0].root==0 && fixture::destroyCalls==1,"destruction removes stored UI pointers");
-    Row one{1,Catalog[0].id};Ptr out=0xdead;std::size_t written{};
-    check(!select_rows(&one,1,8,&out,1,written) && out==0xdead,"invalid category is atomic");
+    Row one{1,Catalog[0].id,0};Ptr out=0xdead;std::size_t written{};
+    check(!select_rows(&one,1,static_cast<unsigned>(TabCount),&out,1,written) && out==0xdead,"invalid category is atomic");
     check(!select_rows(&one,1,0,&out,0,written) && out==0xdead,"insufficient capacity is atomic");
-    std::puts("PASS: real loader/update thread handoff, cross-thread destruction/recreation and foreign-thread guard; compiled-UI binding/missing-selector regression; eight tabs, purchase identity/order, stock refresh, reopen, merchant isolation, invalid/empty data and reentrancy.");
+    std::puts("PASS: real loader/update thread handoff, cross-thread destruction/recreation and foreign-thread guard; compiled-UI binding/missing-selector regression; nine tabs, separate original/mod purchase identities, purchase identity/order, stock refresh, reopen, merchant isolation, invalid/empty data and reentrancy.");
     return 0;
 }
