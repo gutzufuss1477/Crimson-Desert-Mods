@@ -1,10 +1,10 @@
-# Faster Bank Refresh â€” Gold and Bonds
+# Faster Bank Refresh — Gold and Bonds
 
 **Bank Refresh 1.3.1** restores the gold-bank and active bond timers on **Crimson Desert 2.04.06 (Steam build 26423880)**. The author confirmed the mod working in game on 5 November 2026.
 
 Independent timers default to 15 in-game minutes. Investments/reinvestment remain manual; native payouts and risk are unchanged. Normal bank checks may briefly delay refresh after zero. Shortened saved deadlines are not restored by uninstalling.
 
-[Nexus](https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=19612) Â· [GitHub release](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/bank-v1.3.1-b26423880)
+[Nexus](https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=19612) · [GitHub release](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/bank-v1.3.1-b26423880)
 
 ## Install
 
