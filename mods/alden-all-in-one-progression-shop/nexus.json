@@ -4,15 +4,38 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 2066,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
-  "pageVersion": "17.2",
+  "pageVersion": "17.2.1",
   "sourceStatus": "published-release",
-  "sourceNote": "v17.2 published through Nexus API v3 on 2026-11-03. Author confirmed categories, purchasing, tab switching and no DMM conflicts with original Better Inventory 3.3 without DLC. All 20 final game payloads and native runtime logic match the confirmed candidate; diagnostic version text and packaging changed. Standalone/reversed order are technically validated only; DLC remains unverified. Published download SHA-256 verified.",
+  "sourceNote": "Alden_Shop v17.2.1 published through Nexus API v3 on 2026-11-04. The author confirmed Alden, Steelheart, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The final packages preserve the confirmed field targets, effects and runtime payloads; only release metadata and readmes changed. The exact final ZIPs were not separately run in game. DLC installations/data remain unverified. Both data-application orders, idempotence and exact original effects passed regression checks. Published download SHA-256 verified.",
   "currentFiles": [
+    {
+      "fileId": 19467,
+      "name": "Alden Shop 17.2.1 - All Items 1 Copper",
+      "version": "17.2.1",
+      "category": "MAIN",
+      "gameVersion": "2.04.05",
+      "steamBuild": "26361232",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "Alden_Shop v17.2.1 published through Nexus API v3 on 2026-11-04. The author confirmed Alden, Steelheart, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The final packages preserve the confirmed field targets, effects and runtime payloads; only release metadata and readmes changed. The exact final ZIPs were not separately run in game. DLC installations/data remain unverified. Both data-application orders, idempotence and exact original effects passed regression checks. Published download SHA-256 verified.",
+      "sha256": "037f2397b44a3654310a2d74e994dbc3adc35e39be9aec58ad14c9585fba39af",
+      "bytes": 4526806,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19467",
+      "dlcCompatibilityValidated": false,
+      "dmmMinimumVersion": "4.6.4",
+      "characterCreatorVersion": "9.1.32",
+      "originalEquipAllArmorCompatible": true,
+      "betterInventoryVersion": "3.3",
+      "sharedUiFileConflicts": false,
+      "categoryAsiVersion": "17.2"
+    }
+  ],
+  "archivedFiles": [
     {
       "fileId": 19380,
       "name": "Alden Shop 17.2 - All Items 1 Copper",
       "version": "17.2",
-      "category": "MAIN",
+      "category": "ARCHIVED",
       "gameVersion": "2.04.05",
       "steamBuild": "26361232",
       "runtimeBehaviorAuthorConfirmed": true,
@@ -24,9 +47,7 @@
       "betterInventoryVersion": "3.3",
       "sharedUiFileConflicts": false,
       "dlcCompatibilityValidated": false
-    }
-  ],
-  "archivedFiles": [
+    },
     {
       "fileId": 19112,
       "name": "Alden_AIO_Shop_All_Items_1_Copper_2.04.05",

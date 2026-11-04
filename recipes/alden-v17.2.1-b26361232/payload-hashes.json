@@ -1,0 +1,106 @@
+{
+  "Alden Category Tabs.asi": {
+    "bytes": 228352,
+    "sha256": "fed68f4e60e80cd9b4755ad1adca570adedc5cfa4c1911f3f2b5732576631af9"
+  },
+  "LICENSE.txt": {
+    "bytes": 1147,
+    "sha256": "2641b05d2ebafbc852ca9b4e90aa29b9976ccbb28648bd4dc79850ec1e4ce364"
+  },
+  "MinHook-LICENSE.txt": {
+    "bytes": 4446,
+    "sha256": "4f21f857550d7be854da6ea5f2da4e6775ca4e3fbb535e4f3d961c47d0bf3335"
+  },
+  "Preise.json": {
+    "bytes": 135431,
+    "sha256": "1de6a212326eba8317d823f54a6338332b4ce1b15b63e734cc4991904a2c756d"
+  },
+  "README.txt": {
+    "bytes": 2406,
+    "sha256": "dae79304fafc77feea8976f132a28021773070d7cd594c3270db043d605c0ebb"
+  },
+  "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfobody": {
+    "bytes": 2742868,
+    "sha256": "147ae23ecfcc59b7613d09c5e254637fdcee3099942cf09b5612e3aaa6a362cc"
+  },
+  "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfoheader": {
+    "bytes": 413778,
+    "sha256": "98d6b1e0ba05d3d7f54cb202c3ca639e7a5684781c1a929183acd55d320d3677"
+  },
+  "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfobody": {
+    "bytes": 968453,
+    "sha256": "ff91f2f0562de47e296d8b6a1c22eefd1514812989a40070320384f1137a0cc0"
+  },
+  "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfoheader": {
+    "bytes": 2642,
+    "sha256": "7ec5744b9889c538c55ba60c12bf7577769d7538217414fc8579e19c95155835"
+  },
+  "files/0012/ui/xml/gamemain/play/aldencategorytabs.css": {
+    "bytes": 1743,
+    "sha256": "ae7711685e72f02c5d66e9319902e42de044e53aad6db881cee3e8d44967753a"
+  },
+  "files/0019/gamedata/stringtable/binary__/kor/localstringinfo.paloc": {
+    "bytes": 290173,
+    "sha256": "9e4581b2bd68e6ae1440f5d11acd36c1d8edf591fb783f65ca49e3c1d4e49dc0"
+  },
+  "files/0020/gamedata/stringtable/binary__/eng/localstringinfo.paloc": {
+    "bytes": 280715,
+    "sha256": "f66a39ecb5b8d1addc647daed033598be0e1a82d0b2fc44c7b350bc9ce788af3"
+  },
+  "files/0021/gamedata/stringtable/binary__/jpn/localstringinfo.paloc": {
+    "bytes": 296188,
+    "sha256": "78dee9ced620e887e82d833cbd579988b609207530734d911ce4dad1d66f5fe2"
+  },
+  "files/0022/gamedata/stringtable/binary__/rus/localstringinfo.paloc": {
+    "bytes": 349623,
+    "sha256": "a40c1a775b79dac5c9c520982f955a0ffa3e17aae4a16a760cb1d1784735a675"
+  },
+  "files/0023/gamedata/stringtable/binary__/tur/localstringinfo.paloc": {
+    "bytes": 294760,
+    "sha256": "5e794ab37246f447fbba272c4820310ed9404b0488da3a918f9aba465f544115"
+  },
+  "files/0024/gamedata/stringtable/binary__/spa-es/localstringinfo.paloc": {
+    "bytes": 298531,
+    "sha256": "1106193486bf5a719843563f7449de921ca3b70a074e03435f7c2930ba8fb6f8"
+  },
+  "files/0025/gamedata/stringtable/binary__/spa-mx/localstringinfo.paloc": {
+    "bytes": 299434,
+    "sha256": "a33e4d651e2d8c83b666b3300907cd94b0649d67c8c8474995609ec4bfd772d5"
+  },
+  "files/0026/gamedata/stringtable/binary__/fre/localstringinfo.paloc": {
+    "bytes": 302071,
+    "sha256": "153f4cf453757868c9603adad2ee2d03c3c087429628f5968e06da53a46ea60d"
+  },
+  "files/0027/gamedata/stringtable/binary__/ger/localstringinfo.paloc": {
+    "bytes": 305356,
+    "sha256": "dc0df056e0909a593207bc2a0a5b6b2c931cfea8ac5873190762e96d6f8b7322"
+  },
+  "files/0028/gamedata/stringtable/binary__/ita/localstringinfo.paloc": {
+    "bytes": 300808,
+    "sha256": "02378e3f7148c48e8adc75035acc3a17ff22bfe388c520fa6ebffd0147f20e01"
+  },
+  "files/0029/gamedata/stringtable/binary__/pol/localstringinfo.paloc": {
+    "bytes": 309266,
+    "sha256": "541ff2c68e00dcf2e8b8b55888851748aa663972f0111a5b05f08d033d5e8975"
+  },
+  "files/0030/gamedata/stringtable/binary__/por-br/localstringinfo.paloc": {
+    "bytes": 300834,
+    "sha256": "f4f85f9a9f50e75444dc64ea771772379d538fb25648303980b303584ce9ae6e"
+  },
+  "files/0031/gamedata/stringtable/binary__/zho-tw/localstringinfo.paloc": {
+    "bytes": 275242,
+    "sha256": "01d1edb6a4c43890999690a009e01479df9818d6578e6e9228152d67e7b51704"
+  },
+  "files/0032/gamedata/stringtable/binary__/zho-cn/localstringinfo.paloc": {
+    "bytes": 273768,
+    "sha256": "c86109d179e5a24f7858dea0f060b66dd708b09a38c1c179654942d102c4b15b"
+  },
+  "files/0033/gamedata/stringtable/binary__/ara/localstringinfo.paloc": {
+    "bytes": 308755,
+    "sha256": "2a162091f09c85869a1be09e0602664e92a52bc77c037799f1f01f11a398a208"
+  },
+  "manifest.json": {
+    "bytes": 381,
+    "sha256": "514344c587594e344db0c68e09025f07dbf4b8f6f5780ba1a533f97433d0fc17"
+  }
+}

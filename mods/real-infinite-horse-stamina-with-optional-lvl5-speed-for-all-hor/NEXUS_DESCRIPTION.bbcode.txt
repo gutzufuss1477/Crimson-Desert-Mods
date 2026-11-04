@@ -1,0 +1,36 @@
+[b]All Mounts Level 5 - All Stats and Speed Only v13 - Steam build 26361232[/b]
+All Stats was confirmed working in game on 2 November 2026. It changes speed, acceleration, turning and jump.
+
+[url=https://ko-fi.com/gutzufuss]Support my mods on Ko-fi[/url]
+Optional support helps me keep making updates. Thank you!
+
+[b]Steelheart v10 — 4 November 2026[/b]
+Fixes the outdated-patch warning when [url=https://www.nexusmods.com/crimsondesert/mods/837]Character Creator Enhanced — Equip All Armor[/url] is enabled. The patch now targets Steelheart's item ID and equip-buff field instead of a fixed file position. The equipped stamina-regeneration effect is unchanged: level 4 to 20.
+The author confirmed Steelheart v10 together with Alden 17.2.1, original Character Creator Enhanced 9.1.32 / Equip All Armor and Better Inventory 3.3 in DMM and in game without errors. Both data-application orders preserve the original armor changes. No combined package or modified Character Creator version is needed.
+For game 2.04.05 / Steam build 26361232, without DLC. DLC installations/data remain unverified. [b]All Stats and Speed Only remain v13; their files are unchanged.[/b]
+
+[b]Choose your files[/b]
+[list]
+[*][b]All Stats v13 (ASI):[/b] updated and gameplay-tested on Steam build 26361232.[/*]
+[*][b]Speed Only v13 (ASI):[/b] updated for Steam build 26361232. Changes movement speed only; acceleration, turning and jump are unchanged. Passed 1,135 host checks and current structural checks. Separate gameplay confirmation on this build is pending.[/*]
+[*][b]Steelheart Horseshoes v10 (DMM):[/b] raises the equipped horseshoes' stamina-regeneration buff from level 4 to 20. Updated field-level patch works alongside original Equip All Armor. Equip the item. No ASI required.[/*]
+[/list]Use All Stats OR Speed Only, never both. Steelheart is optional and can be used separately.
+
+[b]Install either mount ASI through DMM[/b]
+Close the game and remove older AllStats/Speed ASIs, including manual copies. Import the complete v13 ZIP under [url=https://www.nexusmods.com/crimsondesert/mods/633]DMM[/url]'s ASI Mods, enable it and mount. DMM 4.6.4 import/deployment was verified with All Stats. Both mount ZIPs use the same simple ASI-only layout; neither needs an INI. Keep DMMRuntime.asi and the existing ASI loader.
+Manual alternative: copy either AllMountsLvL5AllStats.asi or AllMountsLvL5Speed.asi into bin64 beside CrimsonDesert.exe using an [url=https://github.com/ThirteenAG/Ultimate-ASI-Loader]x64 ASI loader[/url] (not included). Neither mount ASI requires DMM or Steelheart. Do not keep duplicate copies.
+
+[b]Future game updates - both mount ASIs v13[/b]
+The ASI now finds validated code structures instead of relying on fixed addresses or one executable hash. It may keep working after game updates that only move code. Changed code/layouts or ambiguous matches are refused before hooks are installed. Future compatibility is not guaranteed.
+This applies to both new mount ASIs, All Stats and Speed Only. It does not make Steelheart's data patch update-independent.
+
+[b]Install Steelheart[/b]
+Close the game and unmount in DMM 4.6.4 or later. Replace/disable the old Steelheart patch, import [b]Steelheart_Horseshoes.zip[/b], enable [b]Steelheart Horseshoes - 20 Stamina Regen[/b] and mount. Restart and equip the horseshoes. Keep only one Steelheart patch enabled. Alden, Character Creator and either mount ASI are optional. Other mods changing the same stamina-regeneration buff may still conflict.
+
+[b]Validation and uninstall[/b]
+Each mount variant passed 1,135 host checks and structural/code checks against the current executable. All Stats is gameplay-confirmed; Speed Only shares its runtime except for the speed-only filter and status filename, but has not been separately gameplay-tested on this build. Both release binaries are unchanged from their validated candidates. Startup status: %LOCALAPPDATA%&#92;CrimsonDesertMods&#92;Mount_AllStats.status.txt or Mount_Speed.status.txt.
+To uninstall, close the game and disable/remove the relevant mod in DMM, then remount your remaining mods. Remove a manually installed ASI manually if applicable.
+
+[url=https://github.com/gutzufuss1477/Crimson-Desert-Mods]Source, build instructions and checksums on GitHub[/url]
+[b]Credits[/b]
+Thanks to the Crimson Desert modding community, ThirteenAG for Ultimate ASI Loader, and everyone who tested the mod.

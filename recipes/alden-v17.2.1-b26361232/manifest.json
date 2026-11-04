@@ -1,0 +1,11 @@
+{
+  "format": "crimson_browser_mod_v1",
+  "id": "AldenShop",
+  "title": "Alden Shop",
+  "author": "Blablup",
+  "version": "17.2.1",
+  "enabled": true,
+  "priority": 1,
+  "files_dir": "files",
+  "description": "567 items with localized runtime categories and field-level 1 Copper prices. Compatible data edits for original Equip All Armor; optional original Better Inventory 3.3."
+}

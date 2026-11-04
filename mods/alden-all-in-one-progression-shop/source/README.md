@@ -1,4 +1,18 @@
-# Alden category tabs v17.2
+# Alden v17.2.1 source — unchanged v17.2 category runtime
+
+v17.2.1 replaces only the price manifest with DMM v3.1 field intents. The category ASI and all 20 game payloads are unchanged from v17.2; its diagnostic version intentionally remains 17.2. The build instructions below describe that runtime base.
+
+The [field converter](../../../tooling/crimson_mod_tools/field_patches_204.py) exposes `alden_prices` and `steelheart_stamina`. Supply the official DMM parser, the vanilla ItemInfo body, legacy manifests and the catalog item IDs. Conversion requires an exact parser round-trip and byte-identical effects to the original patches. No parser binary or third-party assets are redistributed. The parser binding used for game 2.04.05 comes from [dmm-parser commit cb1296e](https://github.com/exodiaprivate-eng/dmm-parser/commit/cb1296e8261818e0f6661a21de258ae2cdc8a161); later schemas may target a different game build.
+
+Run the composition regression from the repository root with local, legally obtained inputs:
+
+```powershell
+python tooling/test_field_patches_204.py --parser-python C:\Inputs\parser --body C:\Inputs\iteminfo.staticinfobody --alden-prices C:\Inputs\Alden17.2-Preise.json --catalog recipes/alden-v17-b26361232/categories.json --steelheart C:\Inputs\Steelheart9.json --equip-all C:\Inputs\EquipAllArmor.json
+```
+
+The regression checks exact original effects, both application orders, repeat application, preserved armor edits and rejection of changed original data. The [v17.2.1 recipe](../../../recipes/alden-v17.2.1-b26361232/) contains the exact release manifest, hashes and current confirmation scope. Combined gameplay was confirmed on 4 November 2026; DLC data remain unverified.
+
+## v17.2 category runtime
 
 The ASI inserts eight category controls into the supported buy UI in memory. The package contains the existing 19 Alden data/language files and its own `aldencategorytabs.css`. None of its 20 game paths overlaps the 36 original Better Inventory 3.3 paths. Both DMM load orders therefore produce identical effective files. No Better Inventory assets are bundled.
 

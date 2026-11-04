@@ -3,12 +3,13 @@ Make Alden your shop for crafting and progression supplies: [b]567 items at 1 Co
 [url=https://ko-fi.com/gutzufuss]☕ Support my mods on Ko-fi[/url]
 Optional support helps me keep making updates. Thank you!
 
-[b]Update v17.2 — 3 November 2026[/b]
-Alden's category tabs now work alongside the [url=https://www.nexusmods.com/crimsondesert/mods/452]original Better Inventory and Trade UI 3.3[/url] without shared UI file conflicts. Better Inventory is optional, remains a separate mod and does not need an Alden-specific version. Either DMM load order produces the same files for these two mods.
-The normal buy grid is preserved without Better Inventory; its larger buy grid is preserved when it is installed. Categories, buying and tab switching were confirmed in game with original Better Inventory on a non-DLC installation, with no DMM file conflicts.
-[b]Completely replace the old Alden package and its Alden Category Tabs.asi.[/b] Do not copy over an old Alden folder: obsolete shared UI files must be removed.
-The 567 items, 1 Copper prices, stock and all 15 language variants remain unchanged. The single-step Xbox LT/RT and keyboard tab fix from v17.1 is retained.
-For [b]Crimson Desert 2.04.05 / Steam build 26361232[/b]. Includes the expanded catalog, including rubber. DLC installations and DLC data tables have not been validated; no DLC-exclusive items are added.
+[b]Update v17.2.1 — 4 November 2026[/b]
+Fixes DMM skipping Alden's 1 Copper prices as outdated when [url=https://www.nexusmods.com/crimsondesert/mods/837]Character Creator Enhanced — Equip All Armor[/url] is enabled. Prices now target the intended item IDs and fields, so changes to armor record sizes no longer displace the price patches.
+All 567 items and 706 price changes retain their previous effect. The catalog, stock, languages, category UI and included ASI are unchanged from v17.2. The helper still reports version 17.2 because it is byte-identical.
+The author confirmed Alden, Steelheart v10, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The third-party mods stay separate and unchanged. No combined package or additional compatibility patch is required.
+The v17.2 runtime category system continues to avoid shared UI file replacements with Better Inventory. The single-step keyboard/Xbox tab fix is retained.
+[b]Completely replace the old Alden package and enable its price patch and included category ASI.[/b] Remove old test versions and duplicate price patches. Keep only one Alden data mod and one helper active.
+For [b]Crimson Desert 2.04.05 / Steam build 26361232[/b]. DLC installations/data remain unverified; no DLC-exclusive items are added.
 
 [b]Abyss Gear tiers[/b]
 Tiered Abyss Gear is deliberately sold at [b]Tier I[/b]. Tier II and III, including Vitality II/III, are not sold: you can still craft/synthesize the higher tiers yourself. This update does not change that progression choice.
@@ -37,7 +38,7 @@ Windows PC, [b]Crimson Desert 2.04.05 / Steam build 26361232[/b], and [b]DMM wit
 [list=1]
 [*]Close the game and unmount in DMM.
 [*]Completely replace previous Alden shop packages, including test builds. Remove the old mod entry/folder through DMM instead of merging into it, so obsolete UI files are not retained.
-[*]Import [b]Alden_Shop.zip[/b] and enable the data mod.
+[*]Import [b]Alden_Shop.zip[/b] and enable both [b]Alden Shop[/b] and [b]Alden Shop - 1 Copper[/b].
 [*]Import/replace and enable the included [b]Alden Category Tabs.asi[/b] in DMM's ASI Mods section. Use the helper supplied with this package.
 [*]Mount, restart the game and visit Alden.
 [/list]
@@ -46,10 +47,11 @@ Do not manually copy the ZIP's internal files/ folder into the game. Only one Al
 [b]Compatibility[/b]
 [list]
 [*][b]Better Inventory and Trade UI 3.3:[/b] optional and installed separately from its original page. Follow its author's installation instructions, including the DLC-specific texture instructions. Alden bundles no Better Inventory assets and replaces no inventory textures.
-[*][b]Load order:[/b] Alden v17.2 and original Better Inventory 3.3 have no shared replacement paths, so neither overwrites the other's files. No compatibility patch or combined package is required.
+[*][b]Load order:[/b] Alden v17.2.1 and original Better Inventory 3.3 have no shared replacement paths, so neither overwrites the other's files. No compatibility patch or combined package is required.
+[*][b]Character Creator Enhanced 9.1.32 / Equip All Armor:[/b] optional and installed separately. Alden's field-level prices preserve its armor changes in either application order. No Character Creator assets are bundled.
 [*][b]Without Better Inventory:[/b] the native two-column/four-row buy grid remains. With Better Inventory, its three-column/five-row buy grid remains.
 [*][b]Other mods:[/b] Alden still replaces shop/data and localization files. Other Alden/shop data, item-price or LocalStringInfo replacements may conflict. Support for unrelated shop UI replacements is not established.
-[*][b]Validation:[/b] original Better Inventory with Alden was confirmed in game without DLC. Alden alone and reversed load order passed technical checks but have no separate gameplay confirmation. DLC installations/data tables are unverified.
+[*][b]Validation:[/b] Alden, Steelheart v10, original Character Creator / Equip All Armor and Better Inventory were confirmed together in game without DLC. Alden alone and reversed load order passed technical checks but have no separate gameplay confirmation. DLC installations/data tables are unverified.
 [/list]
 All other merchant records are preserved. The category helper targets the stated executable build and recognized buy UI; future game/UI updates may require a mod update.
 

@@ -1,5 +1,15 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## v17.2.1 — 4 November 2026 — game 2.04.05
+
+- Fix the outdated/partially skipped 1 Copper patch with original Character Creator Enhanced 9.1.32 / Equip All Armor.
+- Replace fixed byte positions with 706 DMM field edits for the same 567 items and prices. Preserve the original armor changes in either application order.
+- Keep the v17.2 category ASI, all game/localization payloads, stock, Tier I progression and Better Inventory compatibility unchanged.
+- Combined DMM mount and gameplay confirmed with Steelheart v10, original Character Creator / Equip All Armor and Better Inventory 3.3 without DLC.
+- Replace the previous Alden package and disable duplicate price patches. Requires DMM 4.6.4+. DLC data remain unverified.
+
+[Download v17.2.1](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19467). Previous v17.2 is archived. [Validation and checksums](../../releases/alden-v17.2.1-b26361232.md).
+
 ## v17.2 — 3 November 2026 — game 2.04.05
 
 - Add category tabs at runtime instead of replacing shared shop HTML, compiled UI or shop CSS.
