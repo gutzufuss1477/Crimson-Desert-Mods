@@ -32,4 +32,4 @@ The author confirmed the supplied candidate works in game on build 26448710. The
 
 [Validation recipe](../recipes/alden-v17.3.2-b26448710/) · [Build source](../mods/alden-all-in-one-progression-shop/source/) · [Nexus mod page](https://www.nexusmods.com/crimsondesert/mods/2066)
 
-Nexus file **19702** replaces archived file **19550**. Nexus virus scanning is in progress; download verification is pending. Full game-data packages remain Nexus-only; Git contains source, recipes, hashes and validation records.
+Nexus file **19702** replaces archived file **19550**. The published download was retrieved and its SHA-256 verified. Full game-data packages remain Nexus-only; Git contains source, recipes, hashes and validation records.

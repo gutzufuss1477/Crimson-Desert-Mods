@@ -56,8 +56,10 @@
     "url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19702",
     "textsVerified": true,
     "changelogVerified": true,
-    "downloadVerified": false,
-    "nexusScan": "pending",
-    "uploadedPackageSha256": "8b90164dc3beefacc10489686d8145cdf35e07d29e2479932b9c60ecd799f1ba"
+    "downloadVerified": true,
+    "nexusScan": "safe_to_use",
+    "uploadedPackageSha256": "8b90164dc3beefacc10489686d8145cdf35e07d29e2479932b9c60ecd799f1ba",
+    "downloadSha256": "8b90164dc3beefacc10489686d8145cdf35e07d29e2479932b9c60ecd799f1ba",
+    "verifiedAt": "2026-11-05T07:38:11.445935+00:00"
   }
 }

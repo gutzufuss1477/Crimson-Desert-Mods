@@ -6,7 +6,7 @@
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2066",
   "pageVersion": "17.3.2",
   "sourceStatus": "published-release",
-  "sourceNote": "Published on Nexus on 2026-11-05. Author confirmed 17.3.2 in game on Steam build 26448710. Final ASI and all game payloads match the confirmed candidate; readme-only finalization. Native/data checks and final local Defender scans passed. Nexus virus scanning is in progress; download verification is pending. Regular shop only; no DLC preview changes. DLC runtime remains unverified.",
+  "sourceNote": "Published on Nexus on 2026-11-05. Author confirmed 17.3.2 in game on Steam build 26448710. Final ASI and all game payloads match the confirmed candidate; readme-only finalization. Native/data checks and final local Defender scans passed. The published download was retrieved and its SHA-256 verified. Regular shop only; no DLC preview changes. DLC runtime remains unverified.",
   "currentFiles": [
     {
       "fileId": 19702,
@@ -17,7 +17,7 @@
       "steamBuild": "26448710",
       "runtimeBehaviorAuthorConfirmed": true,
       "exactReleasePackageInGameTested": false,
-      "validation": "Published on Nexus on 2026-11-05. Author confirmed 17.3.2 in game on Steam build 26448710. Final ASI and all game payloads match the confirmed candidate; readme-only finalization. Native/data checks and final local Defender scans passed. Nexus virus scanning is in progress; download verification is pending. Regular shop only; no DLC preview changes. DLC runtime remains unverified.",
+      "validation": "Published on Nexus on 2026-11-05. Author confirmed 17.3.2 in game on Steam build 26448710. Final ASI and all game payloads match the confirmed candidate; readme-only finalization. Native/data checks and final local Defender scans passed. The published download was retrieved and its SHA-256 verified. Regular shop only; no DLC preview changes. DLC runtime remains unverified.",
       "sha256": "8b90164dc3beefacc10489686d8145cdf35e07d29e2479932b9c60ecd799f1ba",
       "bytes": 4450415,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19702",
@@ -31,7 +31,7 @@
       "categoryAsiSha256": "9983d998d98e8eb79b59ff344b7f76fbfb8b54d8d8fc7ac158914d613d2bac5d",
       "microsoftRuntime": "Visual C++ v14 x64, current supported release",
       "localDefenderResult": "No threats found",
-      "publishedDownloadSha256Verified": false,
+      "publishedDownloadSha256Verified": true,
       "catalogOffers": 607,
       "distinctItems": 598,
       "originalOffers": 40,
