@@ -21,12 +21,15 @@ from runtime_build_inputs import (ALDEN_SHA256, BETTER_SHA256, BINARY, HTML,
                                  CSS as SHARED_CSS, EXPECTED_OUTPUT_HASHES,
                                  read_archive, unique, stylesheet_list, crlf)
 from ui_binary import Reader, number, string, strings
-from original_shop import add_header, add_original_stock, add_localization, ORIGINAL_IDS
+from original_shop import (add_header, add_original_stock, add_localization,
+                           rebase_localization, ORIGINAL_IDS)
 
 HERE = Path(__file__).resolve().parent
-VERSION = '17.3'
+VERSION = '17.3.2'
 HELPER_VERSION = VERSION
-EXE_SHA = 'df531a585bf84ceb47779304cc8b3caaf976aea88424c32605885623cd4519c7'
+PROFILE = json.loads((HERE.parents[2] / 'recipes/alden-v17.3.2-b26448710/native-profile.json').read_text(encoding='utf-8'))
+ADDRESSES = {name: int(address, 16) for name, address in PROFILE['addresses'].items()}
+EXE_SHA = PROFILE['exe_sha256']
 VANILLA_SHA = '68ab1eb625358434a8d65912d5a904085bcafb620c8d4ca88087d12dc8de396b'
 CSS = 'files/0012/ui/xml/gamemain/play/aldencategorytabs.css'
 STYLE = 'UI/GameMain/Play/AldenCategoryTabs.css'
@@ -138,8 +141,10 @@ def build(args):
     sys.path.insert(0, str(args.parser_dir.resolve()))
     import dmm_parser
     prices = json.loads((HERE.parents[2] / 'recipes/alden-v17.2.1-b26361232/field-patches.json').read_text(encoding='utf-8'))
-    stock_report = add_original_stock(payload, args.vanilla_data, dmm_parser, prices)
+    stock_report = add_original_stock(payload, args.vanilla_data, dmm_parser, prices, PROFILE['game_profile'])
+    current_localization = rebase_localization(payload, dmm_parser, args.vanilla_data, PROFILE['game_profile'])
     localization_report = add_localization(payload, dmm_parser)
+    localization_report.update(current_localization)
     assert len(payload) == 20 and not set(payload) & set(better)
 
     out = args.output.resolve(); out.mkdir(parents=True, exist_ok=True)
@@ -165,29 +170,22 @@ def build(args):
     footer = string('UI/GameMain/Play/NpcStoreBuyView2.html') + bytes(5)
     assert vanilla.endswith(footer) and better[BINARY].endswith(footer)
     code = ['#pragma once', '#include <span>', '#include <cstddef>', '#include <cstdint>', 'namespace alden::runtime {',
-            f'inline constexpr char Version[]="Alden Category Tabs {HELPER_VERSION} / Steam 26361232 / runtime UI augmentation";',
+            f'inline constexpr char Version[]="Alden Category Tabs {HELPER_VERSION} / Steam {PROFILE["steam_build"]} / runtime UI augmentation";',
             f'inline constexpr char CssHash[]="{sha(css)}";',
             f'inline constexpr char VanillaInputHash[]="{sha(vanilla)}";',
             f'inline constexpr char BetterInputHash[]="{sha(better[BINARY])}";',
             f'inline constexpr char VanillaOutputHash[]="{sha(outputs[0])}";',
             f'inline constexpr char BetterOutputHash[]="{sha(outputs[1])}";',
-            'inline constexpr std::uintptr_t Deserialize=0x41e6d90;',
-            'inline constexpr std::uintptr_t MemoryReaderVtable=0x5ab96a8;',
-            'inline constexpr std::uintptr_t MemoryRead=0x1601230;',
-            'inline constexpr std::uintptr_t LoadCss=0x41bbf30;',
-            'inline constexpr std::uintptr_t CompileCss=0x41ac150;',
-            'inline constexpr std::uintptr_t DecodeCss=0x41a7e60;',
-            'inline constexpr std::uintptr_t LookupCss=0x41a7360;',
-            'inline constexpr std::uintptr_t SetString=0x4455f0;',
-            'inline constexpr std::uintptr_t ReleaseString=0x3e56e0;',
-            'inline constexpr std::uintptr_t ReleaseBuffer=0x1554b50;',
-            'inline constexpr std::uintptr_t EmptyString=0x6e9cd20;',
+            *[f'inline constexpr std::uintptr_t {name}={ADDRESSES[name]:#x};' for name in
+              ['Deserialize', 'MemoryReaderVtable', 'MemoryRead', 'LoadCss', 'CompileCss',
+               'DecodeCss', 'LookupCss', 'SetString', 'ReleaseString', 'ReleaseBuffer', 'EmptyString']],
             f'inline constexpr char CssPath[]="{STYLE}";',
             array('CssSource',css),
-            array('BuySourceTail', footer), array('NativeMemoryReadCode', exe_at(exe, 0x1601230, 0x40)),
+            array('BuySourceTail', footer), array('NativeMemoryReadCode', exe_at(exe, ADDRESSES['MemoryRead'], 0x40)),
             'struct Guard {std::uintptr_t rva; unsigned char bytes[16];};',
             'inline constexpr Guard Guards[] = {']
-    for address in [0x41e6d90,0x1601230,0x41bbf30,0x41ac150,0x41a7e60,0x41a7360,0x4455f0,0x3e56e0,0x1554b50]:
+    for name in ['Deserialize', 'MemoryRead', 'LoadCss', 'CompileCss', 'DecodeCss', 'LookupCss', 'SetString', 'ReleaseString', 'ReleaseBuffer']:
+        address = ADDRESSES[name]
         code.append('    {0x%x, {%s}},' % (address, ','.join('0x%02x' % b for b in exe_at(exe, address, 16))))
     code.append('};')
     for i, (_, before, after) in enumerate(edits):
@@ -200,20 +198,22 @@ def build(args):
     # Isolated regression executes the real native consumer's dependency loop,
     # replacing only its external calls with test fixtures. Internal branches
     # and the sequence of CSS loading before UI binding remain actual game code.
-    consumer=exe_at(exe,0x38ac3c0,0x264)
+    consumer_address = ADDRESSES['StyleConsumer']
+    consumer=exe_at(exe,consumer_address,0x264)
     decoder=capstone.Cs(capstone.CS_ARCH_X86,capstone.CS_MODE_64); decoder.detail=True
     calls=[]; references=[]
-    for ins in decoder.disasm(consumer,0x140000000+0x38ac3c0):
+    for ins in decoder.disasm(consumer,0x140000000+consumer_address):
         if ins.mnemonic=='call':
             assert ins.bytes[0]==0xe8 and ins.size==5
-            calls.append((ins.address-(0x140000000+0x38ac3c0)+1,ins.operands[0].imm-0x140000000))
+            calls.append((ins.address-(0x140000000+consumer_address)+1,ins.operands[0].imm-0x140000000))
         for operand in ins.operands:
             if operand.type==capstone.CS_OP_MEM and operand.mem.base==capstone.x86.X86_REG_RIP:
                 assert ins.disp_size==4
-                references.append((ins.address-(0x140000000+0x38ac3c0)+ins.disp_offset,ins.address+ins.size+ins.disp-0x140000000))
-    assert {target for _,target in calls}=={0x41bbf30,0x380ebc0,0x41e3b10,0x41e3db0,0x41e3e50,0x4026a10,0x4a8c90,0x5eeca0,0x3e56e0}
+                references.append((ins.address-(0x140000000+consumer_address)+ins.disp_offset,ins.address+ins.size+ins.disp-0x140000000))
+    assert {target for _,target in calls} == {ADDRESSES[n] for n in ['LoadCss', 'FinalizeStyles', 'BindStyles', 'ConsumerHelper1', 'ConsumerHelper2', 'ConsumerHelper3', 'ConsumerHelper4', 'ConsumerHelper5', 'ReleaseString']}
     assert len(references)==2
     test_code=['#pragma once',array('NativeStyleConsumerCode',consumer),'struct ConsumerFixup {unsigned offset; std::uintptr_t target;};']
+    test_code += [f'inline constexpr std::uintptr_t Consumer{name}={ADDRESSES[name]:#x};' for name in ['StyleConsumer', 'LoadCss', 'FinalizeStyles', 'BindStyles']]
     test_code.append('inline constexpr const char* OriginalStyleNames[] = {'+', '.join(json.dumps(s) for s in stylesheet_list(vanilla)[2])+'};')
     for name,records in [('ConsumerCalls',calls),('ConsumerReferences',references)]:
         test_code.append(f'inline constexpr ConsumerFixup {name}[] = {{'+','.join('{%d,0x%x}'%pair for pair in records)+'};')
@@ -244,11 +244,12 @@ def build(args):
     dest = out / 'Alden_Shop.zip'
     with zipfile.ZipFile(dest, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(payload.items()):
-            info = zipfile.ZipInfo(name, (2026, 11, 4, 0, 0, 0)); info.compress_type = zipfile.ZIP_DEFLATED
+            info = zipfile.ZipInfo(name, (2026, 11, 5, 0, 0, 0)); info.compress_type = zipfile.ZIP_DEFLATED
             z.writestr(info, data)
     with zipfile.ZipFile(dest) as z:
         assert z.testzip() is None and all(z.read(n) == v for n, v in payload.items())
-    report = dict(version=VERSION, package_path=str(dest), package_sha256=sha(dest.read_bytes()),
+    report = dict(version=VERSION, game_version=PROFILE['game_version'], steam_build=PROFILE['steam_build'],
+                  exe_sha256=EXE_SHA, package_path=str(dest), package_sha256=sha(dest.read_bytes()),
                   asi_sha256=sha(asi_path.read_bytes()), game_payload_files=20,
                   original_stock=stock_report, localization=localization_report,
                   shared_paths_with_original_better_inventory=[], native_buy_grid_preserved=True,

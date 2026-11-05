@@ -1,0 +1,17 @@
+VERSION
+17.3.2
+
+FILE DESCRIPTION
+17.3.2 for Steam build 26448710; gameplay confirmed. 567 mod offers + 40 originals, nine tabs, 15 languages. Update both Alden data and included ASI. DMM + ASI loader and VC++ v14 x64 required. Regular shop; no DLC preview changes.
+
+CHANGELOG
+Updated the category ASI for Steam build 26448710.
+Rebuilt the shop table from current game data, preserving official changes to other merchants.
+Kept all 567 mod offers, 40 original offers, nine categories, prices, stocks and 15 languages.
+Retained Better Inventory, Equip All Armor and Steelheart compatibility.
+Regular shop only: no DLC preview changes.
+Author confirmed the update in game. Release ASI and game payloads are unchanged from the confirmed candidate.
+Replace both the Alden data package and included category ASI with version 17.3.2.
+
+VALIDATION
+Author confirmed 17.3.2 in game on Steam build 26448710 on 5 November 2026. Readme-only release finalization; confirmed ASI and all game payloads are retained. DLC runtime remains unverified.

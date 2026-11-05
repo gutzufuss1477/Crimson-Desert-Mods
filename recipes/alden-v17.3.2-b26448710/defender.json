@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-05",
+  "engine": "1.1.26100.4",
+  "signature": "1.463.134.0",
+  "scans": [
+    {
+      "file": "Alden Category Tabs.asi",
+      "sha256": "9983d998d98e8eb79b59ff344b7f76fbfb8b54d8d8fc7ac158914d613d2bac5d",
+      "exit_code": 0,
+      "result": "No threats found"
+    },
+    {
+      "file": "Alden_Shop.zip",
+      "sha256": "8b90164dc3beefacc10489686d8145cdf35e07d29e2479932b9c60ecd799f1ba",
+      "exit_code": 0,
+      "result": "No threats found"
+    }
+  ],
+  "security_settings_changed": false
+}

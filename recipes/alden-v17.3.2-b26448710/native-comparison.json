@@ -1,0 +1,247 @@
+{
+  "ranges": [
+    {
+      "name": "Init",
+      "rva": "0xe895c0",
+      "bytes": 1986,
+      "identical": true
+    },
+    {
+      "name": "Destroy",
+      "rva": "0xe89470",
+      "bytes": 323,
+      "identical": true
+    },
+    {
+      "name": "Fill",
+      "rva": "0xe89d90",
+      "bytes": 375,
+      "identical": true
+    },
+    {
+      "name": "TabChanged",
+      "rva": "0xe8c400",
+      "bytes": 30,
+      "identical": true
+    },
+    {
+      "name": "SetCount",
+      "rva": "0xdf3990",
+      "bytes": 236,
+      "identical": true
+    },
+    {
+      "name": "BuildStock",
+      "rva": "0x10ae770",
+      "bytes": 1909,
+      "identical": true
+    },
+    {
+      "name": "BindTab",
+      "rva": "0xe92d40",
+      "bytes": 666,
+      "identical": true
+    },
+    {
+      "name": "StoreInfo",
+      "rva": "0x73fcb0",
+      "bytes": 379,
+      "identical": true
+    },
+    {
+      "name": "ItemInfo",
+      "rva": "0x3dd5c0",
+      "bytes": 379,
+      "identical": true
+    },
+    {
+      "name": "SelectCaller",
+      "rva": "0xe8e3f0",
+      "bytes": 770,
+      "identical": true
+    },
+    {
+      "name": "TabBinding",
+      "rva": "0x10a2360",
+      "bytes": 1788,
+      "identical": true
+    },
+    {
+      "name": "SelectTab",
+      "rva": "0x10006e0",
+      "bytes": 5,
+      "identical": false
+    },
+    {
+      "name": "Show",
+      "rva": "0xded720",
+      "bytes": 368,
+      "identical": true
+    },
+    {
+      "name": "Hide",
+      "rva": "0xded890",
+      "bytes": 435,
+      "identical": true
+    },
+    {
+      "name": "Attribute",
+      "rva": "0x41de370",
+      "bytes": 169,
+      "identical": true
+    },
+    {
+      "name": "Deserialize",
+      "rva": "0x41ec7f0",
+      "bytes": 361,
+      "identical": true
+    },
+    {
+      "name": "MemoryRead",
+      "rva": "0x1602740",
+      "bytes": 19,
+      "identical": true
+    },
+    {
+      "name": "LoadCss",
+      "rva": "0x41c1990",
+      "bytes": 1272,
+      "identical": true
+    },
+    {
+      "name": "CompileCss",
+      "rva": "0x41b1bb0",
+      "bytes": 21520,
+      "identical": true
+    },
+    {
+      "name": "DecodeCss",
+      "rva": "0x41ad8c0",
+      "bytes": 17122,
+      "identical": true
+    },
+    {
+      "name": "LookupCss",
+      "rva": "0x41acdc0",
+      "bytes": 185,
+      "identical": true
+    },
+    {
+      "name": "SetString",
+      "rva": "0x445c00",
+      "bytes": 250,
+      "identical": true
+    },
+    {
+      "name": "ReleaseString",
+      "rva": "0x3e5ce0",
+      "bytes": 147,
+      "identical": true
+    },
+    {
+      "name": "ReleaseBuffer",
+      "rva": "0x1555e70",
+      "bytes": 168,
+      "identical": true
+    },
+    {
+      "name": "StyleConsumer",
+      "rva": "0x38b1db0",
+      "bytes": 612,
+      "identical": true
+    },
+    {
+      "name": "FinalizeStyles",
+      "rva": "0x38145b0",
+      "bytes": 1017,
+      "identical": true
+    },
+    {
+      "name": "BindStyles",
+      "rva": "0x41e9570",
+      "bytes": 659,
+      "identical": true
+    },
+    {
+      "name": "ConsumerHelper1",
+      "rva": "0x41e9810",
+      "bytes": 152,
+      "identical": true
+    },
+    {
+      "name": "ConsumerHelper2",
+      "rva": "0x41e98b0",
+      "bytes": 277,
+      "identical": true
+    },
+    {
+      "name": "ConsumerHelper3",
+      "rva": "0x402c470",
+      "bytes": 528,
+      "identical": true
+    },
+    {
+      "name": "ConsumerHelper4",
+      "rva": "0x4a94a0",
+      "bytes": 220,
+      "identical": true
+    },
+    {
+      "name": "ConsumerHelper5",
+      "rva": "0x5ef5d0",
+      "bytes": 155,
+      "identical": true
+    },
+    {
+      "name": "RootVtable",
+      "rva": "0x59eca30",
+      "bytes": 920,
+      "identical": true
+    },
+    {
+      "name": "StockVtable",
+      "rva": "0x5a4c288",
+      "bytes": 1456,
+      "identical": true
+    },
+    {
+      "name": "TabVtable",
+      "rva": "0x5a249d8",
+      "bytes": 8,
+      "identical": true
+    },
+    {
+      "name": "MemoryReaderVtable",
+      "rva": "0x5abf6d8",
+      "bytes": 8,
+      "identical": true
+    },
+    {
+      "name": "TabSelectorKey",
+      "rva": "0x7122de4",
+      "bytes": 1,
+      "identical": true
+    },
+    {
+      "name": "EmptyString",
+      "rva": "0x6ea3d20",
+      "bytes": 6,
+      "identical": true
+    }
+  ],
+  "select_tab": [
+    {
+      "exe": "CrimsonDesert_b26423880.exe",
+      "rva": "0x10006e0",
+      "target": "0xa3e8230",
+      "caller": "0xe8e6cc"
+    },
+    {
+      "exe": "CrimsonDesert_b26448710.exe",
+      "rva": "0x10006e0",
+      "target": "0xa391030",
+      "caller": "0xe8e6cc"
+    }
+  ],
+  "native_guards_passed": 12
+}

@@ -1,27 +1,27 @@
 #pragma once
 #include <cstdint>
 namespace alden::profile {
-inline constexpr char ExeHash[]="df531a585bf84ceb47779304cc8b3caaf976aea88424c32605885623cd4519c7";
+inline constexpr char ExeHash[]="25f24e06a1f886e9310fd290f9462f66b480a5e7763d1fe156bfddaa8d1992b9";
 inline constexpr char HtmlHash[]="83007609be36014f5389a1cd54aba8809b1be6eba189176adbf274889bcf22fb";
 inline constexpr char CssHash[]="3c821c0cb91e31448a73b0bf889e06b7a486effab7d4d4fd6ea256460ffc6441";
 inline constexpr char BinaryUiHash[]="6632acca3e3253b8bc61158abeff1ac6701589d668857b3d60144d05d5f64590";
-inline constexpr std::uintptr_t RootVtable = 0x59e69f0;
-inline constexpr std::uintptr_t StockVtable = 0x5a45c80;
-inline constexpr std::uintptr_t TabVtable = 0x5a24dc8;
-inline constexpr std::uintptr_t Init = 0xe885d0;
-inline constexpr std::uintptr_t Destroy = 0xe88480;
-inline constexpr std::uintptr_t Fill = 0xe88da0;
-inline constexpr std::uintptr_t TabChanged = 0xe8b410;
-inline constexpr std::uintptr_t SetCount = 0xdf29a0;
-inline constexpr std::uintptr_t BuildStock = 0x10ad5c0;
-inline constexpr std::uintptr_t BindTab = 0xe91d50;
-inline constexpr std::uintptr_t StoreInfo = 0x73f370;
-inline constexpr std::uintptr_t ItemInfo = 0x3dcfc0;
-inline constexpr std::uintptr_t SelectTab = 0xfff530;
-inline constexpr std::uintptr_t Show = 0xdec730;
-inline constexpr std::uintptr_t Hide = 0xdec8a0;
-inline constexpr std::uintptr_t TabSelectorKey = 0x711bcd4;
-inline constexpr std::uintptr_t Attribute = 0x41d8910;
+inline constexpr std::uintptr_t RootVtable = 0x59eca30;
+inline constexpr std::uintptr_t StockVtable = 0x5a4c288;
+inline constexpr std::uintptr_t TabVtable = 0x5a249d8;
+inline constexpr std::uintptr_t Init = 0xe895c0;
+inline constexpr std::uintptr_t Destroy = 0xe89470;
+inline constexpr std::uintptr_t Fill = 0xe89d90;
+inline constexpr std::uintptr_t TabChanged = 0xe8c400;
+inline constexpr std::uintptr_t SetCount = 0xdf3990;
+inline constexpr std::uintptr_t BuildStock = 0x10ae770;
+inline constexpr std::uintptr_t BindTab = 0xe92d40;
+inline constexpr std::uintptr_t StoreInfo = 0x73fcb0;
+inline constexpr std::uintptr_t ItemInfo = 0x3dd5c0;
+inline constexpr std::uintptr_t SelectTab = 0x10006e0;
+inline constexpr std::uintptr_t Show = 0xded720;
+inline constexpr std::uintptr_t Hide = 0xded890;
+inline constexpr std::uintptr_t TabSelectorKey = 0x7122de4;
+inline constexpr std::uintptr_t Attribute = 0x41de370;
 struct Guard { std::uintptr_t rva; unsigned char bytes[16]; };
 inline constexpr Guard Guards[] = {
     {Init, {0x40, 0x55, 0x53, 0x56, 0x57, 0x41, 0x54, 0x41, 0x56, 0x41, 0x57, 0x48, 0x8b, 0xec, 0x48, 0x83}},

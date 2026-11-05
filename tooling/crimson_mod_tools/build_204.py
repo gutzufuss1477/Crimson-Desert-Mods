@@ -18,7 +18,7 @@ from .dmm_builder import healthbar_ui
 
 VERSION = "2.04.02"
 STEAM_BUILD = "26329202"
-PROFILES = {"2.04.02": "26329202", "b26361232": "26361232"}
+PROFILES = {"2.04.02": "26329202", "b26361232": "26361232", "b26423880": "26423880", "b26448710": "26448710"}
 ROOT = Path(__file__).resolve().parents[2]
 BINARY = Path("0008/gamedata/binarystaticinfo__/bin")
 UI = Path("0012/ui/xml/gamemain/play")

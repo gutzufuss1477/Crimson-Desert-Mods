@@ -1,4 +1,4 @@
-// Execute the supported game's actual 0x38ac3c0 dependency loop. Only external
+// Execute the supported game's actual dependency loop. Only external
 // calls/data are redirected to fixtures; branch/order behavior is game code.
 #include "consumer_test_generated.hpp"
 
@@ -20,9 +20,9 @@ static void __fastcall consumer_bind() { ++consumerBound; }
 static void __fastcall consumer_noop() {}
 
 static Ptr consumer_external(Ptr target) {
-    if(target==0x41bbf30) return reinterpret_cast<Ptr>(&consumer_load);
-    if(target==0x380ebc0) return reinterpret_cast<Ptr>(&consumer_finalize);
-    if(target==0x41e3b10) return reinterpret_cast<Ptr>(&consumer_bind);
+    if(target==ConsumerLoadCss) return reinterpret_cast<Ptr>(&consumer_load);
+    if(target==ConsumerFinalizeStyles) return reinterpret_cast<Ptr>(&consumer_finalize);
+    if(target==ConsumerBindStyles) return reinterpret_cast<Ptr>(&consumer_bind);
     return reinterpret_cast<Ptr>(&consumer_noop);
 }
 static void reset_css_fixture() {
@@ -48,7 +48,7 @@ static void test_native_consumer() {
     check(island<4000,"consumer trampoline space bounded");
     for(const auto& fix:ConsumerReferences) {
         std::int32_t old{};std::memcpy(&old,code+fix.offset,4);
-        const auto end=static_cast<std::int64_t>(fix.target)-old-0x38ac3c0;
+        const auto end=static_cast<std::int64_t>(fix.target)-old-ConsumerStyleConsumer;
         check(end>0 && end<=sizeof(NativeStyleConsumerCode),"RIP-relative instruction endpoint");
         const auto relative=static_cast<std::int32_t>(4000-end);
         std::memcpy(code+fix.offset,&relative,4);

@@ -1,5 +1,16 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## v17.3.2 — 5 November 2026 — Steam build 26448710
+
+- Update the native category helper for the current executable and retain its executable/function checks.
+- Rebuild StoreInfo from the current game data, preserving the official change to another merchant and all 439 non-Alden merchants.
+- Keep the regular 567 mod offers plus 40 original offers, nine categories, stock identities, 706 field-level price edits and all 15 languages.
+- Retain the existing vanilla/Better Inventory layouts and compatibility with Equip All Armor and Steelheart price/stamina edits.
+- Exclude DLC preview changes. Replace both the data package and category helper with version 17.3.2.
+- Author confirmed the update in game on Steam build 26448710. Native/UI regressions and package checks pass. The final ASI and game payloads match the confirmed candidate; only the readme changed. Future game updates may still require a new helper or refreshed shop data.
+
+[Download v17.3.2](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19702) · [Validation and checksums](../../releases/alden-v17.3.2-b26448710.md). Previous v17.3 is archived.
+
 ## v17.3 — 4 November 2026 — game 2.04.05
 
 - Add an Original category containing Alden's 40 native offers with their original stock limits and unlock/restock conditions.

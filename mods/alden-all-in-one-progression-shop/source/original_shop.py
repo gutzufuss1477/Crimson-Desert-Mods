@@ -79,8 +79,8 @@ def split_stock(record, count):
     return rows
 
 
-def add_original_stock(payload, vanilla_root, parser, prices):
-    sources = Inputs(vanilla_root, 'b26361232')
+def add_original_stock(payload, vanilla_root, parser, prices, game_profile='b26361232'):
+    sources = Inputs(vanilla_root, game_profile)
     vanilla = sources.table('storeinfo', 2)
     body_path, header_path = [PREFIX + 'storeinfo.staticinfo' + s for s in ('body', 'header')]
     current = Table(payload[body_path], payload[header_path], 2)
@@ -105,7 +105,8 @@ def add_original_stock(payload, vanilla_root, parser, prices):
     struct.pack_into('<I', prefix, 77, 607)
     assert old[-10:] == original[-10:]
     merged = bytes(prefix) + b''.join(stock + appended) + old[-10:]
-    updated = current.replace({3101: merged})
+    # Preserve the selected game's other merchants, including patch updates.
+    updated = vanilla.replace({3101: merged})
     assert split_stock(merged, 607)[:567] == stock
     # Independent DMM parser validates all lengths and nested stock conditions.
     parsed_before = parser.parse_table('storeinfo', current.body, current.header)
@@ -120,7 +121,7 @@ def add_original_stock(payload, vanilla_root, parser, prices):
         row['raw_d'] = row['raw_e'] = 567 + i
         expected['stock_data_list'].append(row)
     assert next(r for r in parsed_after if r['key'] == 3101) == expected
-    assert [r for r in parsed_after if r['key'] != 3101] == [r for r in parsed_before if r['key'] != 3101]
+    assert [r for r in parsed_after if r['key'] != 3101] == [r for r in parsed_vanilla if r['key'] != 3101]
     mod_ids = {i['id'] for i in catalog['items']}
     overlaps = sorted(set(ORIGINAL_IDS) & mod_ids)
     assert len(overlaps) == 9 and len(mod_ids | set(ORIGINAL_IDS)) == 598
@@ -132,6 +133,42 @@ def add_original_stock(payload, vanilla_root, parser, prices):
                 existing_mod_rows_byte_identical=True, original_stock_conditions_preserved=True,
                 original_stock_indices=[567, 606], original_save_indices=[567, 606],
                 other_stores_unchanged=True, independent_dmm_parse='PASS', input_hashes=sources.used)
+
+
+def rebase_localization(payload, parser, vanilla_root, game_profile):
+    """Keep current official translations and append the eight known tab keys."""
+    sources = Inputs(vanilla_root, game_profile)
+    bp, hp = [PREFIX + 'localstringinfo.staticinfo' + s for s in ('body', 'header')]
+    body = sources.read(Path(bp.removeprefix('files/')))
+    header = sources.read(Path(hp.removeprefix('files/')))
+    count = struct.unpack_from('<H', header)[0]
+    # This build changes PALOC translations, not the key table. Refuse future
+    # changes instead of accidentally replacing an updated official key table.
+    assert payload[bp].startswith(body)
+    assert struct.unpack_from('<H', payload[hp])[0] == count + 8
+    assert payload[hp][2:len(header)] == header[2:]
+    keys = None
+    for path, old in list(payload.items()):
+        if not path.endswith('/localstringinfo.paloc'):
+            continue
+        native = sources.read(Path(path.removeprefix('files/')))
+        entries = parser.parse_paloc_bytes(native)
+        added = parser.parse_paloc_bytes(old)[-8:]
+        current_keys = tuple(e['string_key'] for e in added)
+        if keys is None:
+            keys = current_keys
+        assert keys == current_keys and len(set(keys)) == 8
+        assert all(e['unk_id'] == 11 for e in added)
+        assert not set(keys) & {e['string_key'] for e in entries}
+        raw = parser.serialize_paloc(entries + added)
+        block = lz4.block.compress(raw, store_size=False)
+        container = bytearray(native[:512])
+        struct.pack_into('<II', container, 9, len(block), len(raw))
+        container += block
+        assert parser.parse_paloc_bytes(bytes(container)) == entries + added
+        payload[path] = bytes(container)
+    assert len(sources.used) == 17
+    return dict(current_game_translations_preserved=True, input_hashes=sources.used)
 
 
 def add_localization(payload, parser):
