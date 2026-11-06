@@ -1,0 +1,10 @@
+{
+  "current_base_items": 7069,
+  "price_intents": 706,
+  "equip_all_intents": 5158,
+  "steelheart_intents": 1,
+  "both_orders_and_repeat_application": "PASS",
+  "all_record_fields_match_expected": true,
+  "original_item_effects_preserved": true,
+  "game_launched_or_mounted": false
+}

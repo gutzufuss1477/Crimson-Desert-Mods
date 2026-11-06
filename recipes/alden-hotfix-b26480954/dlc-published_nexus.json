@@ -1,0 +1,36 @@
+{
+  "modId": 2066,
+  "fileId": 20057,
+  "globalVersionId": "38521561697881",
+  "fileGroupId": "8322432",
+  "version": "17.4.2",
+  "category": "OPTIONAL",
+  "primary": false,
+  "previousGlobalVersionId": "38521561697747",
+  "previousArchived": true,
+  "url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20057",
+  "descriptionVerified": true,
+  "descriptionCanonicalBbcodeVerified": true,
+  "changelogVerified": true,
+  "downloadVerified": true,
+  "packageSha256": "08f0ae50f8fc6c85bebd09a30c16b44a23aea97a3d3f64af3c35ba9effd8fce7",
+  "downloadSha256": "08f0ae50f8fc6c85bebd09a30c16b44a23aea97a3d3f64af3c35ba9effd8fce7",
+  "bytes": 4372416,
+  "steamBuild": "26480954",
+  "inGameTested": false,
+  "dlcRuntimeTested": false,
+  "alfredFeatureIncluded": false,
+  "verifiedAt": "2026-11-06T20:40:45.697Z",
+  "dlcDependencies": [
+    {
+      "id": "10323",
+      "dlc_targets": [
+        {
+          "id": "11130",
+          "dlc_id": "1",
+          "name": "Charting the Unknown"
+        }
+      ]
+    }
+  ]
+}

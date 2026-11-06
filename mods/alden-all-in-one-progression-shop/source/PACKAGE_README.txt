@@ -1,5 +1,5 @@
-ALDEN SHOP 17.3.2
-Crimson Desert / Steam build 26448710.
+ALDEN SHOP 17.3.3
+Crimson Desert / Steam build 26480954.
 Use a DMM version with support for this game update and field-level patches.
 https://www.nexusmods.com/crimsondesert/mods/2066
 
@@ -25,7 +25,7 @@ INSTALL / UPDATE
    Do not merge into an old folder or keep duplicate price patches.
 3. Import Alden_Shop.zip. Enable Alden Shop and Alden Shop - 1 Copper.
 4. Replace/enable the included Alden Category Tabs.asi in ASI Mods.
-   Keep only one Alden category helper active. Both parts must be 17.3.2.
+   Keep only one Alden category helper active. Both parts must be 17.3.3.
 5. Mount, restart the game and visit Alden.
 
 COMPATIBILITY
@@ -41,10 +41,12 @@ Other mods changing the same shop data, prices or localization may conflict.
 VALIDATION
 The builder checks stock data, all 15 language files, native category callbacks,
 purchase-record identity and the vanilla/Better Inventory UI fixtures.
-The author confirmed version 17.3.2 in game on Steam build 26448710 on
-5 November 2026. This release retains the exact confirmed ASI and all game
-payloads; only this readme was updated after confirmation. All other current
-official merchants and language entries are preserved.
+Compatibility hotfix for Steam build 26480954. All 607 offers, prices, stock
+identities and category behavior are unchanged from the published 17.3.2.
+Current official merchants and language entries are preserved.
+Native category/UI regressions and current-data checks pass. This hotfix has
+not yet been confirmed in game; previous gameplay confirmation applies to
+17.3.2 on build 26448710. No Alfred merchant changes are included.
 This is the regular shop: no DLC preview changes, exclusive records or assets
 are included. DLC runtime support remains unverified.
 The native helper checks the supported executable before installing hooks.

@@ -240,7 +240,7 @@ def build(args):
                     'manifest.json': json.dumps(manifest, ensure_ascii=False, indent=2).encode(),
                     'LICENSE.txt': alden['NATIVE_LICENSE.txt'],
                     'MinHook-LICENSE.txt': (vendor / 'LICENSE.txt').read_bytes(),
-                    'README.txt': crlf((HERE / 'PACKAGE_README.txt').read_text(encoding='utf-8'))})
+                    'README.txt': crlf((HERE.parents[2] / 'recipes/alden-v17.3.2-b26448710/PACKAGE_README.txt').read_text(encoding='utf-8'))})
     dest = out / 'Alden_Shop.zip'
     with zipfile.ZipFile(dest, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         for name, data in sorted(payload.items()):

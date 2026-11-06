@@ -1,6 +1,6 @@
 # Crimson Desert — Mods
 
-Mods by gutzufuss1477 / Blablup. Bank Refresh 1.3.1 was confirmed on **5 November 2026** for **Steam build 26423880**. Alden 17.3.2 was confirmed on **5 November 2026** for **Steam build 26448710**. Steelheart updated on **4 November 2026**; both Mount Stats variants and Healthbar updated on **2 November 2026** for **Steam build 26361232**.
+Mods by gutzufuss1477 / Blablup. Bank Refresh 1.3.1 was confirmed on **5 November 2026** for **Steam build 26423880**. Alden 17.3.3 / optional DLC 17.4.2 target **Steam build 26480954**; technical checks passed, new gameplay confirmation pending. Steelheart updated on **4 November 2026**; both Mount Stats variants and Healthbar updated on **2 November 2026** for **Steam build 26361232**.
 
 | Mod / variant | Release | Current-build status |
 |---|---|---|
@@ -8,13 +8,13 @@ Mods by gutzufuss1477 / Blablup. Bank Refresh 1.3.1 was confirmed on **5 Novembe
 | [All Mounts Level 5 All Stats](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 13 | Gameplay-confirmed; adaptive ASI |
 | [Healthbar — three variants](mods/healthbar-always-on/) | 4 | Vanilla Multitarget gameplay-confirmed; Classic/Caites data/style/host validated |
 | [Steelheart Horseshoes](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 10 | Field-level patch compatible with original Equip All Armor; combined gameplay confirmed |
-| [Alden Shop](mods/alden-all-in-one-progression-shop/) | 17.3.2 | Confirmed in game on Steam 26448710; regular shop, nine tabs; current merchant data and matching category ASI |
+| [Alden Shop](mods/alden-all-in-one-progression-shop/) | 17.3.3 / DLC 17.4.2 | Steam 26480954 hotfix; unchanged catalogs, updated ASIs/localization; offline validated, gameplay pending |
 | [Mining Helmet](mods/mining-helmet-always-on/) | Published 1.3.2 for previous build | New 1.4.0 source/candidate awaiting current gameplay confirmation |
 | Mount Speed Only | 13 | 1,135 host checks and current structural checks passed; separate gameplay confirmation pending |
 
 [Bank Refresh 1.3.1 download](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/bank-v1.3.1-b26423880) · [Steam 26361232 release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26361232). Full Healthbar data/UI ZIPs are on [Nexus](https://www.nexusmods.com/crimsondesert/mods/2406?tab=files); GitHub hosts only its helper, source and recipes.
 
-[Alden v17.3.2 release notes and checksums](releases/alden-v17.3.2-b26448710.md) · [Complete Alden download on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19702). Alden's source, catalog recipe and localization labels are in Git; complete game-data/UI overlays remain Nexus-only.
+[Alden 17.3.3 / DLC 17.4.2 release notes and checksums](releases/alden-hotfix-b26480954.md) · [Complete Alden download on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20056). Alden's source, catalog recipe and localization labels are in Git; complete game-data/UI overlays remain Nexus-only.
 
 [Steelheart v10 release notes and checksums](releases/steelheart-v10-b26361232.md) · [Steelheart download on Nexus](https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=19468). All Stats and Speed Only remain v13.
 

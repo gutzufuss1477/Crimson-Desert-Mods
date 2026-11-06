@@ -1,0 +1,14 @@
+[
+  {
+    "file": "Alden_Shop_DLC.zip",
+    "exit_code": 0,
+    "output": "Scan starting...\nScan finished.\nScanning C:\\Users\\Simon\\Documents\\ChatGPT\\Crimson desert Mod Enticklung\\alden-dlc-17.4.2-b26480954\\Alden_Shop_DLC.zip found no threats.\n",
+    "sha256": "08f0ae50f8fc6c85bebd09a30c16b44a23aea97a3d3f64af3c35ba9effd8fce7"
+  },
+  {
+    "file": "Alden Category Tabs.asi",
+    "exit_code": 0,
+    "output": "Scan starting...\nScan finished.\nScanning C:\\Users\\Simon\\Documents\\ChatGPT\\Crimson desert Mod Enticklung\\alden-dlc-17.4.2-b26480954\\Alden Category Tabs.asi found no threats.\n",
+    "sha256": "0d90ac13cf72efeb22440cd8ce1307ee193e596d12699c23ced19a0d59b30d2c"
+  }
+]

@@ -1,0 +1,482 @@
+{
+  "items": [
+    {
+      "key": 1005625,
+      "string_key": "Item_Natural_Pearl",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Natural Pearl",
+      "ger": "Naturperle",
+      "stock_index": 817
+    },
+    {
+      "key": 1004791,
+      "string_key": "Item_Rare_Collect_Abalone",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Abalone",
+      "ger": "Abalone",
+      "stock_index": 818
+    },
+    {
+      "key": 1005500,
+      "string_key": "Food_Lightning_JellyFish",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Shocking Jellyfish Bell",
+      "ger": "Elektrisierender Quallenschirm",
+      "stock_index": 819
+    },
+    {
+      "key": 1004796,
+      "string_key": "Item_Rare_Collect_Sea_String",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Red Seaweed",
+      "ger": "Meeresfäden",
+      "stock_index": 820
+    },
+    {
+      "key": 1004790,
+      "string_key": "Item_Rare_Collect_Mussel",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Mussel",
+      "ger": "Miesmuschel",
+      "stock_index": 821
+    },
+    {
+      "key": 1005499,
+      "string_key": "Food_JellyFish",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Jellyfish Bell",
+      "ger": "Quallenschirm",
+      "stock_index": 822
+    },
+    {
+      "key": 1006531,
+      "string_key": "Item_Rare_Collect_GiantAbalone",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Abalone",
+      "ger": "Riesen-Abalone",
+      "stock_index": 823
+    },
+    {
+      "key": 1006536,
+      "string_key": "Item_Rare_Collect_GiantSeaPineapple",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Sea Pineapple",
+      "ger": "Riesen-See-Ananas",
+      "stock_index": 824
+    },
+    {
+      "key": 1006535,
+      "string_key": "Item_Rare_Collect_GiantSeaCucumber",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Sea Cucumber",
+      "ger": "Riesen-Seegurke",
+      "stock_index": 825
+    },
+    {
+      "key": 1006537,
+      "string_key": "Item_Rare_Collect_GiantSeaSquirt",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Stalked Sea Squirt",
+      "ger": "Riesen-Seescheide",
+      "stock_index": 826
+    },
+    {
+      "key": 1006533,
+      "string_key": "Item_Rare_Collect_GiantStarfish",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Starfish",
+      "ger": "Riesen-Seestern",
+      "stock_index": 827
+    },
+    {
+      "key": 1006532,
+      "string_key": "Item_Rare_Collect_GiantConch",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Conch",
+      "ger": "Riesen-Turbanschnecke",
+      "stock_index": 828
+    },
+    {
+      "key": 1005457,
+      "string_key": "Item_Rare_Collect_seapineapple",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Sea Pineapple",
+      "ger": "See-Ananas",
+      "stock_index": 829
+    },
+    {
+      "key": 1004795,
+      "string_key": "Item_Rare_Collect_Sea_Kelp",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Kelp",
+      "ger": "Seekohl",
+      "stock_index": 830
+    },
+    {
+      "key": 1004794,
+      "string_key": "Item_Rare_Collect_Sea_Weed",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Seaweed",
+      "ger": "Seetang",
+      "stock_index": 831
+    },
+    {
+      "key": 1004792,
+      "string_key": "Item_Rare_Collect_Shortneckclam",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Clams",
+      "ger": "Teppichmuscheln",
+      "stock_index": 832
+    },
+    {
+      "key": 1004788,
+      "string_key": "Item_Rare_Collect_Conch",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Conch",
+      "ger": "Turbanschnecke",
+      "stock_index": 833
+    },
+    {
+      "key": 1006919,
+      "string_key": "Enhanced_HandCannon_AbyssRuinsCreatureCore",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Dense Abyss Cell",
+      "ger": "Hochverdichtete Abyss-Sphäre",
+      "stock_index": 834
+    },
+    {
+      "key": 1005874,
+      "string_key": "Leviathan_Scale",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Leviakan Scale",
+      "ger": "Leviakans Schuppe",
+      "stock_index": 835
+    },
+    {
+      "key": 1006190,
+      "string_key": "Item_Hydrothermal_Snail",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Scaly-Foot Snail",
+      "ger": "Schuppenfuß-Schnecke",
+      "stock_index": 836
+    },
+    {
+      "key": 1006920,
+      "string_key": "Enhanced_HandCannon_Gun_Powder",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Blended Gunpowder",
+      "ger": "Spezialmischungs-Schießpulver",
+      "stock_index": 837
+    },
+    {
+      "key": 1006918,
+      "string_key": "Enhanced_HandCannon_IronStone",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Smelted Iron Ore",
+      "ger": "Spezialveredeltes Eisenerz",
+      "stock_index": 838
+    },
+    {
+      "key": 1006921,
+      "string_key": "Enhanced_HandCannon_Platinum",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Refined Platinum",
+      "ger": "Speziell veredeltes Platin",
+      "stock_index": 839
+    },
+    {
+      "key": 1006917,
+      "string_key": "Enhanced_HandCannon_MarniMachineLaser",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Upgraded Marni Laser Component",
+      "ger": "Verbesserte Marni-Laserkomponente",
+      "stock_index": 840
+    }
+  ],
+  "reason": "Natural Pearl and 23 additional DLC materials explicitly required by crafting, refinement, alchemy and cooking recipes. Appended after the published 17.4.0 stock identities.",
+  "reference_dlc_version": "2.04.05",
+  "recipe_evidence": {
+    "1005625": {
+      "recipe_count": 68,
+      "recipes": [
+        "Collection_Lamp_stand_ocean_0002_0",
+        "Diving_PlateArmor_Armor_03_9",
+        "Diving_PlateArmor_Boots_03_9",
+        "Diving_PlateArmor_Gloves_03_9",
+        "Diving_PlateArmor_Helm_03_9",
+        "Diving_PlateArmor_Armor_04_9",
+        "Diving_PlateArmor_Gloves_04_9",
+        "Diving_PlateArmor_Helm_04_9",
+        "Diving_PlateArmor_Boots_04_9",
+        "Diving_PlateArmor_Helm_01_9",
+        "Diving_PlateArmor_Helm_02_9",
+        "Diving_PlateArmor_Armor_01_9",
+        "Diving_PlateArmor_Armor_02_9",
+        "Diving_PlateArmor_Gloves_01_9",
+        "Diving_PlateArmor_Gloves_02_9",
+        "Diving_PlateArmor_Boots_01_9",
+        "Diving_PlateArmor_Boots_02_9",
+        "Item_ship_cannon_0009_TurtleShip_0",
+        "Item_ship_cannon_0010_TurtleShip_0",
+        "item_Ship_sail_open_0001_index07_0",
+        "item_Ship_sail_open_0001_index05_0",
+        "item_Ship_sail_open_0001_index06_0",
+        "item_bigship_sail_open_0001_index03_0",
+        "item_bigship_sail_open_0001_index08_0",
+        "item_bigship_sail_open_0001_index12_0",
+        "item_bigship_sail_open_0001_index25_0",
+        "item_bigship_sail_open_0001_index06_0",
+        "item_bigship_sail_open_0001_index07_0",
+        "item_bigship_sail_open_0001_index21_0",
+        "item_bigship_sail_open_0001_index26_0",
+        "item_bigship_sail_open_0002_0",
+        "item_hugeship_sail_open_0001_index02_0",
+        "item_turtleship_sail_open_0001_index01_0",
+        "item_turtleship_sail_open_0001_index02_0",
+        "item_ship_bowdeco_0004_0",
+        "item_ship_bowdeco_0005_0",
+        "item_ship_bowdeco_0006_0",
+        "item_ship_bowdeco_0007_0",
+        "item_bigship_bowdeco_0004_0",
+        "item_bigship_bowdeco_0005_0",
+        "item_bigship_bowdeco_0006_0",
+        "item_bigship_bowdeco_0008_0",
+        "item_ship_sterndecor_0004_0",
+        "item_ship_sterndecor_0005_0",
+        "item_ship_sterndecor_0006_0",
+        "item_bigship_sterndecor_0004_0",
+        "item_bigship_sterndecor_0005_0",
+        "item_bigship_sterndecor_0008_0",
+        "Beam_OneHandSword_0",
+        "Beam_OneHandSword_1",
+        "Beam_OneHandSword_2",
+        "Beam_OneHandSword_3",
+        "Beam_OneHandSword_4",
+        "Beam_OneHandSword_5",
+        "Beam_OneHandSword_6",
+        "Beam_OneHandSword_7",
+        "Beam_OneHandSword_8",
+        "Beam_OneHandSword_9",
+        "Beam_TwoHandSword_0",
+        "Beam_TwoHandSword_1",
+        "Beam_TwoHandSword_2",
+        "Beam_TwoHandSword_3",
+        "Beam_TwoHandSword_4",
+        "Beam_TwoHandSword_5",
+        "Beam_TwoHandSword_6",
+        "Beam_TwoHandSword_7",
+        "Beam_TwoHandSword_8",
+        "Beam_TwoHandSword_9"
+      ]
+    },
+    "1004791": {
+      "recipe_count": 8,
+      "recipes": [
+        "Parboiled_Seafood_XLarge",
+        "Abalone_Porridge_XLarge",
+        "Parboiled_Seafood_Large",
+        "Abalone_Porridge_Large",
+        "Parboiled_Seafood_Medium",
+        "Abalone_Porridge_Medium",
+        "Parboiled_Seafood",
+        "Abalone_Porridge"
+      ]
+    },
+    "1005500": {
+      "recipe_count": 2,
+      "recipes": [
+        "Potion_StatBuff_Tier2_0009_0",
+        "Potion_StatBuff_Tier3_0009_0"
+      ]
+    },
+    "1004796": {
+      "recipe_count": 4,
+      "recipes": [
+        "SeaString_Seasoned_XLarge",
+        "SeaString_Seasoned_Large",
+        "SeaString_Seasoned_Medium",
+        "SeaString_Seasoned"
+      ]
+    },
+    "1004790": {
+      "recipe_count": 4,
+      "recipes": [
+        "Mussel_Soup_XLarge",
+        "Mussel_Soup_Large",
+        "Mussel_Soup_Medium",
+        "Mussel_Soup"
+      ]
+    },
+    "1005499": {
+      "recipe_count": 4,
+      "recipes": [
+        "Jellyfish_Salad_XLarge",
+        "Jellyfish_Salad_Large",
+        "Jellyfish_Salad_Medium",
+        "Jellyfish_Salad"
+      ]
+    },
+    "1006531": {
+      "recipe_count": 2,
+      "recipes": [
+        "Potion_StatBuff_Tier1_0007_0",
+        "Potion_StatBuff_Tier2_0007_0"
+      ]
+    },
+    "1006536": {
+      "recipe_count": 1,
+      "recipes": [
+        "Potion_StatBuff_Tier2_0009_0"
+      ]
+    },
+    "1006535": {
+      "recipe_count": 1,
+      "recipes": [
+        "Potion_StatBuff_Tier3_0009_0"
+      ]
+    },
+    "1006537": {
+      "recipe_count": 1,
+      "recipes": [
+        "Potion_StatBuff_Tier1_0009_0"
+      ]
+    },
+    "1006533": {
+      "recipe_count": 3,
+      "recipes": [
+        "Potion_StatBuff_Tier1_0008_0",
+        "Potion_StatBuff_Tier2_0008_0",
+        "Potion_StatBuff_Tier3_0008_0"
+      ]
+    },
+    "1006532": {
+      "recipe_count": 2,
+      "recipes": [
+        "Potion_StatBuff_Tier2_0007_0",
+        "Potion_StatBuff_Tier3_0007_0"
+      ]
+    },
+    "1005457": {
+      "recipe_count": 4,
+      "recipes": [
+        "SeaPineapple_Bibimbap_XLarge",
+        "SeaPineapple_Bibimbap_Large",
+        "SeaPineapple_Bibimbap_Medium",
+        "SeaPineapple_Bibimbap"
+      ]
+    },
+    "1004795": {
+      "recipe_count": 12,
+      "recipes": [
+        "Mussel_Soup_XLarge",
+        "Shortneckclam_NoodleSoup_XLarge",
+        "Seaweed_Soup_XLarge",
+        "Mussel_Soup_Large",
+        "Shortneckclam_NoodleSoup_Large",
+        "Seaweed_Soup_Large",
+        "Mussel_Soup_Medium",
+        "Shortneckclam_NoodleSoup_Medium",
+        "Seaweed_Soup_Medium",
+        "Mussel_Soup",
+        "Shortneckclam_NoodleSoup",
+        "Seaweed_Soup"
+      ]
+    },
+    "1004794": {
+      "recipe_count": 4,
+      "recipes": [
+        "Seaweed_Soup_XLarge",
+        "Seaweed_Soup_Large",
+        "Seaweed_Soup_Medium",
+        "Seaweed_Soup"
+      ]
+    },
+    "1004792": {
+      "recipe_count": 4,
+      "recipes": [
+        "Shortneckclam_NoodleSoup_XLarge",
+        "Shortneckclam_NoodleSoup_Large",
+        "Shortneckclam_NoodleSoup_Medium",
+        "Shortneckclam_NoodleSoup"
+      ]
+    },
+    "1004788": {
+      "recipe_count": 4,
+      "recipes": [
+        "Parboiled_Seafood_XLarge",
+        "Parboiled_Seafood_Large",
+        "Parboiled_Seafood_Medium",
+        "Parboiled_Seafood"
+      ]
+    },
+    "1006919": {
+      "recipe_count": 1,
+      "recipes": [
+        "Oongka_OneHandCannon_I_0"
+      ]
+    },
+    "1005874": {
+      "recipe_count": 2,
+      "recipes": [
+        "Beam_OneHandSword_9",
+        "Beam_TwoHandSword_9"
+      ]
+    },
+    "1006190": {
+      "recipe_count": 1,
+      "recipes": [
+        "Potion_StatBuff_Tier3_0009_0"
+      ]
+    },
+    "1006920": {
+      "recipe_count": 1,
+      "recipes": [
+        "Oongka_OneHandCannon_I_0"
+      ]
+    },
+    "1006918": {
+      "recipe_count": 1,
+      "recipes": [
+        "Oongka_OneHandCannon_I_0"
+      ]
+    },
+    "1006921": {
+      "recipe_count": 1,
+      "recipes": [
+        "Oongka_OneHandCannon_I_0"
+      ]
+    },
+    "1006917": {
+      "recipe_count": 1,
+      "recipes": [
+        "Oongka_OneHandCannon_I_0"
+      ]
+    }
+  },
+  "selection_policy": "Add new DLC materials explicitly required by an unblocked crafting, refinement, alchemy or cooking recipe. Includes nonstandard item categories. Exclude finished equipment, survey-map fragments, interchangeable fish varieties, decorations and permanent-bonus rewards. Preserve all native use actions, knowledge requirements and stack limits.",
+  "reference_scope": "Current base 26448710 plus available DLC 2.04.05 / 26361232; later DLC changes and in-game behavior unverified."
+}

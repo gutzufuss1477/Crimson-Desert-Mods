@@ -1,5 +1,17 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## 17.3.3 regular / 17.4.2 DLC — 6 November 2026 — Steam build 26480954
+
+- Rebase the category ASIs to the new executable; retain exact executable/function guards and unchanged runtime behavior.
+- Preserve current official localization after the game update. All 439 other merchants are retained.
+- Keep all 607 regular / 841 DLC offers, prices, stock/save identities, nine tabs and 15 languages. DLC books remain at Alden; no Alfred feature.
+- Preserve Better Inventory 3.3 layouts without shared replacement paths; verify Equip All Armor and Steelheart price composition in both orders.
+- Native/UI/data/composition checks and final local Defender scans passed. Both published downloads were retrieved and SHA-256 verified.
+- New builds await gameplay confirmation. The author has no DLC; DLC owner testing is requested. The separate reported ASI crash remains unverified.
+- Update both package and helper. Previous 17.3.2 and 17.4.1 files are archived.
+
+[Regular 17.3.3](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20056) · [Optional DLC 17.4.2](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20057) · [Checksums](../../releases/alden-hotfix-b26480954.md).
+
 ## v17.3.2 — 5 November 2026 — Steam build 26448710
 
 - Update the native category helper for the current executable and retain its executable/function checks.

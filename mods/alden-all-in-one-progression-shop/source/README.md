@@ -1,6 +1,22 @@
-# Alden v17.3.2 source
+# Alden hotfix source — 17.3.3 / 17.4.2
 
-The current builder targets **Steam build 26448710**, using the [native profile](../../../recipes/alden-v17.3.2-b26448710/native-profile.json) and [original data hashes](../../../recipes/b26448710/input-hashes.json). This is the regular shop update; DLC preview changes are excluded. Native/data validation passes. The author confirmed the candidate in game on 5 November 2026; the published ASI and all game payloads are identical, with a readme-only finalization.
+The current release entry point is `build_release_hotfix.py`, with the [26480954 native profile](../../../recipes/alden-hotfix-b26480954/native-profile.json). It consumes the verified previous package and its local generated native build, current official base tables, matching EXE, DMM parser and original Better Inventory 3.3 archive. Select `--variant regular` or `--variant dlc`.
+
+```powershell
+python build_release_hotfix.py --variant regular --previous-build C:\Inputs\alden-release-17.3.2-b26448710 --current-data C:\Inputs\b26480954 --parser-dir C:\Inputs\parser --game-exe C:\Inputs\CrimsonDesert.exe --better-inventory C:\Inputs\BetterInventory3.3.zip --output C:\Output\Alden17.3.3
+```
+
+For DLC, pass `--variant dlc` and the previous 17.4.1 build directory. The historical `build_dlc_shop.py` and its [catalog recipe](../../../recipes/alden-dlc-b26361232/) document construction of that input. Historical full builders pin their matching readmes instead of using current release text.
+
+The hotfix preserves the previous native/filter/catalog sources and all UI edits byte-for-byte, remaps the verified native addresses, rebuilds native regression fixtures and refreshes official localization. It keeps the complete Alden StoreInfo record unchanged and takes all other merchants from current official data. Price targets are unchanged. No Alfred source, additional native API or merchant redistribution is used.
+
+The [release recipe](../../../recipes/alden-hotfix-b26480954/) records input hashes, native/data/composition checks, Defender scans and download-verified Nexus publication. Native fixtures do not constitute a full game test. These builds await gameplay confirmation; DLC runtime remains unverified. Complete generated game-derived headers, native build outputs and game assets remain outside Git.
+
+---
+
+# Historical 17.3.2 full-builder notes
+
+The historical full builder targets **Steam build 26448710**, using the [native profile](../../../recipes/alden-v17.3.2-b26448710/native-profile.json) and [original data hashes](../../../recipes/b26448710/input-hashes.json). This is the regular shop update; DLC preview changes are excluded. Native/data validation passes. The author confirmed the candidate in game on 5 November 2026; the published ASI and all game payloads are identical, with a readme-only finalization.
 
 v17.3 adds an Original tab containing Alden's 40 native offers. The existing 567 mod offers retain their stock identities and 1 Copper prices. Original limits and unlock/restock conditions are retained; 31 original items keep their normal prices and nine shared items retain the existing 1 Copper price. The new offers have separate stock/save indices 567–606. Historical vanilla purchase counters are not migrated. There are 607 offers, 598 distinct items and nine tabs; conditional or sold-out offers may be hidden. Tab counters show catalog sizes.
 

@@ -1,37 +1,38 @@
 # Alden All-In-One Progression Shop
 
-Current release: **v17.3.2**, for **Steam build 26448710**. Updates the category helper and shop table for the current game build, retaining the regular 567 mod offers at 1 Copper and Alden's 40 original offers. DLC preview changes are excluded.
+Current releases: **17.3.3 regular** and **17.4.2 optional DLC**, for **Steam build 26480954**. The previous helpers support build 26448710 and refuse the new executable. Replace both the data package and its matching category ASI.
 
-The Original tab keeps the original stock limits and unlock/restock conditions. **31 original items retain their normal prices**; **nine shared items stay at 1 Copper** in both places, with separate stock records. Existing mod offers and stock identities are unchanged. Restored original offers receive new stock/save identities; historical vanilla purchase counters are not migrated.
+- [Regular download 17.3.3](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20056): 567 mod offers at 1 Copper plus 40 original offers; 607 offers / 598 distinct items. No DLC-exclusive items.
+- [Optional DLC download 17.4.2](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20057): requires installed **Charting the Unknown**. 841 offers / 832 distinct items, including all 234 previous DLC offers, Natural Pearl and 40 DLC crafting books at Alden.
 
-The author confirmed **17.3.2 in game on 5 November 2026**. The final release keeps the exact confirmed ASI and all 20 game payloads; only the readme changed after confirmation. All 439 other merchants match the current game data. DLC runtime support remains unverified.
+The hotfix changes executable compatibility and refreshes official localization. Catalogs, prices, stock/save identities, category filtering and keyboard/controller behavior are unchanged. No Alfred changes are included.
 
-Nine tabs follow all 15 game text languages: **All (607 offers / 598 distinct items), Abyss (94), Abyss Plans (93), Books (71), Recipes (95), Blueprints (125), Materials (39), Contracts (50), Original (40)**. Counts indicate catalog sizes; availability depends on game conditions and stock. Labels size/wrap automatically, and keyboard/controller switching retains the single-step input fix. Tiered Abyss Gear stays at Tier I; craft higher tiers yourself. No DLC-exclusive items are added.
+Nine tabs follow all 15 game text languages and size/wrap automatically: All, Abyss, Abyss Plans, Books, Recipes, Blueprints, Materials, Contracts and Original. Counts show catalog totals; unlock conditions and sold-out offers can reduce availability. Tiered Abyss Gear stays at Tier I; craft higher tiers yourself.
 
-[Download v17.3.2 on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=19702) · [Changelog](CHANGELOG.md) · [Release notes and checksums](../../releases/alden-v17.3.2-b26448710.md) · [Validation recipe](../../recipes/alden-v17.3.2-b26448710/)
+The Original tab preserves Alden's 40 native offers, stocks and unlock/restock conditions. 31 retain normal prices; nine shared items remain 1 Copper in both categories, with separate stock records. Existing stock/save identities are retained; historical vanilla purchase counters are not migrated.
 
-## Requirements and installation
+## Install / update
 
-Use **DMM 4.7.2 or a newer version supporting this game build** with its ASI loader and the **[Microsoft Visual C++ v14 Redistributable, x64](https://aka.ms/vc14/vc_redist.x64.exe)**. Runtime DLLs are not bundled.
+Use DMM with support for this game build and its ASI loader, plus the [Microsoft Visual C++ v14 Redistributable, x64](https://aka.ms/vc14/vc_redist.x64.exe). Close the game and unmount. Completely replace the previous Alden package; do not merge folders. Import `Alden_Shop.zip` or `Alden_Shop_DLC.zip`, enable its matching 1 Copper component and replace/enable the included `Alden Category Tabs.asi`. Mount and restart.
 
-Close the game and unmount in DMM. Completely replace the previous Alden package; do not merge into an old folder. Import `Alden_Shop.zip`, enable **Alden Shop** and **Alden Shop - 1 Copper**, and replace/enable the included **Alden Category Tabs.asi** under ASI Mods. Both components must be **17.3.2**. Mount and restart. Keep only one Alden data mod, price patch and helper active. Do not manually copy the internal `files/` folder into the game.
+Keep only one Alden variant, price patch and helper active. Both regular components must be 17.3.3; both DLC components must be 17.4.2. Do not manually copy the internal `files/` folder into the game.
 
-## Compatibility
+## Compatibility and validation
 
-Original **[Better Inventory and Trade UI 3.3](https://www.nexusmods.com/crimsondesert/mods/452)** remains optional and separate. There are no shared UI replacement paths or required load order. Follow its author's installation instructions, including the DLC-specific texture rules. The native 2×4 buy grid remains without it; its 3×5 grid remains when installed.
+Original [Better Inventory and Trade UI 3.3](https://www.nexusmods.com/crimsondesert/mods/452) remains optional and separate. No shared replacement paths or required load order. Follow its author's DLC/non-DLC texture instructions. The original 2x4 or Better Inventory 3x5 buy grid is preserved.
 
-Original **[Character Creator Enhanced 9.1.32 / Equip All Armor](https://www.nexusmods.com/crimsondesert/mods/837)** remains optional and unmodified. All 706 field-level price edits are unchanged, preserving armor changes in either application order. No combined mod or extra compatibility patch is required. Other mods changing the same shop data, prices or localization can still conflict.
+Original [Character Creator Enhanced 9.1.32 / Equip All Armor](https://www.nexusmods.com/crimsondesert/mods/837) stays separate and unmodified. The unchanged 706 regular / 958 DLC price intents preserve its armor edits. Composition with Equip All Armor and Steelheart passed in both orders and on repeat application. Other shop, price or LocalStringInfo mods can still conflict.
 
-The combined setup with Steelheart v10 was previously confirmed in DMM and in game without DLC. The Original feature has its own gameplay confirmation. Standalone/reversed-order cases have technical checks but no separate gameplay confirmation; DLC data remain unvalidated.
+Both hotfixes passed native/UI/data checks and final local Defender scans. Published ZIP downloads were retrieved and their SHA-256 verified. **These builds have not yet been confirmed in game.** The author's previous normal-version confirmation applies to 17.3.2 on build 26448710.
 
-## Validation
+**The author does not own the DLC. DLC owners are asked to test the optional file.** Its catalog uses the available DLC 2.04.05 reference; current DLC tables and full gameplay remain unverified. No old DLC definitions or assets are bundled. The separate reported ASI crash has not been reproduced; this hotfix is not a confirmed fix for that report.
 
-Data checks preserve all 567 previous stock rows and every other merchant. The 40 original rows retain their native contents except for new stock/save identities. All existing localization records are retained. Native regressions cover nine tabs, all nine overlapping item pairs, separate purchase records, conditional availability, reopening, thread ownership, runtime UI loading and vanilla/Better Inventory layouts.
+The shared Microsoft runtime and Control Flow Guard remain in use. Helpers are unsigned; other antivirus engines and future signatures are unverified. Protection settings were not changed.
 
-The final ASI and ZIP passed direct local Microsoft Defender scans on 5 November 2026 with signature **1.463.134.0**. The shared Microsoft runtime and Control Flow Guard build settings from 17.2.2 are retained. Reports against the older 17.2/17.2.1 helper were reproducible. No protection settings were changed; other antivirus engines and future signatures remain unverified. The ASI is unsigned.
+[Changelog](CHANGELOG.md) · [Release notes and checksums](../../releases/alden-hotfix-b26480954.md) · [Validation recipe](../../recipes/alden-hotfix-b26480954/) · [Build source](source/)
 
-## Uninstall and source
+## Uninstall
 
-Close the game, unmount, disable Alden Shop, its price patch **and category ASI**, then remount. Purchased items and money spent are not rolled back.
+Close the game, unmount, disable the shop, its price component and category ASI, then remount. Purchased items and money spent are not rolled back.
 
-[Build instructions and runtime behavior](source/) cover the exact game/UI guards and native tests. Full game-data packages remain Nexus-only. Git contains source, patch manifests, catalog/localization recipes, hashes and validation records.
+Full game-data packages remain Nexus-only. Git contains source, catalog/localization recipes, hashes and validation records.

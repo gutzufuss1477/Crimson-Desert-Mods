@@ -1,0 +1,17 @@
+{
+  "package_sha256": "08f0ae50f8fc6c85bebd09a30c16b44a23aea97a3d3f64af3c35ba9effd8fce7",
+  "reference_dlc_scope": "Current base plus 2.04.05 DLC, offline only",
+  "base_and_dlc_price_intents": 958,
+  "equip_all_armor_intents": 5351,
+  "steelheart_intents": 1,
+  "both_orders_and_repeat_application": "PASS",
+  "all_record_fields_match_independent_expected_result": true,
+  "original_dlc_effects_actions_and_other_currency_prices_preserved": true,
+  "all_40_reference_dlc_crafting_books_in_books_tab": true,
+  "total_book_offers": 111,
+  "all_817_previous_stock_records_byte_identical": true,
+  "added_material_offers": 24,
+  "natural_pearl_in_materials": true,
+  "nine_localized_category_keys_absent_from_reference_dlc_overrides": true,
+  "game_launch_or_mount_performed": false
+}

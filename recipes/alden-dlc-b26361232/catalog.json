@@ -1,0 +1,1903 @@
+{
+  "game": "2.04.05",
+  "requires_dlc": true,
+  "items": [
+    {
+      "key": 1006113,
+      "string_key": "Item_Skill_AbyssGear_ArmorGoblin",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Ashen Blitz",
+      "ger": "Aschener Blitz",
+      "stock_index": 607
+    },
+    {
+      "key": 1006120,
+      "string_key": "Item_Skill_AbyssGear_Karanda_Feather",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Unfurled Feathers",
+      "ger": "Ausbreitende Federn",
+      "stock_index": 608
+    },
+    {
+      "key": 1006109,
+      "string_key": "Item_Skill_AbyssGear_Ludvig_OneArmed",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Writhebolt",
+      "ger": "Bebender Blitz",
+      "stock_index": 609
+    },
+    {
+      "key": 1006121,
+      "string_key": "Item_Skill_AbyssGear_DrylandsGolem",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Guardian's Gaze",
+      "ger": "Blick des Beschützers",
+      "stock_index": 610
+    },
+    {
+      "key": 1006108,
+      "string_key": "Item_Skill_AbyssGear_Satyros",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Eclipsed Thorn",
+      "ger": "Dorn der Dämmerung",
+      "stock_index": 611
+    },
+    {
+      "key": 1006125,
+      "string_key": "Item_Skill_AbyssGear_EchoStrom",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Storm's Echo",
+      "ger": "Echo des Sturms",
+      "stock_index": 612
+    },
+    {
+      "key": 1006124,
+      "string_key": "Item_Skill_AbyssGear_Ogre_GroundEdge",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Earthen Wedge",
+      "ger": "Erdkeil",
+      "stock_index": 613
+    },
+    {
+      "key": 1006117,
+      "string_key": "Item_Skill_AbyssGear_CircusMachine",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Trial by Fire",
+      "ger": "Feuertaufe",
+      "stock_index": 614
+    },
+    {
+      "key": 1006114,
+      "string_key": "Item_Skill_AbyssGear_Merrick_DefenceCounter",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Radiant Flash",
+      "ger": "Flugbahn des Glanzes",
+      "stock_index": 615
+    },
+    {
+      "key": 1006118,
+      "string_key": "Item_Skill_AbyssGear_LanFord_ChargeShot",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Focus Fire",
+      "ger": "Fokusfeuer",
+      "stock_index": 616
+    },
+    {
+      "key": 1006116,
+      "string_key": "Item_Skill_AbyssGear_RedNightmare",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Venomous Fangs",
+      "ger": "Jagd der Giftzähne",
+      "stock_index": 617
+    },
+    {
+      "key": 1006111,
+      "string_key": "Item_Skill_AbyssGear_ScrapQueenGoblin",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Magnetic Burst",
+      "ger": "Magnetfeld-Explosion",
+      "stock_index": 618
+    },
+    {
+      "key": 1006123,
+      "string_key": "Item_Skill_AbyssGear_Incarnation",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Ascended Incarnate",
+      "ger": "Manifestation des Ultimativen",
+      "stock_index": 619
+    },
+    {
+      "key": 1006115,
+      "string_key": "Item_Skill_AbyssGear_MarniKnight_Spear",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Power Overload",
+      "ger": "Stromüberlastung",
+      "stock_index": 620
+    },
+    {
+      "key": 1006119,
+      "string_key": "Item_Skill_AbyssGear_AncientPeople_ChargeShot",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Rushing Wind",
+      "ger": "Tobender Lebensodem",
+      "stock_index": 621
+    },
+    {
+      "key": 1006122,
+      "string_key": "Item_Skill_AbyssGear_MirageFlurry",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Mirage Cascade",
+      "ger": "Trugbild-Kaskade",
+      "stock_index": 622
+    },
+    {
+      "key": 1006112,
+      "string_key": "Item_Skill_AbyssGear_AwakenCaliburn",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Judicator of Ruin",
+      "ger": "Urteil des Ruins",
+      "stock_index": 623
+    },
+    {
+      "key": 1006110,
+      "string_key": "Item_Skill_AbyssGear_AntumbraArchon",
+      "tab": 1,
+      "stock": 99,
+      "eng": "Revelation's End",
+      "ger": "Vollstrecker der Enthüllung",
+      "stock_index": 624
+    },
+    {
+      "key": 1006095,
+      "string_key": "Recipe_Item_Skill_AbyssGear_ArmorGoblin",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Ashen Blitz",
+      "ger": "Ausrüstungs-Blaupause: Aschener Blitz",
+      "stock_index": 625
+    },
+    {
+      "key": 1006102,
+      "string_key": "Recipe_Item_Skill_AbyssGear_Karanda_Feather",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Unfurled Feathers",
+      "ger": "Ausrüstungs-Blaupause: Ausbreitende Feder",
+      "stock_index": 626
+    },
+    {
+      "key": 1006091,
+      "string_key": "Recipe_Item_Skill_AbyssGear_Ludvig_OneArmed",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Writhebolt",
+      "ger": "Ausrüstungs-Blaupause: Bebender Blitz",
+      "stock_index": 627
+    },
+    {
+      "key": 1006103,
+      "string_key": "Recipe_Item_Skill_AbyssGear_DrylandsGolem",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Guardian's Gaze",
+      "ger": "Ausrüstungs-Blaupause: Blick des Beschützers",
+      "stock_index": 628
+    },
+    {
+      "key": 1006090,
+      "string_key": "Recipe_Item_Skill_AbyssGear_Satyros",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Eclipsed Thorn",
+      "ger": "Ausrüstungs-Blaupause: Dorn der Dämmerung",
+      "stock_index": 629
+    },
+    {
+      "key": 1006107,
+      "string_key": "Recipe_Item_Skill_AbyssGear_EchoStrom",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Storm's Echo",
+      "ger": "Ausrüstungs-Blaupause: Echo des Sturms",
+      "stock_index": 630
+    },
+    {
+      "key": 1006106,
+      "string_key": "Recipe_Item_Skill_AbyssGear_Ogre_GroundEdge",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Earthen Wedge",
+      "ger": "Ausrüstungs-Blaupause: Erdkeil",
+      "stock_index": 631
+    },
+    {
+      "key": 1006099,
+      "string_key": "Recipe_Item_Skill_AbyssGear_CircusMachine",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Trial by Fire",
+      "ger": "Ausrüstungs-Blaupause: Feuertaufe",
+      "stock_index": 632
+    },
+    {
+      "key": 1006096,
+      "string_key": "Recipe_Item_Skill_AbyssGear_Merrick_DefenceCounter",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Radiant Flash",
+      "ger": "Ausrüstungs-Blaupause: Flugbahn des Glanzes",
+      "stock_index": 633
+    },
+    {
+      "key": 1006100,
+      "string_key": "Recipe_Item_Skill_AbyssGear_LanFord_ChargeShot",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Focus Fire",
+      "ger": "Ausrüstungs-Blaupause: Fokusfeuer",
+      "stock_index": 634
+    },
+    {
+      "key": 1006098,
+      "string_key": "Recipe_Item_Skill_AbyssGear_RedNightmare",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Venomous Fangs",
+      "ger": "Ausrüstungs-Blaupause: Jagd der Giftzähne",
+      "stock_index": 635
+    },
+    {
+      "key": 1006093,
+      "string_key": "Recipe_Item_Skill_AbyssGear_ScrapQueenGoblin",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Magnetic Burst",
+      "ger": "Ausrüstungs-Blaupause: Magnetfeld-Explosion",
+      "stock_index": 636
+    },
+    {
+      "key": 1006105,
+      "string_key": "Recipe_Item_Skill_AbyssGear_Incarnation",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Ascended Incarnate",
+      "ger": "Ausrüstungs-Blaupause: Manifestation des Ultimativen",
+      "stock_index": 637
+    },
+    {
+      "key": 1006097,
+      "string_key": "Recipe_Item_Skill_AbyssGear_MarniKnight_Spear",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Power Overload",
+      "ger": "Ausrüstungs-Blaupause: Stromüberlastung",
+      "stock_index": 638
+    },
+    {
+      "key": 1006101,
+      "string_key": "Recipe_Item_Skill_AbyssGear_AncientPeople_ChargeShot",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Rushing Wind",
+      "ger": "Ausrüstungs-Blaupause: Tobender Lebensodem",
+      "stock_index": 639
+    },
+    {
+      "key": 1006104,
+      "string_key": "Recipe_Item_Skill_AbyssGear_MirageFlurry",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Mirage Cascade",
+      "ger": "Ausrüstungs-Blaupause: Trugbild-Kaskade",
+      "stock_index": 640
+    },
+    {
+      "key": 1006094,
+      "string_key": "Recipe_Item_Skill_AbyssGear_AwakenCaliburn",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Judicator of Ruin",
+      "ger": "Ausrüstungs-Blaupause: Urteil des Ruins",
+      "stock_index": 641
+    },
+    {
+      "key": 1006092,
+      "string_key": "Recipe_Item_Skill_AbyssGear_AntumbraArchon",
+      "tab": 2,
+      "stock": 1,
+      "eng": "Gear Blueprint: Revelation's End",
+      "ger": "Ausrüstungs-Blaupause: Vollstrecker der Enthüllung",
+      "stock_index": 642
+    },
+    {
+      "key": 1006941,
+      "string_key": "Recipe_Book_WarRobot_Foot_04",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Ancient Marine Exploration Footwear Blueprint",
+      "ger": "Bauplause: Uralte Meeresforschungs-Schuhe",
+      "stock_index": 643
+    },
+    {
+      "key": 1006939,
+      "string_key": "Recipe_Book_WarRobot_Body_04",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Ancient Marine Exploration Plating Blueprint",
+      "ger": "Blaupause: Uralte Meeresforschungs-Handschuhe",
+      "stock_index": 644
+    },
+    {
+      "key": 1006940,
+      "string_key": "Recipe_Book_WarRobot_Backpack_04",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Ancient Marine Exploration Pack Blueprint",
+      "ger": "Blaupause: Uralter Meereserkundungs-Rucksack",
+      "stock_index": 645
+    },
+    {
+      "key": 1006712,
+      "string_key": "Recipe_Book_Management_Forge_I",
+      "tab": 3,
+      "stock": 1,
+      "eng": "The Tireless Forge's Secret",
+      "ger": "Das Geheimnis der Schmiede, die niemals stillsteht",
+      "stock_index": 646
+    },
+    {
+      "key": 1006710,
+      "string_key": "Recipe_Book_Management_Pub_II",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Popular Restaurants' Secret",
+      "ger": "Das Geheimnis von Restaurants, vor denen Kunden Schlange stehen",
+      "stock_index": 647
+    },
+    {
+      "key": 1006542,
+      "string_key": "Recipe_Book_me_00_str_wallpaper_000_0004_index0007",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Child Sleeping Beneath the Clouds",
+      "ger": "Das Kind, das unter Wolken schläft",
+      "stock_index": 648
+    },
+    {
+      "key": 1006079,
+      "string_key": "Recipe_Book_HousingObject_Border",
+      "tab": 3,
+      "stock": 1,
+      "eng": "One Last Detail",
+      "ger": "Der feine Unterschied im letzten Detail",
+      "stock_index": 649
+    },
+    {
+      "key": 1006706,
+      "string_key": "Recipe_Book_Management_Sawmill_I",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Building with Planks",
+      "ger": "Der richtige Umgang mit Holzbrettern",
+      "stock_index": 650
+    },
+    {
+      "key": 1006067,
+      "string_key": "Recipe_Book_HousingObject_Window_Wood",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Wooden Windows of the South",
+      "ger": "Die Holzfenster des Südkontinents",
+      "stock_index": 651
+    },
+    {
+      "key": 1006081,
+      "string_key": "Recipe_Book_HousingObject_Roof_Brick",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Building Brick Roofs",
+      "ger": "Die Kunst des Ziegeldachbaus",
+      "stock_index": 652
+    },
+    {
+      "key": 1006068,
+      "string_key": "Recipe_Book_HousingObject_Window_Arch",
+      "tab": 3,
+      "stock": 1,
+      "eng": "The Art of Curves",
+      "ger": "Die Ästhetik der Kurven",
+      "stock_index": 653
+    },
+    {
+      "key": 1006711,
+      "string_key": "Recipe_Book_Management_Clothier_I",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Tricolor Fabric",
+      "ger": "Dreifarbig gefärbter Stoff",
+      "stock_index": 654
+    },
+    {
+      "key": 1006066,
+      "string_key": "Recipe_Book_HousingObject_Door_MainGate",
+      "tab": 3,
+      "stock": 1,
+      "eng": "A Grand Door for a Grand House",
+      "ger": "Ein großes Haus braucht ein großes Tor",
+      "stock_index": 655
+    },
+    {
+      "key": 1006069,
+      "string_key": "Recipe_Book_HousingObject_Window_Estate",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Good Windows, Better Homes",
+      "ger": "Ein gutes Haus braucht gute Fenster",
+      "stock_index": 656
+    },
+    {
+      "key": 1006065,
+      "string_key": "Recipe_Book_HousingObject_Door_Entrance",
+      "tab": 3,
+      "stock": 1,
+      "eng": "A Welcoming Front Door",
+      "ger": "Eingangstüren, die den ersten Eindruck prägen",
+      "stock_index": 657
+    },
+    {
+      "key": 1006709,
+      "string_key": "Recipe_Book_Management_Pub_I",
+      "tab": 3,
+      "stock": 1,
+      "eng": "For the Chef by the Fire",
+      "ger": "Für den Koch vor den Flammen",
+      "stock_index": 658
+    },
+    {
+      "key": 1006539,
+      "string_key": "Recipe_Book_HousingObject_Plaster",
+      "tab": 3,
+      "stock": 1,
+      "eng": "The Art of Plastering",
+      "ger": "Grundlagen des Verputzens",
+      "stock_index": 659
+    },
+    {
+      "key": 1006455,
+      "string_key": "Recipe_Book_HousingObject_Finish_Wood_II",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Beighen's Wood and Walls",
+      "ger": "Holz und Wände von Beighen",
+      "stock_index": 660
+    },
+    {
+      "key": 1006063,
+      "string_key": "Recipe_Book_HousingObject_Door_WoodSide",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Long-Lasting Wooden Doors",
+      "ger": "Holztüren von Dauer",
+      "stock_index": 661
+    },
+    {
+      "key": 1006459,
+      "string_key": "Recipe_Book_HousingObject_PatternWallPaper",
+      "tab": 3,
+      "stock": 1,
+      "eng": "A Hundred Patterns for Walls",
+      "ger": "Hundert Muster, die die Wand zieren",
+      "stock_index": 662
+    },
+    {
+      "key": 1006540,
+      "string_key": "Recipe_Book_me_00_str_wallpaper_000_0004_index0005",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Moonlit Silver Blossoms",
+      "ger": "Im Mondlicht erblühende Silberblumen",
+      "stock_index": 663
+    },
+    {
+      "key": 1006451,
+      "string_key": "Recipe_Book_HousingObject_Finish_Stone_I",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Cairn's Apprentice Mason's Guide",
+      "ger": "Lehrbuch für Steinmetzlehrlinge des Steinhügels",
+      "stock_index": 664
+    },
+    {
+      "key": 1006707,
+      "string_key": "Recipe_Book_Management_Sawmill_II",
+      "tab": 3,
+      "stock": 1,
+      "eng": "A Carpenter's Guide to Sawmill Expansion",
+      "ger": "Leitfaden eines Zimmermanns zum Sägewerk-Ausbau",
+      "stock_index": 665
+    },
+    {
+      "key": 1006074,
+      "string_key": "Recipe_Book_HousingObject_Fence_Wood",
+      "tab": 3,
+      "stock": 1,
+      "eng": "One Axe for a Fence",
+      "ger": "Mit nur einer Axt zum eigenen Zaun",
+      "stock_index": 666
+    },
+    {
+      "key": 1006064,
+      "string_key": "Recipe_Book_HousingObject_Door_MetalSide",
+      "tab": 3,
+      "stock": 1,
+      "eng": "The Locked Iron Gate",
+      "ger": "Nur wir zwei hinter Eisentoren",
+      "stock_index": 667
+    },
+    {
+      "key": 1006070,
+      "string_key": "Recipe_Book_HousingObject_Window_Cathedral",
+      "tab": 3,
+      "stock": 1,
+      "eng": "A Window Open to Solumen",
+      "ger": "Offene Fenster gen Solumen",
+      "stock_index": 668
+    },
+    {
+      "key": 1006457,
+      "string_key": "Recipe_Book_HousingObject_Finish_Wood_IV",
+      "tab": 3,
+      "stock": 1,
+      "eng": "The Fifth Furniture-Stacking Competition",
+      "ger": "Offizielles Technikhandbuch des 5. Möbelstapel-Wettbewerbs",
+      "stock_index": 669
+    },
+    {
+      "key": 1006062,
+      "string_key": "Recipe_Book_HousingObject_Door_WoodInterior",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Dividing Spaces with Interior Doors",
+      "ger": "Raumtrennung durch Innentüren",
+      "stock_index": 670
+    },
+    {
+      "key": 1006083,
+      "string_key": "Recipe_Book_HousingObject_Stair_Wood",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Fixing Creaky Stairs",
+      "ger": "Schluss mit knarrenden Treppen: Auch du kannst es richten",
+      "stock_index": 671
+    },
+    {
+      "key": 1006082,
+      "string_key": "Recipe_Book_HousingObject_Chimney",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Building a Maintenance-Free Chimney",
+      "ger": "Schornsteine, die man niemals kehren muss",
+      "stock_index": 672
+    },
+    {
+      "key": 1006708,
+      "string_key": "Recipe_Book_Management_WaitingTable",
+      "tab": 3,
+      "stock": 1,
+      "eng": "The Courtesy of Waiting",
+      "ger": "Selbst Warten ist Teil der Gastfreundschaft",
+      "stock_index": 673
+    },
+    {
+      "key": 1006075,
+      "string_key": "Recipe_Book_HousingObject_Fence_Stone",
+      "tab": 3,
+      "stock": 1,
+      "eng": "The Hundred-Year Wall",
+      "ger": "Steinmauern für ein ganzes Jahrhundert",
+      "stock_index": 674
+    },
+    {
+      "key": 1006084,
+      "string_key": "Recipe_Book_HousingObject_Stair_Stone",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Building Stone Steps",
+      "ger": "Stufe für Stufe: Die Kunst der Steintreppe",
+      "stock_index": 675
+    },
+    {
+      "key": 1006078,
+      "string_key": "Recipe_Book_HousingObject_Pillar",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Pillars of Pywel",
+      "ger": "Säulen von Pywel",
+      "stock_index": 676
+    },
+    {
+      "key": 1006456,
+      "string_key": "Recipe_Book_HousingObject_Finish_Wood_III",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Dizzying Gap Between the Planks",
+      "ger": "Verbotene Blicke durch den Holzspalt",
+      "stock_index": 677
+    },
+    {
+      "key": 1006061,
+      "string_key": "Recipe_Book_HousingObject_Basic",
+      "tab": 3,
+      "stock": 1,
+      "eng": "From the Ground Up",
+      "ger": "Vom Fundament bis zum Dach",
+      "stock_index": 678
+    },
+    {
+      "key": 1006453,
+      "string_key": "Recipe_Book_HousingObject_Finish_Stone_III",
+      "tab": 3,
+      "stock": 1,
+      "eng": "A Stonemason's Stonework",
+      "ger": "Vom Steinmetz gewählte Steinwänder und Böden",
+      "stock_index": 679
+    },
+    {
+      "key": 1006454,
+      "string_key": "Recipe_Book_HousingObject_Finish_Wood_I",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Why Craftsmen Seek Timberham",
+      "ger": "Warum zieht es Handwerker nach Scheitheim?",
+      "stock_index": 680
+    },
+    {
+      "key": 1006452,
+      "string_key": "Recipe_Book_HousingObject_Finish_Stone_II",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Building with Hernand Stones",
+      "ger": "Wie man ein Haus aus Hernand-Steinen baut",
+      "stock_index": 681
+    },
+    {
+      "key": 1006541,
+      "string_key": "Recipe_Book_me_00_str_wallpaper_000_0004_index0006",
+      "tab": 3,
+      "stock": 1,
+      "eng": "Furnishing the Throne Room",
+      "ger": "Wie man einen Thronsaal dekoriert",
+      "stock_index": 682
+    },
+    {
+      "key": 1007006,
+      "string_key": "Recipe_Potion_SwimSpeed_LV2",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Fluva's Elixir",
+      "ger": "Alchemie-Rezept: Fluvas Elixier",
+      "stock_index": 683
+    },
+    {
+      "key": 1007005,
+      "string_key": "Recipe_Potion_SwimSpeed_LV1",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Fluva's Lesser Elixir",
+      "ger": "Alchemie-Rezept: Fluvas minderes Elixier",
+      "stock_index": 684
+    },
+    {
+      "key": 1007007,
+      "string_key": "Recipe_Potion_SwimSpeed_LV3",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Fluva's Greater Elixir",
+      "ger": "Alchemie-Rezept: Fluvas überragendes Elixier",
+      "stock_index": 685
+    },
+    {
+      "key": 1007009,
+      "string_key": "Recipe_Potion_ElementResist_LV2",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Lucaris's Elixir",
+      "ger": "Alchemie-Rezept: Lucaris' Elixier",
+      "stock_index": 686
+    },
+    {
+      "key": 1007008,
+      "string_key": "Recipe_Potion_ElementResist_LV1",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Lucaris's Lesser Elixir",
+      "ger": "Alchemie-Rezept: Lucaris' minderes Elixier",
+      "stock_index": 687
+    },
+    {
+      "key": 1007010,
+      "string_key": "Recipe_Potion_ElementResist_LV3",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Lucaris's Greater Elixir",
+      "ger": "Alchemie-Rezept: Lucaris' überragendes Elixier",
+      "stock_index": 688
+    },
+    {
+      "key": 1007003,
+      "string_key": "Recipe_Potion_Breath_LV2",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Luftis's Elixir",
+      "ger": "Alchemie-Rezept: Luftis' Elixier",
+      "stock_index": 689
+    },
+    {
+      "key": 1007002,
+      "string_key": "Recipe_Potion_Breath_LV1",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Luftis's Lesser Elixir",
+      "ger": "Alchemie-Rezept: Luftis' minderes Elixier",
+      "stock_index": 690
+    },
+    {
+      "key": 1007004,
+      "string_key": "Recipe_Potion_Breath_LV3",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Alchemy Formula: Luftis's Greater Elixir",
+      "ger": "Alchemie-Rezept: Luftis' überragendes Elixier",
+      "stock_index": 691
+    },
+    {
+      "key": 1005710,
+      "string_key": "Recipe_Abalone_Porridge",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Abalone Porridge",
+      "ger": "Rezept: Abalonebrei",
+      "stock_index": 692
+    },
+    {
+      "key": 1005709,
+      "string_key": "Recipe_Parboiled_Seafood",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Assorted Parboiled Seafood",
+      "ger": "Rezept: Blanchierte Meeresfrüchte-Platte",
+      "stock_index": 693
+    },
+    {
+      "key": 1005715,
+      "string_key": "Recipe_SeaPineapple_Bibimbap",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Sea Pineapple Rice Bowl",
+      "ger": "Rezept: Ernte-Allerlei mit See-Ananas",
+      "stock_index": 694
+    },
+    {
+      "key": 1005714,
+      "string_key": "Recipe_ManilaClams_NoodleSoup",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Knife-Cut Clam Noodles",
+      "ger": "Rezept: Flachnudeln mit Teppichmuscheln",
+      "stock_index": 695
+    },
+    {
+      "key": 1005711,
+      "string_key": "Recipe_GrilledClams",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Grilled Clams",
+      "ger": "Rezept: Gegrillte Muscheln",
+      "stock_index": 696
+    },
+    {
+      "key": 1005712,
+      "string_key": "Recipe_Cheese_GrilledClams",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Grilled Cheese Clams",
+      "ger": "Rezept: Gegrillte Muscheln mit Käse",
+      "stock_index": 697
+    },
+    {
+      "key": 1005717,
+      "string_key": "Recipe_SeaString_Seasoned",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Seasoned Red Seaweed",
+      "ger": "Rezept: Gewürzte Meeresfäden",
+      "stock_index": 698
+    },
+    {
+      "key": 1005713,
+      "string_key": "Recipe_Mussel_Soup",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Mussel Soup",
+      "ger": "Rezept: Miesmuschelsuppe",
+      "stock_index": 699
+    },
+    {
+      "key": 1005718,
+      "string_key": "Recipe_Jellyfish_Salad",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Jellyfish Salad",
+      "ger": "Rezept: Quallensalat",
+      "stock_index": 700
+    },
+    {
+      "key": 1005716,
+      "string_key": "Recipe_Seaweed_Soup",
+      "tab": 4,
+      "stock": 1,
+      "eng": "Recipe: Seaweed Soup",
+      "ger": "Rezept: Seetangsuppe",
+      "stock_index": 701
+    },
+    {
+      "key": 1006934,
+      "string_key": "Recipe_Diving_Propulsion_BackPack",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Propulsion Breathing Device",
+      "ger": "Blaupause: Antriebs-Atemgerät",
+      "stock_index": 702
+    },
+    {
+      "key": 1007001,
+      "string_key": "Recipe_Diving_BackPack_02",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Explorer's Breathing Device",
+      "ger": "Blaupause: Atemgerät des Entdeckers",
+      "stock_index": 703
+    },
+    {
+      "key": 1006203,
+      "string_key": "Recipe_Item_Lamp_stand_ocean_0003",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Blue Coral Lamp",
+      "ger": "Blaupause: Blaue Korallen-Lampe",
+      "stock_index": 704
+    },
+    {
+      "key": 1006984,
+      "string_key": "Recipe_Item_ship_cannon_0012",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Admiral's Bow Cannon",
+      "ger": "Blaupause: Bugkanone des Admirals",
+      "stock_index": 705
+    },
+    {
+      "key": 1005764,
+      "string_key": "Recipe_item_ship_bowdeco_0005",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Steam and Clockwork Figurehead",
+      "ger": "Blaupause: Dampf- und Uhrwerk-Galionsfigur",
+      "stock_index": 706
+    },
+    {
+      "key": 1005770,
+      "string_key": "Recipe_item_ship_sterndecor_0005",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Steam and Clockwork Stern",
+      "ger": "Blaupause: Dampf- und Uhrwerk-Heck",
+      "stock_index": 707
+    },
+    {
+      "key": 1006991,
+      "string_key": "Recipe_Item_ship_cannon_0010_TurtleShip",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Dragon Head Prow Cannon",
+      "ger": "Blaupause: Drachenkopf-Bugkanone",
+      "stock_index": 708
+    },
+    {
+      "key": 1006567,
+      "string_key": "Recipe_Item_gimmick_circus_ferriswheel_0001_housing",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Tricolor Ferris Wheel",
+      "ger": "Blaupause: Dreifarbig beleuchtetes Riesenrad",
+      "stock_index": 709
+    },
+    {
+      "key": 1006561,
+      "string_key": "Recipe_Item_gimmick_lamp_streetlamp_06_on_housing_index0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Dark Helms Iron Streetlight",
+      "ger": "Blaupause: Dunkle Eisenstraßenlaterne der Helms",
+      "stock_index": 710
+    },
+    {
+      "key": 1006563,
+      "string_key": "Recipe_Item_gimmick_lamp_marni_streetstand_01_housing_index0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Marni's Dark Streetlight",
+      "ger": "Blaupause: Dunkle Marni-Straßenlaterne",
+      "stock_index": 711
+    },
+    {
+      "key": 1006565,
+      "string_key": "Recipe_Item_gimmick_lamp_marni_streetstand_02_index0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Marni's Dark Battery Streetlight",
+      "ger": "Blaupause: Dunkle Marni-Straßenlaterne mit Batterie",
+      "stock_index": 712
+    },
+    {
+      "key": 1006558,
+      "string_key": "Recipe_Item_troll_academy_torchlight_01_on_housing_index0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Dark Ancient Runic Stone Sconce",
+      "ger": "Blaupause: Dunkle Stein-Wandlampe mit antikem Muster",
+      "stock_index": 713
+    },
+    {
+      "key": 1006207,
+      "string_key": "Recipe_Item_gimmick_in_dff_chair_0005",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Oak Barrel Stool",
+      "ger": "Blaupause: Eichenfass-Stuhl",
+      "stock_index": 714
+    },
+    {
+      "key": 1006560,
+      "string_key": "Recipe_Item_gimmick_lamp_streetlamp_06",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Helms Iron Streetlight",
+      "ger": "Blaupause: Eisenstraßenlaterne der Helms",
+      "stock_index": 715
+    },
+    {
+      "key": 1006208,
+      "string_key": "Recipe_Item_gimmick_in_dff_chair_0006",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Captain's Chair of Dignity",
+      "ger": "Blaupause: Erhabener Stuhl des Kapitäns",
+      "stock_index": 716
+    },
+    {
+      "key": 1006231,
+      "string_key": "Recipe_Item_gimmick_in_dpf_carpet_0017",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Captain's Carpet of Dignity",
+      "ger": "Blaupause: Erhabener Teppich des Kapitäns",
+      "stock_index": 717
+    },
+    {
+      "key": 1006206,
+      "string_key": "Recipe_Item_in_dff_ocean_bed_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Captain's Bed of Dignity",
+      "ger": "Blaupause: Erhabenes Bett des Kapitäns",
+      "stock_index": 718
+    },
+    {
+      "key": 1006205,
+      "string_key": "Recipe_Item_in_dff_set_bookcase_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Rowboat Bookshelf",
+      "ger": "Blaupause: Fähren-Bücherregal",
+      "stock_index": 719
+    },
+    {
+      "key": 1005763,
+      "string_key": "Recipe_item_ship_bowdeco_0004",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Skyborne Beast Figurehead",
+      "ger": "Blaupause: Galionsfigur des Himmelsraubtiers",
+      "stock_index": 720
+    },
+    {
+      "key": 1005765,
+      "string_key": "Recipe_item_ship_bowdeco_0006",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Chain-Breaking Wolf Figurehead",
+      "ger": "Blaupause: Galionsfigur des Krettenbrecherwolfs",
+      "stock_index": 721
+    },
+    {
+      "key": 1006681,
+      "string_key": "Recipe_item_ship_bowdeco_0007",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Long-Horned Fish Figurehead",
+      "ger": "Blaupause: Galionsfigur des Langhorn-Fisches",
+      "stock_index": 722
+    },
+    {
+      "key": 1006566,
+      "string_key": "Recipe_Item_megastructure_carousel_01_housing",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Striped Tent Carousel",
+      "ger": "Blaupause: Gestreiftes Zeltkarussell",
+      "stock_index": 723
+    },
+    {
+      "key": 1006214,
+      "string_key": "Recipe_Item_Item_in_dpfo_shipdeco_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Golden Bottled Ship",
+      "ger": "Blaupause: Goldenes Schiffsmodell",
+      "stock_index": 724
+    },
+    {
+      "key": 1006789,
+      "string_key": "Recipe_item_ship_sail_open_0001_index11",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Greymane Sail",
+      "ger": "Blaupause: Graumähnen-Segel",
+      "stock_index": 725
+    },
+    {
+      "key": 1006806,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index26",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Large Delesyian Naval Sail",
+      "ger": "Blaupause: Großes Marine-Segel von Delesyia",
+      "stock_index": 726
+    },
+    {
+      "key": 1006800,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index07",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Faunus Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Faunus-Piraten",
+      "stock_index": 727
+    },
+    {
+      "key": 1006802,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index09",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Scarlet Widow Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten der scharlachroten Witwe",
+      "stock_index": 728
+    },
+    {
+      "key": 1006797,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index04",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Black Bloom Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten der schwarzen Blüte",
+      "stock_index": 729
+    },
+    {
+      "key": 1006804,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index11",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Devils' Plunder Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten der Teufelsbeute",
+      "stock_index": 730
+    },
+    {
+      "key": 1006803,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index10",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Bloodied Stake Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten des blutigen Pfahls",
+      "stock_index": 731
+    },
+    {
+      "key": 1006801,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index08",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Grim Wind Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten des grimmigen Windes",
+      "stock_index": 732
+    },
+    {
+      "key": 1006798,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index05",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Crimson Shield Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten des roten Schildes",
+      "stock_index": 733
+    },
+    {
+      "key": 1006799,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index06",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Vengeance Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten des Rächers",
+      "stock_index": 734
+    },
+    {
+      "key": 1006805,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index12",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Black Curved Blade Pirates' Large Sail",
+      "ger": "Blaupause: Großes Segel der Piraten des schwarzen Krummsäbels",
+      "stock_index": 735
+    },
+    {
+      "key": 1005759,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index03",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Large Deathbound Sail",
+      "ger": "Blaupause: Großes Segel der Todespilgerfahrt",
+      "stock_index": 736
+    },
+    {
+      "key": 1006807,
+      "string_key": "Recipe_item_bigship_sail_open_0002",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Large Wraithdrift Sail",
+      "ger": "Blaupause: Großes Segel des umherirrenden Rachegeists",
+      "stock_index": 737
+    },
+    {
+      "key": 1007011,
+      "string_key": "Recipe_item_bigship_sail_open_0001_index24",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Large Tidewish Sail",
+      "ger": "Blaupause: Großes Segel des Wogenwunsches",
+      "stock_index": 738
+    },
+    {
+      "key": 1005769,
+      "string_key": "Recipe_item_ship_sterndecor_0004",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Skyborne Beast Stern",
+      "ger": "Blaupause: Heck des Himmelsraubtiers",
+      "stock_index": 739
+    },
+    {
+      "key": 1006683,
+      "string_key": "Recipe_item_ship_sterndecor_0006",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Long-Horned Fish Stern",
+      "ger": "Blaupause: Heck des Langhorn-Fisches",
+      "stock_index": 740
+    },
+    {
+      "key": 1006790,
+      "string_key": "Recipe_item_ship_sail_open_0001_index12",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Hernandian Sail",
+      "ger": "Blaupause: Hernand-Segel",
+      "stock_index": 741
+    },
+    {
+      "key": 1006794,
+      "string_key": "Recipe_item_smallship_sail_open_0001_index08",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Sea Claw Pirates' Small Sail",
+      "ger": "Blaupause: Kleines Segel der Piraten der Seeklaue",
+      "stock_index": 742
+    },
+    {
+      "key": 1006793,
+      "string_key": "Recipe_item_smallship_sail_open_0001_index04",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Siren's Cry Pirates' Small Sail",
+      "ger": "Blaupause: Kleines Segel der Piraten des Schreis der Sirene",
+      "stock_index": 743
+    },
+    {
+      "key": 1006202,
+      "string_key": "Recipe_Item_Lamp_stand_ocean_0002",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Pearl Remembrance Lamp",
+      "ger": "Blaupause: Lampe der Perlenerinnerung",
+      "stock_index": 744
+    },
+    {
+      "key": 1006562,
+      "string_key": "Recipe_Item_gimmick_lamp_marni_streetstand_01",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Marni's Streetlight",
+      "ger": "Blaupause: Marni-Straßenlaterne",
+      "stock_index": 745
+    },
+    {
+      "key": 1006564,
+      "string_key": "Recipe_Item_gimmick_lamp_marni_streetstand_02",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Marni's Battery Streetlight",
+      "ger": "Blaupause: Marni-Straßenlaterne mit Batterie",
+      "stock_index": 746
+    },
+    {
+      "key": 1006796,
+      "string_key": "Recipe_item_ship_sail_open_0001_index06",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Sea's Vengeance Pirates' Medium Sail",
+      "ger": "Blaupause: Mittleres Segel der Piraten der Rache der See",
+      "stock_index": 747
+    },
+    {
+      "key": 1006795,
+      "string_key": "Recipe_item_ship_sail_open_0001_index05",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: The Death Blossom Pirates' Medium Sail",
+      "ger": "Blaupause: Mittleres Segel der Piraten der Todesblüte",
+      "stock_index": 748
+    },
+    {
+      "key": 1006204,
+      "string_key": "Recipe_Item_Lamp_stand_ocean_0004",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Moonshell Cluster",
+      "ger": "Blaupause: Mondverschlingende Muschelkolonie",
+      "stock_index": 749
+    },
+    {
+      "key": 1006786,
+      "string_key": "Recipe_item_smallship_sail_open_0001_index14",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Pirates' Sail",
+      "ger": "Blaupause: Piratenbanden-Segel",
+      "stock_index": 750
+    },
+    {
+      "key": 1006213,
+      "string_key": "Recipe_Item_Item_in_dpw_shipanchor_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Fancy Gilded Anchor",
+      "ger": "Blaupause: Prunkvoller Anker mit Goldverzierung",
+      "stock_index": 751
+    },
+    {
+      "key": 1006212,
+      "string_key": "Recipe_Item_Item_in_dpw_shiphandle_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Fancy Gilded Ship's Wheel",
+      "ger": "Blaupause: Prunkvolles Steuerrad mit Goldverzierung",
+      "stock_index": 752
+    },
+    {
+      "key": 1006993,
+      "string_key": "Recipe_item_hugeship_sail_open_0001_index02",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Giant Golden Compass Sail",
+      "ger": "Blaupause: Riesiges Segel des Goldenen Kompasses",
+      "stock_index": 753
+    },
+    {
+      "key": 1007053,
+      "string_key": "Recipe_Item_troll_academy_torchlight_01_on_housing_index0002",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Red Ancient Runic Stone Sconce",
+      "ger": "Blaupause: Rötliche Stein-Wandlampe mit antikem Muster",
+      "stock_index": 754
+    },
+    {
+      "key": 1006998,
+      "string_key": "Recipe_item_turtleship_sail_open_0001_index02",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Four Taegeuk Sail",
+      "ger": "Blaupause: Sataegeuk-Segel",
+      "stock_index": 755
+    },
+    {
+      "key": 1006556,
+      "string_key": "Recipe_Item_gimmick_tool_automata_monkey_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Clanging Mischievous Monkey",
+      "ger": "Blaupause: Schelmischer Beckenaffen",
+      "stock_index": 756
+    },
+    {
+      "key": 1005917,
+      "string_key": "Recipe_item_ship_cannon_0005",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Sea King's Naval Cannon",
+      "ger": "Blaupause: Schiffskanone des Meereskönigs",
+      "stock_index": 757
+    },
+    {
+      "key": 1006210,
+      "string_key": "Recipe_Item_Item_in_dpf_seahorsedeco_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Seahorse Statue",
+      "ger": "Blaupause: Seepferdchen-Statue",
+      "stock_index": 758
+    },
+    {
+      "key": 1006997,
+      "string_key": "Recipe_item_turtleship_sail_open_0001_index01",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Bluewake Sail",
+      "ger": "Blaupause: Segel der blauen Wogen",
+      "stock_index": 759
+    },
+    {
+      "key": 1005752,
+      "string_key": "Recipe_item_ship_sail_open_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Pearlescent Voyage Sail",
+      "ger": "Blaupause: Segel der reinweißen Fahrt",
+      "stock_index": 760
+    },
+    {
+      "key": 1006785,
+      "string_key": "Recipe_item_ship_sail_open_0001_index08",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Gently Curved Sail",
+      "ger": "Blaupause: Segel der sanften Kurven",
+      "stock_index": 761
+    },
+    {
+      "key": 1006788,
+      "string_key": "Recipe_item_ship_sail_open_0001_index09",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Silver Crescent Sail",
+      "ger": "Blaupause: Segel der silbernen Mondsichel",
+      "stock_index": 762
+    },
+    {
+      "key": 1005755,
+      "string_key": "Recipe_item_ship_sail_open_0001_index03",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Windborne Sail",
+      "ger": "Blaupause: Segel des brausenden Windes",
+      "stock_index": 763
+    },
+    {
+      "key": 1006787,
+      "string_key": "Recipe_item_ship_sail_open_0001_index07",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Red Checkered Sail",
+      "ger": "Blaupause: Segel mit rotem Karomuster",
+      "stock_index": 764
+    },
+    {
+      "key": 1006622,
+      "string_key": "Recipe_item_ship_teleporter_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Ship Teleportation Device",
+      "ger": "Blaupause: Segelschiff-Teleportationsgerät",
+      "stock_index": 765
+    },
+    {
+      "key": 1006557,
+      "string_key": "Recipe_Item_troll_academy_torchlight_01_on",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Ancient Runic Stone Sconce",
+      "ger": "Blaupause: Stein-Wandlampe mit antikem Muster",
+      "stock_index": 766
+    },
+    {
+      "key": 1006211,
+      "string_key": "Recipe_Item_Item_in_dpw_fishdeco_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Fisherman's Pride",
+      "ger": "Blaupause: Stolz des Fischers",
+      "stock_index": 767
+    },
+    {
+      "key": 1006019,
+      "string_key": "Recipe_PetArmor_Diving_Armor",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Charter Assistant's Diving Suit",
+      "ger": "Blaupause: Tauchanzug für Assistenten des Entdeckers",
+      "stock_index": 768
+    },
+    {
+      "key": 1006018,
+      "string_key": "Recipe_PetArmor_Diving_Helm",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Charter Assistant's Diving Helm",
+      "ger": "Blaupause: Tauchhelm für Assistenten des Entdeckers",
+      "stock_index": 769
+    },
+    {
+      "key": 1006138,
+      "string_key": "Recipe_Item_Lamp_stand_ocean_0001",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Octopus-legged Candlestick",
+      "ger": "Blaupause: Tentakel-Kerzenständer",
+      "stock_index": 770
+    },
+    {
+      "key": 1006559,
+      "string_key": "Recipe_Item_gimmick_in_dff_chair_53",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Throne of the Northern Warrior",
+      "ger": "Blaupause: Thron des Nordkriegers",
+      "stock_index": 771
+    },
+    {
+      "key": 1006209,
+      "string_key": "Recipe_Item_in_dff_table_0003",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Shoreline Memories Table",
+      "ger": "Blaupause: Tisch „Stranderinnerung“",
+      "stock_index": 772
+    },
+    {
+      "key": 1006935,
+      "string_key": "Recipe_Diving_Propulsion_BackPack_I",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Enhanced Propulsion Breathing Device",
+      "ger": "Blaupause: Verbessertes Antriebs-Atemgerät",
+      "stock_index": 773
+    },
+    {
+      "key": 1005915,
+      "string_key": "Recipe_item_ship_cannon_0003",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Blueprint: Gilded Naval Cannon",
+      "ger": "Blaupause: Vergoldete Schiffskanone",
+      "stock_index": 774
+    },
+    {
+      "key": 1006821,
+      "string_key": "Recipe_Paper_HousingObject_Tent_Graymane",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Greymanes' Camp",
+      "ger": "Camps der Graumähnen",
+      "stock_index": 775
+    },
+    {
+      "key": 1006817,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Fortress",
+      "tab": 5,
+      "stock": 1,
+      "eng": "The Stone Sentinel",
+      "ger": "Der steinerne Wächter",
+      "stock_index": 776
+    },
+    {
+      "key": 1006741,
+      "string_key": "Recipe_Paper_HousingObject_Canopy_IV",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Stone That Weathers the Ages",
+      "ger": "Die Anmut des Steins, der der Zeit trotzt",
+      "stock_index": 777
+    },
+    {
+      "key": 1006825,
+      "string_key": "Recipe_Paper_HousingObject_Barricade",
+      "tab": 5,
+      "stock": 1,
+      "eng": "The First Bulwark",
+      "ger": "Die erste Barriere",
+      "stock_index": 778
+    },
+    {
+      "key": 1006876,
+      "string_key": "Recipe_Paper_HousingObject_Cart_I",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Easing Daily Life",
+      "ger": "Die Last des Alltags ablegen",
+      "stock_index": 779
+    },
+    {
+      "key": 1006883,
+      "string_key": "Recipe_Paper_HousingObject_Windmill_SandCrawler",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Crimson Wasteland's Rusted Pillars",
+      "ger": "Die verrostete Säule der roten Ödnis",
+      "stock_index": 780
+    },
+    {
+      "key": 1006739,
+      "string_key": "Recipe_Paper_HousingObject_Canopy_II",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Shade Stronger Than Rainstorms",
+      "ger": "Ein gewaltiger Schatten, der Wind und Wetter trotzt",
+      "stock_index": 781
+    },
+    {
+      "key": 1006827,
+      "string_key": "Recipe_Paper_HousingObject_Map",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Homes Without Dead Ends",
+      "ger": "Ein Haus, in dem man sich nicht verirrt",
+      "stock_index": 782
+    },
+    {
+      "key": 1006820,
+      "string_key": "Recipe_Paper_HousingObject_Tent",
+      "tab": 5,
+      "stock": 1,
+      "eng": "A Night Anywhere",
+      "ger": "Eine Nacht an jedem Ort",
+      "stock_index": 783
+    },
+    {
+      "key": 1006811,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Tribe",
+      "tab": 5,
+      "stock": 1,
+      "eng": "For the Lone Watch",
+      "ger": "Für die einsame Wache",
+      "stock_index": 784
+    },
+    {
+      "key": 1006881,
+      "string_key": "Recipe_Paper_HousingObject_Straw_IV",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Barren Hill Honeybee Shelter",
+      "ger": "Honigbienen-Unterschlupf an kargen Hügeln",
+      "stock_index": 785
+    },
+    {
+      "key": 1006819,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Machine",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Strength from Earth and Wind",
+      "ger": "Kraft aus Erde und Wind schöpfen",
+      "stock_index": 786
+    },
+    {
+      "key": 1006824,
+      "string_key": "Recipe_Paper_HousingObject_Tent_Trade",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Drawn to the Tent",
+      "ger": "Kunden kommen wegen des Zeltes",
+      "stock_index": 787
+    },
+    {
+      "key": 1006738,
+      "string_key": "Recipe_Paper_HousingObject_Canopy_I",
+      "tab": 5,
+      "stock": 1,
+      "eng": "A Rest in the Shade",
+      "ger": "Kurze Rast im Schatten",
+      "stock_index": 788
+    },
+    {
+      "key": 1006879,
+      "string_key": "Recipe_Paper_HousingObject_Straw_II",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Flower-Scented Grass",
+      "ger": "Nach Blüten duftender Grashaufen",
+      "stock_index": 789
+    },
+    {
+      "key": 1006823,
+      "string_key": "Recipe_Paper_HousingObject_Tent_Desert",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Shade on the Sand",
+      "ger": "Schatten auf dem Sand",
+      "stock_index": 790
+    },
+    {
+      "key": 1006812,
+      "string_key": "Recipe_Paper_HousingObject_Tower_North",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Shielded Watchtower",
+      "ger": "Schildbewehrte Wachtürme",
+      "stock_index": 791
+    },
+    {
+      "key": 1006740,
+      "string_key": "Recipe_Paper_HousingObject_Canopy_III",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Nature's Humble Shade",
+      "ger": "Schlichter Schatten, erfüllt vom Atem der Natur",
+      "stock_index": 792
+    },
+    {
+      "key": 1006818,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Siege",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Take Aim from Above",
+      "ger": "Schuss aus der Höhe",
+      "stock_index": 793
+    },
+    {
+      "key": 1006878,
+      "string_key": "Recipe_Paper_HousingObject_Straw_I",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Sun-Dried Fodder",
+      "ger": "Sonnengetrocknetes Futter",
+      "stock_index": 794
+    },
+    {
+      "key": 1006813,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Canopy",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Shelter Under a Canopy",
+      "ger": "Stoff statt Dach",
+      "stock_index": 795
+    },
+    {
+      "key": 1006875,
+      "string_key": "Recipe_Paper_HousingObject_GraymaneFlag",
+      "tab": 5,
+      "stock": 1,
+      "eng": "An Unbreakable Will",
+      "ger": "Unzerbrechlicher, eiserner Wille",
+      "stock_index": 796
+    },
+    {
+      "key": 1006877,
+      "string_key": "Recipe_Paper_HousingObject_Cart_II",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Reliable Porter",
+      "ger": "Verlässlicher Träger zwischen Dörfern",
+      "stock_index": 797
+    },
+    {
+      "key": 1006814,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Nest",
+      "tab": 5,
+      "stock": 1,
+      "eng": "High-Nesting Birds",
+      "ger": "Vögel nisten in der Höhe",
+      "stock_index": 798
+    },
+    {
+      "key": 1006815,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Windmill",
+      "tab": 5,
+      "stock": 1,
+      "eng": "The Windwatch Tower",
+      "ger": "Wachturm des Windes",
+      "stock_index": 799
+    },
+    {
+      "key": 1006816,
+      "string_key": "Recipe_Paper_HousingObject_Tower_Nobility",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Watchtowers of Three Factions",
+      "ger": "Wachtürme der drei Lager",
+      "stock_index": 800
+    },
+    {
+      "key": 1006880,
+      "string_key": "Recipe_Paper_HousingObject_Straw_III",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Where the Honey Mead Matures",
+      "ger": "Wo der Met reift",
+      "stock_index": 801
+    },
+    {
+      "key": 1006810,
+      "string_key": "Recipe_Paper_HousingObject_Tower",
+      "tab": 5,
+      "stock": 1,
+      "eng": "A Sparrow's Perch",
+      "ger": "Wo der Spatz rastet",
+      "stock_index": 802
+    },
+    {
+      "key": 1006826,
+      "string_key": "Recipe_Paper_HousingObject_Pinwheel",
+      "tab": 5,
+      "stock": 1,
+      "eng": "The Wind's Passing",
+      "ger": "Wo der Wind weht",
+      "stock_index": 803
+    },
+    {
+      "key": 1006882,
+      "string_key": "Recipe_Paper_HousingObject_Windmill_Dem",
+      "tab": 5,
+      "stock": 1,
+      "eng": "Where Only the Wind Lingers",
+      "ger": "Wo nur der Wind verweilt",
+      "stock_index": 804
+    },
+    {
+      "key": 1006822,
+      "string_key": "Recipe_Paper_HousingObject_Tent_Military",
+      "tab": 5,
+      "stock": 1,
+      "eng": "The Tent Behind the Front",
+      "ger": "Zelte hinter der Frontlinie",
+      "stock_index": 805
+    },
+    {
+      "key": 1006189,
+      "string_key": "ambergris",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Ambergris",
+      "ger": "Ambra",
+      "stock_index": 806
+    },
+    {
+      "key": 1005448,
+      "string_key": "QuartzOre",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Shiny Ore",
+      "ger": "Glänzendes Erz",
+      "stock_index": 807
+    },
+    {
+      "key": 1006238,
+      "string_key": "Item_Rare_Collect_sea_goldencoral",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Golden Coral",
+      "ger": "Goldene Koralle",
+      "stock_index": 808
+    },
+    {
+      "key": 1006282,
+      "string_key": "Giant_JellyFish_Skin",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Jellyfish Skin",
+      "ger": "Haut der Riesen-Qualle",
+      "stock_index": 809
+    },
+    {
+      "key": 1006281,
+      "string_key": "Giant_Salamander_Leather",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Giant Hydrothermal Salamander Hide",
+      "ger": "Haut des riesigen Hydrothermal-Salamanders",
+      "stock_index": 810
+    },
+    {
+      "key": 1006197,
+      "string_key": "hydrothermalmineral",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Hydrothermal Mineral Deposit",
+      "ger": "Hydrothermale Erzlagerstätte",
+      "stock_index": 811
+    },
+    {
+      "key": 1005511,
+      "string_key": "Malachite",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Malachite",
+      "ger": "Malachit",
+      "stock_index": 812
+    },
+    {
+      "key": 1006089,
+      "string_key": "Manganese",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Manganese",
+      "ger": "Mangan",
+      "stock_index": 813
+    },
+    {
+      "key": 1006974,
+      "string_key": "Obsidian",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Obsidian",
+      "ger": "Obsidian",
+      "stock_index": 814
+    },
+    {
+      "key": 1006237,
+      "string_key": "Item_Rare_Collect_sea_blackcoral",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Sea Fan Coral",
+      "ger": "Weichkoralle",
+      "stock_index": 815
+    },
+    {
+      "key": 1007000,
+      "string_key": "Item_Sea_Coin_Broken",
+      "tab": 6,
+      "stock": 999,
+      "eng": "Shattered Ancient Relic",
+      "ger": "Zerbrochenes Uraltes Relikt",
+      "stock_index": 816
+    }
+  ],
+  "excluded": [
+    {
+      "id": 1004203,
+      "name": "Solar Transference",
+      "reason": "higher-tier Abyss Gear"
+    }
+  ]
+}
