@@ -1,0 +1,95 @@
+{
+  "version": "17.4.3",
+  "offers": 843,
+  "distinct_items": 834,
+  "current_data_names_and_descriptions_checked_in_languages": [
+    "ara",
+    "eng",
+    "fre",
+    "ger",
+    "ita",
+    "jpn",
+    "kor",
+    "pol",
+    "por-br",
+    "rus",
+    "spa-es",
+    "spa-mx",
+    "tur",
+    "zho-cn",
+    "zho-tw"
+  ],
+  "icon_asset_paths_resolved": 234,
+  "added_ingredients": {
+    "kor": {
+      "756518": "긴 뿔",
+      "22008": "물"
+    },
+    "eng": {
+      "756518": "Long Horn",
+      "22008": "Water"
+    },
+    "jpn": {
+      "756518": "長い角",
+      "22008": "水"
+    },
+    "rus": {
+      "756518": "Длинный рог",
+      "22008": "Вода"
+    },
+    "tur": {
+      "756518": "Uzun Boynuz",
+      "22008": "Su"
+    },
+    "spa-es": {
+      "756518": "Cuerno largo",
+      "22008": "Agua"
+    },
+    "spa-mx": {
+      "756518": "Cuerno largo",
+      "22008": "Agua"
+    },
+    "fre": {
+      "756518": "Longue corne",
+      "22008": "Eau"
+    },
+    "ger": {
+      "756518": "Langhorn",
+      "22008": "Wasser"
+    },
+    "ita": {
+      "756518": "Corno lungo",
+      "22008": "Acqua"
+    },
+    "pol": {
+      "756518": "Długi róg",
+      "22008": "Woda"
+    },
+    "por-br": {
+      "756518": "Chifre Longo",
+      "22008": "Água"
+    },
+    "zho-tw": {
+      "756518": "長角",
+      "22008": "水"
+    },
+    "zho-cn": {
+      "756518": "长角",
+      "22008": "水"
+    },
+    "ara": {
+      "756518": "القرن الطويل",
+      "22008": "الماء"
+    }
+  },
+  "current_dlc_book_unlock_references_validated": 40,
+  "every_item_field_matches_independent_expected_result": true,
+  "equip_all_armor_and_steelheart_both_orders_and_repeat": "PASS",
+  "base_and_dlc_price_intents_separately_validated": true,
+  "existing_stock_and_save_ids_preserved": true,
+  "other_439_merchants_unchanged": true,
+  "original_better_inventory_file_intersection": [],
+  "in_game_tested": true,
+  "dmm_mount_performed": false,
+  "in_game_confirmation_source": "Author report, 7 November 2026"
+}

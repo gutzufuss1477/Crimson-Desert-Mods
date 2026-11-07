@@ -1,0 +1,614 @@
+{
+  "executable": {
+    "steam_build": "26480954",
+    "sha256": "c94ad6c3ea54970a6d2da7a2719753210a7728a91698ed3405dd9125470ed98f"
+  },
+  "dmm": {
+    "version": "4.7.4",
+    "sha256": "0764d91a9b7c05099b99adcf026606b6d4d7b6540ec7aeeafe17b1a13fd5ddc3"
+  },
+  "extracted": [
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/iteminfo.staticinfobody",
+      "bytes": 5865384,
+      "sha256": "e5e50a9667718da71091e8b265bb54608cbdbf920fba1da34c3f7c183344c37b"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/iteminfo.staticinfoheader",
+      "bytes": 56554,
+      "sha256": "c65b9d98e844415d1aff714f071922a3226763954a8741441d208b70d53284f1"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/itemuseinfo.staticinfobody",
+      "bytes": 993549,
+      "sha256": "c2839aea7d8007eb159be50a96d1d5edc03a3cc12d00ce82cbe6a0adfe7f1357"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/itemuseinfo.staticinfoheader",
+      "bytes": 81628,
+      "sha256": "19fe9df536f3560645ab9884b5b6a8f361e7324fbe2194df2dc69a8444f22441"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/knowledgeinfo.staticinfobody",
+      "bytes": 3405231,
+      "sha256": "00a05dbdb2d12a7c5cb49001db211708f82ee820bbd203174644c8fbd9225c38"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/knowledgeinfo.staticinfoheader",
+      "bytes": 54746,
+      "sha256": "176ba4a6cb4cc6fb17ac6125733a251f7790ae0aa1d8e23b0525ede71f813f7b"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/localstringinfo.staticinfobody",
+      "bytes": 2742614,
+      "sha256": "3d5cbcf6825447584fb6174e929e77b43edf857cd7be6bb80a44142521b19862"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/localstringinfo.staticinfoheader",
+      "bytes": 413730,
+      "sha256": "8714b30b77d8e6abf0fca61d85836c0a1165001da61831f78941740ba6ec144d"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/storeinfo.staticinfobody",
+      "bytes": 901667,
+      "sha256": "db4adc8bee86706c7270a562847332afaf98b3b9781beedf0fa2d2b2fb6e976c"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/storeinfo.staticinfoheader",
+      "bytes": 2642,
+      "sha256": "2d1587c9af6fd9d27ec8c52dd6a11fbb490b9d87af757732dd7ba90db16f8939"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/stringinfo.staticinfobody",
+      "bytes": 2000030,
+      "sha256": "7cc8cf1fe5c5aae1d51801b55d2db607e872d0795ba76f3e0bc0431c8833019c"
+    },
+    {
+      "kind": "base",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/stringinfo.staticinfoheader",
+      "bytes": 271122,
+      "sha256": "28681275455712f01350cde5729771798bbe224fdd297bcbc197c397f72d452d"
+    },
+    {
+      "kind": "base",
+      "group": "0012",
+      "path": "ui/bin__/npcstorebuyview2_game.uibinary",
+      "bytes": 138942,
+      "sha256": "68ab1eb625358434a8d65912d5a904085bcafb620c8d4ca88087d12dc8de396b"
+    },
+    {
+      "kind": "base",
+      "group": "0012",
+      "path": "ui/xml/gamemain/play/npcstore2.css",
+      "bytes": 4032,
+      "sha256": "e302c8156fa9e29a54aca1e1e19555014172d2a30a9a8718f03070c16812396a"
+    },
+    {
+      "kind": "base",
+      "group": "0019",
+      "path": "gamedata/stringtable/binary__/kor/item.paloc",
+      "bytes": 590668,
+      "sha256": "e6769e17b468739e93c213e386ed6ab24cb86e000be4095bda007670e8d10d08"
+    },
+    {
+      "kind": "base",
+      "group": "0019",
+      "path": "gamedata/stringtable/binary__/kor/localstringinfo.paloc",
+      "bytes": 290035,
+      "sha256": "8d021afd1835f4d793b4ef8e00925f58567f95d84d2800c3277ba7e79ffee4c7"
+    },
+    {
+      "kind": "base",
+      "group": "0020",
+      "path": "gamedata/stringtable/binary__/eng/item.paloc",
+      "bytes": 589555,
+      "sha256": "af8a2bf615d623b2442cb64abe6db72e4f3ef5678740e39d717da9e90295abb3"
+    },
+    {
+      "kind": "base",
+      "group": "0020",
+      "path": "gamedata/stringtable/binary__/eng/localstringinfo.paloc",
+      "bytes": 280603,
+      "sha256": "31b8c6b2f72d24d8cfc64c2519cfec1e02544f3b294504a7854d5a25a3a2613a"
+    },
+    {
+      "kind": "base",
+      "group": "0021",
+      "path": "gamedata/stringtable/binary__/jpn/item.paloc",
+      "bytes": 611791,
+      "sha256": "091c03b123fc3d22c10d99f6f45e3a951136dc2072734e55c0c5424b3f141c67"
+    },
+    {
+      "kind": "base",
+      "group": "0021",
+      "path": "gamedata/stringtable/binary__/jpn/localstringinfo.paloc",
+      "bytes": 296107,
+      "sha256": "bd5f9bcb176fef45e3151842acc06be32f7e462bae19a4dbc60ab5fa0ee9cd51"
+    },
+    {
+      "kind": "base",
+      "group": "0022",
+      "path": "gamedata/stringtable/binary__/rus/item.paloc",
+      "bytes": 803112,
+      "sha256": "d0d62e6749014d1e819e32836e9a99404dba455819b79b92531015e9be863c5c"
+    },
+    {
+      "kind": "base",
+      "group": "0022",
+      "path": "gamedata/stringtable/binary__/rus/localstringinfo.paloc",
+      "bytes": 349508,
+      "sha256": "15c889776909b28d793bbf243dae4cc69133e4056741611b9100326a0a12e646"
+    },
+    {
+      "kind": "base",
+      "group": "0023",
+      "path": "gamedata/stringtable/binary__/tur/item.paloc",
+      "bytes": 634137,
+      "sha256": "436cad9597701ed5230e30ffd815c1fdf17635204e9732a4a54bebd7f54703ae"
+    },
+    {
+      "kind": "base",
+      "group": "0023",
+      "path": "gamedata/stringtable/binary__/tur/localstringinfo.paloc",
+      "bytes": 294657,
+      "sha256": "ebe595aed288ff513144d99e57a91d4c8848b2e9c527999a27a992aa0844668d"
+    },
+    {
+      "kind": "base",
+      "group": "0024",
+      "path": "gamedata/stringtable/binary__/spa-es/item.paloc",
+      "bytes": 644478,
+      "sha256": "8949e9c2de2c1452e330d83aa161dc403587d2b9770a952c818d8160ed75363b"
+    },
+    {
+      "kind": "base",
+      "group": "0024",
+      "path": "gamedata/stringtable/binary__/spa-es/localstringinfo.paloc",
+      "bytes": 298472,
+      "sha256": "e7459acc6a445e3c751a25fe5e73be701aca1ce4d1a8b9aa80a8a56f267c0906"
+    },
+    {
+      "kind": "base",
+      "group": "0025",
+      "path": "gamedata/stringtable/binary__/spa-mx/item.paloc",
+      "bytes": 642101,
+      "sha256": "7aa8ce96e71004edde82ef3f483e03cd26eef301b17cea271dbdf6456455041f"
+    },
+    {
+      "kind": "base",
+      "group": "0025",
+      "path": "gamedata/stringtable/binary__/spa-mx/localstringinfo.paloc",
+      "bytes": 299355,
+      "sha256": "ed427fed7455378b562073c0dc9f4f0490cb635e2baf4644afa781aee6e0f695"
+    },
+    {
+      "kind": "base",
+      "group": "0026",
+      "path": "gamedata/stringtable/binary__/fre/item.paloc",
+      "bytes": 647915,
+      "sha256": "fc130d98bdc6defcd0ba100454604a1aeb207c8a99651d165e65797e071f5d1a"
+    },
+    {
+      "kind": "base",
+      "group": "0026",
+      "path": "gamedata/stringtable/binary__/fre/localstringinfo.paloc",
+      "bytes": 301956,
+      "sha256": "73a5f729c8502a47002c844385fac916715dd2fddb052d7a5a366b9a3d29b966"
+    },
+    {
+      "kind": "base",
+      "group": "0027",
+      "path": "gamedata/stringtable/binary__/ger/item.paloc",
+      "bytes": 673525,
+      "sha256": "0edf8b6fd1e6361f0cf83eca7d252208ea31103ba46043ab67977d6aa9565a40"
+    },
+    {
+      "kind": "base",
+      "group": "0027",
+      "path": "gamedata/stringtable/binary__/ger/localstringinfo.paloc",
+      "bytes": 305274,
+      "sha256": "13d99c82bdcccfdbf25ad1dad382e19473b573a19183be18488c91b17567320e"
+    },
+    {
+      "kind": "base",
+      "group": "0028",
+      "path": "gamedata/stringtable/binary__/ita/item.paloc",
+      "bytes": 649755,
+      "sha256": "1a080d20133c78fb5746593c60228aeabb5090bb43758b0b672b7e1737da3612"
+    },
+    {
+      "kind": "base",
+      "group": "0028",
+      "path": "gamedata/stringtable/binary__/ita/localstringinfo.paloc",
+      "bytes": 300668,
+      "sha256": "77d0da5c818a8ee4e01c291bab4bb48fd8f29d6a9b9a8f7f0bf1daed1ae1a8f6"
+    },
+    {
+      "kind": "base",
+      "group": "0029",
+      "path": "gamedata/stringtable/binary__/pol/item.paloc",
+      "bytes": 679730,
+      "sha256": "fa039cc937725ac82082ec71be6333ace1b654c9e505e65a076e9ab43d4e26d5"
+    },
+    {
+      "kind": "base",
+      "group": "0029",
+      "path": "gamedata/stringtable/binary__/pol/localstringinfo.paloc",
+      "bytes": 309187,
+      "sha256": "9731ad62db6af55a158136f8508ccda5a22268f84c8d64f7ae954a6820af86cc"
+    },
+    {
+      "kind": "base",
+      "group": "0030",
+      "path": "gamedata/stringtable/binary__/por-br/item.paloc",
+      "bytes": 646248,
+      "sha256": "0ef649effee725eb18c99ea689be0d6a5c0be76ea049a367a86b81f54e984d5b"
+    },
+    {
+      "kind": "base",
+      "group": "0030",
+      "path": "gamedata/stringtable/binary__/por-br/localstringinfo.paloc",
+      "bytes": 300632,
+      "sha256": "21b0fa1199b487b355ece8017ef7ab74b8f83a9dfa9053cc88ec08d27c9350a6"
+    },
+    {
+      "kind": "base",
+      "group": "0031",
+      "path": "gamedata/stringtable/binary__/zho-tw/item.paloc",
+      "bytes": 587107,
+      "sha256": "20ce6c80b223297490d258deaf636d48d97a051e0dac0873c28816f178f6ddad"
+    },
+    {
+      "kind": "base",
+      "group": "0031",
+      "path": "gamedata/stringtable/binary__/zho-tw/localstringinfo.paloc",
+      "bytes": 275057,
+      "sha256": "c0554ad6df29b1234532cc68d6fd66ec3b3fbb5c5716b923a9f7a361c4d08827"
+    },
+    {
+      "kind": "base",
+      "group": "0032",
+      "path": "gamedata/stringtable/binary__/zho-cn/item.paloc",
+      "bytes": 580231,
+      "sha256": "05257199c6cd4b6630d00463843119de35d98173ad5703f1565c49e019542e67"
+    },
+    {
+      "kind": "base",
+      "group": "0032",
+      "path": "gamedata/stringtable/binary__/zho-cn/localstringinfo.paloc",
+      "bytes": 273649,
+      "sha256": "fd9fc75644c47ea2a3bef2fd97420456093d002ee2ecca6c197a6cab75aac5f4"
+    },
+    {
+      "kind": "base",
+      "group": "0033",
+      "path": "gamedata/stringtable/binary__/ara/item.paloc",
+      "bytes": 689017,
+      "sha256": "d9786d05370f79e795ca29eb424512b0152d52ca3663ec0e7c7d045b3ff50602"
+    },
+    {
+      "kind": "base",
+      "group": "0033",
+      "path": "gamedata/stringtable/binary__/ara/localstringinfo.paloc",
+      "bytes": 308731,
+      "sha256": "b793dd855ae2a9ea5553d1d62d3881acae04d1acb3271ca72f05b1641171916b"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/iteminfo.dlc_01.staticinfobody",
+      "bytes": 1215745,
+      "sha256": "7df5bc5e67d0aaa6dbaa4083ab5413e339a0915e8debdb6ec429ab9b3c663fac"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/iteminfo.dlc_01.staticinfoheader",
+      "bytes": 12418,
+      "sha256": "c05b4150e770d2ca9c620157523c000963300a1cb0373a87ec0561fe9c6b93ae"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/itemuseinfo.dlc_01.staticinfobody",
+      "bytes": 130707,
+      "sha256": "72eea1c8125c679f92ff260f605436d2fe68d62e0bdf9efc8d7f6d2041e695c2"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/itemuseinfo.dlc_01.staticinfoheader",
+      "bytes": 11604,
+      "sha256": "037df111cbe0193cc33a09d1c069fa774fefa371aff9c2417551d397308ca5e5"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/knowledgeinfo.dlc_01.staticinfobody",
+      "bytes": 399809,
+      "sha256": "aaedcb1f2705a7606315c5b2ae979c3f94a5441d0b9d6cdc47f7786a4eb86941"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/knowledgeinfo.dlc_01.staticinfoheader",
+      "bytes": 6562,
+      "sha256": "cb41719b6db796889d8d5520c6b392a538bbdd3ad081d07f5b7536f6a67a0c47"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/localstringinfo.dlc_01.staticinfobody",
+      "bytes": 426589,
+      "sha256": "126255fcd3bd5f6abdae98506c292409bb2190a9fd53bb43b13fd43c9dc99f9a"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/localstringinfo.dlc_01.staticinfoheader",
+      "bytes": 54522,
+      "sha256": "884be4ecf34a06fffbc5a752e6e9e5c070b114d429ccf143e473b3c284c3f3bf"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/storeinfo.dlc_01.staticinfobody",
+      "bytes": 310763,
+      "sha256": "6b3994a46e3762ab37d4d1bc0478eeb76e3804fb0364fa7a736b44896eaee06e"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/storeinfo.dlc_01.staticinfoheader",
+      "bytes": 1052,
+      "sha256": "8f45737d2fee744cc49e2ad9b8e969fb055461a1a4db6f406381881ef39460c3"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/stringinfo.dlc_01.staticinfobody",
+      "bytes": 182735,
+      "sha256": "8e5e953c7a5e00510348be1ba33781bd01abde0395c5f7a51f52d6c315e38266"
+    },
+    {
+      "kind": "dlc",
+      "group": "0008",
+      "path": "gamedata/binarystaticinfo__/bin/stringinfo.dlc_01.staticinfoheader",
+      "bytes": 26130,
+      "sha256": "001f5fe927c11689bb6bd2082bc84bdae14793d9e99bf9b44fc043a34ed23f36"
+    },
+    {
+      "kind": "dlc",
+      "group": "0019",
+      "path": "gamedata/stringtable/binary__/kor/item.dlc_01.paloc",
+      "bytes": 151737,
+      "sha256": "32d9f1c572811fb36d4ad9bbd48dbd338b0a82c22217a22bc22f675efe0f4b30"
+    },
+    {
+      "kind": "dlc",
+      "group": "0019",
+      "path": "gamedata/stringtable/binary__/kor/localstringinfo.dlc_01.paloc",
+      "bytes": 8982,
+      "sha256": "95c1281fa72e4446165ccbd38d34523334936be107209b3285d2a08f2b06eb2f"
+    },
+    {
+      "kind": "dlc",
+      "group": "0020",
+      "path": "gamedata/stringtable/binary__/eng/item.dlc_01.paloc",
+      "bytes": 156171,
+      "sha256": "f87b37b0bba3f9fa41442b651e43939e46f0815dab323190a1b539eaa7bb4a91"
+    },
+    {
+      "kind": "dlc",
+      "group": "0020",
+      "path": "gamedata/stringtable/binary__/eng/localstringinfo.dlc_01.paloc",
+      "bytes": 8678,
+      "sha256": "6dc9cbadc0c22be9498ecdf7147cf5f5d23e6a4c90237425294a81a1d662c163"
+    },
+    {
+      "kind": "dlc",
+      "group": "0021",
+      "path": "gamedata/stringtable/binary__/jpn/item.dlc_01.paloc",
+      "bytes": 157900,
+      "sha256": "9b93a548bb0d9f964931db60f87f14d5410ad19f2d62b4f19d15e5cc33d4ba29"
+    },
+    {
+      "kind": "dlc",
+      "group": "0021",
+      "path": "gamedata/stringtable/binary__/jpn/localstringinfo.dlc_01.paloc",
+      "bytes": 8955,
+      "sha256": "8d9ad62045ee6760b656e8369943b47b6a4b5c44d3e1481f5002c3d44347c24a"
+    },
+    {
+      "kind": "dlc",
+      "group": "0022",
+      "path": "gamedata/stringtable/binary__/rus/item.dlc_01.paloc",
+      "bytes": 222949,
+      "sha256": "c62f452564012389d92bb7973c20776e1574b26d6e6b9d98378d59b2d6928092"
+    },
+    {
+      "kind": "dlc",
+      "group": "0022",
+      "path": "gamedata/stringtable/binary__/rus/localstringinfo.dlc_01.paloc",
+      "bytes": 11254,
+      "sha256": "142ad881990a34e58956a5f1ab210c5322ed426fc82861022959ac3f22dab36c"
+    },
+    {
+      "kind": "dlc",
+      "group": "0023",
+      "path": "gamedata/stringtable/binary__/tur/item.dlc_01.paloc",
+      "bytes": 170823,
+      "sha256": "1b77c2f202fa3506707e34215b09ff342a47341d429296958362cfa4d9d3750d"
+    },
+    {
+      "kind": "dlc",
+      "group": "0023",
+      "path": "gamedata/stringtable/binary__/tur/localstringinfo.dlc_01.paloc",
+      "bytes": 9122,
+      "sha256": "62b3e0d5b40e1cb6014cb3d186852d2003a8d26836a5c7a0e4ca4489a477f7fd"
+    },
+    {
+      "kind": "dlc",
+      "group": "0024",
+      "path": "gamedata/stringtable/binary__/spa-es/item.dlc_01.paloc",
+      "bytes": 174963,
+      "sha256": "945b15e2d470c6bec13ed6471b842ae4e44e93ad27732ca30fb0fc66671caf06"
+    },
+    {
+      "kind": "dlc",
+      "group": "0024",
+      "path": "gamedata/stringtable/binary__/spa-es/localstringinfo.dlc_01.paloc",
+      "bytes": 9384,
+      "sha256": "b4ae285ecfa3eed3ec3e8c67d96227cd90d6088f28c7219513463a67a8a097d0"
+    },
+    {
+      "kind": "dlc",
+      "group": "0025",
+      "path": "gamedata/stringtable/binary__/spa-mx/item.dlc_01.paloc",
+      "bytes": 175795,
+      "sha256": "2737bbfa74495e07b3522a874bae84784679324ab2a58dce8cc8bdbe6f220c85"
+    },
+    {
+      "kind": "dlc",
+      "group": "0025",
+      "path": "gamedata/stringtable/binary__/spa-mx/localstringinfo.dlc_01.paloc",
+      "bytes": 9384,
+      "sha256": "16793272ef7aafeb3c02c3cd5fd1c84a9d6b5c32d43ac4ed9fd06e33c1abcf8c"
+    },
+    {
+      "kind": "dlc",
+      "group": "0026",
+      "path": "gamedata/stringtable/binary__/fre/item.dlc_01.paloc",
+      "bytes": 175660,
+      "sha256": "4be0be4debc79d985757c57f3d85b2706f598e353a792b4d464f7352c8e05d86"
+    },
+    {
+      "kind": "dlc",
+      "group": "0026",
+      "path": "gamedata/stringtable/binary__/fre/localstringinfo.dlc_01.paloc",
+      "bytes": 9540,
+      "sha256": "d6714126e5f78d047823fc76f7ee0acf15db0288a9c6d4159160ce46b7b0a833"
+    },
+    {
+      "kind": "dlc",
+      "group": "0027",
+      "path": "gamedata/stringtable/binary__/ger/item.dlc_01.paloc",
+      "bytes": 180083,
+      "sha256": "dc029c661164855a2d69d9da99869914fc11644624f34e52b6ca521e6ff5669a"
+    },
+    {
+      "kind": "dlc",
+      "group": "0027",
+      "path": "gamedata/stringtable/binary__/ger/localstringinfo.dlc_01.paloc",
+      "bytes": 9438,
+      "sha256": "1603fc7e0b1572a123c1f832abfa7d06cce02338ff5acb799db7ca0b1cdfbe7b"
+    },
+    {
+      "kind": "dlc",
+      "group": "0028",
+      "path": "gamedata/stringtable/binary__/ita/item.dlc_01.paloc",
+      "bytes": 177765,
+      "sha256": "c19cc3f36907a650e4abcac1134fc5615f553e7b35fbf708982db1417ce5d113"
+    },
+    {
+      "kind": "dlc",
+      "group": "0028",
+      "path": "gamedata/stringtable/binary__/ita/localstringinfo.dlc_01.paloc",
+      "bytes": 9433,
+      "sha256": "9527cdb4d1e2e04c9cdc046e8510b7e0e29fcba48436e37a2bff35ecbec00fe2"
+    },
+    {
+      "kind": "dlc",
+      "group": "0029",
+      "path": "gamedata/stringtable/binary__/pol/item.dlc_01.paloc",
+      "bytes": 185867,
+      "sha256": "f8c5c7fc73e5c9d94c7f750153daa50c17c668530b72600ff5e3f5ca29ae8b39"
+    },
+    {
+      "kind": "dlc",
+      "group": "0029",
+      "path": "gamedata/stringtable/binary__/pol/localstringinfo.dlc_01.paloc",
+      "bytes": 9678,
+      "sha256": "c06606b9145556b3fd4115e879c7c54b082383ce839ab200e27e164214cbb478"
+    },
+    {
+      "kind": "dlc",
+      "group": "0030",
+      "path": "gamedata/stringtable/binary__/por-br/item.dlc_01.paloc",
+      "bytes": 173369,
+      "sha256": "74220346a2519033cfaafd5d680a7cf3aaa904e7fd7a318e6a2e2342d5045114"
+    },
+    {
+      "kind": "dlc",
+      "group": "0030",
+      "path": "gamedata/stringtable/binary__/por-br/localstringinfo.dlc_01.paloc",
+      "bytes": 9274,
+      "sha256": "f373524888086981a0a83ffecdb6f8923750af68e6fa60230d6c363e92bc5b5f"
+    },
+    {
+      "kind": "dlc",
+      "group": "0031",
+      "path": "gamedata/stringtable/binary__/zho-tw/item.dlc_01.paloc",
+      "bytes": 160125,
+      "sha256": "8c0bc21f99237ed10cda84366a99363e3a323afd770bb3e92c2b623764153c63"
+    },
+    {
+      "kind": "dlc",
+      "group": "0031",
+      "path": "gamedata/stringtable/binary__/zho-tw/localstringinfo.dlc_01.paloc",
+      "bytes": 8649,
+      "sha256": "fdb1d4e34154eb83d7a9eab9b01cd44bdf2d6a03cdbb68a931c16791691a2bd7"
+    },
+    {
+      "kind": "dlc",
+      "group": "0032",
+      "path": "gamedata/stringtable/binary__/zho-cn/item.dlc_01.paloc",
+      "bytes": 156620,
+      "sha256": "29a5abc1deda7df95a7a0749d3ebdc0a9e40db8bb0bf8fba383f69ddc3d53b5b"
+    },
+    {
+      "kind": "dlc",
+      "group": "0032",
+      "path": "gamedata/stringtable/binary__/zho-cn/localstringinfo.dlc_01.paloc",
+      "bytes": 8567,
+      "sha256": "02723342ed74cbd2452aafcb6cacf3f99cbf3d6eb93a7bae8ef1e532aa49ab7c"
+    },
+    {
+      "kind": "dlc",
+      "group": "0033",
+      "path": "gamedata/stringtable/binary__/ara/item.dlc_01.paloc",
+      "bytes": 189292,
+      "sha256": "3c1faaab34ed5c03c8e3d6a7242a4aa2f1a406c5d9598ee2fff833007f83ff77"
+    },
+    {
+      "kind": "dlc",
+      "group": "0033",
+      "path": "gamedata/stringtable/binary__/ara/localstringinfo.dlc_01.paloc",
+      "bytes": 10048,
+      "sha256": "3930f9cd6c0884390af171c57c0285327b02fa8944591dfe54f3aa523b424043"
+    }
+  ]
+}

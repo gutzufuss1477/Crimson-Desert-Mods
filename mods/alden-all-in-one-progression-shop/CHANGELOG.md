@@ -1,5 +1,19 @@
 # Alden AIO Shop + All Items 1 Copper
 
+## 17.4.3 DLC / 17.3.4 No DLC — 7 November 2026 — Steam build 26480954
+
+- Published DLC as the main file and No DLC as the optional file. Previous 17.4.2/17.3.3 files are archived.
+- Author confirmed DLC 17.4.3 in game. Final ASI and game payloads are unchanged; only the readme was finalized. No DLC passed technical checks but was not separately gameplay-tested.
+- Add base-game Long Horn and Water to Materials, 1 Copper / 999 merchant stock, without changing inventory stack limits or existing stock/save identities.
+- Move all 234 existing DLC offers into a dedicated tenth DLC tab; retain all 40 knowledge books and Natural Pearl at Alden. Normal categories contain base-game offers.
+- Check current supplied DLC IDs, 15-language names/descriptions, icon assets and book knowledge/action references. No DLC definitions or assets are bundled.
+- Require DMM 4.7.4+ and a fresh mount. DMM's embedded 4.7.3 changelog documents a fix for DLC items at ordinary vendors appearing without icons/prices. The reporter's manager version is unknown; the separate ASI crash remains unconfirmed.
+- Native/UI regression, current-data, original Better Inventory path separation and Equip All Armor/Steelheart composition checks pass. Final local Defender folder scan found no threats.
+
+- Added anonymous Special Thanks to the two community members who made the DLC available for development and testing.
+
+[Downloads and release notes](../../releases/alden-current-dlc-b26480954.md) · [Build inputs, checksums and validation](../../recipes/alden-current-dlc-b26480954/).
+
 ## 17.3.3 regular / 17.4.2 DLC — 6 November 2026 — Steam build 26480954
 
 - Rebase the category ASIs to the new executable; retain exact executable/function guards and unchanged runtime behavior.

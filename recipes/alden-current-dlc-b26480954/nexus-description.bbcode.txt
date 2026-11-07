@@ -1,0 +1,59 @@
+[b]Alden Shop - DLC categories and new ingredients[/b]
+Updated 7 November 2026 for [b]Steam build 26480954[/b]. [b]DLC 17.4.3 is now the Main File[/b]; [b]No DLC 17.3.4 is the Optional File[/b]. Choose the version matching your installation and replace both the shop package and its included Alden Category Tabs.asi.
+
+The DLC version has been confirmed working in game by the author. Its 234 expansion offers now have their own [b]DLC[/b] tab, including Natural Pearl and all 40 DLC crafting/knowledge books for doors, windows, decor and more. All books remain at Alden.
+
+[b]Long Horn and Water[/b] are now available under Materials in both versions: [b]1 Copper and 999 merchant stock each[/b]. They are base-game ingredients. Normal inventory stack limits are unchanged.
+
+[url=https://ko-fi.com/gutzufuss]Support my mods on Ko-fi[/url]
+Optional support helps me keep making updates. Thank you!
+
+[b]Choose one package[/b]
+[list]
+[*][url=https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20197]Alden Shop DLC 17.4.3 - Main File[/url]: requires installed [b]Charting the Unknown[/b]. 843 offers / 834 distinct items, including 234 DLC offers and the 40 original shop offers. Ten category tabs.
+[*][url=https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20198]Alden Shop No DLC 17.3.4 - Optional File[/url]: 609 offers / 600 distinct items, including the 40 original offers. Nine category tabs. No DLC items or DLC requirement.
+[/list]
+Keep only one Alden variant, its matching 1 Copper component and one category helper active.
+
+[b]Categories[/b]
+Both versions: Abyss 94, Abyss Plans 93, Books 71, Recipes 95, Blueprints 125, Materials 41, Contracts 50 and Original 40, plus All.
+The DLC version adds [b]DLC 234[/b]: 18 Abyss gears, 18 Abyss plans, 40 books, 19 recipes, 104 blueprints and 35 materials. Expansion offers appear in DLC and All; the normal categories contain base-game offers.
+
+Counts show catalog sizes; original unlock conditions and sold-out offers can reduce availability. Reopening resets All. Labels follow all 15 game text languages and size/wrap automatically. Click the tabs or use the displayed keyboard/controller controls.
+
+[b]Original assortment and progression[/b]
+The Original tab preserves Alden's 40 native offers, stocks and unlock/restock conditions. 31 retain normal prices; nine items shared with the mod catalog remain 1 Copper in both places, with separate stock records. Existing stock/save identities are retained.
+Tiered Abyss Gear deliberately stays at [b]Tier I[/b]. Tier II/III, including Vitality II/III, remain for crafting/synthesis.
+
+[b]Requirements and installation[/b]
+Windows PC, Steam build 26480954, [b]DMM 4.7.4 or later[/b] with its ASI loader enabled, and [url=https://aka.ms/vc14/vc_redist.x64.exe]Microsoft Visual C++ v14 Redistributable (x64)[/url]. The DLC main file also requires the installed expansion.
+[list=1]
+[*]Close the game and unmount in DMM.
+[*]Completely replace the previous Alden package. Do not merge into an old folder.
+[*]Import Alden_Shop_DLC.zip, or Alden_Shop_No_DLC.zip if you do not have the expansion. Enable its matching 1 Copper component.
+[*]Replace and enable the included Alden Category Tabs.asi in ASI Mods. The DLC package/helper pair must be 17.4.3; the No DLC pair must be 17.3.4.
+[*]Mount again, restart the game and visit Alden.
+[/list]
+Mount again after installing the DLC or updating DMM. DMM 4.7.3 fixed DLC offers appearing without icons/prices at ordinary vendors by adding the vendor to the DLC shop list during mounting.
+Do not manually copy the internal files/ folder into the game. If the helper is not imported automatically, extract it and add it through DMM's ASI management.
+
+[b]Compatibility[/b]
+[list]
+[*][url=https://www.nexusmods.com/crimsondesert/mods/452]Original Better Inventory and Trade UI 3.3[/url] is optional and separate. Alden replaces none of its files, so there is no shared-file load-order requirement. Follow its author's DLC/non-DLC texture instructions. The native 2x4 or Better Inventory 3x5 shop grid is preserved.
+[*][url=https://www.nexusmods.com/crimsondesert/mods/837]Original Character Creator Enhanced 9.1.32 / Equip All Armor[/url] remains separate and optional. Price edits preserve its armor changes; composition with Steelheart was verified in both orders and on repeat application.
+[*]Other mods changing the same shop, prices or LocalStringInfo data can still conflict. Other shop UI replacements are not covered by the two supported layouts.
+[/list]
+
+[b]Validation and support[/b]
+The author confirmed [b]DLC 17.4.3 working in game on 7 November 2026[/b]. The release keeps that confirmed ASI and all game payloads unchanged; only its readme was finalized afterward. No DLC 17.3.4 passed the technical checks but has not had a separate gameplay test; the previous regular 17.3.3 was confirmed working.
+The current supplied DLC data were checked for item IDs, names/descriptions in 15 languages, icon references and all 40 book knowledge/action references. Native category/UI checks, stock preservation and price composition passed. No DLC item definitions, models or textures are bundled.
+The separate earlier ASI crash report has not been reproduced. For problems, include the game build, DMM version, active ASI helpers, Alden Category Tabs.asi.log and the DMM mount log. Both final packages and their helpers passed a local Microsoft Defender scan.
+
+[b]Special Thanks[/b]
+Special thanks to the two community members who made the DLC available to me, allowing me to build and test this update. Your support is greatly appreciated!
+
+[b]Uninstall[/b]
+Close the game, unmount, disable the shop, its price component and category ASI, then remount. Purchased items and spent money are not rolled back.
+
+Blablup / gutzufuss1477. Developed with AI assistance. MIT; MinHook license included.
+[url=https://github.com/gutzufuss1477/Crimson-Desert-Mods]Source and release notes on GitHub[/url].

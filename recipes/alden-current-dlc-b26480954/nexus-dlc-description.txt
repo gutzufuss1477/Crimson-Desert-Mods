@@ -1,0 +1,9 @@
+Alden Shop DLC 17.4.3 — MAIN FILE
+
+Requires installed Charting the Unknown, Steam build 26480954 and DMM 4.7.4+. Choose the separate optional No DLC version if you do not have the expansion. Install only one Alden variant and its matching category helper.
+
+843 offers in 10 categories. All 234 expansion offers now share a dedicated DLC tab, including 40 crafting/knowledge books, Natural Pearl and the previous DLC materials. Long Horn and Water are added to Materials for 1 Copper, 999 merchant stock. These two ingredients are base-game items and are also included in the No DLC version. Previous stock/save identities and the Original shop category are preserved.
+
+Completely replace the old Alden folder and the old category ASI. Enable the matching 1 Copper component. Mount again after updating DMM or installing the DLC; DMM 4.7.3 fixed DLC offers appearing without icons/prices at ordinary vendors. Original Better Inventory 3.3 remains optional and separate, with no shared replacement paths or required load order.
+
+Checked against the current supplied DLC data, including item names, icon references and book unlocks. The author confirmed this DLC build working in game on 7 November 2026. The release keeps the confirmed ASI and game payloads unchanged. The separate reported ASI crash has not been reproduced. No DLC item definitions or assets are bundled.

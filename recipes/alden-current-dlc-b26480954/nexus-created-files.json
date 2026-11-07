@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-07",
+  "dlc": {
+    "file": {
+      "id": "38521561698021",
+      "game_scoped_id": "20197",
+      "name": "Alden Shop DLC 17.4.3",
+      "file_category": "main"
+    },
+    "version": {
+      "id": "38521561698021",
+      "position": "4.0"
+    }
+  },
+  "regular": {
+    "file": {
+      "id": "38521561698022",
+      "game_scoped_id": "20198",
+      "name": "Alden Shop No DLC 17.3.4",
+      "file_category": "optional"
+    },
+    "version": {
+      "id": "38521561698022",
+      "position": "25.0"
+    }
+  }
+}

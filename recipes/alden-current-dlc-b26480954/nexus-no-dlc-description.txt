@@ -1,0 +1,7 @@
+Alden Shop No DLC 17.3.4 — OPTIONAL FILE
+
+For players without Charting the Unknown. Steam build 26480954; DMM 4.7.4+. Install this instead of the DLC main file, with its matching 17.3.4 category ASI and 1 Copper component. Keep only one Alden variant active.
+
+609 offers in nine categories. Adds Long Horn and Water to Materials for 1 Copper, 999 merchant stock. Both are base-game ingredients. Existing prices, stock/save identities, Tier I progression and the Original tab remain intact. No DLC items or DLC tab.
+
+Completely replace the old Alden folder and helper, then mount again. Original Better Inventory 3.3 remains optional and separate; there are no shared replacement paths or required load order. Native/UI/data/composition checks pass. The companion DLC 17.4.3 was confirmed working in game by the author on 7 November 2026; this No DLC variant has not had a separate gameplay test. The previous regular 17.3.3 was also confirmed working.

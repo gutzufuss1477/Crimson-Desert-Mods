@@ -1,0 +1,1201 @@
+{
+  "base_ingredients": [
+    {
+      "key": 756518,
+      "string_key": "Deer_Antler",
+      "eng": "Long Horn",
+      "ger": "Langhorn",
+      "category": 6,
+      "price_copper": 1,
+      "stock": 999,
+      "no_dlc_stock_index": 607,
+      "dlc_stock_index": 841
+    },
+    {
+      "key": 22008,
+      "string_key": "Water",
+      "eng": "Water",
+      "ger": "Wasser",
+      "category": 6,
+      "price_copper": 1,
+      "stock": 999,
+      "no_dlc_stock_index": 608,
+      "dlc_stock_index": 842
+    }
+  ],
+  "dlc_category": 9,
+  "dlc_offers": [
+    {
+      "key": 1006113,
+      "stock_index": 607,
+      "category": 9
+    },
+    {
+      "key": 1006120,
+      "stock_index": 608,
+      "category": 9
+    },
+    {
+      "key": 1006109,
+      "stock_index": 609,
+      "category": 9
+    },
+    {
+      "key": 1006121,
+      "stock_index": 610,
+      "category": 9
+    },
+    {
+      "key": 1006108,
+      "stock_index": 611,
+      "category": 9
+    },
+    {
+      "key": 1006125,
+      "stock_index": 612,
+      "category": 9
+    },
+    {
+      "key": 1006124,
+      "stock_index": 613,
+      "category": 9
+    },
+    {
+      "key": 1006117,
+      "stock_index": 614,
+      "category": 9
+    },
+    {
+      "key": 1006114,
+      "stock_index": 615,
+      "category": 9
+    },
+    {
+      "key": 1006118,
+      "stock_index": 616,
+      "category": 9
+    },
+    {
+      "key": 1006116,
+      "stock_index": 617,
+      "category": 9
+    },
+    {
+      "key": 1006111,
+      "stock_index": 618,
+      "category": 9
+    },
+    {
+      "key": 1006123,
+      "stock_index": 619,
+      "category": 9
+    },
+    {
+      "key": 1006115,
+      "stock_index": 620,
+      "category": 9
+    },
+    {
+      "key": 1006119,
+      "stock_index": 621,
+      "category": 9
+    },
+    {
+      "key": 1006122,
+      "stock_index": 622,
+      "category": 9
+    },
+    {
+      "key": 1006112,
+      "stock_index": 623,
+      "category": 9
+    },
+    {
+      "key": 1006110,
+      "stock_index": 624,
+      "category": 9
+    },
+    {
+      "key": 1006095,
+      "stock_index": 625,
+      "category": 9
+    },
+    {
+      "key": 1006102,
+      "stock_index": 626,
+      "category": 9
+    },
+    {
+      "key": 1006091,
+      "stock_index": 627,
+      "category": 9
+    },
+    {
+      "key": 1006103,
+      "stock_index": 628,
+      "category": 9
+    },
+    {
+      "key": 1006090,
+      "stock_index": 629,
+      "category": 9
+    },
+    {
+      "key": 1006107,
+      "stock_index": 630,
+      "category": 9
+    },
+    {
+      "key": 1006106,
+      "stock_index": 631,
+      "category": 9
+    },
+    {
+      "key": 1006099,
+      "stock_index": 632,
+      "category": 9
+    },
+    {
+      "key": 1006096,
+      "stock_index": 633,
+      "category": 9
+    },
+    {
+      "key": 1006100,
+      "stock_index": 634,
+      "category": 9
+    },
+    {
+      "key": 1006098,
+      "stock_index": 635,
+      "category": 9
+    },
+    {
+      "key": 1006093,
+      "stock_index": 636,
+      "category": 9
+    },
+    {
+      "key": 1006105,
+      "stock_index": 637,
+      "category": 9
+    },
+    {
+      "key": 1006097,
+      "stock_index": 638,
+      "category": 9
+    },
+    {
+      "key": 1006101,
+      "stock_index": 639,
+      "category": 9
+    },
+    {
+      "key": 1006104,
+      "stock_index": 640,
+      "category": 9
+    },
+    {
+      "key": 1006094,
+      "stock_index": 641,
+      "category": 9
+    },
+    {
+      "key": 1006092,
+      "stock_index": 642,
+      "category": 9
+    },
+    {
+      "key": 1006941,
+      "stock_index": 643,
+      "category": 9
+    },
+    {
+      "key": 1006939,
+      "stock_index": 644,
+      "category": 9
+    },
+    {
+      "key": 1006940,
+      "stock_index": 645,
+      "category": 9
+    },
+    {
+      "key": 1006712,
+      "stock_index": 646,
+      "category": 9
+    },
+    {
+      "key": 1006710,
+      "stock_index": 647,
+      "category": 9
+    },
+    {
+      "key": 1006542,
+      "stock_index": 648,
+      "category": 9
+    },
+    {
+      "key": 1006079,
+      "stock_index": 649,
+      "category": 9
+    },
+    {
+      "key": 1006706,
+      "stock_index": 650,
+      "category": 9
+    },
+    {
+      "key": 1006067,
+      "stock_index": 651,
+      "category": 9
+    },
+    {
+      "key": 1006081,
+      "stock_index": 652,
+      "category": 9
+    },
+    {
+      "key": 1006068,
+      "stock_index": 653,
+      "category": 9
+    },
+    {
+      "key": 1006711,
+      "stock_index": 654,
+      "category": 9
+    },
+    {
+      "key": 1006066,
+      "stock_index": 655,
+      "category": 9
+    },
+    {
+      "key": 1006069,
+      "stock_index": 656,
+      "category": 9
+    },
+    {
+      "key": 1006065,
+      "stock_index": 657,
+      "category": 9
+    },
+    {
+      "key": 1006709,
+      "stock_index": 658,
+      "category": 9
+    },
+    {
+      "key": 1006539,
+      "stock_index": 659,
+      "category": 9
+    },
+    {
+      "key": 1006455,
+      "stock_index": 660,
+      "category": 9
+    },
+    {
+      "key": 1006063,
+      "stock_index": 661,
+      "category": 9
+    },
+    {
+      "key": 1006459,
+      "stock_index": 662,
+      "category": 9
+    },
+    {
+      "key": 1006540,
+      "stock_index": 663,
+      "category": 9
+    },
+    {
+      "key": 1006451,
+      "stock_index": 664,
+      "category": 9
+    },
+    {
+      "key": 1006707,
+      "stock_index": 665,
+      "category": 9
+    },
+    {
+      "key": 1006074,
+      "stock_index": 666,
+      "category": 9
+    },
+    {
+      "key": 1006064,
+      "stock_index": 667,
+      "category": 9
+    },
+    {
+      "key": 1006070,
+      "stock_index": 668,
+      "category": 9
+    },
+    {
+      "key": 1006457,
+      "stock_index": 669,
+      "category": 9
+    },
+    {
+      "key": 1006062,
+      "stock_index": 670,
+      "category": 9
+    },
+    {
+      "key": 1006083,
+      "stock_index": 671,
+      "category": 9
+    },
+    {
+      "key": 1006082,
+      "stock_index": 672,
+      "category": 9
+    },
+    {
+      "key": 1006708,
+      "stock_index": 673,
+      "category": 9
+    },
+    {
+      "key": 1006075,
+      "stock_index": 674,
+      "category": 9
+    },
+    {
+      "key": 1006084,
+      "stock_index": 675,
+      "category": 9
+    },
+    {
+      "key": 1006078,
+      "stock_index": 676,
+      "category": 9
+    },
+    {
+      "key": 1006456,
+      "stock_index": 677,
+      "category": 9
+    },
+    {
+      "key": 1006061,
+      "stock_index": 678,
+      "category": 9
+    },
+    {
+      "key": 1006453,
+      "stock_index": 679,
+      "category": 9
+    },
+    {
+      "key": 1006454,
+      "stock_index": 680,
+      "category": 9
+    },
+    {
+      "key": 1006452,
+      "stock_index": 681,
+      "category": 9
+    },
+    {
+      "key": 1006541,
+      "stock_index": 682,
+      "category": 9
+    },
+    {
+      "key": 1007006,
+      "stock_index": 683,
+      "category": 9
+    },
+    {
+      "key": 1007005,
+      "stock_index": 684,
+      "category": 9
+    },
+    {
+      "key": 1007007,
+      "stock_index": 685,
+      "category": 9
+    },
+    {
+      "key": 1007009,
+      "stock_index": 686,
+      "category": 9
+    },
+    {
+      "key": 1007008,
+      "stock_index": 687,
+      "category": 9
+    },
+    {
+      "key": 1007010,
+      "stock_index": 688,
+      "category": 9
+    },
+    {
+      "key": 1007003,
+      "stock_index": 689,
+      "category": 9
+    },
+    {
+      "key": 1007002,
+      "stock_index": 690,
+      "category": 9
+    },
+    {
+      "key": 1007004,
+      "stock_index": 691,
+      "category": 9
+    },
+    {
+      "key": 1005710,
+      "stock_index": 692,
+      "category": 9
+    },
+    {
+      "key": 1005709,
+      "stock_index": 693,
+      "category": 9
+    },
+    {
+      "key": 1005715,
+      "stock_index": 694,
+      "category": 9
+    },
+    {
+      "key": 1005714,
+      "stock_index": 695,
+      "category": 9
+    },
+    {
+      "key": 1005711,
+      "stock_index": 696,
+      "category": 9
+    },
+    {
+      "key": 1005712,
+      "stock_index": 697,
+      "category": 9
+    },
+    {
+      "key": 1005717,
+      "stock_index": 698,
+      "category": 9
+    },
+    {
+      "key": 1005713,
+      "stock_index": 699,
+      "category": 9
+    },
+    {
+      "key": 1005718,
+      "stock_index": 700,
+      "category": 9
+    },
+    {
+      "key": 1005716,
+      "stock_index": 701,
+      "category": 9
+    },
+    {
+      "key": 1006934,
+      "stock_index": 702,
+      "category": 9
+    },
+    {
+      "key": 1007001,
+      "stock_index": 703,
+      "category": 9
+    },
+    {
+      "key": 1006203,
+      "stock_index": 704,
+      "category": 9
+    },
+    {
+      "key": 1006984,
+      "stock_index": 705,
+      "category": 9
+    },
+    {
+      "key": 1005764,
+      "stock_index": 706,
+      "category": 9
+    },
+    {
+      "key": 1005770,
+      "stock_index": 707,
+      "category": 9
+    },
+    {
+      "key": 1006991,
+      "stock_index": 708,
+      "category": 9
+    },
+    {
+      "key": 1006567,
+      "stock_index": 709,
+      "category": 9
+    },
+    {
+      "key": 1006561,
+      "stock_index": 710,
+      "category": 9
+    },
+    {
+      "key": 1006563,
+      "stock_index": 711,
+      "category": 9
+    },
+    {
+      "key": 1006565,
+      "stock_index": 712,
+      "category": 9
+    },
+    {
+      "key": 1006558,
+      "stock_index": 713,
+      "category": 9
+    },
+    {
+      "key": 1006207,
+      "stock_index": 714,
+      "category": 9
+    },
+    {
+      "key": 1006560,
+      "stock_index": 715,
+      "category": 9
+    },
+    {
+      "key": 1006208,
+      "stock_index": 716,
+      "category": 9
+    },
+    {
+      "key": 1006231,
+      "stock_index": 717,
+      "category": 9
+    },
+    {
+      "key": 1006206,
+      "stock_index": 718,
+      "category": 9
+    },
+    {
+      "key": 1006205,
+      "stock_index": 719,
+      "category": 9
+    },
+    {
+      "key": 1005763,
+      "stock_index": 720,
+      "category": 9
+    },
+    {
+      "key": 1005765,
+      "stock_index": 721,
+      "category": 9
+    },
+    {
+      "key": 1006681,
+      "stock_index": 722,
+      "category": 9
+    },
+    {
+      "key": 1006566,
+      "stock_index": 723,
+      "category": 9
+    },
+    {
+      "key": 1006214,
+      "stock_index": 724,
+      "category": 9
+    },
+    {
+      "key": 1006789,
+      "stock_index": 725,
+      "category": 9
+    },
+    {
+      "key": 1006806,
+      "stock_index": 726,
+      "category": 9
+    },
+    {
+      "key": 1006800,
+      "stock_index": 727,
+      "category": 9
+    },
+    {
+      "key": 1006802,
+      "stock_index": 728,
+      "category": 9
+    },
+    {
+      "key": 1006797,
+      "stock_index": 729,
+      "category": 9
+    },
+    {
+      "key": 1006804,
+      "stock_index": 730,
+      "category": 9
+    },
+    {
+      "key": 1006803,
+      "stock_index": 731,
+      "category": 9
+    },
+    {
+      "key": 1006801,
+      "stock_index": 732,
+      "category": 9
+    },
+    {
+      "key": 1006798,
+      "stock_index": 733,
+      "category": 9
+    },
+    {
+      "key": 1006799,
+      "stock_index": 734,
+      "category": 9
+    },
+    {
+      "key": 1006805,
+      "stock_index": 735,
+      "category": 9
+    },
+    {
+      "key": 1005759,
+      "stock_index": 736,
+      "category": 9
+    },
+    {
+      "key": 1006807,
+      "stock_index": 737,
+      "category": 9
+    },
+    {
+      "key": 1007011,
+      "stock_index": 738,
+      "category": 9
+    },
+    {
+      "key": 1005769,
+      "stock_index": 739,
+      "category": 9
+    },
+    {
+      "key": 1006683,
+      "stock_index": 740,
+      "category": 9
+    },
+    {
+      "key": 1006790,
+      "stock_index": 741,
+      "category": 9
+    },
+    {
+      "key": 1006794,
+      "stock_index": 742,
+      "category": 9
+    },
+    {
+      "key": 1006793,
+      "stock_index": 743,
+      "category": 9
+    },
+    {
+      "key": 1006202,
+      "stock_index": 744,
+      "category": 9
+    },
+    {
+      "key": 1006562,
+      "stock_index": 745,
+      "category": 9
+    },
+    {
+      "key": 1006564,
+      "stock_index": 746,
+      "category": 9
+    },
+    {
+      "key": 1006796,
+      "stock_index": 747,
+      "category": 9
+    },
+    {
+      "key": 1006795,
+      "stock_index": 748,
+      "category": 9
+    },
+    {
+      "key": 1006204,
+      "stock_index": 749,
+      "category": 9
+    },
+    {
+      "key": 1006786,
+      "stock_index": 750,
+      "category": 9
+    },
+    {
+      "key": 1006213,
+      "stock_index": 751,
+      "category": 9
+    },
+    {
+      "key": 1006212,
+      "stock_index": 752,
+      "category": 9
+    },
+    {
+      "key": 1006993,
+      "stock_index": 753,
+      "category": 9
+    },
+    {
+      "key": 1007053,
+      "stock_index": 754,
+      "category": 9
+    },
+    {
+      "key": 1006998,
+      "stock_index": 755,
+      "category": 9
+    },
+    {
+      "key": 1006556,
+      "stock_index": 756,
+      "category": 9
+    },
+    {
+      "key": 1005917,
+      "stock_index": 757,
+      "category": 9
+    },
+    {
+      "key": 1006210,
+      "stock_index": 758,
+      "category": 9
+    },
+    {
+      "key": 1006997,
+      "stock_index": 759,
+      "category": 9
+    },
+    {
+      "key": 1005752,
+      "stock_index": 760,
+      "category": 9
+    },
+    {
+      "key": 1006785,
+      "stock_index": 761,
+      "category": 9
+    },
+    {
+      "key": 1006788,
+      "stock_index": 762,
+      "category": 9
+    },
+    {
+      "key": 1005755,
+      "stock_index": 763,
+      "category": 9
+    },
+    {
+      "key": 1006787,
+      "stock_index": 764,
+      "category": 9
+    },
+    {
+      "key": 1006622,
+      "stock_index": 765,
+      "category": 9
+    },
+    {
+      "key": 1006557,
+      "stock_index": 766,
+      "category": 9
+    },
+    {
+      "key": 1006211,
+      "stock_index": 767,
+      "category": 9
+    },
+    {
+      "key": 1006019,
+      "stock_index": 768,
+      "category": 9
+    },
+    {
+      "key": 1006018,
+      "stock_index": 769,
+      "category": 9
+    },
+    {
+      "key": 1006138,
+      "stock_index": 770,
+      "category": 9
+    },
+    {
+      "key": 1006559,
+      "stock_index": 771,
+      "category": 9
+    },
+    {
+      "key": 1006209,
+      "stock_index": 772,
+      "category": 9
+    },
+    {
+      "key": 1006935,
+      "stock_index": 773,
+      "category": 9
+    },
+    {
+      "key": 1005915,
+      "stock_index": 774,
+      "category": 9
+    },
+    {
+      "key": 1006821,
+      "stock_index": 775,
+      "category": 9
+    },
+    {
+      "key": 1006817,
+      "stock_index": 776,
+      "category": 9
+    },
+    {
+      "key": 1006741,
+      "stock_index": 777,
+      "category": 9
+    },
+    {
+      "key": 1006825,
+      "stock_index": 778,
+      "category": 9
+    },
+    {
+      "key": 1006876,
+      "stock_index": 779,
+      "category": 9
+    },
+    {
+      "key": 1006883,
+      "stock_index": 780,
+      "category": 9
+    },
+    {
+      "key": 1006739,
+      "stock_index": 781,
+      "category": 9
+    },
+    {
+      "key": 1006827,
+      "stock_index": 782,
+      "category": 9
+    },
+    {
+      "key": 1006820,
+      "stock_index": 783,
+      "category": 9
+    },
+    {
+      "key": 1006811,
+      "stock_index": 784,
+      "category": 9
+    },
+    {
+      "key": 1006881,
+      "stock_index": 785,
+      "category": 9
+    },
+    {
+      "key": 1006819,
+      "stock_index": 786,
+      "category": 9
+    },
+    {
+      "key": 1006824,
+      "stock_index": 787,
+      "category": 9
+    },
+    {
+      "key": 1006738,
+      "stock_index": 788,
+      "category": 9
+    },
+    {
+      "key": 1006879,
+      "stock_index": 789,
+      "category": 9
+    },
+    {
+      "key": 1006823,
+      "stock_index": 790,
+      "category": 9
+    },
+    {
+      "key": 1006812,
+      "stock_index": 791,
+      "category": 9
+    },
+    {
+      "key": 1006740,
+      "stock_index": 792,
+      "category": 9
+    },
+    {
+      "key": 1006818,
+      "stock_index": 793,
+      "category": 9
+    },
+    {
+      "key": 1006878,
+      "stock_index": 794,
+      "category": 9
+    },
+    {
+      "key": 1006813,
+      "stock_index": 795,
+      "category": 9
+    },
+    {
+      "key": 1006875,
+      "stock_index": 796,
+      "category": 9
+    },
+    {
+      "key": 1006877,
+      "stock_index": 797,
+      "category": 9
+    },
+    {
+      "key": 1006814,
+      "stock_index": 798,
+      "category": 9
+    },
+    {
+      "key": 1006815,
+      "stock_index": 799,
+      "category": 9
+    },
+    {
+      "key": 1006816,
+      "stock_index": 800,
+      "category": 9
+    },
+    {
+      "key": 1006880,
+      "stock_index": 801,
+      "category": 9
+    },
+    {
+      "key": 1006810,
+      "stock_index": 802,
+      "category": 9
+    },
+    {
+      "key": 1006826,
+      "stock_index": 803,
+      "category": 9
+    },
+    {
+      "key": 1006882,
+      "stock_index": 804,
+      "category": 9
+    },
+    {
+      "key": 1006822,
+      "stock_index": 805,
+      "category": 9
+    },
+    {
+      "key": 1006189,
+      "stock_index": 806,
+      "category": 9
+    },
+    {
+      "key": 1005448,
+      "stock_index": 807,
+      "category": 9
+    },
+    {
+      "key": 1006238,
+      "stock_index": 808,
+      "category": 9
+    },
+    {
+      "key": 1006282,
+      "stock_index": 809,
+      "category": 9
+    },
+    {
+      "key": 1006281,
+      "stock_index": 810,
+      "category": 9
+    },
+    {
+      "key": 1006197,
+      "stock_index": 811,
+      "category": 9
+    },
+    {
+      "key": 1005511,
+      "stock_index": 812,
+      "category": 9
+    },
+    {
+      "key": 1006089,
+      "stock_index": 813,
+      "category": 9
+    },
+    {
+      "key": 1006974,
+      "stock_index": 814,
+      "category": 9
+    },
+    {
+      "key": 1006237,
+      "stock_index": 815,
+      "category": 9
+    },
+    {
+      "key": 1007000,
+      "stock_index": 816,
+      "category": 9
+    },
+    {
+      "key": 1005625,
+      "stock_index": 817,
+      "category": 9
+    },
+    {
+      "key": 1004791,
+      "stock_index": 818,
+      "category": 9
+    },
+    {
+      "key": 1005500,
+      "stock_index": 819,
+      "category": 9
+    },
+    {
+      "key": 1004796,
+      "stock_index": 820,
+      "category": 9
+    },
+    {
+      "key": 1004790,
+      "stock_index": 821,
+      "category": 9
+    },
+    {
+      "key": 1005499,
+      "stock_index": 822,
+      "category": 9
+    },
+    {
+      "key": 1006531,
+      "stock_index": 823,
+      "category": 9
+    },
+    {
+      "key": 1006536,
+      "stock_index": 824,
+      "category": 9
+    },
+    {
+      "key": 1006535,
+      "stock_index": 825,
+      "category": 9
+    },
+    {
+      "key": 1006537,
+      "stock_index": 826,
+      "category": 9
+    },
+    {
+      "key": 1006533,
+      "stock_index": 827,
+      "category": 9
+    },
+    {
+      "key": 1006532,
+      "stock_index": 828,
+      "category": 9
+    },
+    {
+      "key": 1005457,
+      "stock_index": 829,
+      "category": 9
+    },
+    {
+      "key": 1004795,
+      "stock_index": 830,
+      "category": 9
+    },
+    {
+      "key": 1004794,
+      "stock_index": 831,
+      "category": 9
+    },
+    {
+      "key": 1004792,
+      "stock_index": 832,
+      "category": 9
+    },
+    {
+      "key": 1004788,
+      "stock_index": 833,
+      "category": 9
+    },
+    {
+      "key": 1006919,
+      "stock_index": 834,
+      "category": 9
+    },
+    {
+      "key": 1005874,
+      "stock_index": 835,
+      "category": 9
+    },
+    {
+      "key": 1006190,
+      "stock_index": 836,
+      "category": 9
+    },
+    {
+      "key": 1006920,
+      "stock_index": 837,
+      "category": 9
+    },
+    {
+      "key": 1006918,
+      "stock_index": 838,
+      "category": 9
+    },
+    {
+      "key": 1006921,
+      "stock_index": 839,
+      "category": 9
+    },
+    {
+      "key": 1006917,
+      "stock_index": 840,
+      "category": 9
+    }
+  ],
+  "prior_base_rows": 567,
+  "original_rows": 40
+}

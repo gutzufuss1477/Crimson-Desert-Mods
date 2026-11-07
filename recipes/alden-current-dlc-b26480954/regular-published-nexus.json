@@ -1,0 +1,19 @@
+{
+  "variant": "regular",
+  "bytes": 4365114,
+  "sha256": "f6454e5e6d7a8b0ccc5d94e399f38158a4917a46ac90ed52f7d6a81fe1a02d97",
+  "published_download_verified": true,
+  "date": "2026-11-07",
+  "file_id": 20198,
+  "global_file_version_id": "38521561698022",
+  "file_group_id": "7385165",
+  "version": "17.3.4",
+  "category": "optional",
+  "primary": false,
+  "dlc_dependencies": {
+    "dlc_dependency_definitions": []
+  },
+  "previous_file_id": 20056,
+  "previous_file_archived": true,
+  "published_url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20198"
+}

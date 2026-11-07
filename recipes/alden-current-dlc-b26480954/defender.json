@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-07",
+  "scan_type": "custom folder scan, DisableRemediation",
+  "engine_tool": "4.18.26100.4-0/MpCmdRun.exe",
+  "exit_code": 0,
+  "result": "Scanning C:\\Users\\Simon\\Downloads\\Alden_Shop_Update found no threats.",
+  "artifacts": [
+    {
+      "variant": "regular",
+      "file": "Alden_Shop_No_DLC.zip",
+      "sha256": "f6454e5e6d7a8b0ccc5d94e399f38158a4917a46ac90ed52f7d6a81fe1a02d97",
+      "bytes": 4365114
+    },
+    {
+      "variant": "regular",
+      "file": "Alden Category Tabs.asi",
+      "sha256": "aadb633ef6283e14a77db61f0b50685b4c84f8ef79f9a83dd5948577912cf3b3",
+      "bytes": 84480
+    },
+    {
+      "variant": "dlc",
+      "file": "Alden_Shop_DLC.zip",
+      "sha256": "55cd03f8b5dfad6294064a14074bfa811dac2e3cc0ced8e7088d9e4cf7aa1976",
+      "bytes": 4371988
+    },
+    {
+      "variant": "dlc",
+      "file": "Alden Category Tabs.asi",
+      "sha256": "3880d4cf9c5eb498ac15cf4a7b4c89616b01966e212edc43c10d3a9ffdab982f",
+      "bytes": 87040
+    }
+  ],
+  "release_readmes_finalized_before_scan": true
+}

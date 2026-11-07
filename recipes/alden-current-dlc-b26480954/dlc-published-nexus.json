@@ -1,0 +1,30 @@
+{
+  "variant": "dlc",
+  "bytes": 4371988,
+  "sha256": "55cd03f8b5dfad6294064a14074bfa811dac2e3cc0ced8e7088d9e4cf7aa1976",
+  "published_download_verified": true,
+  "date": "2026-11-07",
+  "file_id": 20197,
+  "global_file_version_id": "38521561698021",
+  "file_group_id": "8322432",
+  "version": "17.4.3",
+  "category": "main",
+  "primary": true,
+  "dlc_dependencies": {
+    "dlc_dependency_definitions": [
+      {
+        "id": "10413",
+        "dlc_targets": [
+          {
+            "id": "11220",
+            "dlc_id": "1",
+            "name": "Charting the Unknown"
+          }
+        ]
+      }
+    ]
+  },
+  "previous_file_id": 20057,
+  "previous_file_archived": true,
+  "published_url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=20197"
+}

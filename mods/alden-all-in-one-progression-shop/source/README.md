@@ -1,4 +1,17 @@
-# Alden hotfix source — 17.3.3 / 17.4.2
+# Alden release source — 17.4.3 DLC / 17.3.4 No DLC
+
+`build_checked_shop.py` builds the current two variants for Steam 26480954. It consumes the exact published 17.4.2 DLC or 17.3.3 regular ZIP and corresponding generated native build directory, current extracted base data, matching executable, DMM parser, Python lz4 and MSVC tools. The existing native profile and hook addresses remain unchanged. The complete inputs include game-derived files and are not distributed in Git.
+
+```powershell
+python build_checked_shop.py --variant dlc --previous-build C:\Inputs\alden-dlc-17.4.2-b26480954 --current-data C:\Inputs\current\raw\base --parser-dir C:\Inputs\parser --game-exe C:\Inputs\CrimsonDesert.exe --output C:\Output\AldenDLC17.4.3
+python test_checked_shop.py --variant dlc --parser-dir C:\Inputs\parser --data C:\Inputs\current --package C:\Output\AldenDLC17.4.3\Alden_Shop_DLC.zip --previous-package C:\Inputs\alden-dlc-17.4.2-b26480954\Alden_Shop_DLC.zip --equip-all C:\Inputs\EquipAllArmor.json --steelheart C:\Inputs\Steelheart.json --better-inventory C:\Inputs\BetterInventory3.3.zip --report C:\Output\AldenDLC17.4.3\CURRENT_DATA_CHECKS.json
+```
+
+For No DLC, select `regular`, supply 17.3.3 inputs and use output version 17.3.4 / `Alden_Shop_No_DLC.zip`. The current-data check uses `raw/base`, `raw/dlc` and an archive `inventory.json`; see the [recipe](../../../recipes/alden-current-dlc-b26480954/) for provenance and scope.
+
+Both builders append Long Horn and Water after all existing offers, preserving stock/save identities. Materials increases to 41. The DLC build assigns the existing DLC rows to tab 9 (tenth tab), appends its localization label and regenerates the reversible UI insertion while retaining the native grid and dependencies. No DLC item table or texture is bundled. `CHECKED_*_README.txt` are pinned package texts. Published on 7 November 2026: DLC as main file, No DLC as optional. The author confirmed the DLC build in game; its ASI and game payloads are unchanged after readme finalization. No DLC has not had a separate gameplay test.
+
+# Published hotfix source — 17.3.3 / 17.4.2
 
 The current release entry point is `build_release_hotfix.py`, with the [26480954 native profile](../../../recipes/alden-hotfix-b26480954/native-profile.json). It consumes the verified previous package and its local generated native build, current official base tables, matching EXE, DMM parser and original Better Inventory 3.3 archive. Select `--variant regular` or `--variant dlc`.
 
