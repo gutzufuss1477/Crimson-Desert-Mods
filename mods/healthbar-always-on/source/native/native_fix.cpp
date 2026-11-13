@@ -9,7 +9,7 @@
 #include <cstring>
 #include <string>
 #include "hash_core.hpp"
-#include "../../../../tooling/native/profiles_26361232.hpp"
+#include "../../../../tooling/native/profiles_26636972.hpp"
 
 namespace healthbar {
 uintptr_t UpdateRva=0xedfc10, SlotRva=0x59ea750, HeadUpVtableRva=0x59ec0e8;
@@ -19,10 +19,10 @@ constexpr uint8_t Context[]={0x8b,0x43,0x04,0x39,0x86,0xa4,0x01,0x00,0x00,0x75,0
 constexpr uint8_t UpdateHead[]={0x48,0x89,0x5c,0x24,0x08,0x55,0x56,0x57,0x41,0x54,0x41,0x55,0x41,0x56,0x41,0x57};
 cd::Addresses addresses;
 constexpr char HtmlHash[]="0c5d73a5bf41ae660159d401a900ba0c425037544ee0c7589b97f719edeec9c1";
-constexpr char CssHash[]="82ed06b4f93cbacf26ce94be76c09940777131def32d45ac512b6ab01ddfc985";
-constexpr char FramedCssHash[]="df27c0bb1abd0323497cf41974a28865191533864e6510044a615a5b88997ea4";
+constexpr char CssHash[]="9e646b05c8465d155e11d27671d0899b78fc9ab7d0d9aeae98d2222595f55e24";
+constexpr char FramedCssHash[]="9de0ceb306b8f78afea00203c75febe49b1615874ec4d726f897040c9081dde7";
 constexpr char SingleHtmlHash[]="dac9fa9905b29b55418371b2287b29598fbeef17a518159961b442ac23bad80c";
-constexpr char SingleCssHash[]="99a3daea5f3a7a260efa84e9d009457e024ce6dab2ee451cc9c76b351346579b";
+constexpr char SingleCssHash[]="89148d1ba2e4ce8fc28641959447c3661acd9ca45c5dfc9674a0c481cc4b00e3";
 enum class UiMode { unsupported, single, compact, framed };
 UiMode identify_ui(const char* html,const char* css) {
     if(std::strcmp(html,SingleHtmlHash)==0 && std::strcmp(css,SingleCssHash)==0) return UiMode::single;
@@ -159,7 +159,7 @@ DWORD WINAPI initialize(void*) {
     const std::wstring logPath=std::wstring(modulePath)+L".log";
     logfile=CreateFileW(logPath.c_str(),GENERIC_WRITE,FILE_SHARE_READ|FILE_SHARE_WRITE,nullptr,
         CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,nullptr);
-    log("Healthbar v4 candidate; structural resolver; baseline Steam 26361232");
+    log("Healthbar v5 test; structural resolver; baseline Steam 26636972");
     const wchar_t* leaf=wcsrchr(exe,L'\\');
     if(!leaf || _wcsicmp(leaf+1,L"CrimsonDesert.exe")) {
         log("REFUSED: wrong executable name"); return 2;

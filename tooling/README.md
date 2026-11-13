@@ -1,3 +1,28 @@
+## Current build 26636972 — 13 November 2026
+
+These instructions supersede the historical sections below. Public native payloads retain the tested candidate bytes, including diagnostic `-test` suffixes. Version labels and user instructions are finalized in the release ZIPs. A different compiler or rebuild is not automatically byte-identical.
+
+Use Visual Studio C++ x64 tools. Bank and Mining use their existing `source/src/build.cmd`; Healthbar uses `source/native/build.cmd`. Both Mount variants use the commands below. All source includes the current guarded profile in `tooling/native/profiles_26636972.hpp`.
+
+```powershell
+python tooling/prepare_mount_fixture_b26636972.py --exe <local-b26636972-exe>
+tooling/build_allstats_204.cmd
+tooling/build_speed_204.cmd
+```
+
+The local generator validates the full EXE hash before extracting the native continuation into an ignored header. Both public mount regressions run 1,354 checks using semantic fixtures and the actual native notification continuation. Mount implementation scope is the stat UI/cache; actual movement effects are unproven.
+
+Alden: run `mods/alden-all-in-one-progression-shop/source/native/prepare_b26636972.py` with `--variant regular` or `dlc`, `--exe`, `--ui` (current extracted npcstorebuyview2_game.uibinary), `--legacy-augmented` (previous locally generated vanilla_expected.bin for No DLC 17.3.4 / DLC 17.4.3), `--legacy-better` (previous Better Inventory fixture, used only for rejection), `--minhook` (licensed source tree) and a new empty `--output` directory. Then run `build_runtime.cmd` inside that output. Generated private UI/code arrays and fixtures must not be committed. The generator asserts all output hashes, exercises the current schema and preserves the tested runtime source. The old shared `build_runtime_shop.py` remains a historical build recipe, not the current release entry point.
+
+Data recipes:
+
+- `mods/alden-all-in-one-progression-shop/source/build_data_b26636972.py --inputs <extract-root> --parser <dmm_parser.pyd> --previous-regular <17.3.4.zip> --previous-dlc <17.4.3.zip> --output <local-output>`. Requires the DMM parser extension and `lz4`. The input root contains `current/<group>/...` and `raw/base/<group>/...`, `raw/dlc/<group>/...`. Input SHA-256 manifests reject other builds. Output data needs the matching current category ASI; no full game data is stored in Git.
+- `mods/healthbar-always-on/source/build_data_b26636972.py --current <current-extracted-root> --previous-downloads <old-v4-download-directory> --output <local-output>`. Prior files are named `2406_19042.zip`, `2406_19043.zip`, `2406_19044.zip`. Add the built helper only to the two Multitarget styles. Requires current skill, character and original UI inputs; exact hashes are recorded alongside the script.
+
+Nexus ZIPs were downloaded again and matched all nine archive SHA-256 values. [Release notes](../releases/mods-b26636972.md) distinguish author confirmation from automated validation. Alden/Healthbar complete data/UI overlays remain Nexus-only. Steelheart v10 is unchanged. Better Mount Movement and Bank Save Patcher are excluded.
+
+---
+
 # Build and validation
 
 ## Steam build 26361232 release and remaining candidates

@@ -1,0 +1,108 @@
+{
+  "build": "26636972",
+  "author_confirmed": [
+    "Bank (reported working)",
+    "Mining Helmet",
+    "Mount All Stats display",
+    "Healthbar Vanilla Multitarget",
+    "Alden DLC shop/categories"
+  ],
+  "separate_current_build_gameplay_not_confirmed": [
+    "Mount Speed Only",
+    "Healthbar Classic",
+    "Healthbar Caites",
+    "Alden No DLC",
+    "Steelheart v10"
+  ],
+  "mount_gameplay_physics": "not established",
+  "native_payloads_preserved": true,
+  "healthbar_data": {
+    "skill_records": 2160,
+    "changed_skill_keys": [
+      1201
+    ],
+    "preserved_skill_records": 2159,
+    "character_offsets": [
+      525,
+      7857,
+      23004
+    ],
+    "build": "26636972",
+    "variants": [
+      {
+        "variant": "multi",
+        "html_sha256": "0c5d73a5bf41ae660159d401a900ba0c425037544ee0c7589b97f719edeec9c1",
+        "css_sha256": "9de0ceb306b8f78afea00203c75febe49b1615874ec4d726f897040c9081dde7",
+        "native_required": true
+      },
+      {
+        "variant": "classic",
+        "html_sha256": "dac9fa9905b29b55418371b2287b29598fbeef17a518159961b442ac23bad80c",
+        "css_sha256": "89148d1ba2e4ce8fc28641959447c3661acd9ca45c5dfc9674a0c481cc4b00e3",
+        "native_required": false
+      },
+      {
+        "variant": "caites",
+        "html_sha256": "0c5d73a5bf41ae660159d401a900ba0c425037544ee0c7589b97f719edeec9c1",
+        "css_sha256": "9e646b05c8465d155e11d27671d0899b78fc9ab7d0d9aeae98d2222595f55e24",
+        "native_required": true
+      }
+    ],
+    "gameplay_tested": false
+  },
+  "alden_ui_schema": [
+    {
+      "variant": "regular",
+      "version": "17.3.6-test",
+      "nodes": 55,
+      "property_conditions_updated": 2,
+      "field": "hasCssAttribute",
+      "native_reader_rva": "0x426cb10",
+      "bar_sha256": "e57ab240cd6849b051b6163f7d0c58c718b339aa585a3b80103d2047689fe818",
+      "offers": 606,
+      "category_counts": [
+        "606",
+        "94",
+        "93",
+        "71",
+        "95",
+        "122",
+        "41",
+        "50",
+        "40"
+      ],
+      "old_bar_rejected": true,
+      "fresh_native_example_matches": true,
+      "grid_and_styles_preserved": true,
+      "current_3x5_input_sha256": "cb0ae4baaa83d7f51ed619e4e9d558bf49de0ff704e3fab6122045b094ac5257",
+      "legacy_bi33_supported": false
+    },
+    {
+      "variant": "dlc",
+      "version": "17.4.5-test",
+      "nodes": 58,
+      "property_conditions_updated": 2,
+      "field": "hasCssAttribute",
+      "native_reader_rva": "0x426cb10",
+      "bar_sha256": "0316341c18e991cd289632ca2e15b387d15c5588f99f72dc6614c8043348929b",
+      "offers": 840,
+      "category_counts": [
+        "840",
+        "94",
+        "93",
+        "71",
+        "95",
+        "122",
+        "41",
+        "50",
+        "40",
+        "234"
+      ],
+      "old_bar_rejected": true,
+      "fresh_native_example_matches": true,
+      "grid_and_styles_preserved": true,
+      "current_3x5_input_sha256": "cb0ae4baaa83d7f51ed619e4e9d558bf49de0ff704e3fab6122045b094ac5257",
+      "legacy_bi33_supported": false
+    }
+  ]
+}

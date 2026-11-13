@@ -1,4 +1,4 @@
-#include "../../../../../tooling/native/profiles_26361232.hpp"
+#include "../../../../../tooling/native/profiles_26636972.hpp"
 namespace cd { inline Addresses mining_addresses; }
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
@@ -20,7 +20,7 @@ namespace cd { inline Addresses mining_addresses; }
 
 // Standalone build. No FullMode/ore_only/direct_bridge implementation linked.
 namespace auto34 {
-constexpr char Version[]="1.4.0";
+constexpr char Version[]="1.5.0-test";
 constexpr uint32_t On=1417341355,Off=652747463,MineKey=1001881;
 constexpr uint16_t MineIndex=2502;
 constexpr size_t MaxTargets=2048;
@@ -79,7 +79,7 @@ using EffectFn=uint32_t*(__fastcall*)(void*,uint32_t*,const void*,const void*);
 using FrameFn=uintptr_t(__fastcall*)(uintptr_t);
 using NearbyFn=void(__fastcall*)(uintptr_t,uintptr_t);
 using QueryFn=void(__fastcall*)(uintptr_t,const float*,float,float,void*);
-using InfoFn=uintptr_t(__fastcall*)(uintptr_t,uint32_t);
+using InfoFn=uintptr_t(__fastcall*)(const uint16_t*);
 using RotateFn=void(__fastcall*)(float*,const float*);
 using EyeFn=float*(__fastcall*)(uintptr_t,float*);
 using OrientationFn=void(__fastcall*)(float*,const float*,float*,int,int,int);
@@ -290,7 +290,8 @@ bool cameraGeometry(uintptr_t player,float* direction,float* worldUp,float* p,fl
     return true;
 }
 bool modeAxes(float* look,float* up) {
-    const auto info=modeInfo(0,13); // FindMine key 10, current table index 13.
+    const uint16_t modeIndex=13;
+    const auto info=modeInfo(&modeIndex); // FindMine key 10, current table index 13.
     return info && value<uint32_t>(info+8)==10 && value<uint8_t>(info+0x1d0)==1 &&
         value<uint8_t>(info+0x208)==1 && readRaw(info+0x1f4,look,12) && readRaw(info+0x1e8,up,12);
 }

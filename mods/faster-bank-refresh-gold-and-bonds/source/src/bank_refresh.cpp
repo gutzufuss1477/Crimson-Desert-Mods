@@ -1,4 +1,4 @@
-// Bank Refresh 1.3.1 - Copyright (c) 2026 Blablup, MIT.
+// Bank Refresh 1.4.0-test - Copyright (c) 2026 Blablup, MIT.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -18,7 +18,7 @@ uintptr_t LockRva=0x3e2eb0, NotifyRva=0x2deaac0, TimerReturnRva=0x2df4086;
 uintptr_t BondRefreshRva=0x2df5450, BondTimerReturnRva=0x2df407a;
 cd::Addresses addresses;
 using RefreshFn=int*(__fastcall*)(uintptr_t,int*,const Calendar*,uint16_t);
-using LookupFn=uintptr_t(__fastcall*)(uintptr_t,uint32_t);
+using LookupFn=uintptr_t(__fastcall*)(const uint16_t*);
 using LockFn=void*(__fastcall*)(void*,uintptr_t,uint8_t);
 using UnlockFn=void(__fastcall*)(uintptr_t,uint8_t);
 using NotifyFn=void(__fastcall*)(uintptr_t,uint16_t);
@@ -80,8 +80,8 @@ bool locked_adjust(uintptr_t component,uint16_t key,uint64_t now,uint64_t limit)
     bool changed=false;
     __try {
         __try {
-            auto records=*reinterpret_cast<BankRecord**>(component+0x130);
-            const auto count=*reinterpret_cast<uint32_t*>(component+0x138);
+            auto records=*reinterpret_cast<BankRecord**>(component+0x140);
+            const auto count=*reinterpret_cast<uint32_t*>(component+0x148);
             size_t bytes{};
             BankRecord snapshot[32]{};
             uint32_t index{};
@@ -112,7 +112,7 @@ int* dispatch_refresh(BankType type,uintptr_t caller,uintptr_t component,int* re
     if(!read(calendar,&date,sizeof(date)) || !calendar_ticks(date,now) ||
         !game_deadline(date,bonds ? bondGameMinutes : intervalGameMinutes,limit,type) ||
         !read(returned,&nativeResult,sizeof(nativeResult)) || nativeResult!=0) return returned;
-    const auto info=lookupBank(0,key);
+    const auto info=lookupBank(&key);
     uintptr_t textHolder{},textData{};
     uint8_t kind=255;
     char name[8]{};

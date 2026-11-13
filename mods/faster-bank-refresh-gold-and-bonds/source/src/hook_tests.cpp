@@ -18,11 +18,11 @@ struct Info {
 static_assert(offsetof(Info,kind)==0xb);
 struct Component {
     uintptr_t reserved{},actor{};
-    uint8_t padding[0x120]{};
+    uint8_t padding[0x130]{};
     BankRecord* records{};
     uint32_t count{},unknown11c{1};
 };
-static_assert(offsetof(Component,records)==0x130 && offsetof(Component,count)==0x138);
+static_assert(offsetof(Component,records)==0x140 && offsetof(Component,count)==0x148);
 enum class NativeAction { waiting, completeBond, rollGold, error, nullResult };
 struct Fixture {
     const char* names[2]{"Bank_01","Bank_02"};
@@ -49,7 +49,9 @@ void* __fastcall lock_stub(void* guard,uintptr_t lock,uint8_t refFlag) {
     fixture->held=true; ++fixture->acquires;
     return guard;
 }
-uintptr_t __fastcall lookup_stub(uintptr_t,uint32_t key) {
+uintptr_t __fastcall lookup_stub(const uint16_t* keyPtr) {
+    require(keyPtr!=nullptr,"typed bank lookup gets an index pointer");
+    const auto key=*keyPtr;
     ++fixture->lookupCalls;
     if(key==7) return reinterpret_cast<uintptr_t>(&fixture->info[0]);
     if(key==8) return reinterpret_cast<uintptr_t>(&fixture->info[1]);

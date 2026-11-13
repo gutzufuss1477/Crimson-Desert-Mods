@@ -1,0 +1,238 @@
+{
+  "build": "26636972",
+  "exe_sha256": "8be67178d9b9a149c361a731051665e0ba4d441e250ae1dfe645bd6e524345c8",
+  "date": "2026-11-13",
+  "packages": [
+    {
+      "name": "Bank Refresh Gold and Bonds 1.4.0",
+      "version": "1.4.0",
+      "mod": 3669,
+      "previous_file_id": 19612,
+      "category": "main",
+      "archive": "Bank_Refresh_Gold_and_Bonds_1.4.0.zip",
+      "sha256": "000892cc80fefedcf86fff7b4009b6dd16c41e7b2ab3fd25d407ea55444e3ce4",
+      "bytes": 112216,
+      "tested_candidate_sha256": "cb7f66d6e61c2b585843bfc7a1661353f01e6b3a10ff5db886f205f583c920e2",
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "preserved_payloads": {
+        "Bank_Refresh.asi": "48fbc59d996ca51483fdd261110cac7829baad3ceb9c7d3cccd53f86adf692cd",
+        "Bank_Refresh.ini": "6938aa346247fc322b84298369f1d0539f89471365c11b73c6ddf49640947a38",
+        "LICENSE.txt": "4a7fc09838966c558618ce5c219db5124a24fef6ef420415464bc9d10e56f956",
+        "MinHook-LICENSE.txt": "4f21f857550d7be854da6ea5f2da4e6775ca4e3fbb535e4f3d961c47d0bf3335"
+      }
+    },
+    {
+      "name": "Mining Helmet Always On 1.5.0",
+      "version": "1.5.0",
+      "mod": 3586,
+      "previous_file_id": 19922,
+      "category": "main",
+      "archive": "Mining_Helmet_Always_On_1.5.0.zip",
+      "sha256": "2737a2a618b0023d362dd3e7eca57297b1a2f1fa23183133a722338220896da1",
+      "bytes": 142591,
+      "tested_candidate_sha256": "5873c52a437db2d3a6b6d4d6bc9d0720e1357fe7248900af69a5ec78241c1479",
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "preserved_payloads": {
+        "MinHook-LICENSE.txt": "244ec858b66513e661205ac9b13acc146c6dffba09a27e100e8e758de564a774",
+        "Mining_Helmet_Always_On.asi": "7cad63e56118a1088bc143c160b84249869785556fd51b98bde0c1d2c43caff7",
+        "Mining_Helmet_Always_On.ini": "355f069dfd2e8afd27a95314607d218717cf495eff2b4e777ab2e0ae6df2778d"
+      }
+    },
+    {
+      "name": "Mount Speed Only v15 - Level 5 Display",
+      "version": "15",
+      "mod": 2365,
+      "previous_file_id": 19047,
+      "category": "main",
+      "archive": "Mount_Speed_Only_v15.zip",
+      "sha256": "e282f38d2d75018bce21087db689b62b389fb01f732cae7c19e15c9e13c79c2c",
+      "bytes": 100968,
+      "tested_candidate_sha256": "3455388d39509f7c69feb95b962519ea686f0b36066d2adf6507a882d270f087",
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "preserved_payloads": {
+        "AllMountsLvL5Speed.asi": "4d73bf33c92aae99bcdf33ac0f3414e2717a925b27fe5c91bf1e96b0d091a233"
+      }
+    },
+    {
+      "name": "Mount All Stats v15 - Level 5 Display",
+      "version": "15",
+      "mod": 2365,
+      "previous_file_id": 19041,
+      "category": "optional",
+      "archive": "Mount_All_Stats_v15.zip",
+      "sha256": "f273e83a8cb8108d718fc1f8514cb5d437dfba0a406aae4fd07df72768190766",
+      "bytes": 100955,
+      "tested_candidate_sha256": "bbe6ce270eeb7bf218eb88a80ad094968ee6f57a4aae75e5e90cfc8dc9780c85",
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "preserved_payloads": {
+        "AllMountsLvL5AllStats.asi": "c52428b6401a581bf247d756be0e537f540b44a52d137736f0b226937cbd3331"
+      }
+    },
+    {
+      "name": "Healthbar Classic Single Target v5",
+      "version": "5",
+      "mod": 2406,
+      "previous_file_id": 19043,
+      "category": "main",
+      "archive": "Healthbar_Classic_Single_Target_v5.zip",
+      "sha256": "ffd6a34ee6042f75317895ba85d09ad0165fbbb66def6e5b4c3341ce9809a558",
+      "bytes": 149331,
+      "tested_candidate_sha256": "28616621297138025bfa62839fd382f16ffda050577392136d3a17804cf1452c",
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "Healthbar.json",
+        "README.txt"
+      ],
+      "preserved_payloads": {
+        "files/0008/gamedata/binarystaticinfo__/bin/skill.staticinfobody": "6cf4142ff6ca8ad4898835f30c21372c9f93d0cc81d7158ce9141160b99310cd",
+        "files/0008/gamedata/binarystaticinfo__/bin/skill.staticinfoheader": "af27828c2bf9e0251427ac5ac033b878d454ae914ca644e139a1962698bb295d",
+        "files/0012/ui/xml/gamemain/play/subtitletagview.css": "89148d1ba2e4ce8fc28641959447c3661acd9ca45c5dfc9674a0c481cc4b00e3",
+        "files/0012/ui/xml/gamemain/play/subtitletagview.html": "dac9fa9905b29b55418371b2287b29598fbeef17a518159961b442ac23bad80c"
+      }
+    },
+    {
+      "name": "Healthbar Caites Multitarget v5",
+      "version": "5",
+      "mod": 2406,
+      "previous_file_id": 19044,
+      "category": "main",
+      "archive": "Healthbar_Caites_Multitarget_v5.zip",
+      "sha256": "4eae9b7f54290ee7b4067659ff988d28bb458ff3747556d8b96999b79e225f46",
+      "bytes": 242502,
+      "tested_candidate_sha256": "0cc777697e7aae93dc45af70feeddbbe45f45a80586b39d3a21773c5187f138d",
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "Healthbar.json",
+        "README.txt"
+      ],
+      "preserved_payloads": {
+        "Healthbar Multitarget.asi": "0a1f65c556d3e5a9e7d42a6e2ed3324eae29ff19ae6e123d7c2fd22eb698cda1",
+        "NATIVE_LICENSE.txt": "aaf1b006638e708a293e8e37297e977126aada006cd718b2937e8fc86d97be34",
+        "files/0008/gamedata/binarystaticinfo__/bin/skill.staticinfobody": "6cf4142ff6ca8ad4898835f30c21372c9f93d0cc81d7158ce9141160b99310cd",
+        "files/0008/gamedata/binarystaticinfo__/bin/skill.staticinfoheader": "af27828c2bf9e0251427ac5ac033b878d454ae914ca644e139a1962698bb295d",
+        "files/0012/ui/xml/gamemain/play/subtitletagview.css": "9e646b05c8465d155e11d27671d0899b78fc9ab7d0d9aeae98d2222595f55e24",
+        "files/0012/ui/xml/gamemain/play/subtitletagview.html": "0c5d73a5bf41ae660159d401a900ba0c425037544ee0c7589b97f719edeec9c1"
+      }
+    },
+    {
+      "name": "Healthbar Vanilla Multitarget v5",
+      "version": "5",
+      "mod": 2406,
+      "previous_file_id": 19042,
+      "category": "main",
+      "archive": "Healthbar_Vanilla_Multitarget_v5.zip",
+      "sha256": "78dc63d78410b2ef3d90d78ca79776598653753455e6498d53cea3f7925d856a",
+      "bytes": 242468,
+      "tested_candidate_sha256": "24aa817161df10c037ca1ab17abd7fb5f8358330fdbefaa2437da2847c634eab",
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "Healthbar.json",
+        "README.txt"
+      ],
+      "preserved_payloads": {
+        "Healthbar Multitarget.asi": "0a1f65c556d3e5a9e7d42a6e2ed3324eae29ff19ae6e123d7c2fd22eb698cda1",
+        "NATIVE_LICENSE.txt": "aaf1b006638e708a293e8e37297e977126aada006cd718b2937e8fc86d97be34",
+        "files/0008/gamedata/binarystaticinfo__/bin/skill.staticinfobody": "6cf4142ff6ca8ad4898835f30c21372c9f93d0cc81d7158ce9141160b99310cd",
+        "files/0008/gamedata/binarystaticinfo__/bin/skill.staticinfoheader": "af27828c2bf9e0251427ac5ac033b878d454ae914ca644e139a1962698bb295d",
+        "files/0012/ui/xml/gamemain/play/subtitletagview.css": "9de0ceb306b8f78afea00203c75febe49b1615874ec4d726f897040c9081dde7",
+        "files/0012/ui/xml/gamemain/play/subtitletagview.html": "0c5d73a5bf41ae660159d401a900ba0c425037544ee0c7589b97f719edeec9c1"
+      }
+    },
+    {
+      "name": "Alden Shop No DLC 17.3.7",
+      "version": "17.3.7",
+      "mod": 2066,
+      "previous_file_id": 20198,
+      "category": "optional",
+      "archive": "Alden_Shop_No_DLC_17.3.7.zip",
+      "sha256": "d177280f5e40014eb3b1c9934811d196a1e1dd0712c00af1ecccc4fd6c4995cf",
+      "bytes": 4444734,
+      "tested_candidate_sha256": "ab533fa9f7ed32cc43843a4a60a4c9548d9b4cb40a1ee08f04240d7142cfeaff",
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "Preise.json",
+        "README.txt",
+        "manifest.json"
+      ],
+      "preserved_payloads": {
+        "Alden Category Tabs.asi": "60d19a7debeeb7fa9194086d00c553fe42b7b61f180b42bc1ff71c916411a2bb",
+        "LICENSE.txt": "2641b05d2ebafbc852ca9b4e90aa29b9976ccbb28648bd4dc79850ec1e4ce364",
+        "MinHook-LICENSE.txt": "4f21f857550d7be854da6ea5f2da4e6775ca4e3fbb535e4f3d961c47d0bf3335",
+        "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfobody": "df724e5200d79c5967ecf76b5abbf1b45204d6485cd8c913c4c90476839f3f72",
+        "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfoheader": "7c6067d9ce7821ca3cd8cc3a1ed22708e1ba3e7e8d14218ac5883e715e2e5c97",
+        "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfobody": "0ca45b52c6f2c02c23c7a3a0dd9bbab6422eb388272c0a2c46da88e0961d55d3",
+        "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfoheader": "4770c543356b0e79fcdd513a33e17fcb4d6436d1c37e2f68cf6851f38b2989dc",
+        "files/0012/ui/xml/gamemain/play/aldencategorytabs.css": "ae7711685e72f02c5d66e9319902e42de044e53aad6db881cee3e8d44967753a",
+        "files/0019/gamedata/stringtable/binary__/kor/localstringinfo.paloc": "f704e2e3be8e91242353f9c62a33af8e9e829af9dd26c73aa4909ee37b92f245",
+        "files/0020/gamedata/stringtable/binary__/eng/localstringinfo.paloc": "1904f79911cb186d8e5405d5cea4824672be8e18c0d44b2ad7f2d24b955de168",
+        "files/0021/gamedata/stringtable/binary__/jpn/localstringinfo.paloc": "7912f73ca14f10d737ac391a3a5ba9c4b694503c21445bcf09757a91fff460af",
+        "files/0022/gamedata/stringtable/binary__/rus/localstringinfo.paloc": "a0c4014786f2dcadc8f1c0cbd6187f8e10af5f2dee121ba580f9002619f11656",
+        "files/0023/gamedata/stringtable/binary__/tur/localstringinfo.paloc": "96f8f65e5d2cc66057629c145652168f685857f4c4c343ee27931d0e1379991a",
+        "files/0024/gamedata/stringtable/binary__/spa-es/localstringinfo.paloc": "8425c13602ba1241a5ba2a0b7fd2e3acc0717825d23b29356c401c7429390110",
+        "files/0025/gamedata/stringtable/binary__/spa-mx/localstringinfo.paloc": "f9784721e43ef7751eb793ef4b6dc1d5845df521455766af53876b28dc9af452",
+        "files/0026/gamedata/stringtable/binary__/fre/localstringinfo.paloc": "abef2602e3f3154f60fa1f835a6baa546fbc29d8640d63bf516547ca8b83e7b0",
+        "files/0027/gamedata/stringtable/binary__/ger/localstringinfo.paloc": "935fe559a1ef61f2996dca6227fbfe8bed3210ea0d468829329f4a1e986cf989",
+        "files/0028/gamedata/stringtable/binary__/ita/localstringinfo.paloc": "bf70bdd74559db50db31ecd4a1a8776d142f9f5e63f761963b3848e119d86893",
+        "files/0029/gamedata/stringtable/binary__/pol/localstringinfo.paloc": "2660dae12191c83fb94f7fb497bbcd1d257507fc0cd43d2782380f9078216cdb",
+        "files/0030/gamedata/stringtable/binary__/por-br/localstringinfo.paloc": "8c7f43f995b7293cf80ddaf651182fd818de1dbac816685a2f48b7b602ce4bac",
+        "files/0031/gamedata/stringtable/binary__/zho-tw/localstringinfo.paloc": "0d3cefa0ef0e1eae07bc8867af3ed00fd2a22769361272eeb192055ba8544e14",
+        "files/0032/gamedata/stringtable/binary__/zho-cn/localstringinfo.paloc": "2db69ee70a91ea023898381ed973a4e2a6279d6ac1db62c32d15775cb42c80b4",
+        "files/0033/gamedata/stringtable/binary__/ara/localstringinfo.paloc": "e6f8a7bef123409d601e4be8a56210d2a2ee95a7cbd6c0ae7a8f2c0df1165f79"
+      }
+    },
+    {
+      "name": "Alden Shop DLC 17.4.6",
+      "version": "17.4.6",
+      "mod": 2066,
+      "previous_file_id": 20197,
+      "category": "main",
+      "archive": "Alden_Shop_DLC_17.4.6.zip",
+      "sha256": "451d4c4d181407f324915f3a56440a543aa46b5cd106778c0ff444ea0661eafb",
+      "bytes": 4451102,
+      "tested_candidate_sha256": "68c8943c68879f4f6d2a3f800f65517b96e49b6eb0520c205b14d8cc062e313c",
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "Preise.json",
+        "README.txt",
+        "manifest.json"
+      ],
+      "preserved_payloads": {
+        "Alden Category Tabs.asi": "a10d273c3710ec4189e833e3dae423b5d5cb9524cfbd8ee1b4dd1b64372981a6",
+        "LICENSE.txt": "2641b05d2ebafbc852ca9b4e90aa29b9976ccbb28648bd4dc79850ec1e4ce364",
+        "MinHook-LICENSE.txt": "4f21f857550d7be854da6ea5f2da4e6775ca4e3fbb535e4f3d961c47d0bf3335",
+        "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfobody": "43984d70580a9c0df6e856edcd2b23125b894ba2910307520ee9386ac5245c42",
+        "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfoheader": "e5e986b4254e35558cd65c75dc713e07a530ba72ec30bd8e2ad600223e90a81b",
+        "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfobody": "f33d789fbb44cfe1ca9607cacce001523467ddaf1ecd6ee04f69ae55bfdc41af",
+        "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfoheader": "fb88b2ab9d417df5d7eba40325720f4fb677b5c8206664f8669f41b83e30d05e",
+        "files/0012/ui/xml/gamemain/play/aldencategorytabs.css": "ae7711685e72f02c5d66e9319902e42de044e53aad6db881cee3e8d44967753a",
+        "files/0019/gamedata/stringtable/binary__/kor/localstringinfo.paloc": "951bb646a931757306b323119e1ce8e4d51fb9ef4d54b692771bd66dad035103",
+        "files/0020/gamedata/stringtable/binary__/eng/localstringinfo.paloc": "07b111699b569647bbae7750e0f6a5ddd3971cd939c668ed8b4d18f64c68631d",
+        "files/0021/gamedata/stringtable/binary__/jpn/localstringinfo.paloc": "35c56e7217955f3b784783da6683173b447a3b63b5d65d130e2ffa781b4c10c0",
+        "files/0022/gamedata/stringtable/binary__/rus/localstringinfo.paloc": "3ed6da5bc8930c10d0b2b181bf061e4ab589f6c35794260dc156c78abddbd046",
+        "files/0023/gamedata/stringtable/binary__/tur/localstringinfo.paloc": "f485e19104bba8c9070b57ebce216486b87890fd7c61334c23b289c8ca6b8daf",
+        "files/0024/gamedata/stringtable/binary__/spa-es/localstringinfo.paloc": "774377e8741fb6041e53ff4493e416bdc02beba67a526a29dcc388c26918d457",
+        "files/0025/gamedata/stringtable/binary__/spa-mx/localstringinfo.paloc": "42a6ea0d4243dbd2de1cf563d032feb3b5b70f26ab63de856e7a10e4dbf5e70b",
+        "files/0026/gamedata/stringtable/binary__/fre/localstringinfo.paloc": "b05a1617aafaf245e5208200ce6974179025e53508f225be9c0cb39518a0835c",
+        "files/0027/gamedata/stringtable/binary__/ger/localstringinfo.paloc": "30443a892bc36d2a9540c1b0e889dc919a09426de61d77bbc1e4345342f355b1",
+        "files/0028/gamedata/stringtable/binary__/ita/localstringinfo.paloc": "e3a9668ba894be8cc3daea6876538fdca6a49d4dd41668fa36a1a5bf75e50127",
+        "files/0029/gamedata/stringtable/binary__/pol/localstringinfo.paloc": "77c6d0b807a0c014a6c56360cfea79f6f77d708f106b7aea73e52c96f11b7d25",
+        "files/0030/gamedata/stringtable/binary__/por-br/localstringinfo.paloc": "9c9238f5f2c0a4edbf341d4e31514e40cc0ede59d777f3e968e6070c75912a80",
+        "files/0031/gamedata/stringtable/binary__/zho-tw/localstringinfo.paloc": "455524b88d99b027d05a1230034db6de4870ded5edbf1c68df6b4183fdd7a3a6",
+        "files/0032/gamedata/stringtable/binary__/zho-cn/localstringinfo.paloc": "eb240109a34760458e9deb52c1491714178b43e18dd0c471270947112e0b981d",
+        "files/0033/gamedata/stringtable/binary__/ara/localstringinfo.paloc": "900a2192eb2e6bdc3cd1c98683ec295b9d158d496334b44bc746d7631d607cbf"
+      }
+    }
+  ]
+}

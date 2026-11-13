@@ -1,0 +1,57 @@
+{
+  "data_recipes": [
+    {
+      "package": "Healthbar Classic Single Target v5",
+      "identical_game_files": 4
+    },
+    {
+      "package": "Healthbar Caites Multitarget v5",
+      "identical_game_files": 4
+    },
+    {
+      "package": "Healthbar Vanilla Multitarget v5",
+      "identical_game_files": 4
+    },
+    {
+      "package": "Alden Shop No DLC 17.3.7",
+      "identical_game_files": 20
+    },
+    {
+      "package": "Alden Shop DLC 17.4.6",
+      "identical_game_files": 20
+    }
+  ],
+  "native_rebuilds": [
+    {
+      "package": "Mount All Stats v15 - Level 5 Display",
+      "public_source_rebuild_sha256": "c52428b6401a581bf247d756be0e537f540b44a52d137736f0b226937cbd3331",
+      "published_sha256": "c52428b6401a581bf247d756be0e537f540b44a52d137736f0b226937cbd3331",
+      "byte_identical": true,
+      "host_tests": "passed"
+    },
+    {
+      "package": "Mount Speed Only v15 - Level 5 Display",
+      "public_source_rebuild_sha256": "4d73bf33c92aae99bcdf33ac0f3414e2717a925b27fe5c91bf1e96b0d091a233",
+      "published_sha256": "4d73bf33c92aae99bcdf33ac0f3414e2717a925b27fe5c91bf1e96b0d091a233",
+      "byte_identical": true,
+      "host_tests": "passed"
+    },
+    {
+      "package": "Alden Shop No DLC 17.3.7",
+      "public_source_rebuild_sha256": "60d19a7debeeb7fa9194086d00c553fe42b7b61f180b42bc1ff71c916411a2bb",
+      "published_sha256": "60d19a7debeeb7fa9194086d00c553fe42b7b61f180b42bc1ff71c916411a2bb",
+      "byte_identical": true,
+      "host_tests": "passed"
+    },
+    {
+      "package": "Alden Shop DLC 17.4.6",
+      "public_source_rebuild_sha256": "a10d273c3710ec4189e833e3dae423b5d5cb9524cfbd8ee1b4dd1b64372981a6",
+      "published_sha256": "a10d273c3710ec4189e833e3dae423b5d5cb9524cfbd8ee1b4dd1b64372981a6",
+      "byte_identical": true,
+      "host_tests": "passed"
+    }
+  ],
+  "mount_checks_per_variant": 1354,
+  "alden_native_ui_catalog_tests": "passed for both variants",
+  "generated_game_inputs": "kept local and excluded from Git"
+}

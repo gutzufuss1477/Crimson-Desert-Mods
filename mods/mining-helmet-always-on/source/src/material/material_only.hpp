@@ -4,7 +4,7 @@
 #include <cstring>
 #include <cmath>
 
-// CPU material path revalidated against the Steam 2.04.02 native readers.
+// CPU material path revalidated against the Steam 26636972 native readers.
 // Current in-game validation is still required. This header
 // cannot call gameplay functions or write player/global SpecialMode lists.
 namespace mh34 {
@@ -63,8 +63,8 @@ inline bool valid(Read read,const View& v) {
 }
 inline bool resolve(Read read,uintptr_t root,uintptr_t base,View& output) {
     uintptr_t manager{},a{},b{},groups{},pool{},nameEntries{};
-    if(!get(read,root+0x20,manager) || !manager || !get(read,manager+0x1280,a) || !a ||
-       !get(read,a+0x160,b) || !b || !get(read,b+0x560,groups) || !groups ||
+    if(!get(read,root+0x20,manager) || !manager || !get(read,manager+0x1288,a) || !a ||
+       !get(read,a+0x160,b) || !b || !get(read,b+0x580,groups) || !groups ||
        !get(read,base+cd::mining_addresses.rva(0x70cdc60),pool) || !pool || !get(read,pool+0x58,nameEntries) || !nameEntries) return false;
     View v{}; v.base=base;
     if(!names(read,nameEntries,groups,[&](const char* name,uintptr_t entry,uint32_t) {

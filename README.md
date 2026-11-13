@@ -1,37 +1,30 @@
 # Crimson Desert — Mods
 
-Mods by gutzufuss1477 / Blablup. Bank Refresh 1.3.1 was confirmed on **5 November 2026** for **Steam build 26423880**. Alden DLC 17.4.3 (main) / No DLC 17.3.4 (optional) target **Steam build 26480954**; DLC gameplay confirmed on **7 November 2026**, No DLC separately validated offline. Steelheart updated on **4 November 2026**; both Mount Stats variants and Healthbar updated on **2 November 2026** for **Steam build 26361232**.
+Mods by gutzufuss1477 / Blablup. Updated **13 November 2026** for **Steam build 26636972**, EXE 1.0.0.3663. DMM 5.0.0 was used for the current setup.
 
-| Mod / variant | Release | Current-build status |
+| Mod | Release | Current-build validation |
 |---|---|---|
-| [Bank Refresh — Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.3.1 | Confirmed in game on Steam 26423880 |
-| [All Mounts Level 5 All Stats](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 13 | Gameplay-confirmed; adaptive ASI |
-| [Healthbar — three variants](mods/healthbar-always-on/) | 4 | Vanilla Multitarget gameplay-confirmed; Classic/Caites data/style/host validated |
-| [Steelheart Horseshoes](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 10 | Field-level patch compatible with original Equip All Armor; combined gameplay confirmed |
-| [Alden Shop](mods/alden-all-in-one-progression-shop/) | DLC 17.4.3 / No DLC 17.3.4 | DLC main file gameplay-confirmed; dedicated DLC tab; Long Horn/Water in both variants; No DLC optional, offline validated |
-| [Mining Helmet](mods/mining-helmet-always-on/) | Published 1.3.2 for previous build | New 1.4.0 source/candidate awaiting current gameplay confirmation |
-| Mount Speed Only | 13 | 1,135 host checks and current structural checks passed; separate gameplay confirmation pending |
+| [Bank Refresh — Gold and Bonds](mods/faster-bank-refresh-gold-and-bonds/) | 1.4.0 | Author reports working in game; timer paths technically checked |
+| [Mining Helmet Always On](mods/mining-helmet-always-on/) | 1.5.0 | Ore highlighting confirmed in game |
+| [Mount All Stats / Speed Only](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 15 | Display/cache changes only; All Stats confirmed, Speed Only technically checked |
+| [Healthbar — three variants](mods/healthbar-always-on/) | 5 | Vanilla Multitarget confirmed; Classic and Caites technically checked |
+| [Alden Shop](mods/alden-all-in-one-progression-shop/) | DLC 17.4.6 / No DLC 17.3.7 | DLC shop/categories confirmed; No DLC technically checked |
+| [Steelheart Horseshoes](mods/real-infinite-horse-stamina-with-optional-lvl5-speed-for-all-hor/) | 10, unchanged | Current data checks passed; separate new gameplay test pending |
 
-[Bank Refresh 1.3.1 download](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/bank-v1.3.1-b26423880) · [Steam 26361232 release and checksums](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26361232). Full Healthbar data/UI ZIPs are on [Nexus](https://www.nexusmods.com/crimsondesert/mods/2406?tab=files); GitHub hosts only its helper, source and recipes.
+**Mount scope correction:** the ASIs set the displayed stat gauges to level 5. Their UI/cache implementation does not establish a change to actual movement/physics or stamina. Earlier claims of actual speed/acceleration/turn/jump boosts were unsupported. Steelheart separately changes the equipped horseshoes' stamina-regeneration buff from 4 to 20.
 
-[Alden DLC 17.4.3 / No DLC 17.3.4 release notes and checksums](releases/alden-current-dlc-b26480954.md) · [Alden downloads on Nexus](https://www.nexusmods.com/crimsondesert/mods/2066?tab=files). Alden's source, catalog recipe and localization labels are in Git; complete game-data/UI overlays remain Nexus-only.
-
-[Steelheart v10 release notes and checksums](releases/steelheart-v10-b26361232.md) · [Steelheart download on Nexus](https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=19468). All Stats and Speed Only remain v13.
+[Current release notes](releases/mods-b26636972.md) · [GitHub native downloads](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26636972) · [Full payload hashes](releases/mods-b26636972-payloads.json).
 
 ## Installation
 
-Import complete ZIPs into DMM. Enable native plugins under **ASI Mods**, then mount. Bundled INIs are imported and deployed too; preserve existing settings when updating. Bank and both Mount Stats variants also support manual installation with an x64 ASI loader and do not require DMM. Avoid duplicate manual/manager copies; keep the existing loader and DmmRuntime.asi.
+Close the game, unmount and replace previous copies in DMM. Import complete ZIPs; enable native helpers under **ASI Mods**, mount and restart. Bundled INIs are imported too; back up custom settings. Keep the working loader and DmmRuntime.asi. Avoid duplicate manual and manager copies. Bank, Mining and both Mount ASIs also support manual installation with an x64 ASI loader.
 
-Healthbar: choose **one** complete variant, enable its data mod and the bundled helper for either Multitarget style, mount and restart. DMM 4.6.4 import/deployment was verified. Never combine All Stats and Speed Only.
+Use All Stats OR Speed Only. Healthbar: choose ONE complete style and enable the included helper for either Multitarget variant; disable it for Classic. Alden: choose DLC OR No DLC and update the data, price component and category helper together. DLC requires Charting the Unknown. Alden also requires the [Microsoft Visual C++ v14 x64 runtime](https://aka.ms/vc14/vc_redist.x64.exe). Old Better Inventory 3.3 compiled UI is not supported on this build.
 
-Alden DLC 17.4.3 / No DLC 17.3.4: choose one variant, import the complete data ZIP and enable the included **Alden Category Tabs.asi** in DMM's ASI Mods section. Update both components together. Completely replace previous Alden packages/helpers so obsolete UI files are removed, then mount and restart. Original Better Inventory 3.3 is optional and no load order is required between these two mods. Use DMM 4.7.4 or later and mount again after installing the DLC. Alden also requires the current [Microsoft Visual C++ v14 Redistributable (x64)](https://aka.ms/vc14/vc_redist.x64.exe).
+## Future updates
 
-## Game updates
+Bank, Mining, Mount and Healthbar's native helper resolve validated code structures. Compatible address shifts may survive a game update; changed layouts/functions still require updates. Healthbar's data/UI and Alden's exact executable/UI guards remain build-dependent. Steelheart's field-level patch preserves unrelated item edits but still needs compatible game data. No mod has guaranteed future compatibility.
 
-The ASI now finds validated code structures instead of relying on fixed addresses or one executable hash. It may keep working after game updates that only move code. Changed code/layouts or ambiguous matches are refused before hooks are installed. Future compatibility is not guaranteed.
+Full Alden and Healthbar data/UI packages are distributed on Nexus; GitHub contains owned source, recipes, hashes and eligible native-only assets. The obsolete Bank Save Patcher and experimental Better Mount Movement are excluded.
 
-This applies to the newly released Bank, All Stats and Speed Only ASIs and Healthbar's native helper. Healthbar data/UI still target the listed build. Alden DLC 17.4.3 / No DLC 17.3.4 target build 26480954; their helpers use exact executable/UI guards. Alden's prices and Steelheart v10 use DMM field edits, preserving original Equip All Armor changes when item record sizes move. They still require compatible game data. The current supplied DLC data were checked and the DLC build was confirmed working in game.
-
-Mining is not part of this release. The obsolete Bank Save Patcher remains excluded.
-
-See [build and validation](tooling/README.md), [distribution](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md). Game inputs, full game tables/UI, executables and private diagnostics stay out of Git.
+See [build instructions](tooling/README.md), [distribution](DISTRIBUTION.md), [security reporting](SECURITY.md) and [license scope](LICENSES.md).

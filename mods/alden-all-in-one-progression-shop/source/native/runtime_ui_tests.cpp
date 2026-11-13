@@ -153,6 +153,7 @@ static void run_bridge(const Bytes& input,const Bytes& expected,bool augmented,b
 }
 
 #include "consumer_fixture.hpp"
+#include "property_condition_fixture.hpp"
 
 int main(int argc,char** argv) {
     check(argc==2,"fixture directory argument");
@@ -160,8 +161,10 @@ int main(int argc,char** argv) {
     const auto vanilla=load(fixtures/"vanilla.bin"),better=load(fixtures/"better.bin");
     const auto vanillaExpected=load(fixtures/"vanilla_expected.bin"),betterExpected=load(fixtures/"better_expected.bin");
     Bytes out;
+    const auto legacyBetter=load(fixtures/"legacy_better.bin");
+    check(alden::runtime::patch_ui(legacyBetter,out)==alden::runtime::PatchResult::unsupported && out.empty(),"legacy BI UI schema must not be claimed compatible");
     check(alden::runtime::patch_ui(vanilla,out)==alden::runtime::PatchResult::patched && out==vanillaExpected,"normal 2x4 tree matches published native controls");
-    check(alden::runtime::patch_ui(better,out)==alden::runtime::PatchResult::patched && out==betterExpected,"original BI 3x5 tree and all its bytes preserved");
+    check(alden::runtime::patch_ui(better,out)==alden::runtime::PatchResult::patched && out==betterExpected,"current-schema 3x5 tree and all its bytes preserved");
     // Already augmented and corrupted buy trees are refused, unrelated trees
     // pass through; no fallback to a replacement of the user's active UI.
     for(const auto& input:{vanillaExpected,betterExpected})
@@ -179,6 +182,7 @@ int main(int argc,char** argv) {
     check(VirtualProtect(memory,sizeof(alden::runtime::NativeMemoryReadCode),PAGE_EXECUTE_READ,&previous)!=0,"native reader scratch executable");
     FlushInstructionCache(GetCurrentProcess(),memory,sizeof(alden::runtime::NativeMemoryReadCode));
     nativeRead=reinterpret_cast<ReadFn>(memory);
+    test_native_property_condition();
     alden::base=0x140000000; alden::ready=true; alden::originalDeserialize=decode;
     alden::originalLoadCss=load_css;
     // The real preload precedes CSS registration. Preserve the augmented tree
@@ -251,6 +255,6 @@ int main(int argc,char** argv) {
     check(MH_DisableHook(reinterpret_cast<void*>(&css_hook_target))==MH_OK && MH_RemoveHook(reinterpret_cast<void*>(&css_hook_target))==MH_OK,"isolated CSS hook removed");
     check(MH_Uninitialize()==MH_OK,"isolated hook resources released");
     VirtualFree(memory,0,MEM_RELEASE);
-    std::puts("PASS: actual native CSS dependency loop reproduces old missing-dependency abort, then binds corrected UI with late CSS registration; optional CSS failure still reaches native UI binding with category controls inactive; exact known 2x4/BI 3x5 trees, original dependencies; native memory reader; EOF/failures; nested/concurrent loads; real dual MinHook trampolines. CSS compiler/decoder and final UI renderer remain fixtures.");
+    std::puts("PASS: actual native CSS dependency loop reproduces old missing-dependency abort, then binds corrected UI with late CSS registration; optional CSS failure still reaches native UI binding with category controls inactive; current-schema 2x4/3x5 trees, original dependencies; native memory reader; EOF/failures; nested/concurrent loads; real dual MinHook trampolines. CSS compiler/decoder and final UI renderer remain fixtures.");
     return 0;
 }

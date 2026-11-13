@@ -1,3 +1,7 @@
+## 2026-11-13 — Steam build 26636972
+
+DLC 17.4.6 / No DLC 17.3.7 for Steam 26636972. Fixes startup UI condition serialization and persistent-stock category selection; preserves native purchase identities. DLC author-confirmed, No DLC technically checked. 840 / 606 authored offers. Old BI 3.3 unsupported.
+
 # Alden AIO Shop + All Items 1 Copper
 
 ## 17.4.3 DLC / 17.3.4 No DLC — 7 November 2026 — Steam build 26480954

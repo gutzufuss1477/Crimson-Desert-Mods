@@ -101,11 +101,11 @@ int main(int argc,char** argv) {
         require(!cd::resolve_bank(image,bank),"changed call destination refused");
         std::memcpy(memory+call,&delta,4);
         require(cd::resolve_bank(image,bank),"restore bank lookup");
-        // Gold's mov rcx,[rax+disp32] distinguishes the two layouts.
-        const auto member=bank.rva(cd::bank_gold_id)+4191;
+        // Current gold handler reads the live bank record array at +0x140.
+        const auto member=bank.rva(cd::bank_gold_id)+0x74;
         const auto offset=image.get<uint32_t>(member);
-        require(offset==0x210 || offset==0x218,"recognized gold member");
-        memory[member]=0x20;  // unaudited +0x220
+        require(offset==0x140,"recognized gold bank-record member");
+        memory[member]=0x50;  // unaudited +0x150
         require(!cd::resolve_bank(image,bank) && !bank.rva(cd::bank_gold_id) && !bank.rva(0x2df5450),
                 "unknown gold layout disarms both timers");
         memory[member]=static_cast<uint8_t>(offset);

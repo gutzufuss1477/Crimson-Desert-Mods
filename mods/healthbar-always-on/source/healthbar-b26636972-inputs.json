@@ -1,0 +1,15 @@
+{
+  "inputs": {
+    "0008/gamedata/binarystaticinfo__/bin/skill.staticinfobody": "3280fa6d064024ac8b9c1eb2a00088e83819019844475945f1bd0b441f3d1da1",
+    "0008/gamedata/binarystaticinfo__/bin/skill.staticinfoheader": "8796bb0017029ada7a315449ab0c4a3fafe499be905f2b5e818a044021d2b59b",
+    "0008/gamedata/binarystaticinfo__/bin/characterinfo.staticinfobody": "857e5baa45fdfaa0057be23e0bf277c3235e49adb6aae878fe962a630e04111a",
+    "0008/gamedata/binarystaticinfo__/bin/characterinfo.staticinfoheader": "363ebdb8564495d9b9d7f04bbe393e1f65e7869b22f06621ae55c36fed4b7f50",
+    "0012/ui/xml/gamemain/play/subtitletagview.css": "40f43cddc329506fbe67e5e686d0d8473c026694500d29f0dac5170fe89042be",
+    "0012/ui/xml/gamemain/play/subtitletagview.html": "a1c244252c83a54ac87264b4e67058f81e14098e2633473bc6e7bc8ff6248bee"
+  },
+  "archives": {
+    "2406_19042.zip": "f70bf306ff14b6523ff1b5f6e3065440d46b35576d3e2803e4888075d36d01fe",
+    "2406_19043.zip": "5b9d88ebeb3fa7c5daa0069ba597af3812844573227ffec5ead73442d5581bb9",
+    "2406_19044.zip": "6355c60d1728638546e0019c621671399effafd0966d9bb65821a221ca200a37"
+  }
+}

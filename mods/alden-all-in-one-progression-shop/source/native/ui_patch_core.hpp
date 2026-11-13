@@ -38,12 +38,13 @@ inline PatchResult patch_ui(Bytes input,std::vector<unsigned char>& output) {
     char digest[65]{};
     if(!memory_hash(input,digest)) return PatchResult::unsupported;
     const char* expected=nullptr;
-    if(!std::strcmp(digest,VanillaInputHash)) expected=VanillaOutputHash;
-    if(!std::strcmp(digest,BetterInputHash)) expected=BetterOutputHash;
+    std::span<const Edit> selectedEdits;
+    if(!std::strcmp(digest,VanillaInputHash)) { expected=VanillaOutputHash; selectedEdits=Edits; }
+    if(!std::strcmp(digest,BetterInputHash)) { expected=BetterOutputHash; selectedEdits=BetterEdits; }
     if(!expected) return PatchResult::unsupported;
     std::size_t cursor=0;
     output.reserve(input.size()+AddedSize);
-    for(const auto& edit:Edits) {
+    for(const auto& edit:selectedEdits) {
         if(edit.offset<cursor || edit.offset>input.size() || edit.before.size()>input.size()-edit.offset ||
            !std::equal(edit.before.begin(),edit.before.end(),input.begin()+edit.offset)) {
             output.clear(); return PatchResult::unsupported;

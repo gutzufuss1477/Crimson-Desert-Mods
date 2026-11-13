@@ -39,3 +39,10 @@
 *.bc3
 *.bc7
 *.blend
+
+# Build 26636972: generated private game inputs, never commit.
+tooling/native_mount_code.generated.hpp
+mods/alden-all-in-one-progression-shop/source/native/runtime_generated.hpp
+mods/alden-all-in-one-progression-shop/source/native/consumer_test_generated.hpp
+mods/alden-all-in-one-progression-shop/source/native/property_condition_generated.hpp
+mods/alden-all-in-one-progression-shop/source/native/fixtures/

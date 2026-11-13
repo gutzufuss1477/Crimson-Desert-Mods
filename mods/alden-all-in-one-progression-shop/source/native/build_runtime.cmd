@@ -9,6 +9,8 @@ if errorlevel 1 exit /b 2
 :compiler_ready
 pushd "%~dp0"
 if not exist out mkdir out
+python validate_alden_ui_schema.py fixtures
+if errorlevel 1 exit /b 1
 rem Use the official shared Microsoft runtime consistently across all objects.
 cl /nologo /W3 /O2 /MD /guard:cf /c /Fo:out\ vendor\minhook\src\buffer.c vendor\minhook\src\hook.c vendor\minhook\src\trampoline.c vendor\minhook\src\hde\hde64.c
 if errorlevel 1 exit /b 1
@@ -20,6 +22,10 @@ if errorlevel 1 exit /b 1
 cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MD /guard:cf /DALDEN_RUNTIME_UI /Fe:out\runtime_ui_tests.exe /Fo:out\runtime_ui_tests.obj runtime_ui_tests.cpp %ALDEN_HOOK_OBJS% /link /DYNAMICBASE /NXCOMPAT /GUARD:CF bcrypt.lib
 if errorlevel 1 exit /b 1
 out\runtime_ui_tests.exe fixtures
+if errorlevel 1 exit /b 1
+cl /nologo /std:c++20 /W4 /WX /EHsc /O2 /MD /guard:cf /DALDEN_RUNTIME_UI /Fe:out\catalog_tests.exe /Fo:out\catalog_tests.obj catalog_tests.cpp %ALDEN_HOOK_OBJS% /link /DYNAMICBASE /NXCOMPAT /GUARD:CF bcrypt.lib
+if errorlevel 1 exit /b 1
+out\catalog_tests.exe
 if errorlevel 1 exit /b 1
 rc /nologo /fo out\version.res version.rc
 if errorlevel 1 exit /b 1

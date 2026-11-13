@@ -138,13 +138,15 @@ bool __fastcall deserialize_hook(Ptr loader,Ptr stream) {
     proxy.size=static_cast<std::uint32_t>(augmented.size());
     const bool result=originalDeserialize(loader,reinterpret_cast<Ptr>(&proxy));
     if(!result || proxy.cursor!=proxy.size) {
-        log("UI AUGMENT FAILED: native decoder rejected or did not consume augmented stream");
+        char detail[192]{};
+        std::snprintf(detail,sizeof(detail),"UI AUGMENT FAILED: native decoder result=%u; consumed=%u/%u; input=%u", static_cast<unsigned>(result),proxy.cursor,proxy.size,source.size);
+        log(detail);
         return false;
     }
     // The outer loader checks the ORIGINAL stream for unread bytes. Only its
     // cursor is advanced; its buffer pointer, ownership and size never change.
     reinterpret_cast<MemoryReader*>(stream)->cursor=source.size;
-    log("UI AUGMENTED: native buy UI + nine categories; original grid preserved; no shared UI file replacement");
+    log("UI AUGMENTED: native buy UI + 9 categories; original grid preserved; no shared UI file replacement");
     return true;
 }
 

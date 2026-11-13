@@ -1,0 +1,41 @@
+{
+  "inputs": {
+    "current/0008/gamedata/binarystaticinfo__/bin/iteminfo.staticinfobody": "0b9e254cc11484bfbd06ce1964108ff0411ec718032e06e199712049afecc22d",
+    "current/0008/gamedata/binarystaticinfo__/bin/iteminfo.staticinfoheader": "ffa1a8f557076286f4e5aff922bbb2b4f71322ea886e3d86c4d846f4760f526c",
+    "current/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfobody": "2710aabb8214970e7b0b6629b86166421c04a015a9e272499e4c47f92fd4a409",
+    "current/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfoheader": "f6c2bc1a95e72b44a34601e601449d0d9bb5c9122672240e95ac81d0444e7cc1",
+    "current/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfobody": "a77f4a0deb5f8441a7dfe9664f7c5c34063c484ba75f9ed23cf22b907751da14",
+    "current/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfoheader": "9a3bf48fe285faff054560718f7488d62eeac1122d692835b698bb4b18656b3a",
+    "raw/base/0008/gamedata/binarystaticinfo__/bin/iteminfo.staticinfobody": "0b9e254cc11484bfbd06ce1964108ff0411ec718032e06e199712049afecc22d",
+    "raw/base/0008/gamedata/binarystaticinfo__/bin/iteminfo.staticinfoheader": "ffa1a8f557076286f4e5aff922bbb2b4f71322ea886e3d86c4d846f4760f526c",
+    "raw/base/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfobody": "2710aabb8214970e7b0b6629b86166421c04a015a9e272499e4c47f92fd4a409",
+    "raw/base/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfoheader": "f6c2bc1a95e72b44a34601e601449d0d9bb5c9122672240e95ac81d0444e7cc1",
+    "raw/base/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfobody": "a77f4a0deb5f8441a7dfe9664f7c5c34063c484ba75f9ed23cf22b907751da14",
+    "raw/base/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfoheader": "9a3bf48fe285faff054560718f7488d62eeac1122d692835b698bb4b18656b3a",
+    "raw/dlc/0008/gamedata/binarystaticinfo__/bin/iteminfo.dlc_01.staticinfobody": "80560f4223cffc1df1c25a9762893a799297d373ab0ddeffbe834b230bc25a5f",
+    "raw/dlc/0008/gamedata/binarystaticinfo__/bin/iteminfo.dlc_01.staticinfoheader": "f58d70fbad5c1c668c18b3230ef408041553761c5d4a711b5b31153c0f0991fe",
+    "raw/dlc/0008/gamedata/binarystaticinfo__/bin/localstringinfo.dlc_01.staticinfobody": "ffa4d76b776d2acb81dc263d37e9d6a59d9e82ca072842127423234634f618b6",
+    "raw/dlc/0008/gamedata/binarystaticinfo__/bin/localstringinfo.dlc_01.staticinfoheader": "813892585c87528eb16d9b3b65715a04467783c5b38dac8b54d1df4713148979",
+    "raw/dlc/0008/gamedata/binarystaticinfo__/bin/storeinfo.dlc_01.staticinfobody": "086e4d14a44ce933c697063aafc1b04dfdc21cf340195eedf953de5ca68426a4",
+    "raw/dlc/0008/gamedata/binarystaticinfo__/bin/storeinfo.dlc_01.staticinfoheader": "133944ad4f9598f8a93d85f352199ed786a841fa145c470cbc0cdd5b0d148d29",
+    "current/0019/gamedata/stringtable/binary__/kor/localstringinfo.paloc": "028b8dbc32a06f609a4150369d24f173782ddd555e85339d6e8cf41149444a47",
+    "current/0020/gamedata/stringtable/binary__/eng/localstringinfo.paloc": "6fcc7bf9170c70d0cf6be046776bbcc91ff6e92933467acb4451f50aa55d5a12",
+    "current/0021/gamedata/stringtable/binary__/jpn/localstringinfo.paloc": "557077c2e7e3e621570f78c9f3c1e387c100245e90de3e800f9202235f4faa3f",
+    "current/0022/gamedata/stringtable/binary__/rus/localstringinfo.paloc": "092de77eb86ad9cbd6e05026c1e3316c2f4bd351418fc0060c837bcf5ef07763",
+    "current/0023/gamedata/stringtable/binary__/tur/localstringinfo.paloc": "133dc96235479b36d7d66e4c3c6330b06d0d65b8f7c39ef0f4ffdc0ade5409cb",
+    "current/0024/gamedata/stringtable/binary__/spa-es/localstringinfo.paloc": "d0e69222df8c01b9285a4777540c1397551edf625341c1104581dea1a56447c7",
+    "current/0025/gamedata/stringtable/binary__/spa-mx/localstringinfo.paloc": "9955fc248337de889453599bfab0a23e3ed781d6bcb8f5f40b2749c076f100b4",
+    "current/0026/gamedata/stringtable/binary__/fre/localstringinfo.paloc": "e6a931d07ec596687514e00f08335d099f14e6d2e04b1bfff3e6b264b1897972",
+    "current/0027/gamedata/stringtable/binary__/ger/localstringinfo.paloc": "612a61fd5690cc182d22b8c15a25d05b53403dbe35ffa514f5b55ba1c4fbb0e4",
+    "current/0028/gamedata/stringtable/binary__/ita/localstringinfo.paloc": "184b306b0a11157a73f2b6a012b0e582811d969fb8382dc158f6d65f9772c607",
+    "current/0029/gamedata/stringtable/binary__/pol/localstringinfo.paloc": "968a0700d6d4ab70c321ceec5744c02d1f6b8f51d5b5028d4e3b0c6cdcf4aa0a",
+    "current/0030/gamedata/stringtable/binary__/por-br/localstringinfo.paloc": "b850879768181463b075b72b2494b7736c873ca6fcd483f8cd37a384da632d82",
+    "current/0031/gamedata/stringtable/binary__/zho-tw/localstringinfo.paloc": "a82722d76797fd7c43ad71aebfcca65c37fba1a6f8e7ae9d0419b838b869fef4",
+    "current/0032/gamedata/stringtable/binary__/zho-cn/localstringinfo.paloc": "55b174867fb2c0e33d38433c04a1b7973ad07b5461a105c5143689ab65a8f17c",
+    "current/0033/gamedata/stringtable/binary__/ara/localstringinfo.paloc": "15fc236f491d653fc4c3eae345af947fcdf7c17049c9254352fdacdfda981f29"
+  },
+  "previous_archives": {
+    "20198": "f6454e5e6d7a8b0ccc5d94e399f38158a4917a46ac90ed52f7d6a81fe1a02d97",
+    "20197": "55cd03f8b5dfad6294064a14074bfa811dac2e3cc0ced8e7088d9e4cf7aa1976"
+  }
+}

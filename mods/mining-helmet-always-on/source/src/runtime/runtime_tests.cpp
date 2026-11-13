@@ -40,8 +40,8 @@ void node(uintptr_t nodes,uintptr_t bucket,uint32_t index,uintptr_t nodeAddress,
 }
 mh34::View fixture() {
     memory.clear(); writes.clear();
-    set(Root+0x20,Manager); set(Manager+0x1280,uintptr_t{0x21000}); set(0x21000+0x160,uintptr_t{0x22000});
-    set(0x22000+0x560,Groups); set(Image+0x70cdc60,Pool); set(Pool+0x58,Names);
+    set(Root+0x20,Manager); set(Manager+0x1288,uintptr_t{0x21000}); set(0x21000+0x160,uintptr_t{0x22000});
+    set(0x22000+0x580,Groups); set(Image+0x70cdc60,Pool); set(Pool+0x58,Names);
     map(Groups,0x51000,0x52000,1); name(1,"GlobalMaterialGlobalParameter_Common",0x53000);
     node(0x52000,0x51000,0,0x54000,1,Group);
     reserve(Group,0x100); reserve(Buffer,484); set(Group+0x78,Buffer); set(Group+0x80,uint32_t{484});
@@ -143,8 +143,10 @@ void lifecycle() {
 }
 unsigned eyeCalls{},orientationCalls{},rotationCalls{};
 std::array<uint8_t,0x220> modeRecord{};
-uintptr_t __fastcall modeLookup(uintptr_t unused,uint32_t index) {
-    assert(unused==0 && index==13); // New lookup ABI: EDX value, not RCX pointer.
+uintptr_t __fastcall modeLookup(const uint16_t* indexPointer) {
+    const uintptr_t unused=0;
+    const uint32_t index=*indexPointer;
+    assert(unused==0 && index==13); // Build 26636972: RCX points to the u16 index.
     return reinterpret_cast<uintptr_t>(modeRecord.data());
 }
 void currentModeLayout() {

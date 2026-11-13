@@ -583,6 +583,11 @@ inline constexpr std::uint32_t OriginalItems[] = {
     795009, 1001117, 1000853,
 };
 inline constexpr std::uint32_t OriginalOfferCount = sizeof(OriginalItems)/sizeof(OriginalItems[0]);
-inline constexpr std::uint32_t OfferCount = ModOfferCount + OriginalOfferCount;
+inline constexpr std::uint32_t ExtraStart = ModOfferCount + OriginalOfferCount;
 inline constexpr std::size_t TabCount = 9;
+}
+
+namespace alden {
+inline constexpr std::uint32_t ExtraItems[] = {756518,22008};
+inline constexpr std::uint32_t OfferCount = ExtraStart + 2;
 }

@@ -1,3 +1,7 @@
+## 2026-11-13 — Steam build 26636972
+
+All Stats / Speed Only v15 for Steam 26636972. Fixes UI field ordinals and native changed-value notification; 1,354 checks per variant. All Stats display confirmed. Correction: ASIs change displayed stat gauges; actual movement/physics increases are not established. Steelheart v10 remains unchanged.
+
 # Steelheart and mount stats changelog
 
 ## Steelheart v10 — 4 November 2026 — game 2.04.05

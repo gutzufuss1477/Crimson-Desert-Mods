@@ -1,4 +1,4 @@
-// Alden category tabs, v17.1, Steam build 26361232. Copyright 2026 Blablup. MIT.
+// Alden category tabs, 17.3.7-test, Steam build 26636972. Copyright 2026 Blablup. MIT.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -23,7 +23,7 @@ using FillFn=void(__fastcall*)(Ptr);
 using TabFn=void(__fastcall*)(Ptr,Ptr,bool,unsigned,unsigned,Ptr);
 using CountFn=unsigned char(__fastcall*)(Ptr,unsigned);
 using BindFn=Ptr(__fastcall*)(Ptr,Ptr,Ptr,Ptr);
-using InfoFn=Ptr(__fastcall*)(Ptr,unsigned);
+using InfoFn=Ptr(__fastcall*)(const std::uint16_t*);
 using SelectFn=void(__fastcall*)(Ptr,unsigned,bool,bool);
 using AttributeFn=const char*(__fastcall*)(Ptr,Ptr,const char*);
 HMODULE module{};
@@ -80,7 +80,7 @@ bool is_alden(Ptr stock) {
     if(!value(stock,vtable) || vtable!=base+profile::StockVtable ||
        !value(stock+0x178,mode) || mode!=0 || !value(stock+0x17a,index) || index==0xffff ||
        !value(stock+0x1f0,housing) || housing || !value(stock+0x1f1,alternate) || alternate) return false;
-    const auto info=function<InfoFn>(profile::StoreInfo)(0,index);
+    const auto info=function<InfoFn>(profile::StoreInfo)(&index);
     return value(info+8,key) && key==3101;
 }
 void show_bar(State& s,bool show) {
@@ -162,9 +162,12 @@ unsigned char __fastcall count_hook(Ptr stock,unsigned count) {
         valid=value(entries+n*sizeof(Ptr),record) && record && value(record+0x38,description) && description &&
             value(description+0x60,type) && type==0 && value(description+0x38,index) && index!=0xffff;
         if(!valid) break;
-        const auto info=function<InfoFn>(profile::ItemInfo)(0,index);
+        const auto info=function<InfoFn>(profile::ItemInfo)(&index);
         rows[n].stock=record;
-        valid=value(info+8,rows[n].item) && value(record+0x28,rows[n].index) && category(rows[n])!=255;
+        // +0x28 is the compact purchase-array position; +0x2c retains the
+        // authored stock identity when removed/conditional offers create holes.
+        // Read the stable identity for classification; never rewrite either field.
+        valid=value(info+8,rows[n].item) && value(record+0x2c,rows[n].index) && category(rows[n])!=255;
     }
     std::size_t selected{};
     if(!valid || !select_rows(rows,count,s->tab,reinterpret_cast<Ptr*>(entries),capacity,selected)) {
@@ -210,7 +213,7 @@ void __fastcall fill_hook(Ptr root) {
     if(active) select_tab(*s,0);
     show_bar(*s,active);
     s->busy=false;
-    log(active ? "OPEN: Alden, nine tabs including Original, default All" : "HIDDEN: another merchant or unsupported TabBar");
+    log(active ? "OPEN: Alden, category tabs including Original, default All" : "HIDDEN: another merchant or unsupported TabBar");
 }
 
 void __fastcall tab_hook(Ptr root,Ptr bar,bool preview,unsigned previous,unsigned selected,Ptr header) {

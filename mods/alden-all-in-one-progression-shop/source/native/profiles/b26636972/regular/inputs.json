@@ -1,0 +1,33 @@
+{
+  "exe_sha256": "8be67178d9b9a149c361a731051665e0ba4d441e250ae1dfe645bd6e524345c8",
+  "arrays": {
+    "CssSource": {
+      "size": 1743,
+      "sha256": "ae7711685e72f02c5d66e9319902e42de044e53aad6db881cee3e8d44967753a"
+    },
+    "NativeMemoryReadCode": {
+      "size": 64,
+      "sha256": "489f6023c3c5a3b50b23475cda1c29fed28f732acea918c38caf380f64fdb233"
+    },
+    "After1": {
+      "size": 16552,
+      "sha256": "f3c6eba29ce750695c55cacbdb5545ed4a98f1177947ea08e33a0de325ca30d5"
+    },
+    "NativeStyleConsumerCode": {
+      "size": 612,
+      "sha256": "bd24cbee50c705ba72ab8131f00166011c469f7c12d092bf32bff306458b4ce5"
+    },
+    "NativePropertyConditionCode": {
+      "size": 431,
+      "sha256": "eaa2a1d61c9b38ee3ed50fcb041de7107cb2019a97c997ac05b42b2ae2ee6187"
+    }
+  },
+  "fixtures": {
+    "better.bin": "cb0ae4baaa83d7f51ed619e4e9d558bf49de0ff704e3fab6122045b094ac5257",
+    "better_expected.bin": "b67bf911bfb0bdafd89b9d902e011760e3dac9e50c861f0fecc8d0d968f41cfe",
+    "legacy_better.bin": "51b92452b9dd5ef273323920eb6909cd0858c1365a43a9cdedeac3a27fc27527",
+    "legacy_category_bar.bin": "c1afe8d894f04313914ef94347975e5b526bbcefa5d2b2667c385a4c62df971f",
+    "vanilla.bin": "6b571f7fc9c95f50fe7ff9a9008c03341b19c64aaf876252a21350bcd6b1970b",
+    "vanilla_expected.bin": "ea2a471e1961ba9d34ffff962ce571b0db8e9d5bdbcb2130b81a9488c55c7a1c"
+  }
+}

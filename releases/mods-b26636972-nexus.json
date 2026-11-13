@@ -1,0 +1,182 @@
+{
+  "packages": [
+    {
+      "name": "Bank Refresh Gold and Bonds 1.4.0",
+      "version": "1.4.0",
+      "mod": 3669,
+      "previous_file_id": 19612,
+      "category": "main",
+      "archive": "Bank_Refresh_Gold_and_Bonds_1.4.0.zip",
+      "sha256": "000892cc80fefedcf86fff7b4009b6dd16c41e7b2ab3fd25d407ea55444e3ce4",
+      "bytes": 112216,
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "file_id": 21013,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=21013",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Mining Helmet Always On 1.5.0",
+      "version": "1.5.0",
+      "mod": 3586,
+      "previous_file_id": 19922,
+      "category": "main",
+      "archive": "Mining_Helmet_Always_On_1.5.0.zip",
+      "sha256": "2737a2a618b0023d362dd3e7eca57297b1a2f1fa23183133a722338220896da1",
+      "bytes": 142591,
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "file_id": 21014,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=21014",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Mount Speed Only v15 - Level 5 Display",
+      "version": "15",
+      "mod": 2365,
+      "previous_file_id": 19047,
+      "category": "main",
+      "archive": "Mount_Speed_Only_v15.zip",
+      "sha256": "e282f38d2d75018bce21087db689b62b389fb01f732cae7c19e15c9e13c79c2c",
+      "bytes": 100968,
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "file_id": 21015,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=21015",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Mount All Stats v15 - Level 5 Display",
+      "version": "15",
+      "mod": 2365,
+      "previous_file_id": 19041,
+      "category": "optional",
+      "archive": "Mount_All_Stats_v15.zip",
+      "sha256": "f273e83a8cb8108d718fc1f8514cb5d437dfba0a406aae4fd07df72768190766",
+      "bytes": 100955,
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "README.txt"
+      ],
+      "file_id": 21016,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=21016",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Healthbar Classic Single Target v5",
+      "version": "5",
+      "mod": 2406,
+      "previous_file_id": 19043,
+      "category": "main",
+      "archive": "Healthbar_Classic_Single_Target_v5.zip",
+      "sha256": "ffd6a34ee6042f75317895ba85d09ad0165fbbb66def6e5b4c3341ce9809a558",
+      "bytes": 149331,
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "Healthbar.json",
+        "README.txt"
+      ],
+      "file_id": 21017,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=21017",
+      "security_scan_status": "unverified",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Healthbar Caites Multitarget v5",
+      "version": "5",
+      "mod": 2406,
+      "previous_file_id": 19044,
+      "category": "main",
+      "archive": "Healthbar_Caites_Multitarget_v5.zip",
+      "sha256": "4eae9b7f54290ee7b4067659ff988d28bb458ff3747556d8b96999b79e225f46",
+      "bytes": 242502,
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "Healthbar.json",
+        "README.txt"
+      ],
+      "file_id": 21018,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=21018",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Healthbar Vanilla Multitarget v5",
+      "version": "5",
+      "mod": 2406,
+      "previous_file_id": 19042,
+      "category": "main",
+      "archive": "Healthbar_Vanilla_Multitarget_v5.zip",
+      "sha256": "78dc63d78410b2ef3d90d78ca79776598653753455e6498d53cea3f7925d856a",
+      "bytes": 242468,
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "Healthbar.json",
+        "README.txt"
+      ],
+      "file_id": 21019,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=21019",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Alden Shop No DLC 17.3.7",
+      "version": "17.3.7",
+      "mod": 2066,
+      "previous_file_id": 20198,
+      "category": "optional",
+      "archive": "Alden_Shop_No_DLC_17.3.7.zip",
+      "sha256": "d177280f5e40014eb3b1c9934811d196a1e1dd0712c00af1ecccc4fd6c4995cf",
+      "bytes": 4444734,
+      "author_in_game_confirmed": false,
+      "changed_metadata": [
+        "Preise.json",
+        "README.txt",
+        "manifest.json"
+      ],
+      "file_id": 21020,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=21020",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    },
+    {
+      "name": "Alden Shop DLC 17.4.6",
+      "version": "17.4.6",
+      "mod": 2066,
+      "previous_file_id": 20197,
+      "category": "main",
+      "archive": "Alden_Shop_DLC_17.4.6.zip",
+      "sha256": "451d4c4d181407f324915f3a56440a543aa46b5cd106778c0ff444ea0661eafb",
+      "bytes": 4451102,
+      "author_in_game_confirmed": true,
+      "changed_metadata": [
+        "Preise.json",
+        "README.txt",
+        "manifest.json"
+      ],
+      "file_id": 21021,
+      "url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=21021",
+      "security_scan_status": "cleared",
+      "superseded_archived": true,
+      "download_sha256_verified": true
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-#include "../../../../../tooling/native/profiles_26361232.hpp"
+#include "../../../../../tooling/native/profiles_26636972.hpp"
 #include <cstdio>
-// Crimson Desert 2.04.02 - All Mounts LvL 5 Speed Only
+// Crimson Desert Steam 26636972 - All Mounts LvL 5 Speed Only
 // Standalone x64 ASI with a shared structural resolver. Loaded directly by an x64 ASI loader; DMM is optional.
 // Steam 26329202; host tests cover the R15/RCX register path shared with AllStats.
 // In-game validation of this version is pending.
@@ -48,6 +48,8 @@ static U8* g_gameBase = (U8*)0;
 static U8* g_target = (U8*)0;
 static U8 g_original = 0;
 static volatile U32 g_singleStep = 0;
+static volatile LONG g_matchedFields = 0;
+static volatile LONG g_observedField = 0;
 static volatile U64 g_stepTid = 0;
 static NtFlushInstructionCache_t g_flush = (NtFlushInstructionCache_t)0;
 
@@ -161,11 +163,11 @@ static I64 veh_handler(EXCEPTION_POINTERS_MIN* ep) {
     if (code == STATUS_BREAKPOINT && ep->ExceptionRecord->ExceptionAddress == (PVOID)g_target) {
         // Windows x64 CONTEXT offsets:
         // EFlags 0x44, RCX 0x80, R15 0xF0, R14 0xE8, RIP 0xF8.
-        U64 r15 = ctx64(ctx, 0xF0);
+        // Build 26636972 retains the field owner in R14. R12/R15 are reused.
+        // The complete resolved function proves this program point and +0x230.
         U64 r14 = ctx64(ctx, 0xE8);
-
-        if (valid_ptr(r15) && valid_ptr(r14) && r15 >= r14 && (r15 - r14) == 0x230ull) {
-            U8* field = (U8*)r15;
+        if (valid_ptr(r14) && valid_ptr(r14+0x258ull)) {
+            U8* field = (U8*)(r14+0x230ull);
             U64 current = rd64(field + 0x00);
             U64 maxv    = rd64(field + 0x08);
             U64 minv    = rd64(field + 0x10);
@@ -174,14 +176,20 @@ static I64 veh_handler(EXCEPTION_POINTERS_MIN* ep) {
             U8 subIndex  = *(volatile U8*)(field + 0x26);
             U16 ordinal  = *(volatile U16*)(field + 0x28);
 
-            // Structure validated in 2.03.00 and statically rechecked in 2.04.02.
+            if (statIndex == 3 && subIndex >= 15 && subIndex <= 18)
+                InterlockedExchange(&g_observedField,static_cast<LONG>(0x1000000u | (static_cast<U32>(subIndex)<<16) | ordinal));
+
+            // b26636972 inserted three property entries. Live UI subindices 15..17
+            // use ordinals 50..52; property table key 1000089 is ordinal 53.
             if (statIndex == 3 &&
                 subIndex == 15 &&
-                ordinal == (U16)(subIndex + 32) &&
+                ordinal == (U16)(subIndex + 35) &&
                 maxv == 5000 && minv == 0 && step == 1000 &&
                 current <= maxv) {
                 wr64(field, maxv);
-                setctx64(ctx, 0x80, maxv); // RCX is the prior value at the 2.04.02 comparison site.
+                // Keep RDX (previous value) intact: the native continuation
+                // must detect the change and update the visible gauge.
+                InterlockedExchange(&g_matchedFields,1);
             }
         }
 
@@ -222,11 +230,8 @@ static DWORD WINAPI initialize_mount(PVOID) {
     if (rd32(imageBase + rd32(imageBase + 0x3C) + 24 + 56) < 0x1012ABF) return 1;
     g_gameBase = imageBase;
 
-    // Strict Crimson Desert 2.04.02 guard. The sequence is unique in build 26329202.
-    static const U8 guardBytes[16] = {
-        0x4D,0x8B,0x9E,0x30,0x02,0x00,0x00,0x4D,
-        0x3B,0xD8,0x0F,0x85,0x92,0xF9,0xFF,0xFF
-    };
+    // Strict Crimson Desert Steam 26636972 guard. The sequence is unique in build 26329202.
+    static const U8 guardBytes[16] = {0x4D,0x8B,0x9E,0x30,0x02,0x00,0x00,0x4D,0x3B,0xD8,0x0F,0x85,0xC4,0xFB,0xFF,0xFF};
     U8* guardAt = imageBase + mountAddresses.rva(0x1012aaf);
     U32 i;
     for (i = 0; i < 16; ++i) {
@@ -240,10 +245,7 @@ static DWORD WINAPI initialize_mount(PVOID) {
     g_flush = flush;
 
     g_target = imageBase + mountAddresses.rva(0x101248b);
-    static const U8 targetBytes[16] = {
-        0x4D,0x8B,0x96,0x30,0x02,0x00,0x00,0x49,
-        0x3B,0xCA,0x75,0x0D,0x4D,0x3B,0xAE,0x38
-    };
+    static const U8 targetBytes[16] = {0x4D,0x8B,0x96,0x30,0x02,0x00,0x00,0x49,0x3B,0xD2,0x75,0x0D,0x49,0x3B,0x8E,0x38};
     for (i = 0; i < 16; ++i) {
         if (g_target[i] != targetBytes[i]) return 1; // Wrong build: fail closed.
     }
@@ -259,7 +261,22 @@ static DWORD WINAPI initialize_mount(PVOID) {
         return 1;
 
     set_break_byte(0xCC);
-    cd::write_status(L"Mount_Speed.status.txt","active",mountAddresses);
+    cd::write_status(L"Mount_Speed.status.txt","v15 hook installed; waiting for matching mount fields",mountAddresses);
+    LONG lastObserved=0;
+    for (;;) {
+        Sleep(1000);
+        if (InterlockedCompareExchange(&g_matchedFields,0,0)) {
+            cd::write_status(L"Mount_Speed.status.txt","v15 active; matching mount fields applied",mountAddresses);
+            break;
+        }
+        const LONG observed=InterlockedCompareExchange(&g_observedField,0,0);
+        if (observed && observed!=lastObserved) {
+            lastObserved=observed;char message[160]{};
+            std::snprintf(message,sizeof(message),"v15 hook installed; field guard waiting (sub=%u ordinal=%u)",
+                (static_cast<unsigned>(observed)>>16)&255u,static_cast<unsigned>(observed)&65535u);
+            cd::write_status(L"Mount_Speed.status.txt",message,mountAddresses);
+        }
+    }
     return 1;
 }
 

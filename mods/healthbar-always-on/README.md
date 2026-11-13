@@ -1,29 +1,36 @@
-# Healthbar Always On
+**Healthbar Always On v5**
+Updated for Steam build 26636972 (EXE 1.0.0.3663), 13 November 2026. DMM 5.0.0 was used for the current setup. See enemy health bars without a Health Detection Device or special helmet.
 
-**Release 4**, for **Steam build 26361232**.
+[Support my mods on Ko-fi](https://ko-fi.com/gutzufuss) — optional support helps me keep making updates.
 
-| Variant | Appearance | Targets | Components |
-|---|---|---|---|
-| Vanilla Multitarget | Framed red bars | Multiple | DMM data + bundled ASI |
-| Classic Vanilla Single Target | Framed red bars | One | DMM data only |
-| Caites Multitarget | Compact thin red bars | Multiple | DMM data + bundled ASI |
+**Choose ONE of three distinct variants**
 
-[Complete Nexus downloads](https://www.nexusmods.com/crimsondesert/mods/2406?tab=files) · [Source/helper release](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26361232)
+- **Vanilla Multitarget:** classic red bars with a dark frame; multiple enemies. ASI helper included.
+- **Classic Vanilla Single Target:** the same framed style; one target. No Healthbar ASI required.
+- **Caites Multitarget:** compact thin red bars without the thick frame; multiple enemies. ASI helper included.
 
-## Install
+Multitarget keeps bars when switching targets and retains native removal when enemies die.
 
-Close the game and unmount/remove the old Healthbar variant. Import **one complete ZIP** in DMM. Enable the data mod and, for Multitarget, the included **Healthbar Multitarget** under ASI Mods. Keep DMM's ASI loader, mount and restart. No separate helper download or manual file copy is needed. DMM 4.6.4 import/deployment was verified.
+**Installation — one ZIP through DMM**
 
-Remove old manual NativeFix/Healthbar helpers before migrating. Never enable multiple variants or duplicate helpers. The helper selects the style automatically and remains inactive with Classic. Close the game before changing or uninstalling variants; remount the remaining mods afterwards.
+- Close the game, unmount and remove the previous Healthbar variant in DMM.
+- Import the complete ZIP for your chosen variant. No manual game-folder copying is required.
+- Enable the Healthbar data mod. For either Multitarget style, also enable the included Healthbar Multitarget under ASI Mods; DMM may leave its checkbox off after import.
+- Keep the existing ASI loader and DmmRuntime.asi, mount and restart.
 
-## Updates and validation
+Use only one data variant and one helper copy. Disable/remove the Multitarget helper when selecting Classic. Remove old manual NativeFix/Healthbar ASIs when migrating to DMM. To uninstall, disable/remove the data and helper, then remount.
 
-The native helper gains structural code detection: The ASI now finds validated code structures instead of relying on fixed addresses or one executable hash. It may keep working after game updates that only move code. Changed code/layouts or ambiguous matches are refused before hooks are installed. Future compatibility is not guaranteed.
+**What changed / validation**
+Rebased the skill and UI payloads onto the current game build and updated native resolution. All three visual styles are retained. Of 2,160 skill records, only the intended skill 1201 changes; the other 2,159 are preserved.
+Vanilla Multitarget was confirmed in game on this build. Classic and Caites passed data/style/native checks but have no separate current-build gameplay confirmation. Other characters were not separately tested. All published functional payloads are identical to the validated candidates.
 
-**The DMM data/UI packages remain specific to build 26361232.** Classic is data-only and does not gain ASI-based update resilience. Conflicting changes to the same skill or subtitletagview HTML/CSS can prevent correct operation.
+**Future updates / conflicts**
+The native ASI resolves validated code structures and may survive updates that only move compatible code. Changed layouts, changed functions or ambiguous matches can still require an update. Future compatibility is not guaranteed.
+This applies to the native Multitarget helper only. The full mod still includes game-data/UI files for build 26636972 and can require rebuilding after a patch. Classic is data-only. Other changes to the same skill or subtitletagview.html/css can conflict.
 
-The skill overlay was rebuilt from current vanilla inputs, preserving the new ability ID and all unrelated records. Three previous visual styles remain unchanged. Vanilla Multitarget was confirmed working in game on 2 November 2026. Classic and Caites passed current data/style/host checks, but were not separately replaytested on this build. Other characters were not separately tested.
+**Credits**
+Blablup / gutzufuss1477. Thanks to [Caites](https://www.nexusmods.com/profile/Caites) for [Persistent HP Bars](https://www.nexusmods.com/crimsondesert/mods/2409), the original multitarget work/inspiration and compact presentation, and to the community testers.
+[Source, release notes and checksums on GitHub](https://github.com/gutzufuss1477/Crimson-Desert-Mods).
 
-Released functional payloads are unchanged from the validated candidates. Native patch guards, atomicity, Classic isolation and native target cleanup remain tested. Build the helper with source/native/build.cmd; see [tooling](../../tooling/README.md) for data recipes and packaging. Full game data/UI assets remain Nexus-only.
 
-Credits: Blablup / gutzufuss1477; [Caites — Persistent HP Bars](https://www.nexusmods.com/crimsondesert/mods/2409). The helper's MIT license covers only original helper code.
+[Current build and validation notes](../../releases/mods-b26636972.md).

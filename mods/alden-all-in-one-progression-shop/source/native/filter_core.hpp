@@ -12,6 +12,7 @@ inline unsigned category(std::uint32_t id) {
 }
 struct Row { std::uintptr_t stock; std::uint32_t item; std::uint32_t index; };
 inline unsigned category(const Row& row) {
+    if(row.index>=ExtraStart) return row.index<OfferCount && ExtraItems[row.index-ExtraStart]==row.item ? 6 : 255;
     if(row.index<ModOfferCount) return category(row.item);
     const auto original=row.index-ModOfferCount;
     return original<OriginalOfferCount && OriginalItems[original]==row.item ? 8 : 255;

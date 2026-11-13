@@ -4,22 +4,24 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 3669,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3669",
-  "pageVersion": "1.3.1",
+  "pageVersion": "1.4.0",
   "sourceStatus": "published-release",
-  "sourceNote": "Bank Refresh 1.3.1 restores support for the gold refresh routine on Steam 26423880. Gameplay confirmed 2026-11-05. Both supported executable layouts passed structural checks.",
+  "sourceNote": "Updated 2026-11-13 for Steam build 26636972; see per-file confirmation scope and current release notes.",
   "currentFiles": [
     {
-      "fileId": 19612,
-      "name": "Bank Refresh 1.3.1 - Gold and Bonds - b26423880",
-      "version": "1.3.1",
+      "fileId": 21013,
+      "name": "Bank Refresh Gold and Bonds 1.4.0",
+      "version": "1.4.0",
       "category": "MAIN",
-      "gameVersion": "2.04.06",
-      "steamBuild": "26423880",
-      "sha256": "b69c09a4bf77b398e9dc379b36aaefa8992fc94b2e79990fa3fcabf5bc8e9b0a",
-      "bytes": 111599,
-      "inGameTested": true,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=19612",
-      "validation": "Author confirmed Bank Refresh working in game on Steam 26423880 on 2026-11-05. Both timer routines also passed executable checks on Steam 26361232."
+      "steamBuild": "26636972",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "Public native/game payloads equal the validated candidates; only documentation and metadata finalized. Author reported working in game.",
+      "sha256": "000892cc80fefedcf86fff7b4009b6dd16c41e7b2ab3fd25d407ea55444e3ce4",
+      "bytes": 112216,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=21013",
+      "publishedDownloadSha256Verified": true,
+      "nexusSecurityScanStatus": "cleared"
     }
   ],
   "archivedFiles": [
@@ -67,6 +69,20 @@
       "inGameTested": true,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=19040",
       "validation": "Gameplay confirmed 2026-11-02 through DMM 4.6.4; payload unchanged from tested candidate."
+    },
+    {
+      "fileId": 19612,
+      "name": "Bank Refresh 1.3.1 - Gold and Bonds - b26423880",
+      "version": "1.3.1",
+      "category": "ARCHIVED",
+      "gameVersion": "2.04.06",
+      "steamBuild": "26423880",
+      "sha256": "b69c09a4bf77b398e9dc379b36aaefa8992fc94b2e79990fa3fcabf5bc8e9b0a",
+      "bytes": 111599,
+      "inGameTested": true,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=19612",
+      "validation": "Author confirmed Bank Refresh working in game on Steam 26423880 on 2026-11-05. Both timer routines also passed executable checks on Steam 26361232."
     }
-  ]
+  ],
+  "dmmTestedVersion": "5.0.0"
 }

@@ -1,35 +1,36 @@
-# Horse stamina and mount stats
+**Mount Level 5 Display v15 / Steelheart Horseshoes v10**
+Updated for Steam build 26636972 (EXE 1.0.0.3663), 13 November 2026. DMM 5.0.0 was used for the current setup.
+**Scope correction:** All Stats and Speed Only change the mount stat display/cache. A corresponding increase to actual movement speed, acceleration, turning, jumping or stamina has not been established. The earlier description promised more than the implementation demonstrates. Please choose these ASIs for the level-5 display; Steelheart is the separate equipped stamina-regeneration modification.
 
-| Download | Version | Baseline / status |
-|---|---|---|
-| All Mounts Level 5 All Stats | 13 | Steam 26361232; gameplay confirmed 2 November 2026 |
-| Speed Only | 13 | Steam 26361232; host/structural checks passed, separate gameplay confirmation pending |
-| Steelheart Horseshoes | 10 | Game 2.04.05 / Steam 26361232; field-level patch, combined gameplay confirmed 4 November 2026 |
+[Support my mods on Ko-fi](https://ko-fi.com/gutzufuss) — optional support helps me keep making updates.
 
-All Stats changes speed, acceleration, turning and jump. Speed Only changes movement speed alone. Use **one** mount ASI. Steelheart raises the equipped horseshoes' stamina-regeneration buff from 4 to 20 and is optional.
+**Choose your files**
 
-[Nexus downloads](https://www.nexusmods.com/crimsondesert/mods/2365?tab=files) · [Current release](https://github.com/gutzufuss1477/Crimson-Desert-Mods/releases/tag/mods-b26361232)
+- **All Stats v15 (ASI):** sets the four supported mount stat gauges to level 5. The author confirmed the displayed values on the current build.
+- **Speed Only v15 (ASI):** sets only the speed gauge to level 5. The other gauges are unchanged. Current automated checks passed; no separate gameplay test on this build.
+- **Steelheart Horseshoes v10 (DMM):** changes the equipped horseshoes' stamina-regeneration buff from level 4 to 20. Equip the item. No ASI needed. This existing download is unchanged.
 
-## Install
+Use All Stats OR Speed Only, never both. Steelheart is optional and can be used separately.
 
-For either mount ASI, close the game, remove older/manual duplicate ASIs, import the complete v13 ZIP in DMM under ASI Mods, enable and mount. DMM 4.6.4 deployment was verified with All Stats. Keep the loader and DmmRuntime.asi. Both ZIPs use the same simple ASI-only layout; neither needs an INI.
+**Install a mount ASI**
+Close the game. Remove the previous version in DMM and any duplicate manually installed copy. Back up custom INI settings. Import the complete ZIP through DMM ASI Mods, enable the plugin, mount and restart. Keep the working x64 ASI loader and DmmRuntime.asi. Included INIs are imported and deployed with the ASI. Manual alternative: put the ASI and its INI, if supplied, beside CrimsonDesert.exe in bin64 with an x64 ASI loader. No loader is bundled. Do not combine manual and manager copies.
+The two mount ZIPs do not need an INI. DMM is optional for these ASIs.
 
-Manual alternative: copy either AllMountsLvL5AllStats.asi or AllMountsLvL5Speed.asi into bin64 with an x64 ASI loader. Neither DMM nor Steelheart is required by the ASI. Disable/remove it with the game closed.
+**v15 fixes and validation**
+Updated the current mount UI field mapping and corrected native changed-value notifications. Each variant passed 1,354 host checks, including captured current fields, unrelated UI rejection and native notification continuation. A hook being installed is now distinguished from matching fields actually being applied. The published ASIs are the tested candidates without binary changes.
+The native ASI resolves validated code structures and may survive updates that only move compatible code. Changed layouts, changed functions or ambiguous matches can still require an update. Future compatibility is not guaranteed.
+Status: %LOCALAPPDATA%\CrimsonDesertMods\Mount_AllStats.status.txt or Mount_Speed.status.txt.
 
-For Steelheart v10, close the game and unmount in **DMM 4.6.4 or later**. Replace/disable the old Steelheart patch, import `Steelheart_Horseshoes.zip`, enable **Steelheart Horseshoes - 20 Stamina Regen**, mount and restart. Equip the horseshoes. Keep only one Steelheart patch active. No ASI is required. Other edits to the same stamina-regeneration buff may conflict.
+**Steelheart installation and compatibility**
+Close the game and unmount. Import the complete Steelheart v10 ZIP through DMM, enable Steelheart Horseshoes - 20 Stamina Regen, mount and restart. Equip the horseshoes and keep only one Steelheart patch active.
+Its item-ID/equip-buff field patch preserves unrelated item edits, including Equip All Armor. Compatibility was confirmed on the earlier build; the unchanged patch passed current data checks, with no separate new gameplay confirmation. Changes to the same equip buff can still conflict. This data patch is not update-independent.
 
-[Download Steelheart v10](https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=19468) · [Steelheart release notes](../../releases/steelheart-v10-b26361232.md) · [Changelog](CHANGELOG.md)
+**Uninstall**
+Close the game, disable/remove the chosen mod in DMM and remount the remaining mods. Remove a manual ASI manually if applicable.
 
-## Compatibility and validation
+[Source, release notes and checksums on GitHub](https://github.com/gutzufuss1477/Crimson-Desert-Mods).
+**Credits**
+Thanks to the Crimson Desert modding community, ThirteenAG for Ultimate ASI Loader and everyone who tested the mods.
 
-Steelheart v10 fixes the outdated-patch warning with original Character Creator Enhanced — Equip All Armor. It targets item 1000594's stamina-regeneration buff field instead of a fixed file position. The effect remains level 4 to 20. Armor changes are preserved in either application order; Character Creator and Alden remain optional, separate mods.
 
-The author confirmed Alden, Steelheart, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The final packages preserve the confirmed field targets, effects and runtime payloads; only release metadata and readmes changed. The exact final ZIPs were not separately run in game. DLC installations/data remain unverified.
-
-All Stats and Speed Only remain v13; neither ASI changed in this update.
-
-Both mount ASIs v13: The ASI now finds validated code structures instead of relying on fixed addresses or one executable hash. It may keep working after game updates that only move code. Changed code/layouts or ambiguous matches are refused before hooks are installed. Future compatibility is not guaranteed.
-
-The same claim does not apply to Steelheart's data patch. Each mount variant passed 1,135 host checks and structural resolver checks. Both released binaries match their validated candidates; All Stats is gameplay-confirmed, while Speed Only's separate gameplay test on this build is pending. Speed Only shares All Stats' runtime except for the speed-only filter and status filename. Startup status: %LOCALAPPDATA%/CrimsonDesertMods/Mount_AllStats.status.txt or Mount_Speed.status.txt.
-
-Build All Stats with tooling/build_allstats_204.cmd and Speed Only with tooling/build_speed_204.cmd. Speed Only v13 is a supplemental asset on the current GitHub release, with SHA256SUMS-SpeedOnly.txt; the original release assets and tag are unchanged. See [tooling](../../tooling/README.md) and nexus.json.
+[Current build and validation notes](../../releases/mods-b26636972.md).

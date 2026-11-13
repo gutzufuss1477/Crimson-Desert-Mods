@@ -1,3 +1,7 @@
+## Current release: build 26636972
+
+Use `native/prepare_b26636972.py` and `build_data_b26636972.py` for DLC 17.4.6 / No DLC 17.3.7. See [current build instructions](../../../tooling/README.md). The older recipes below are retained for provenance. Full game-derived inputs and generated headers stay local.
+
 # Alden release source — 17.4.3 DLC / 17.3.4 No DLC
 
 `build_checked_shop.py` builds the current two variants for Steam 26480954. It consumes the exact published 17.4.2 DLC or 17.3.3 regular ZIP and corresponding generated native build directory, current extracted base data, matching executable, DMM parser, Python lz4 and MSVC tools. The existing native profile and hook addresses remain unchanged. The complete inputs include game-derived files and are not distributed in Git.

@@ -1,0 +1,6 @@
+#pragma once
+@@NativePropertyConditionCode@@
+inline constexpr std::uintptr_t PropertyReaderRva=0x426cb10;
+struct PropertyFixup {unsigned offset; std::uintptr_t target;};
+inline constexpr PropertyFixup PropertyCalls[] = {{113,0x1595880},{174,0x5485a0},{219,0x16436f0},{231,0x1643f30},{293,0x3aacb0}};
+inline constexpr PropertyFixup PropertyReferences[] = {{82,0x6f29f18},{144,0x6f29f48},{187,0x597bc54},{242,0x6017f30},{357,0x6017ed0},{389,0x6017e70}};

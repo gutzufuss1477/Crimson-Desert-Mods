@@ -36,10 +36,12 @@ const char* __fastcall attribute(Ptr,Ptr key,const char*) {
 Ptr __fastcall bind(Ptr p,Ptr result,Ptr out,Ptr) {
     check(p==r(),"bind own root");put(result,bindError);put(out,bindError ? Ptr{} : b());return result;
 }
-Ptr __fastcall store_info(Ptr,unsigned index) {
+Ptr __fastcall store_info(const std::uint16_t* ordinal) {
+    check(ordinal!=nullptr,"store ordinal pointer ABI");const auto index=*ordinal;
     check(index==7,"native store ordinal preserved"); return reinterpret_cast<Ptr>(storeInfo.data());
 }
-Ptr __fastcall item_info(Ptr,unsigned index) {
+Ptr __fastcall item_info(const std::uint16_t* ordinal) {
+    check(ordinal!=nullptr,"item ordinal pointer ABI");const auto index=*ordinal;
     check(index<items.size(),"native item ordinal in range"); return reinterpret_cast<Ptr>(items[index].data());
 }
 void __fastcall show(Ptr p) { check(p==b(),"show own bar"); shown=true; }
@@ -75,13 +77,14 @@ void setup() {
     put(reinterpret_cast<Ptr>(storeInfo.data())+8,std::uint16_t{3101});
     for(unsigned i=0;i<alden::OfferCount;++i) {
         // Reverse mod-ID order; original stock has separate identities for overlaps.
-        const auto id=i<alden::ModOfferCount ? alden::Catalog[alden::ModOfferCount-1-i].id :
+        const auto id=i>=alden::ExtraStart ? alden::ExtraItems[i-alden::ExtraStart] : i<alden::ModOfferCount ? alden::Catalog[alden::ModOfferCount-1-i].id :
             alden::OriginalItems[i-alden::ModOfferCount];
         put(reinterpret_cast<Ptr>(items[i].data())+8,id);
         const Ptr rec=reinterpret_cast<Ptr>(records[i].data());
         put(rec+0x38,reinterpret_cast<Ptr>(descriptions[i].data()));
         put(reinterpret_cast<Ptr>(descriptions[i].data())+0x38,static_cast<std::uint16_t>(i));
-        put(rec+0x28,i); // The native purchase row index must never be rewritten.
+        put(rec+0x28,i); // Compact native purchase-array position.
+        put(rec+0x2c,i); // Stable authored stock identity; distinct after removals.
         allPointers[i]=rec;
     }
     pointers=allPointers;
@@ -106,7 +109,7 @@ Ptr resolve_test_function(Ptr rva) {
 
 int main() {
     using namespace alden;
-    constexpr unsigned expected[]={607,94,93,71,95,125,39,50,40};
+    constexpr unsigned expected[]={609,94,93,71,95,125,41,50,40};
     fixture::setup();states[0]={};unsigned initialization=99;
 #ifdef ALDEN_RUNTIME_UI
     categoryStylesAvailable=false;
@@ -140,7 +143,7 @@ int main() {
     fill_hook(fixture::r());
     check(fixture::shown && states[0].ownerThread==GetCurrentThreadId(),"18b regression: first fill takes ownership and shows tabs");
     tab_hook(fixture::r(),fixture::b(),false,0,6,0);
-    check(get<unsigned>(fixture::s()+0x100)==39,"material tab filters after real cross-thread handoff");
+    check(get<unsigned>(fixture::s()+0x100)==41,"material tab filters after real cross-thread handoff");
     const auto beforeForeignFill=fixture::fillCalls;
     std::thread foreign([] { tab_hook(fixture::r(),fixture::b(),false,6,1,0); });
     foreign.join();
@@ -230,7 +233,7 @@ int main() {
           fixture::pointers[0]==fixture::allPointers[ModOfferCount+5] &&
           fixture::pointers[1]==fixture::allPointers[ModOfferCount+38],"conditional original availability preserves sparse native indices");
     fixture::setup();states[0].tab=8;
-    put(fixture::allPointers[ModOfferCount]+0x28,0xffffffffu);
+    put(fixture::allPointers[ModOfferCount]+0x2c,0xffffffffu);
     count_hook(fixture::s(),OfferCount);
     check(states[0].fault && fixture::pointers==fixture::allPointers,"unrecognized original index falls back without partial writes");
     fixture::setup();states[0].tab=6;states[0].ownerThread=0;
@@ -238,9 +241,19 @@ int main() {
     check(fixture::pointers==fixture::allPointers,"other UI thread passes through");
     destroy_hook(fixture::r(),1);
     check(states[0].root==0 && fixture::destroyCalls==1,"destruction removes stored UI pointers");
+    fixture::setup();states[0].tab=6;
+    count_hook(fixture::s(),OfferCount);
+    for(unsigned i=ExtraStart;i<OfferCount;++i) {
+        check(std::find(fixture::pointers.begin(),fixture::pointers.begin()+41,fixture::allPointers[i])!=fixture::pointers.begin()+41,
+              "Long Horn and Water keep their own purchase rows in Materials");
+    }
+    fixture::setup();states[0].tab=6;
+    put(fixture::allPointers[ExtraStart]+0x2c,0xffffffffu);
+    count_hook(fixture::s(),OfferCount);
+    check(states[0].fault && fixture::pointers==fixture::allPointers,"invalid ingredient index fails atomically");
     Row one{1,Catalog[0].id,0};Ptr out=0xdead;std::size_t written{};
     check(!select_rows(&one,1,static_cast<unsigned>(TabCount),&out,1,written) && out==0xdead,"invalid category is atomic");
     check(!select_rows(&one,1,0,&out,0,written) && out==0xdead,"insufficient capacity is atomic");
-    std::puts("PASS: real loader/update thread handoff, cross-thread destruction/recreation and foreign-thread guard; compiled-UI binding/missing-selector regression; nine tabs, separate original/mod purchase identities, purchase identity/order, stock refresh, reopen, merchant isolation, invalid/empty data and reentrancy.");
+    std::puts("PASS: real loader/update thread handoff, cross-thread destruction/recreation and foreign-thread guard; compiled-UI binding/missing-selector regression; 9 tabs, separate original/mod purchase identities, purchase identity/order, stock refresh, reopen, merchant isolation, invalid/empty data and reentrancy.");
     return 0;
 }
