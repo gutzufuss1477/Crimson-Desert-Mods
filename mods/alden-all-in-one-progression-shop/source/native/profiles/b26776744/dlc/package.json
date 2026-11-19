@@ -1,0 +1,31 @@
+{
+  "previous_file_id": 21021,
+  "previous_sha256": "451d4c4d181407f324915f3a56440a543aa46b5cd106778c0ff444ea0661eafb",
+  "members": {
+    "Alden Category Tabs.asi": "a3564e9a66b4d8799d9e2a4e472c935c55f2f37181055bac2ef647c0e60e98b9",
+    "LICENSE.txt": "2641b05d2ebafbc852ca9b4e90aa29b9976ccbb28648bd4dc79850ec1e4ce364",
+    "MinHook-LICENSE.txt": "4f21f857550d7be854da6ea5f2da4e6775ca4e3fbb535e4f3d961c47d0bf3335",
+    "README.txt": "c4ac7a8eafd116662135154e19b0c7681b8644af3f28c2d5b147fb608c4afb4b",
+    "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfobody": "43984d70580a9c0df6e856edcd2b23125b894ba2910307520ee9386ac5245c42",
+    "files/0008/gamedata/binarystaticinfo__/bin/localstringinfo.staticinfoheader": "e5e986b4254e35558cd65c75dc713e07a530ba72ec30bd8e2ad600223e90a81b",
+    "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfobody": "f33d789fbb44cfe1ca9607cacce001523467ddaf1ecd6ee04f69ae55bfdc41af",
+    "files/0008/gamedata/binarystaticinfo__/bin/storeinfo.staticinfoheader": "fb88b2ab9d417df5d7eba40325720f4fb677b5c8206664f8669f41b83e30d05e",
+    "files/0012/ui/xml/gamemain/play/aldencategorytabs.css": "ae7711685e72f02c5d66e9319902e42de044e53aad6db881cee3e8d44967753a",
+    "files/0019/gamedata/stringtable/binary__/kor/localstringinfo.paloc": "951bb646a931757306b323119e1ce8e4d51fb9ef4d54b692771bd66dad035103",
+    "files/0020/gamedata/stringtable/binary__/eng/localstringinfo.paloc": "07b111699b569647bbae7750e0f6a5ddd3971cd939c668ed8b4d18f64c68631d",
+    "files/0021/gamedata/stringtable/binary__/jpn/localstringinfo.paloc": "35c56e7217955f3b784783da6683173b447a3b63b5d65d130e2ffa781b4c10c0",
+    "files/0022/gamedata/stringtable/binary__/rus/localstringinfo.paloc": "3ed6da5bc8930c10d0b2b181bf061e4ab589f6c35794260dc156c78abddbd046",
+    "files/0023/gamedata/stringtable/binary__/tur/localstringinfo.paloc": "f485e19104bba8c9070b57ebce216486b87890fd7c61334c23b289c8ca6b8daf",
+    "files/0024/gamedata/stringtable/binary__/spa-es/localstringinfo.paloc": "774377e8741fb6041e53ff4493e416bdc02beba67a526a29dcc388c26918d457",
+    "files/0025/gamedata/stringtable/binary__/spa-mx/localstringinfo.paloc": "b5db789a9da74dd1946771e8228ae62c8e2175dfe5a306c23a26be19799b82c7",
+    "files/0026/gamedata/stringtable/binary__/fre/localstringinfo.paloc": "b05a1617aafaf245e5208200ce6974179025e53508f225be9c0cb39518a0835c",
+    "files/0027/gamedata/stringtable/binary__/ger/localstringinfo.paloc": "30443a892bc36d2a9540c1b0e889dc919a09426de61d77bbc1e4345342f355b1",
+    "files/0028/gamedata/stringtable/binary__/ita/localstringinfo.paloc": "e3a9668ba894be8cc3daea6876538fdca6a49d4dd41668fa36a1a5bf75e50127",
+    "files/0029/gamedata/stringtable/binary__/pol/localstringinfo.paloc": "dbb626e72f031ca68aefe31f75641204ad2a0780ec5c015dbf0cece452519e4c",
+    "files/0030/gamedata/stringtable/binary__/por-br/localstringinfo.paloc": "9c9238f5f2c0a4edbf341d4e31514e40cc0ede59d777f3e968e6070c75912a80",
+    "files/0031/gamedata/stringtable/binary__/zho-tw/localstringinfo.paloc": "d78c77d406e4ba1e10f090835e11c9ec90839430a0331324b244fdf8eb99f703",
+    "files/0032/gamedata/stringtable/binary__/zho-cn/localstringinfo.paloc": "eb240109a34760458e9deb52c1491714178b43e18dd0c471270947112e0b981d",
+    "files/0033/gamedata/stringtable/binary__/ara/localstringinfo.paloc": "900a2192eb2e6bdc3cd1c98683ec295b9d158d496334b44bc746d7631d607cbf",
+    "manifest.json": "088d3a00e0f58f9653763c85731ae8c40b949dce80dbfe643e20a88110b22c2c"
+  }
+}

@@ -1,4 +1,12 @@
-## Current build 26636972 — 13 November 2026
+## Build 26776744
+
+Use the Visual Studio x64 C++ toolchain. Bank builds with its source/src/build.cmd. Steelheart's DMM patch is in the mount mod's recipes/steelheart-v11 directory.
+
+For Alden, run native/prepare_b26776744.py with the same inputs as the previous native recipe below, substituting the build 26776744 EXE and current extracted shop UI. Run build_runtime.cmd inside the generated directory. The regular and DLC profiles each include their own offer catalog and guarded item prices.
+
+Run build_data_b26776744.py from the Alden source directory with --variant regular or dlc, --previous (Nexus file 21020 or 21021, respectively), --current (current extracted group tree), --parser (dmm_parser.pyd), --asi (rebuilt helper) and --output (destination ZIP). The script checks every package member against its release hash. Both ZIPs were independently reproduced using these recipes.
+
+## Previous build 26636972 — 13 November 2026
 
 These instructions supersede the historical sections below. Public native payloads retain the tested candidate bytes, including diagnostic `-test` suffixes. Version labels and user instructions are finalized in the release ZIPs. A different compiler or rebuild is not automatically byte-identical.
 

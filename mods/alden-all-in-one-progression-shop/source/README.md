@@ -1,4 +1,8 @@
-## Current release: build 26636972
+## Build 26776744
+
+Use native/prepare_b26776744.py and build_data_b26776744.py for DLC 17.4.12 and No DLC 17.3.9. See the [build instructions](../../../tooling/README.md).
+
+## Previous release: build 26636972
 
 Use `native/prepare_b26636972.py` and `build_data_b26636972.py` for DLC 17.4.6 / No DLC 17.3.7. See [current build instructions](../../../tooling/README.md). The older recipes below are retained for provenance. Full game-derived inputs and generated headers stay local.
 

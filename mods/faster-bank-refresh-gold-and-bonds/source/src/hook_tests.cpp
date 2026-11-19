@@ -18,11 +18,11 @@ struct Info {
 static_assert(offsetof(Info,kind)==0xb);
 struct Component {
     uintptr_t reserved{},actor{};
-    uint8_t padding[0x130]{};
+    uint8_t padding[0x140]{};
     BankRecord* records{};
     uint32_t count{},unknown11c{1};
 };
-static_assert(offsetof(Component,records)==0x140 && offsetof(Component,count)==0x148);
+static_assert(offsetof(Component,records)==0x150 && offsetof(Component,count)==0x158);
 enum class NativeAction { waiting, completeBond, rollGold, error, nullResult };
 struct Fixture {
     const char* names[2]{"Bank_01","Bank_02"};

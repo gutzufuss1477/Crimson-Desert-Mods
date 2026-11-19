@@ -6,7 +6,7 @@
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2406",
   "pageVersion": "5",
   "sourceStatus": "published-release",
-  "sourceNote": "Updated 2026-11-13 for Steam build 26636972; see per-file confirmation scope and current release notes.",
+  "sourceNote": "All three v5 packages match the expected current skill and UI payloads. Character edits and the shared Multitarget helper passed the checks.",
   "currentFiles": [
     {
       "fileId": 21017,
@@ -21,7 +21,8 @@
       "bytes": 149331,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=21017",
       "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "unverified"
+      "nexusSecurityScanStatus": "unverified",
+      "compatibilityCheckedOnBuild": "26776744"
     },
     {
       "fileId": 21018,
@@ -36,7 +37,8 @@
       "bytes": 242502,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=21018",
       "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "cleared"
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
     },
     {
       "fileId": 21019,
@@ -51,7 +53,8 @@
       "bytes": 242468,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2406?tab=files&file_id=21019",
       "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "cleared"
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
     }
   ],
   "archivedFiles": [

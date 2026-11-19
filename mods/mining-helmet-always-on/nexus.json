@@ -6,7 +6,7 @@
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3586",
   "pageVersion": "1.5.0",
   "sourceStatus": "published-release",
-  "sourceNote": "Updated 2026-11-13 for Steam build 26636972; see per-file confirmation scope and current release notes.",
+  "sourceNote": "The released ASI passed all 36 native checks. The ore group and 375 relevant records match.",
   "currentFiles": [
     {
       "fileId": 21014,
@@ -21,7 +21,8 @@
       "bytes": 142591,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=21014",
       "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "cleared"
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
     }
   ],
   "archivedFiles": [

@@ -1,0 +1,12 @@
+{
+  "format": "crimson_browser_mod_v1",
+  "id": "AldenShopDLC",
+  "title": "Alden Shop DLC",
+  "author": "Blablup",
+  "version": "17.4.12",
+  "enabled": true,
+  "priority": 1,
+  "files_dir": "files",
+  "description": "Alden progression shop with 1 Copper catalog prices, category tabs and Charting the Unknown offers.",
+  "requires_dlc": true
+}

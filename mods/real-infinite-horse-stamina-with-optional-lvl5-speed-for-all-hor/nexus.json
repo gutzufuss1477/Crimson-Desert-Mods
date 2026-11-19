@@ -6,26 +6,8 @@
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/2365",
   "pageVersion": "15",
   "sourceStatus": "published-release",
-  "sourceNote": "Updated 2026-11-13 for Steam build 26636972; see per-file confirmation scope and current release notes.",
+  "sourceNote": "Steelheart v11 mounted with Alden. The equipped buff in the merged item table was verified at 20. Both existing v15 stat-display ASIs passed the current executable checks.",
   "currentFiles": [
-    {
-      "fileId": 19468,
-      "name": "Steelheart Horseshoes v10 - 20 Stamina Regen",
-      "version": "10",
-      "category": "MAIN",
-      "gameVersion": "2.04.05",
-      "steamBuild": "26361232",
-      "runtimeBehaviorAuthorConfirmed": true,
-      "exactReleasePackageInGameTested": false,
-      "validation": "Steelheart_Horseshoes v10 published through Nexus API v3 on 2026-11-04. The author confirmed Alden, Steelheart, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The final packages preserve the confirmed field targets, effects and runtime payloads; only release metadata and readmes changed. The exact final ZIPs were not separately run in game. DLC installations/data remain unverified. Both data-application orders, idempotence and exact original effects passed regression checks. Published download SHA-256 verified.",
-      "sha256": "6e1d8586f317245598def8786a74f902f3cd0937ead032f796f8f635633bfbfe",
-      "bytes": 1451,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=19468",
-      "dlcCompatibilityValidated": false,
-      "dmmMinimumVersion": "4.6.4",
-      "characterCreatorVersion": "9.1.32",
-      "originalEquipAllArmorCompatible": true
-    },
     {
       "fileId": 21015,
       "name": "Mount Speed Only v15 - Level 5 Display",
@@ -39,7 +21,8 @@
       "bytes": 100968,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=21015",
       "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "cleared"
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
     },
     {
       "fileId": 21016,
@@ -54,7 +37,24 @@
       "bytes": 100955,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=21016",
       "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "cleared"
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
+    },
+    {
+      "fileId": 22277,
+      "name": "Steelheart Horseshoes v11 - 20 Stamina Regen",
+      "version": "11",
+      "category": "MAIN",
+      "steamBuild": "26776744",
+      "runtimeBehaviorAuthorConfirmed": false,
+      "exactReleasePackageInGameTested": false,
+      "validation": "Steelheart v11 mounted with Alden. The equipped buff in the merged item table was verified at 20. Both existing v15 stat-display ASIs passed the current executable checks.",
+      "sha256": "6dfd88807db57d424a0bfb2f5e7db74aab6d9ecfa9469cb5174326e6e1aafd5e",
+      "bytes": 747,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=22277",
+      "publishedDownloadSha256Verified": true,
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
     }
   ],
   "archivedFiles": [
@@ -171,8 +171,26 @@
       "inGameTested": true,
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=19041",
       "validation": "Gameplay confirmed 2026-11-02 through DMM 4.6.4; payload unchanged from tested candidate."
+    },
+    {
+      "fileId": 19468,
+      "name": "Steelheart Horseshoes v10 - 20 Stamina Regen",
+      "version": "10",
+      "category": "ARCHIVED",
+      "gameVersion": "2.04.05",
+      "steamBuild": "26361232",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "Steelheart_Horseshoes v10 published through Nexus API v3 on 2026-11-04. The author confirmed Alden, Steelheart, original Character Creator Enhanced 9.1.32 / Equip All Armor and original Better Inventory 3.3 together in DMM and in game on 4 November 2026 without errors. The final packages preserve the confirmed field targets, effects and runtime payloads; only release metadata and readmes changed. The exact final ZIPs were not separately run in game. DLC installations/data remain unverified. Both data-application orders, idempotence and exact original effects passed regression checks. Published download SHA-256 verified.",
+      "sha256": "6e1d8586f317245598def8786a74f902f3cd0937ead032f796f8f635633bfbfe",
+      "bytes": 1451,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=19468",
+      "dlcCompatibilityValidated": false,
+      "dmmMinimumVersion": "4.6.4",
+      "characterCreatorVersion": "9.1.32",
+      "originalEquipAllArmorCompatible": true
     }
   ],
-  "dmmTestedVersion": "5.0.0",
+  "dmmTestedVersion": "5.0.2",
   "mountAsiScope": "UI stat display/cache; actual movement/physics changes not established. Steelheart separately changes the equipped stamina-regeneration buff."
 }

@@ -1,3 +1,7 @@
+## 19 November 2026 · Build 26776744
+
+Steelheart v11 mounted with Alden. The equipped buff in the merged item table was verified at 20. Both existing v15 stat-display ASIs passed the current executable checks.
+
 ## 2026-11-13 — Steam build 26636972
 
 All Stats / Speed Only v15 for Steam 26636972. Fixes UI field ordinals and native changed-value notification; 1,354 checks per variant. All Stats display confirmed. Correction: ASIs change displayed stat gauges; actual movement/physics increases are not established. Steelheart v10 remains unchanged.

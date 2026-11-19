@@ -1,0 +1,50 @@
+[
+  {
+    "mod": 2066,
+    "previous": 21020,
+    "fileId": 22278,
+    "name": "Alden Shop No DLC 17.3.9",
+    "version": "17.3.9",
+    "category": "OPTIONAL",
+    "sha256": "0463301d14ef17f536a2327f92dd1b6bd9b11c7c33d10a2a9fcf23fc65f272d9",
+    "bytes": 4535116,
+    "scan": "cleared",
+    "url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=22278"
+  },
+  {
+    "mod": 2066,
+    "previous": 21021,
+    "fileId": 22275,
+    "name": "Alden Shop DLC 17.4.12",
+    "version": "17.4.12",
+    "category": "MAIN",
+    "sha256": "48f308fb1267352ef888edf0fd46b2297cab0b88c9bccd74009fb0645e57fac3",
+    "bytes": 4541325,
+    "scan": "unverified",
+    "url": "https://www.nexusmods.com/crimsondesert/mods/2066?tab=files&file_id=22275"
+  },
+  {
+    "mod": 2365,
+    "previous": 19468,
+    "fileId": 22277,
+    "name": "Steelheart Horseshoes v11 - 20 Stamina Regen",
+    "version": "11",
+    "category": "MAIN",
+    "sha256": "6dfd88807db57d424a0bfb2f5e7db74aab6d9ecfa9469cb5174326e6e1aafd5e",
+    "bytes": 747,
+    "scan": "cleared",
+    "url": "https://www.nexusmods.com/crimsondesert/mods/2365?tab=files&file_id=22277"
+  },
+  {
+    "mod": 3669,
+    "previous": 21013,
+    "fileId": 22276,
+    "name": "Bank Refresh Gold and Bonds 1.4.1",
+    "version": "1.4.1",
+    "category": "MAIN",
+    "sha256": "2fcff960221ad6c89e603d36623333be275425b3c6851eda2fc38f721d1d64b0",
+    "bytes": 114499,
+    "scan": "cleared",
+    "url": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=22276"
+  }
+]

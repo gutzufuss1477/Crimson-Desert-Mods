@@ -1,3 +1,7 @@
+## 19 November 2026 · Build 26776744
+
+DLC and No DLC category switching and catalog prices confirmed in game with Charting the Unknown installed. Both full ZIPs rebuilt byte-for-byte from the release source and local game inputs.
+
 ## 2026-11-13 — Steam build 26636972
 
 DLC 17.4.6 / No DLC 17.3.7 for Steam 26636972. Fixes startup UI condition serialization and persistent-stock category selection; preserves native purchase identities. DLC author-confirmed, No DLC technically checked. 840 / 606 authored offers. Old BI 3.3 unsupported.

@@ -1,0 +1,11 @@
+{
+  "format": "crimson_browser_mod_v1",
+  "id": "AldenShop",
+  "title": "Alden Shop No DLC",
+  "author": "Blablup",
+  "version": "17.3.9",
+  "enabled": true,
+  "priority": 1,
+  "files_dir": "files",
+  "description": "Base-game Alden shop with 606 offers, category tabs and 1 Copper catalog prices."
+}

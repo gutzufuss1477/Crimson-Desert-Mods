@@ -1,4 +1,4 @@
-// Bank Refresh 1.4.0-test - Copyright (c) 2026 Blablup, MIT.
+// Bank Refresh 1.4.1-test - Copyright (c) 2026 Blablup, MIT.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -80,8 +80,8 @@ bool locked_adjust(uintptr_t component,uint16_t key,uint64_t now,uint64_t limit)
     bool changed=false;
     __try {
         __try {
-            auto records=*reinterpret_cast<BankRecord**>(component+0x140);
-            const auto count=*reinterpret_cast<uint32_t*>(component+0x148);
+            auto records=*reinterpret_cast<BankRecord**>(component+0x150);
+            const auto count=*reinterpret_cast<uint32_t*>(component+0x158);
             size_t bytes{};
             BankRecord snapshot[32]{};
             uint32_t index{};
