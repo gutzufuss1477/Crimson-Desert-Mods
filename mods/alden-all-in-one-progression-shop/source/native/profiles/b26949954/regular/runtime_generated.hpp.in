@@ -1,0 +1,37 @@
+#pragma once
+#include <span>
+#include <cstdint>
+namespace alden::runtime {
+inline constexpr char Version[]="Alden Category Tabs 17.3.11 / Steam 26949954";
+inline constexpr uintptr_t Deserialize=0x43dd5d0;
+inline constexpr uintptr_t MemoryReaderVtable=0x5cd0888;
+inline constexpr uintptr_t MemoryRead=0x16ce340;
+inline constexpr char CssHash[]="ae7711685e72f02c5d66e9319902e42de044e53aad6db881cee3e8d44967753a";
+struct Guard {uint32_t rva; unsigned char bytes[16];};
+inline constexpr Guard Guards[]={{Deserialize,{0x48,0x89,0x5c,0x24,0x10,0x48,0x89,0x6c,0x24,0x18,0x48,0x89,0x74,0x24,0x20,0x57}},{MemoryRead,{0x4c,0x8b,0xc9,0x8b,0x49,0x2c,0x42,0x8d,0x4,0x1,0x41,0x39,0x41,0x28,0x73,0x3}}};
+inline constexpr unsigned char BuySourceTail[]={@@BuySourceTail@@};
+struct Edit {size_t offset; std::span<const unsigned char> before,after;};
+inline constexpr size_t AddedSize=18445;
+inline constexpr char VanillaInputHash[]="16f82442461dfc0a63bb3f6b56381658aa2d00cbf422baeefe073867f40eb4f9";
+inline constexpr char VanillaOutputHash[]="19ec478f98ded9cc8ab4f0272232d27ce5accfe9f1f24f59cacd1d987eb2b3f2";
+inline constexpr unsigned char vanilla_from_0[]={@@vanilla_from_0@@};
+inline constexpr unsigned char vanilla_to_0[]={@@vanilla_to_0@@};
+inline constexpr unsigned char vanilla_to_1[]={@@vanilla_to_1@@};
+inline constexpr unsigned char vanilla_from_2[]={@@vanilla_from_2@@};
+inline constexpr unsigned char vanilla_to_2[]={@@vanilla_to_2@@};
+inline constexpr unsigned char vanilla_to_3[]={@@vanilla_to_3@@};
+inline constexpr unsigned char vanilla_from_4[]={@@vanilla_from_4@@};
+inline constexpr unsigned char vanilla_to_4[]={@@vanilla_to_4@@};
+inline constexpr Edit Edits[]={{1186,vanilla_from_0,vanilla_to_0},{66590,{},vanilla_to_1},{133943,vanilla_from_2,vanilla_to_2},{133947,{},vanilla_to_3},{137736,vanilla_from_4,vanilla_to_4}};
+inline constexpr char BetterInputHash[]="68e5e5c9ac318a451ebf1efe12fd73d101dd2b7362d593d520a639b5c1ed6d54";
+inline constexpr char BetterOutputHash[]="4846601722928ce90fe685831112d4422cc9fae72a7aa307e0fcc677858ac727";
+inline constexpr unsigned char better_from_0[]={@@better_from_0@@};
+inline constexpr unsigned char better_to_0[]={@@better_to_0@@};
+inline constexpr unsigned char better_to_1[]={@@better_to_1@@};
+inline constexpr unsigned char better_from_2[]={@@better_from_2@@};
+inline constexpr unsigned char better_to_2[]={@@better_to_2@@};
+inline constexpr unsigned char better_to_3[]={@@better_to_3@@};
+inline constexpr unsigned char better_from_4[]={@@better_from_4@@};
+inline constexpr unsigned char better_to_4[]={@@better_to_4@@};
+inline constexpr Edit BetterEdits[]={{1186,better_from_0,better_to_0},{66590,{},better_to_1},{133943,better_from_2,better_to_2},{133947,{},better_to_3},{137736,better_from_4,better_to_4}};
+}

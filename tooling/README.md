@@ -1,3 +1,13 @@
+## Build 26949954 · Crimson Desert 2.06.00
+
+Use the x64 MSVC toolchain. Bank and Mining build with their respective source/src/build.cmd scripts. Use source/native/build.cmd for Healthbar. For the two mount variants, run tooling/prepare_mount_fixture_b26949954.py with --exe pointing to the installed game executable. Then run tooling/build_allstats_204.cmd and tooling/build_speed_204.cmd. Steelheart's field patch is in its steelheart-v12 recipe directory.
+
+For Alden, run source/native/prepare_b26949954.py for each edition. Supply --variant regular or dlc, --ui pointing to the clean current npcstorebuyview2_game.uibinary, --previous-fixtures pointing to the matching 26776744 native fixtures, --minhook pointing to the MinHook source and --output pointing to a build folder. Run build_runtime.cmd in that folder. To generate the complete ZIP, run source/build_data_b26949954.py with --variant, --current (clean extracted groups), --previous (Nexus 22278 for regular or 22275 for DLC), --parser (DMM 5.3.2 dmm_parser.pyd), --asi and --output. Install Python lz4 and use a Python runtime compatible with the supplied DMM parser.
+
+For Healthbar, run source/build_healthbar_b26949954.py with --current (clean extracted groups 0008 and 0012, including ui/bin__), --parser, --asi and --output (a directory). It generates and verifies all three variants.
+
+The published plugins are the binaries tested in game. Some diagnostic banners retain development labels, including v5 in the Healthbar helper. Use the package version and SHA-256 to identify the release.
+
 ## Build 26776744
 
 Use the Visual Studio x64 C++ toolchain. Bank builds with its source/src/build.cmd. Steelheart's DMM patch is in the mount mod's recipes/steelheart-v11 directory.

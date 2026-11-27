@@ -1,0 +1,11 @@
+{
+  "format": "crimson_browser_mod_v1",
+  "id": "AldenShop",
+  "title": "Alden Shop No DLC",
+  "author": "Blablup",
+  "version": "17.3.11",
+  "enabled": true,
+  "priority": 1,
+  "files_dir": "files",
+  "description": "Alden Shop No DLC for Steam 26949954, 605 offers"
+}

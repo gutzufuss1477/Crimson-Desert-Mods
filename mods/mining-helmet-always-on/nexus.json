@@ -4,25 +4,24 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 3586,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3586",
-  "pageVersion": "1.5.0",
+  "pageVersion": "1.6.0",
   "sourceStatus": "published-release",
-  "sourceNote": "The released ASI passed all 36 native checks. The ore group and 375 relevant records match.",
+  "sourceNote": "1.6.0 updates ore detection, highlighting and configurable range. This release checks the exact game executable. Author-confirmed in game.",
   "currentFiles": [
     {
-      "fileId": 21014,
-      "name": "Mining Helmet Always On 1.5.0",
-      "version": "1.5.0",
+      "fileId": 23846,
+      "name": "Mining Helmet Always On 1.6.0",
+      "version": "1.6.0",
       "category": "MAIN",
-      "steamBuild": "26636972",
+      "steamBuild": "26949954",
       "runtimeBehaviorAuthorConfirmed": true,
-      "exactReleasePackageInGameTested": false,
-      "validation": "Public native/game payloads equal the validated candidates; only documentation and metadata finalized. Author reported working in game.",
-      "sha256": "2737a2a618b0023d362dd3e7eca57297b1a2f1fa23183133a722338220896da1",
-      "bytes": 142591,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=21014",
-      "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "cleared",
-      "compatibilityCheckedOnBuild": "26776744"
+      "validation": "Author-tested in game. Distributed functional payloads match the test package byte-for-byte. Readme updated for release.",
+      "sha256": "fca957800f0430f39c646e3487d9222b31eca6480bfd2ebd8a094f30bed773bf",
+      "bytes": 143117,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=23846",
+      "nexusMd5SearchVerified": true,
+      "nexusScanSha256Verified": true,
+      "nexusSecurityScanStatus": "cleared"
     }
   ],
   "archivedFiles": [
@@ -72,7 +71,23 @@
       "bytes": 143083,
       "asiSha256": "977aaa8b5e90fbbb850e0369716096f0ad574691d43d6d50b642ac55b6d5eacb",
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=19922"
+    },
+    {
+      "fileId": 21014,
+      "name": "Mining Helmet Always On 1.5.0",
+      "version": "1.5.0",
+      "category": "MAIN",
+      "steamBuild": "26636972",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "exactReleasePackageInGameTested": false,
+      "validation": "Public native/game payloads equal the validated candidates; only documentation and metadata finalized. Author reported working in game.",
+      "sha256": "2737a2a618b0023d362dd3e7eca57297b1a2f1fa23183133a722338220896da1",
+      "bytes": 142591,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3586?tab=files&file_id=21014",
+      "publishedDownloadSha256Verified": true,
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
     }
   ],
-  "dmmTestedVersion": "5.0.0"
+  "dmmTestedVersion": "5.3.2"
 }

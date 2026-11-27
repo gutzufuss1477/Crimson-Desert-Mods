@@ -1,5 +1,5 @@
-**Faster Bank Refresh - Gold and Bonds 1.4.1**
-Updated for Steam build 26776744 (EXE 1.0.0.3732). The updated bank lookup and component layout passed the executable and timer tests.
+**Faster Bank Refresh - Gold and Bonds 1.4.2**
+Author-tested in game on Crimson Desert 2.06.00, Steam build 26949954, with DMM 5.3.2.
 
 [Support my mods on Ko-fi](https://ko-fi.com/gutzufuss) — optional support helps me keep making updates.
 
@@ -12,7 +12,8 @@ Close the game. Remove the previous version in DMM and any duplicate manually in
 Do not combine this with old BR04, Bonds Test or other Bank Refresh copies.
 
 **What changed / future updates**
-Version 1.4.1 supports the new bank component layout and typed lookup used by this game build. Both timer hook paths passed host and executable validation. The ZIP includes the ASI and both timer settings in Bank_Refresh.ini.
+Version 1.4.2 updates the bank lookup and timer component for both gold and bonds. The ZIP includes both interval settings in Bank_Refresh.ini.
+
 The native ASI resolves validated code structures and may survive updates that only move compatible code. Changed layouts, changed functions or ambiguous matches can still require an update. Future compatibility is not guaranteed.
 Status: %LOCALAPPDATA%\CrimsonDesertMods\Bank_Refresh.status.txt.
 
@@ -23,4 +24,4 @@ Close the game, disable/remove the plugin in DMM and remount. Shortened deadline
 **Credits**
 Thanks to Jicku12x and c47n1p for requesting bond support, the MinHook contributors and ThirteenAG for Ultimate ASI Loader.
 
-[Build 26776744 release notes](../../releases/mods-b26776744.md).
+[Build 26949954 downloads and checksums](../../releases/mods-b26949954.md)

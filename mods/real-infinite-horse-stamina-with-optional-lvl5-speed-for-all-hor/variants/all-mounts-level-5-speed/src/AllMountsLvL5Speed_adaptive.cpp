@@ -1,6 +1,6 @@
-#include "../../../../../tooling/native/profiles_26636972.hpp"
+#include "../../../../../tooling/native/mount_26949954.hpp"
 #include <cstdio>
-// Crimson Desert Steam 26636972 - All Mounts LvL 5 Speed Only
+// Crimson Desert Steam 26949954 - All Mounts LvL 5 Speed Only
 // Standalone x64 ASI with a shared structural resolver. Loaded directly by an x64 ASI loader; DMM is optional.
 // Steam 26329202; host tests cover the R15/RCX register path shared with AllStats.
 // In-game validation of this version is pending.
@@ -163,7 +163,7 @@ static I64 veh_handler(EXCEPTION_POINTERS_MIN* ep) {
     if (code == STATUS_BREAKPOINT && ep->ExceptionRecord->ExceptionAddress == (PVOID)g_target) {
         // Windows x64 CONTEXT offsets:
         // EFlags 0x44, RCX 0x80, R15 0xF0, R14 0xE8, RIP 0xF8.
-        // Build 26636972 retains the field owner in R14. R12/R15 are reused.
+        // Build 26949954 retains the field owner in R14. R12/R15 are reused.
         // The complete resolved function proves this program point and +0x230.
         U64 r14 = ctx64(ctx, 0xE8);
         if (valid_ptr(r14) && valid_ptr(r14+0x258ull)) {
@@ -179,7 +179,7 @@ static I64 veh_handler(EXCEPTION_POINTERS_MIN* ep) {
             if (statIndex == 3 && subIndex >= 15 && subIndex <= 18)
                 InterlockedExchange(&g_observedField,static_cast<LONG>(0x1000000u | (static_cast<U32>(subIndex)<<16) | ordinal));
 
-            // b26636972 inserted three property entries. Live UI subindices 15..17
+            // b26949954 inserted three property entries. Live UI subindices 15..17
             // use ordinals 50..52; property table key 1000089 is ordinal 53.
             if (statIndex == 3 &&
                 subIndex == 15 &&
@@ -187,7 +187,7 @@ static I64 veh_handler(EXCEPTION_POINTERS_MIN* ep) {
                 maxv == 5000 && minv == 0 && step == 1000 &&
                 current <= maxv) {
                 wr64(field, maxv);
-                // Keep RDX (previous value) intact: the native continuation
+                // Keep RCX (previous value) intact: the native continuation
                 // must detect the change and update the visible gauge.
                 InterlockedExchange(&g_matchedFields,1);
             }
@@ -230,8 +230,8 @@ static DWORD WINAPI initialize_mount(PVOID) {
     if (rd32(imageBase + rd32(imageBase + 0x3C) + 24 + 56) < 0x1012ABF) return 1;
     g_gameBase = imageBase;
 
-    // Strict Crimson Desert Steam 26636972 guard. The sequence is unique in build 26329202.
-    static const U8 guardBytes[16] = {0x4D,0x8B,0x9E,0x30,0x02,0x00,0x00,0x4D,0x3B,0xD8,0x0F,0x85,0xC4,0xFB,0xFF,0xFF};
+    // Strict Crimson Desert Steam 26949954 guard. The sequence is unique in build 26329202.
+    static const U8 guardBytes[16] = {0x4d,0x8b,0x9e,0x30,0x2,0x0,0x0,0x4d,0x3b,0xd8,0xf,0x85,0x66,0xf9,0xff,0xff};
     U8* guardAt = imageBase + mountAddresses.rva(0x1012aaf);
     U32 i;
     for (i = 0; i < 16; ++i) {
@@ -245,7 +245,7 @@ static DWORD WINAPI initialize_mount(PVOID) {
     g_flush = flush;
 
     g_target = imageBase + mountAddresses.rva(0x101248b);
-    static const U8 targetBytes[16] = {0x4D,0x8B,0x96,0x30,0x02,0x00,0x00,0x49,0x3B,0xD2,0x75,0x0D,0x49,0x3B,0x8E,0x38};
+    static const U8 targetBytes[16] = {0x4d,0x8b,0x96,0x30,0x2,0x0,0x0,0x49,0x3b,0xca,0x75,0xd,0x4d,0x3b,0xae,0x38};
     for (i = 0; i < 16; ++i) {
         if (g_target[i] != targetBytes[i]) return 1; // Wrong build: fail closed.
     }
@@ -261,18 +261,18 @@ static DWORD WINAPI initialize_mount(PVOID) {
         return 1;
 
     set_break_byte(0xCC);
-    cd::write_status(L"Mount_Speed.status.txt","v15 hook installed; waiting for matching mount fields",mountAddresses);
+    cd::write_status(L"Mount_Speed.status.txt","v16 hook installed; waiting for matching mount fields",mountAddresses);
     LONG lastObserved=0;
     for (;;) {
         Sleep(1000);
         if (InterlockedCompareExchange(&g_matchedFields,0,0)) {
-            cd::write_status(L"Mount_Speed.status.txt","v15 active; matching mount fields applied",mountAddresses);
+            cd::write_status(L"Mount_Speed.status.txt","v16 active; matching mount fields applied",mountAddresses);
             break;
         }
         const LONG observed=InterlockedCompareExchange(&g_observedField,0,0);
         if (observed && observed!=lastObserved) {
             lastObserved=observed;char message[160]{};
-            std::snprintf(message,sizeof(message),"v15 hook installed; field guard waiting (sub=%u ordinal=%u)",
+            std::snprintf(message,sizeof(message),"v16 hook installed; field guard waiting (sub=%u ordinal=%u)",
                 (static_cast<unsigned>(observed)>>16)&255u,static_cast<unsigned>(observed)&65535u);
             cd::write_status(L"Mount_Speed.status.txt",message,mountAddresses);
         }

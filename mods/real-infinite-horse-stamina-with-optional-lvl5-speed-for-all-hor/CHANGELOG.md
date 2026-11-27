@@ -1,3 +1,7 @@
+## 27 November 2026 · Steam 26949954
+
+All Stats and Speed Only v16 update the level-5 stat display. Steelheart v12 changes the equipped stamina-regeneration buff from 4 to 20.
+
 ## 19 November 2026 · Build 26776744
 
 Steelheart v11 mounted with Alden. The equipped buff in the merged item table was verified at 20. Both existing v15 stat-display ASIs passed the current executable checks.

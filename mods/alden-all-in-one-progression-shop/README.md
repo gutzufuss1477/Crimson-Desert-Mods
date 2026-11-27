@@ -1,19 +1,20 @@
-**Alden Shop DLC 17.4.12 / No DLC 17.3.9**
-Steam build 26776744, EXE 1.0.0.3732. Tested with DMM 5.0.2. The DLC edition now keeps the selected category and shows expansion offers at 1 Copper.
+**Alden Shop DLC 17.4.14 / No DLC 17.3.11**
+Author-tested in game on Crimson Desert 2.06.00, Steam build 26949954, with DMM 5.3.2. Both editions use the updated shop UI format. This fixes a black screen that could appear before the main menu.
 
 [Support my mods on Ko-fi](https://ko-fi.com/gutzufuss) — optional support helps me keep making updates.
 
 **Choose one complete package**
 
-- **DLC 17.4.12 — Main File:** requires installed Charting the Unknown. 840 authored offers / 831 distinct items, including 234 DLC offers and the 40 original offers. Nine category tabs plus All.
-- **No DLC 17.3.9 — Optional File:** 606 offers / 597 distinct items, including 40 original offers. Eight category tabs plus All. No DLC items or requirement.
+- **DLC 17.4.14** requires Charting the Unknown. It includes 839 offers across nine categories plus All, including 234 expansion offers.
+- **No DLC 17.3.11** includes 605 base-game offers across eight categories plus All. You can use it with the expansion installed.
 
-Choose one edition. Each ZIP contains the complete shop and its matching Alden Category Tabs helper.
+Each ZIP includes the shop and its matching Alden Category Tabs helper.
 
 **Categories and prices**
-Both versions: Abyss 94, Abyss Plans 93, Books 71, Recipes 95, Blueprints 122, Materials 41, Contracts 50 and Original 40, plus All. DLC adds its own tab with 234 expansion offers: 18 Abyss gears, 18 plans, 40 books, 19 recipes, 104 blueprints and 35 materials.
+Both versions: Abyss 94, Abyss Plans 93, Books 71, Recipes 95, Blueprints 121, Materials 41, Contracts 50 and Original 40, plus All. DLC adds its own tab with 234 expansion offers: 18 Abyss gears, 18 plans, 40 books, 19 recipes, 104 blueprints and 35 materials.
 Long Horn and Water remain under Materials, with 1 Copper prices and 999 merchant stock each; normal inventory stack limits are unchanged. All 40 DLC crafting/knowledge books remain at Alden. Tiered Abyss Gear stays at Tier I; higher tiers remain for crafting/synthesis.
-Counts describe the catalog, not guaranteed visible availability. Unlocks and sold-out conditions can reduce it; the current live DLC test showed 839 available offers. Three obsolete blueprint definitions were removed without renumbering persistent stock identities.
+Unlocks and stock can affect which offers are available. This update removes the obsolete wagon lantern blueprint and preserves the saved stock identities of the other offers.
+
 Original preserves Alden's 40 native offers, stocks and unlock/restock conditions. 31 keep normal prices; nine items shared with the mod catalog are 1 Copper in both places, with separate stock records. Reopening resets All. Labels support all 15 game text languages. Use mouse tabs or the displayed keyboard/controller controls.
 
 **Install or update in DMM**
@@ -27,9 +28,8 @@ Requires an x64 ASI loader, DMM runtime and the [Microsoft Visual C++ v14 x64 ru
 **Prices and compatibility**
 Opening Alden sets the catalog item prices for the rest of that game session. Other shops using the same item prices can reflect the change. Of Alden's 40 original offers, 31 keep their regular prices. A conflicting item price or unknown catalog layout can stop the helper from applying its edits. Mods replacing the same shop UI or trader record need a compatibility check. The helper verifies the executable and UI for this build. Later game updates may require a new download.
 
-**Validation**
-The DLC shop and category switching were tested in game. The DLC tab displayed all 234 expansion offers, and all 840 shop entries resolved to their intended items. No DLC passed the base-game catalog and category tests for all 606 offers and 798 price fields. The author also tested its tabs and purchase price in game with the expansion installed.
-For a problem report, include your game build, DMM version, active shop/UI mods, mount log and Alden Category Tabs.asi.log.
+**Compatibility and support**
+The category helper now reads the 2.06 shop layout. If the game rejects the added controls, it retries the original shop screen. For a problem report, include your game build, DMM version, active shop or UI mods, mount log and Alden Category Tabs.asi.log.
 
 **Special thanks**
 Thanks to the two community members who made the DLC available to me for building and testing this update.
@@ -40,4 +40,4 @@ Close the game, unmount, disable/remove the shop and its category helper, then r
 Blablup / gutzufuss1477. Developed with AI assistance. MIT; MinHook license included.
 [Source, release notes and checksums on GitHub](https://github.com/gutzufuss1477/Crimson-Desert-Mods).
 
-[Build 26776744 release notes](../../releases/mods-b26776744.md).
+[Build 26949954 downloads and checksums](../../releases/mods-b26949954.md)

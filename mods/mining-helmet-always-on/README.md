@@ -1,5 +1,5 @@
-**Mining Helmet Always On 1.5.0**
-Verified against Steam build 26776744. All 36 native checks passed and the ore group and 375 relevant records match. The latest in-game confirmation was on build 26636972.
+**Mining Helmet Always On 1.6.0**
+Author-tested in game on Crimson Desert 2.06.00, Steam build 26949954, with DMM 5.3.2.
 
 Highlights nearby ore without requiring the mining helmet. Keep your preferred headgear.
 
@@ -13,9 +13,9 @@ Includes live INI reload, ore re-entry handling and native material handoff. Fas
 Close the game. Remove the previous version in DMM and any duplicate manually installed copy. Back up custom INI settings. Import the complete ZIP through DMM ASI Mods, enable the plugin, mount and restart. Keep the working x64 ASI loader and DmmRuntime.asi. Included INIs are imported and deployed with the ASI. Manual alternative: put the ASI and its INI, if supplied, beside CrimsonDesert.exe in bin64 with an x64 ASI loader. No loader is bundled. Do not combine manual and manager copies.
 Remove old Mining_Ore_Group_Range test plugins too. Keep only one Mining Helmet ASI.
 
-**What changed / compatibility**
-Version 1.5.0 adapts the typed lookup and material-manager path for build 26636972. Host, resolver and runtime checks passed; the native file is identical to the author-tested candidate.
-The native ASI resolves validated code structures and may survive updates that only move compatible code. Changed layouts, changed functions or ambiguous matches can still require an update. Future compatibility is not guaranteed.
+**What changed in 1.6.0**
+Updated the ore-group reader, nearby-ore lookup and material settings used for the glow. This release checks the exact game executable and native functions before it activates. A later executable requires a compatibility update.
+
 The actual helmet/lantern takes control while active; automatic glow resumes after a short delay. Pressing B with the helmet still invokes its separate native mode. Other mods changing the same detection materials, handlers or ore group can conflict.
 Status files are under %LOCALAPPDATA%\MiningHelmetAlwaysOn. Include the latest status and your Steam build when reporting a refusal. Disable/remove the plugin in DMM to uninstall.
 
@@ -23,4 +23,4 @@ Status files are under %LOCALAPPDATA%\MiningHelmetAlwaysOn. Include the latest s
 **Credits**
 Thanks to Tsuda Kageyu and the MinHook contributors, ThirteenAG for Ultimate ASI Loader and the testers. MinHook's license is included; the loader is separate.
 
-[Build 26776744 release notes](../../releases/mods-b26776744.md).
+[Build 26949954 downloads and checksums](../../releases/mods-b26949954.md)

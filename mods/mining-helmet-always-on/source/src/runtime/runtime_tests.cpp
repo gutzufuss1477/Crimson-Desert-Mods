@@ -143,29 +143,27 @@ void lifecycle() {
 }
 unsigned eyeCalls{},orientationCalls{},rotationCalls{};
 std::array<uint8_t,0x220> modeRecord{};
-uintptr_t __fastcall modeLookup(const uint16_t* indexPointer) {
-    const uintptr_t unused=0;
-    const uint32_t index=*indexPointer;
-    assert(unused==0 && index==13); // Build 26636972: RCX points to the u16 index.
+uintptr_t __fastcall modeLookup(uintptr_t manager,uint32_t index) {
+    assert(manager==0x1234 && index==13);
     return reinterpret_cast<uintptr_t>(modeRecord.data());
 }
 void currentModeLayout() {
     using namespace auto34;
     modeInfo=modeLookup; modeRecord={};
-    field(modeRecord,8,uint32_t{10});
-    field(modeRecord,0x1d0,uint8_t{1}); field(modeRecord,0x208,uint8_t{1});
-    field(modeRecord,0x1ec,1.0f); // Up Y, at vector base 0x1e8.
-    field(modeRecord,0x1fc,1.0f); // Forward Z, at vector base 0x1f4.
+    field(modeRecord,0,uint32_t{10});
+    field(modeRecord,0x1c8,uint8_t{1}); field(modeRecord,0x200,uint8_t{1});
+    field(modeRecord,0x1e4,1.0f); field(modeRecord,0x1f4,1.0f);
     float look[3]{},up[3]{};
-    assert(modeAxes(look,up) && look[0]==0 && look[1]==0 && look[2]==1);
+    assert(!modeAxes(0,look,up));
+    assert(modeAxes(0x1234,look,up) && look[0]==0 && look[1]==0 && look[2]==1);
     assert(up[0]==0 && up[1]==1 && up[2]==0);
     const auto good=modeRecord;
-    for(const size_t offset:{size_t{8},size_t{0x1d0},size_t{0x208}}) {
-        modeRecord=good; modeRecord[offset]=0; assert(!modeAxes(look,up));
+    for(const size_t offset:{size_t{0},size_t{0x1c8},size_t{0x200}}) {
+        modeRecord=good; modeRecord[offset]=0; assert(!modeAxes(0x1234,look,up));
     }
-    modeRecord={}; field(modeRecord,0,uint32_t{10});
-    field(modeRecord,0x1c8,uint8_t{1}); field(modeRecord,0x200,uint8_t{1});
-    assert(!modeAxes(look,up)); // Old layout must never pass the identity checks.
+    modeRecord={}; field(modeRecord,8,uint32_t{10});
+    field(modeRecord,0x1d0,uint8_t{1}); field(modeRecord,0x208,uint8_t{1});
+    assert(!modeAxes(0x1234,look,up));
 }
 float expectedDirection[3]={1,0,0};
 float* __fastcall eye(uintptr_t player,float* p) {
@@ -499,15 +497,15 @@ void groupRange() {
     using namespace ore_range;
     original=groupNativeRead;changed=0;refused=0;
     std::array<uint8_t,0x1d8> record{};
-    const char* label="Item_Collect_Ore";
-    field(record,8,uint32_t{1708});field(record,0,reinterpret_cast<uintptr_t>(&label));
+
+    field(record,0,uint32_t{1708}); field(record,4,uint32_t{783});
     field(record,LevelOffset,int32_t{5});
     const auto before=record;
     assert(onRead(nullptr,record.data())==1 && groupNativeCalls==1 && changed==1);
     int32_t level{};std::memcpy(&level,record.data()+LevelOffset,4);assert(level==7);
     for(size_t i=0;i<record.size();++i)if(i<LevelOffset || i>=LevelOffset+4)assert(record[i]==before[i]);
     for(uint32_t key:{0u,1707u,1709u,1000632u,1711u,1000816u,0xffffffffu}) {
-        record=before;field(record,8,key);const auto saved=record;
+        record=before;field(record,0,key);const auto saved=record;
         onRead(nullptr,record.data());assert(record==saved);
     }
     for(int32_t prior:{-1,0,4,6,7,8,31,100}) {
@@ -518,9 +516,9 @@ void groupRange() {
         record=before;record[DefaultOffset]=flag;const auto saved=record;
         onRead(nullptr,record.data());assert(record==saved);
     }
-    record=before;label="Item_Collect_Ore_Drop";
-    onRead(nullptr,record.data());assert(record==before);
-    label="Item_Collect_Ore";groupNativeResult=0;
+    record=before;field(record,4,uint32_t{782}); const auto wrongIndex=record;
+    onRead(nullptr,record.data());assert(record==wrongIndex);
+    record=before;groupNativeResult=0;
     assert(onRead(nullptr,record.data())==0 && record==before);
     groupNativeResult=1;assert(onRead(nullptr,nullptr)==1);
     auto* inaccessible=VirtualAlloc(nullptr,4096,MEM_RESERVE|MEM_COMMIT,PAGE_NOACCESS);

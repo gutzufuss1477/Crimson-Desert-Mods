@@ -9,26 +9,24 @@
 #include <cstring>
 #include <string>
 #include "hash_core.hpp"
-#include "../../../../tooling/native/profiles_26636972.hpp"
+#include "../../../../tooling/native/healthbar_26949954.hpp"
 
 namespace healthbar {
 uintptr_t UpdateRva=0xedfc10, SlotRva=0x59ea750, HeadUpVtableRva=0x59ec0e8;
-uintptr_t ContextRva=0xedfdca, WordRva=0xedfdd0;
+uintptr_t ContextRva=0xf84aaf, WordRva=0xf84ab8;
 constexpr uint8_t Context[]={0x8b,0x43,0x04,0x39,0x86,0xa4,0x01,0x00,0x00,0x75,0x1f,
     0x48,0x8b,0x5b,0x08,0x48,0x8b,0x8b,0xe0,0x00,0x00,0x00,0x48,0x85,0xc9,0x74,0x21};
 constexpr uint8_t UpdateHead[]={0x48,0x89,0x5c,0x24,0x08,0x55,0x56,0x57,0x41,0x54,0x41,0x55,0x41,0x56,0x41,0x57};
 cd::Addresses addresses;
-constexpr char HtmlHash[]="0c5d73a5bf41ae660159d401a900ba0c425037544ee0c7589b97f719edeec9c1";
-constexpr char CssHash[]="9e646b05c8465d155e11d27671d0899b78fc9ab7d0d9aeae98d2222595f55e24";
-constexpr char FramedCssHash[]="9de0ceb306b8f78afea00203c75febe49b1615874ec4d726f897040c9081dde7";
-constexpr char SingleHtmlHash[]="dac9fa9905b29b55418371b2287b29598fbeef17a518159961b442ac23bad80c";
-constexpr char SingleCssHash[]="89148d1ba2e4ce8fc28641959447c3661acd9ca45c5dfc9674a0c481cc4b00e3";
 enum class UiMode { unsupported, single, compact, framed };
-UiMode identify_ui(const char* html,const char* css) {
-    if(std::strcmp(html,SingleHtmlHash)==0 && std::strcmp(css,SingleCssHash)==0) return UiMode::single;
-    if(std::strcmp(html,HtmlHash)!=0) return UiMode::unsupported;
-    if(std::strcmp(css,CssHash)==0) return UiMode::compact;
-    if(std::strcmp(css,FramedCssHash)==0) return UiMode::framed;
+constexpr char singleHash[]="29f93032c459a0c96a40e573a54f0e0954109ae7e64ff538659a0e6b5a09f9a7";
+constexpr char framedHash[]="77f883a8f45b0784d514b8cb2d3eaf791a1a17f1fed0b040ce12cabd57e84a79";
+constexpr char compactHash[]="2340961d36f1e14a4556c996eefc38d6b5d4bc06c7a1f303af40e9c0c7523336";
+UiMode identify_ui(const char* html, const char* css) {
+    if (*css) return UiMode::unsupported;
+    if (std::strcmp(html,singleHash)==0) return UiMode::single;
+    if (std::strcmp(html,framedHash)==0) return UiMode::framed;
+    if (std::strcmp(html,compactHash)==0) return UiMode::compact;
     return UiMode::unsupported;
 }
 using Update=void(__fastcall*)(uintptr_t);
@@ -61,7 +59,7 @@ bool patch_word(uintptr_t word) {
     if(word%8) return false;
     uint64_t expected{},replacement{};
     std::memcpy(&expected,Context+(WordRva-ContextRva),sizeof(expected));
-    replacement=(expected&~(uint64_t{0xffff}<<24))|(uint64_t{0x9090}<<24);
+    replacement=(expected & ~uint64_t{0xffff}) | uint64_t{0x9090};
     uint64_t current{};
     if(!value(word,current) || current!=expected) return false;
     DWORD oldProtect{};

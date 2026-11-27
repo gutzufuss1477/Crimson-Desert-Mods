@@ -1,0 +1,12 @@
+{
+  "format": "crimson_browser_mod_v1",
+  "id": "AldenShopDLC",
+  "title": "Alden Shop DLC",
+  "author": "Blablup",
+  "version": "17.4.14",
+  "enabled": true,
+  "priority": 1,
+  "files_dir": "files",
+  "description": "Alden Shop DLC for Steam 26949954, 839 offers",
+  "requires_dlc": true
+}

@@ -1,0 +1,97 @@
+{
+  "arrays": {
+    "BuySourceTail": "d753ed9ee72a9b4c0636ba36c870579c0438aa08bd5062940bd5470b98bcb257",
+    "vanilla_from_0": "2594b6a92ebfb1c3312deb7d01c015fb95e9fbe9bd7bc6b527af07813ec7b910",
+    "vanilla_to_0": "7aa8ca4a02506da9133d8f889678b76f716ce45d02e22fdb7b70a15e56a0eff8",
+    "vanilla_to_1": "9034b774e1b3d446064db31a34f26b6c26f2bbc004ef1e13265fd6c3f382c03a",
+    "vanilla_from_2": "977d1a863cf97921a76b1f8414af65c7463cdab40d64c174cead35ad54c4ddb3",
+    "vanilla_to_2": "1a00f51f3029fa4b7e61b9bf7aa9de5a64798857872981f7e056e4f437171955",
+    "vanilla_to_3": "76a4048d9f5322a904ae8b3c2c6cb86d37705fa7a3be08f5ad3785ffdc6a6eaa",
+    "vanilla_from_4": "bae89cf8b6866ab5ffc66c98b50c328b5eb35b677c7c949728902a1a3b71eb38",
+    "vanilla_to_4": "4d4b7ba78920557f7d7cc8ca6b211cd22e30d3c56bf491c9fefe853232a49f0c",
+    "better_from_0": "2594b6a92ebfb1c3312deb7d01c015fb95e9fbe9bd7bc6b527af07813ec7b910",
+    "better_to_0": "7aa8ca4a02506da9133d8f889678b76f716ce45d02e22fdb7b70a15e56a0eff8",
+    "better_to_1": "9034b774e1b3d446064db31a34f26b6c26f2bbc004ef1e13265fd6c3f382c03a",
+    "better_from_2": "977d1a863cf97921a76b1f8414af65c7463cdab40d64c174cead35ad54c4ddb3",
+    "better_to_2": "1a00f51f3029fa4b7e61b9bf7aa9de5a64798857872981f7e056e4f437171955",
+    "better_to_3": "76a4048d9f5322a904ae8b3c2c6cb86d37705fa7a3be08f5ad3785ffdc6a6eaa",
+    "better_from_4": "bae89cf8b6866ab5ffc66c98b50c328b5eb35b677c7c949728902a1a3b71eb38",
+    "better_to_4": "4d4b7ba78920557f7d7cc8ca6b211cd22e30d3c56bf491c9fefe853232a49f0c"
+  },
+  "tailSize": 47,
+  "edits": {
+    "vanilla": [
+      [
+        1186,
+        4
+      ],
+      [
+        66590,
+        0
+      ],
+      [
+        133943,
+        4
+      ],
+      [
+        133947,
+        0
+      ],
+      [
+        137736,
+        957
+      ]
+    ],
+    "better": [
+      [
+        1186,
+        4
+      ],
+      [
+        66590,
+        0
+      ],
+      [
+        133943,
+        4
+      ],
+      [
+        133947,
+        0
+      ],
+      [
+        137736,
+        957
+      ]
+    ]
+  },
+  "fixtures": {
+    "better.bin": "68e5e5c9ac318a451ebf1efe12fd73d101dd2b7362d593d520a639b5c1ed6d54",
+    "better_expected.bin": "194b75c7a5e7e8b3eb94d4e80cdb1549733d4cbb8420b52000ceaae2b8bb61f8",
+    "previous_alden.bin": "6ee7478d65ec936cfb15a196b54d0f5bbd8d3a527f6b431d4aae5bbe51953a44",
+    "previous_vanilla.bin": "6b571f7fc9c95f50fe7ff9a9008c03341b19c64aaf876252a21350bcd6b1970b",
+    "vanilla.bin": "16f82442461dfc0a63bb3f6b56381658aa2d00cbf422baeefe073867f40eb4f9",
+    "vanilla_expected.bin": "9ba33e6e6aa29c271362502ae9cdd14a751a26cb3762aa852a1db584acbdfddd"
+  },
+  "sources": [
+    "native_tabs.cpp",
+    "native_tests.cpp",
+    "filter_core.hpp",
+    "runtime_ui.hpp",
+    "runtime_ui_tests.cpp",
+    "ui_patch_core.hpp",
+    "catalog_generated.hpp",
+    "catalog_tests.cpp",
+    "shop_data.hpp",
+    "shop_data_tests.cpp",
+    "shop_data_generated.hpp",
+    "hash_core.hpp",
+    "build_runtime.cmd",
+    "profile_generated.hpp",
+    "version.rc",
+    "version_generated.h",
+    "ui_schema_26949954.py",
+    "ui_schema_b26636972.py",
+    "validate_alden_ui_schema.py"
+  ]
+}

@@ -11,21 +11,20 @@ void require(bool ok,const char* message) {
     if(!ok) { std::fprintf(stderr,"FAIL: %s\n",message); std::exit(1); }
 }
 struct Info {
-    const char** holder{};
     uint16_t key{};
-    uint8_t blocked{},kind{};
+    uint8_t reserved[7]{},kind{};
 };
-static_assert(offsetof(Info,kind)==0xb);
+static_assert(offsetof(Info,kind)==9);
 struct Component {
     uintptr_t reserved{},actor{};
-    uint8_t padding[0x140]{};
+    uint8_t padding[0x170]{};
     BankRecord* records{};
     uint32_t count{},unknown11c{1};
 };
-static_assert(offsetof(Component,records)==0x150 && offsetof(Component,count)==0x158);
+static_assert(offsetof(Component,records)==0x180 && offsetof(Component,count)==0x188);
 enum class NativeAction { waiting, completeBond, rollGold, error, nullResult };
 struct Fixture {
-    const char* names[2]{"Bank_01","Bank_02"};
+    uintptr_t manager{1};
     Info info[2]{};
     uintptr_t vtable[5]{},lock[1]{},actor[2]{};
     BankRecord records[2]{};
@@ -49,9 +48,8 @@ void* __fastcall lock_stub(void* guard,uintptr_t lock,uint8_t refFlag) {
     fixture->held=true; ++fixture->acquires;
     return guard;
 }
-uintptr_t __fastcall lookup_stub(const uint16_t* keyPtr) {
-    require(keyPtr!=nullptr,"typed bank lookup gets an index pointer");
-    const auto key=*keyPtr;
+uintptr_t __fastcall lookup_stub(uintptr_t manager,uint32_t key) {
+    require(manager==fixture->manager,"current bank registry");
     ++fixture->lookupCalls;
     if(key==7) return reinterpret_cast<uintptr_t>(&fixture->info[0]);
     if(key==8) return reinterpret_cast<uintptr_t>(&fixture->info[1]);
@@ -86,7 +84,7 @@ int* __fastcall bond_stub(uintptr_t c,int* r,const Calendar* d,uint16_t k) {
 void reset(Fixture& f) {
     f=Fixture{}; fixture=&f;
     for(unsigned i=0;i<2;++i) {
-        f.info[i].holder=&f.names[i]; f.info[i].kind=static_cast<uint8_t>(i);
+        f.info[i].key=static_cast<uint16_t>(16960+i); f.info[i].kind=static_cast<uint8_t>(i);
         f.records[i].key=static_cast<uint16_t>(7+i);
         f.records[i].unknown08=123+i;
         f.records[i].history[0]=static_cast<uint8_t>(42+i);
@@ -104,6 +102,7 @@ void reset(Fixture& f) {
     intervalGameMinutes=15; bondGameMinutes=30;
     goldEnabled=bondsEnabled=true; hooksReady=true; faulted=false;
     original=gold_stub; originalBonds=bond_stub;
+    bankManagerSlot=reinterpret_cast<uintptr_t>(&f.manager);
     lookupBank=lookup_stub; lockBank=lock_stub; notifyBank=notify_stub;
 }
 void run(BankType type,uintptr_t caller,uint16_t key) {
@@ -155,13 +154,13 @@ int main() {
             case 2: f.action=NativeAction::error; break;
             case 3: f.action=NativeAction::nullResult; break;
             case 4: f.info[1].kind=0; break;
-            case 5: f.names[1]="Bank_01"; break;
-            case 6: f.names[1]="Bank_03"; break;
+            case 5: f.info[1].key=16960; break;
+            case 6: f.info[1].key=16962; break;
             case 7: f.date.rate=0; break;
             case 8: f.component.count=33; break;
             case 9: f.records[0].key=8; break;
             case 10: f.component.records=nullptr; break;
-            case 11: f.info[1].holder=nullptr; break;
+            case 11: f.manager=0; break;
             case 12: f.component.actor=0; break;
             case 13: f.component.records=reinterpret_cast<BankRecord*>(uintptr_t(1)); break;
         }

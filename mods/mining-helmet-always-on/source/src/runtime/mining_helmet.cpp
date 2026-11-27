@@ -1,4 +1,4 @@
-#include "../../../../../tooling/native/profiles_26636972.hpp"
+#include "../../../../../tooling/native/mining_26949954.hpp"
 namespace cd { inline Addresses mining_addresses; }
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
@@ -20,7 +20,7 @@ namespace cd { inline Addresses mining_addresses; }
 
 // Standalone build. No FullMode/ore_only/direct_bridge implementation linked.
 namespace auto34 {
-constexpr char Version[]="1.5.0-test";
+constexpr char Version[]="1.6.0-test";
 constexpr uint32_t On=1417341355,Off=652747463,MineKey=1001881;
 constexpr uint16_t MineIndex=2502;
 constexpr size_t MaxTargets=2048;
@@ -79,7 +79,7 @@ using EffectFn=uint32_t*(__fastcall*)(void*,uint32_t*,const void*,const void*);
 using FrameFn=uintptr_t(__fastcall*)(uintptr_t);
 using NearbyFn=void(__fastcall*)(uintptr_t,uintptr_t);
 using QueryFn=void(__fastcall*)(uintptr_t,const float*,float,float,void*);
-using InfoFn=uintptr_t(__fastcall*)(const uint16_t*);
+using InfoFn=uintptr_t(__fastcall*)(uintptr_t,uint32_t);
 using RotateFn=void(__fastcall*)(float*,const float*);
 using EyeFn=float*(__fastcall*)(uintptr_t,float*);
 using OrientationFn=void(__fastcall*)(float*,const float*,float*,int,int,int);
@@ -183,7 +183,7 @@ bool gameTime(uint64_t& time) {
     time=123456; return true;
 #else
     uintptr_t tls{}; uint8_t special{}; uint64_t delta{};
-    if(!read(__readgsqword(0x58),tls) || !tls || !read(tls+0x1eb,special) || !read(base+cd::mining_addresses.rva(0x71b1ce8),delta)) return false;
+    if(!read(__readgsqword(0x58),tls) || !tls || !read(tls+0x1fb,special) || !read(base+cd::mining_addresses.rva(0x71b1ce8),delta)) return false;
     time=reinterpret_cast<uint64_t(__fastcall*)()>(base+cd::mining_addresses.rva(0x15f5550))()+(special?0:delta); return true;
 #endif
 }
@@ -289,18 +289,20 @@ bool cameraGeometry(uintptr_t player,float* direction,float* worldUp,float* p,fl
     std::memcpy(p,position,12);
     return true;
 }
-bool modeAxes(float* look,float* up) {
+bool modeAxes(uintptr_t manager,float* look,float* up) {
+    if(!manager) return false;
     const uint16_t modeIndex=13;
-    const auto info=modeInfo(&modeIndex); // FindMine key 10, current table index 13.
-    return info && value<uint32_t>(info+8)==10 && value<uint8_t>(info+0x1d0)==1 &&
-        value<uint8_t>(info+0x208)==1 && readRaw(info+0x1f4,look,12) && readRaw(info+0x1e8,up,12);
+    const auto info=modeInfo(manager,modeIndex); // FindMine key 10, current table index 13.
+    return info && value<uint32_t>(info)==10 && value<uint8_t>(info+0x1c8)==1 &&
+        value<uint8_t>(info+0x200)==1 && readRaw(info+0x1ec,look,12) && readRaw(info+0x1e0,up,12);
 }
 bool geometry(uintptr_t root,uintptr_t player,float* p,float* look,float* up) {
     const auto parts=value<uintptr_t>(player+0x68),model=parts?value<uintptr_t>(parts+0x40):0;
     const auto vt=model?value<uintptr_t>(model):0,metadata=value<uintptr_t>(player+0x88);
     const auto type=metadata?value<uint8_t>(metadata+1):0;
     if(vt<base || vt>=imageEnd || (type!=1 && type!=3 && type!=4 && type!=5 && type!=6 && type!=8 && type!=9)) return false;
-    if(!modeAxes(look,up)) return false;
+    const auto modeManager=value<uintptr_t>(base+cd::mining_addresses.rva(0x80000001));
+    if(!modeAxes(modeManager,look,up)) return false;
     const auto holder=value<uintptr_t>(root+0xd8),camera=holder?value<uintptr_t>(holder+8):0;
     alignas(16) float direction[4]{},worldUp[4]{};
     return camera && readRaw(camera+0xd4,direction,12) && readRaw(base+cd::mining_addresses.rva(0x58e7890),worldUp,12) &&
@@ -315,8 +317,8 @@ void scan(uintptr_t root,uintptr_t mgr,uintptr_t player,uint32_t source,uint64_t
     if(!nearby) return;
     const float requested=scanRange.load(),limit=requested<45?45:requested;
     { QueryScope scope({nearby,requested}); nearbyCache(nearby,player); }
-    const auto entries=value<uintptr_t>(nearby+0x310); const auto n=value<uint32_t>(nearby+0x318);
-    if(!value<uint8_t>(nearby+0x320) || !entries || n>65536) return;
+    const auto entries=value<uintptr_t>(nearby+0x2e8); const auto n=value<uint32_t>(nearby+0x2f0);
+    if(!value<uint8_t>(nearby+0x2f8) || !entries || n>65536) return;
     ++scans; float farthest{};
     for(uint32_t i=0;i<n;++i) {
         const auto entry=entries+static_cast<uintptr_t>(i)*0x28;
@@ -534,6 +536,7 @@ DWORD WINAPI worker(void*) {
     char hash[65]{};
     if(!mh067::Sha256File(exe,hash)) { status("hash_failed"); log("hash_failed"); return 0; }
     log("build_identity","\"sha256\":\"%s\"",hash);
+    if(std::strcmp(hash,ExpectedSha)!=0) { status("unsupported_build"); log("unsupported_build"); return 0; }
     cd::Image image;
     if(!cd::loaded_image(image) || !cd::mining_addresses.resolve(image,cd::mining_plan)) {
         status("resolver_refused");

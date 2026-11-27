@@ -1,5 +1,5 @@
-**Healthbar Always On v5**
-All three v5 downloads passed data and UI checks on Steam build 26776744. See enemy health bars without a Health Detection Device or special helmet.
+**Healthbar Always On v6**
+Author-tested in game on Crimson Desert 2.06.00, Steam build 26949954, with DMM 5.3.2. Choose a framed or thin red bar and single-target or multitarget behavior below.
 
 [Support my mods on Ko-fi](https://ko-fi.com/gutzufuss) — optional support helps me keep making updates.
 
@@ -20,14 +20,11 @@ Multitarget keeps bars when switching targets and retains native removal when en
 
 Use only one data variant and one helper copy. Disable/remove the Multitarget helper when selecting Classic. Remove old manual NativeFix/Healthbar ASIs when migrating to DMM. To uninstall, disable/remove the data and helper, then remount.
 
-**What changed / validation**
-The current game produces the same three style-specific UI and skill payloads. The character edits and both Multitarget helpers passed the compatibility check. Vanilla Multitarget was last confirmed in game on build 26636972.
-
-The native ASI resolves validated code structures and may survive updates that only move compatible code. Changed layouts, changed functions or ambiguous matches can still require an update. Future compatibility is not guaranteed.
-This applies to the native Multitarget helper only. The full mod still includes game-data/UI files verified on build 26776744 and can require rebuilding after a patch. Classic is data-only. Other changes to the same skill or subtitletagview.html/css can conflict.
+**What changed in v6**
+All three packages include the updated character and skill data, HUD markup and compiled HUD resources used by game 2.06.00. Both Multitarget variants include the updated target-selection helper. Other mods that replace the same skill or health-bar HUD can conflict. Future changes to these assets may require another release.
 
 **Credits**
 Blablup / gutzufuss1477. Thanks to [Caites](https://www.nexusmods.com/profile/Caites) for [Persistent HP Bars](https://www.nexusmods.com/crimsondesert/mods/2409), the original multitarget work/inspiration and compact presentation, and to the community testers.
 [Source, release notes and checksums on GitHub](https://github.com/gutzufuss1477/Crimson-Desert-Mods).
 
-[Build 26776744 release notes](../../releases/mods-b26776744.md).
+[Build 26949954 downloads and checksums](../../releases/mods-b26949954.md)

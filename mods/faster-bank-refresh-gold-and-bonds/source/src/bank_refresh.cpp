@@ -1,4 +1,4 @@
-// Bank Refresh 1.4.1-test - Copyright (c) 2026 Blablup, MIT.
+// Bank Refresh 1.4.2-test - Copyright (c) 2026 Blablup, MIT.
 #define WIN32_LEAN_AND_MEAN
 #define NOMINMAX
 #include <windows.h>
@@ -6,7 +6,7 @@
 #include <atomic>
 #include <cstdio>
 #include <cstring>
-#include "../../../../tooling/native/bank_profiles.hpp"
+#include "../../../../tooling/native/bank_26949954.hpp"
 #include "bank_core.hpp"
 #include "hash_core.hpp"
 #include "vendor/minhook/include/MinHook.h"
@@ -18,7 +18,7 @@ uintptr_t LockRva=0x3e2eb0, NotifyRva=0x2deaac0, TimerReturnRva=0x2df4086;
 uintptr_t BondRefreshRva=0x2df5450, BondTimerReturnRva=0x2df407a;
 cd::Addresses addresses;
 using RefreshFn=int*(__fastcall*)(uintptr_t,int*,const Calendar*,uint16_t);
-using LookupFn=uintptr_t(__fastcall*)(const uint16_t*);
+using LookupFn=uintptr_t(__fastcall*)(uintptr_t,uint32_t);
 using LockFn=void*(__fastcall*)(void*,uintptr_t,uint8_t);
 using UnlockFn=void(__fastcall*)(uintptr_t,uint8_t);
 using NotifyFn=void(__fastcall*)(uintptr_t,uint16_t);
@@ -27,6 +27,7 @@ uintptr_t base{};
 RefreshFn original{};
 RefreshFn originalBonds{};
 LookupFn lookupBank{};
+uintptr_t bankManagerSlot{};
 LockFn lockBank{};
 NotifyFn notifyBank{};
 std::atomic<bool> faulted{};
@@ -80,8 +81,8 @@ bool locked_adjust(uintptr_t component,uint16_t key,uint64_t now,uint64_t limit)
     bool changed=false;
     __try {
         __try {
-            auto records=*reinterpret_cast<BankRecord**>(component+0x150);
-            const auto count=*reinterpret_cast<uint32_t*>(component+0x158);
+            auto records=*reinterpret_cast<BankRecord**>(component+0x180);
+            const auto count=*reinterpret_cast<uint32_t*>(component+0x188);
             size_t bytes{};
             BankRecord snapshot[32]{};
             uint32_t index{};
@@ -112,13 +113,13 @@ int* dispatch_refresh(BankType type,uintptr_t caller,uintptr_t component,int* re
     if(!read(calendar,&date,sizeof(date)) || !calendar_ticks(date,now) ||
         !game_deadline(date,bonds ? bondGameMinutes : intervalGameMinutes,limit,type) ||
         !read(returned,&nativeResult,sizeof(nativeResult)) || nativeResult!=0) return returned;
-    const auto info=lookupBank(&key);
-    uintptr_t textHolder{},textData{};
-    uint8_t kind=255;
-    char name[8]{};
-    if(!info || !value(info,textHolder) || !value(textHolder,textData) ||
-        !read(reinterpret_cast<void*>(textData),name,sizeof(name)) ||
-        !value(info+0xb,kind) || !eligible(name,kind,type)) return returned;
+    uintptr_t manager{};
+    if(!value(bankManagerSlot,manager) || !manager) return returned;
+    const auto info=lookupBank(manager,key);
+    uint16_t bankKey{};
+    uint8_t kind{};
+    if(!info || !value(info,bankKey) || !value(info+9,kind) ||
+       bankKey!=(bonds ? 16961 : 16960) || kind!=(bonds ? 1 : 0)) return returned;
     if(locked_adjust(component,key,now,limit)) notifyBank(component,key);
     return returned;
 }
@@ -176,6 +177,7 @@ InitResult initialize_impl() {
     LockRva=addresses.rva(0x3e2eb0);NotifyRva=addresses.rva(0x2deaac0);
     TimerReturnRva=addresses.rva(0x2df4086);BondRefreshRva=addresses.rva(0x2df5450);
     BondTimerReturnRva=addresses.rva(0x2df407a);
+    bankManagerSlot=base+addresses.rva(0x80000001);
     lookupBank=reinterpret_cast<LookupFn>(base+LookupRva);
     lockBank=reinterpret_cast<LockFn>(base+LockRva);
     notifyBank=reinterpret_cast<NotifyFn>(base+NotifyRva);

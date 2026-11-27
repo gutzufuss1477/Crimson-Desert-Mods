@@ -1,5 +1,5 @@
 #pragma once
-// Native b26636972 post-read comparison and UI notification; no game process calls.
+// Native b26949954 post-read comparison and UI notification; no game process calls.
 static unsigned notifiedCount;
 static U64 notifiedValue;
 static void __fastcall record_notification(void*,U64 current,U64 maximum,U64 step,U64 minimum,bool,bool) {

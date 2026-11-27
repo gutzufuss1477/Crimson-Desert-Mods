@@ -4,25 +4,24 @@
   "nexusGame": "crimsondesert",
   "nexusModId": 3669,
   "nexusUrl": "https://www.nexusmods.com/crimsondesert/mods/3669",
-  "pageVersion": "1.4.1",
+  "pageVersion": "1.4.2",
   "sourceStatus": "published-release",
-  "sourceNote": "The updated bank component and native lookup passed the executable, timer and load tests. A separate gameplay check of both timers on this build is pending.",
+  "sourceNote": "1.4.2 updates the gold and active bond timer lookup. The two intervals can be configured separately in the included INI. Author-confirmed in game.",
   "currentFiles": [
     {
-      "fileId": 22276,
-      "name": "Bank Refresh Gold and Bonds 1.4.1",
-      "version": "1.4.1",
+      "fileId": 23847,
+      "name": "Bank Refresh Gold and Bonds 1.4.2",
+      "version": "1.4.2",
       "category": "MAIN",
-      "steamBuild": "26776744",
-      "runtimeBehaviorAuthorConfirmed": false,
-      "exactReleasePackageInGameTested": false,
-      "validation": "The updated bank component and native lookup passed the executable, timer and load tests. A separate gameplay check of both timers on this build is pending.",
-      "sha256": "2fcff960221ad6c89e603d36623333be275425b3c6851eda2fc38f721d1d64b0",
-      "bytes": 114499,
-      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=22276",
-      "publishedDownloadSha256Verified": true,
-      "nexusSecurityScanStatus": "cleared",
-      "compatibilityCheckedOnBuild": "26776744"
+      "steamBuild": "26949954",
+      "runtimeBehaviorAuthorConfirmed": true,
+      "validation": "Author-tested in game. Distributed functional payloads match the test package byte-for-byte. Readme updated for release.",
+      "sha256": "36a11a6574e7c4bffb3e7102c87ff046c93ef70a6dd7321df32fcc6feacd5c8c",
+      "bytes": 114654,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=23847",
+      "nexusMd5SearchVerified": true,
+      "nexusScanSha256Verified": true,
+      "nexusSecurityScanStatus": "cleared"
     }
   ],
   "archivedFiles": [
@@ -98,7 +97,23 @@
       "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=21013",
       "publishedDownloadSha256Verified": true,
       "nexusSecurityScanStatus": "cleared"
+    },
+    {
+      "fileId": 22276,
+      "name": "Bank Refresh Gold and Bonds 1.4.1",
+      "version": "1.4.1",
+      "category": "MAIN",
+      "steamBuild": "26776744",
+      "runtimeBehaviorAuthorConfirmed": false,
+      "exactReleasePackageInGameTested": false,
+      "validation": "The updated bank component and native lookup passed the executable, timer and load tests. A separate gameplay check of both timers on this build is pending.",
+      "sha256": "2fcff960221ad6c89e603d36623333be275425b3c6851eda2fc38f721d1d64b0",
+      "bytes": 114499,
+      "downloadUrl": "https://www.nexusmods.com/crimsondesert/mods/3669?tab=files&file_id=22276",
+      "publishedDownloadSha256Verified": true,
+      "nexusSecurityScanStatus": "cleared",
+      "compatibilityCheckedOnBuild": "26776744"
     }
   ],
-  "dmmTestedVersion": "5.0.0"
+  "dmmTestedVersion": "5.3.2"
 }

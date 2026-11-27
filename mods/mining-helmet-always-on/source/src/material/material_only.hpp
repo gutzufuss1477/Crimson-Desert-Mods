@@ -4,7 +4,7 @@
 #include <cstring>
 #include <cmath>
 
-// CPU material path revalidated against the Steam 26636972 native readers.
+// CPU material path revalidated against the Steam 26949954 native readers.
 // Current in-game validation is still required. This header
 // cannot call gameplay functions or write player/global SpecialMode lists.
 namespace mh34 {

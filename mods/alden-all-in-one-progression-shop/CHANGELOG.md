@@ -1,3 +1,7 @@
+## 27 November 2026 · Steam 26949954
+
+DLC 17.4.14 and No DLC 17.3.11 update category selection and 1 Copper catalog prices for 2.06.00. Both include the fix for the black screen before the main menu.
+
 ## 19 November 2026 · Build 26776744
 
 DLC and No DLC category switching and catalog prices confirmed in game with Charting the Unknown installed. Both full ZIPs rebuilt byte-for-byte from the release source and local game inputs.

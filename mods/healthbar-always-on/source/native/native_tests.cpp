@@ -7,13 +7,11 @@ void require(bool condition,const char* message) {
 }
 int main() {
     using namespace healthbar;
-    require(identify_ui(HtmlHash,CssHash)==UiMode::compact,"compact Caites/legacy UIFix2 accepted");
-    require(identify_ui(HtmlHash,FramedCssHash)==UiMode::framed,"framed Vanilla Multitarget accepted");
-    require(identify_ui(SingleHtmlHash,SingleCssHash)==UiMode::single,"Classic preserves single-target mode");
-    require(identify_ui(SingleHtmlHash,FramedCssHash)==UiMode::unsupported,"reject mixed UI pair");
-    require(identify_ui(HtmlHash,SingleCssHash)==UiMode::unsupported,"reject inconsistent target mode");
-    require(identify_ui("",CssHash)==UiMode::unsupported,"reject absent HTML");
-    require(identify_ui(HtmlHash,"changed")==UiMode::unsupported,"reject unknown CSS");
+    require(identify_ui(singleHash,"")==UiMode::single,"single HTML");
+    require(identify_ui(framedHash,"")==UiMode::framed,"framed HTML");
+    require(identify_ui(compactHash,"")==UiMode::compact,"compact HTML");
+    require(identify_ui(compactHash,"old")==UiMode::unsupported,"mixed styles");
+    require(identify_ui("","")==UiMode::unsupported,"missing HTML");
     auto page=static_cast<uint8_t*>(VirtualAlloc(nullptr,4096,MEM_COMMIT|MEM_RESERVE,PAGE_READWRITE));
     require(page!=nullptr,"allocation");
     const size_t offset=128;
@@ -25,7 +23,7 @@ int main() {
     DWORD previous{};
     require(VirtualProtect(page,4096,PAGE_EXECUTE_READ,&previous)!=FALSE,"read-only fixture");
     require(patch_word(reinterpret_cast<uintptr_t>(page+offset)),"atomic patch");
-    for(size_t i=0;i<8;++i) require(page[offset+i]==((i==3 || i==4) ? 0x90 : Context[6+i]),"only JNE bytes changed");
+    for(size_t i=0;i<8;++i) require(page[offset+i]==((i==0 || i==1) ? 0x90 : Context[9+i]),"only JNE bytes changed");
     require(!patch_word(reinterpret_cast<uintptr_t>(page+offset)),"reject duplicate application");
     MEMORY_BASIC_INFORMATION info{}; VirtualQuery(page,&info,sizeof(info));
     require(info.Protect==PAGE_EXECUTE_READ,"restore protection");
